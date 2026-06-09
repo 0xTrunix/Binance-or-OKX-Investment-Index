@@ -1,0 +1,7755 @@
+{
+  "generatedAt": "2026-06-09T16:00:22.152Z",
+  "criteria": "Assets with Binance spot trading enabled and Binance USD-M perpetual futures trading enabled.",
+  "counts": {
+    "spotAssets": 430,
+    "futuresAssets": 531,
+    "matchedAssets": 365,
+    "withFdv": 361,
+    "yziLabs": 45,
+    "okxVentures": 23
+  },
+  "sources": [
+    "https://api.binance.com/api/v3/exchangeInfo",
+    "https://fapi.binance.com/fapi/v1/exchangeInfo",
+    "https://api.coingecko.com/api/v3/coins/markets",
+    "https://coinmarketcap.com/view/binance-labs-portfolio/",
+    "https://coinmarketcap.com/view/okx-ventures-portfolio/",
+    "https://s2.coinmarketcap.com/generated/search/quick_search.json"
+  ],
+  "notes": [
+    "YZi Labs uses the former Binance Labs portfolio page where applicable.",
+    "CMC direct links use CMC slugs when available; otherwise they fall back to CMC search links.",
+    "Some Binance multiplier assets such as 1000SATS or 1MBABYDOGE are matched to their closest market-data token."
+  ],
+  "rows": [
+    {
+      "asset": "BTC",
+      "name": "Bitcoin",
+      "fdv": 1227163533566,
+      "marketCap": 1227163533566,
+      "rank": 1,
+      "price": 61286,
+      "change24h": -3.97296,
+      "yziLabs": true,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/bitcoin/",
+      "coinGeckoId": "bitcoin",
+      "spotPairs": [
+        "BTCUSDT",
+        "BTCUSDC",
+        "BTCFDUSD"
+      ],
+      "futuresPairs": [
+        "BTCUSDT",
+        "BTCUSDC"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "ETH",
+      "name": "Ethereum",
+      "fdv": 197969143862,
+      "marketCap": 197969143862,
+      "rank": 2,
+      "price": 1640.38,
+      "change24h": -3.07707,
+      "yziLabs": true,
+      "okxVentures": true,
+      "cmcUrl": "https://coinmarketcap.com/currencies/ethereum/",
+      "coinGeckoId": "ethereum",
+      "spotPairs": [
+        "ETHUSDT",
+        "ETHUSDC",
+        "ETHFDUSD",
+        "ETHBTC"
+      ],
+      "futuresPairs": [
+        "ETHUSDT",
+        "ETHUSDC"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "XRP",
+      "name": "XRP",
+      "fdv": 113257623780,
+      "marketCap": 70290858230,
+      "rank": 6,
+      "price": 1.13,
+      "change24h": -3.24783,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/xrp/",
+      "coinGeckoId": "ripple",
+      "spotPairs": [
+        "XRPUSDT",
+        "XRPUSDC",
+        "XRPFDUSD",
+        "XRPBTC",
+        "XRPETH",
+        "XRPBNB"
+      ],
+      "futuresPairs": [
+        "XRPUSDT",
+        "XRPUSDC"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "BNB",
+      "name": "BNB",
+      "fdv": 79202626243,
+      "marketCap": 79202626655,
+      "rank": 4,
+      "price": 587.63,
+      "change24h": -2.71372,
+      "yziLabs": true,
+      "okxVentures": true,
+      "cmcUrl": "https://coinmarketcap.com/currencies/binance-coin/",
+      "coinGeckoId": "binancecoin",
+      "spotPairs": [
+        "BNBUSDT",
+        "BNBUSDC",
+        "BNBFDUSD",
+        "BNBBTC",
+        "BNBETH"
+      ],
+      "futuresPairs": [
+        "BNBUSDT",
+        "BNBUSDC"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "USDC",
+      "name": "USDC",
+      "fdv": 75589360309,
+      "marketCap": 75574202463,
+      "rank": 5,
+      "price": 0.999917,
+      "change24h": 0.02601,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/usd-coin/",
+      "coinGeckoId": "usd-coin",
+      "spotPairs": [
+        "USDCUSDT"
+      ],
+      "futuresPairs": [
+        "USDCUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "SOL",
+      "name": "Solana",
+      "fdv": 40567757292,
+      "marketCap": 37424915303,
+      "rank": 7,
+      "price": 64.59,
+      "change24h": -4.06686,
+      "yziLabs": true,
+      "okxVentures": true,
+      "cmcUrl": "https://coinmarketcap.com/currencies/solana/",
+      "coinGeckoId": "solana",
+      "spotPairs": [
+        "SOLUSDT",
+        "SOLUSDC",
+        "SOLFDUSD",
+        "SOLBTC",
+        "SOLETH",
+        "SOLBNB"
+      ],
+      "futuresPairs": [
+        "SOLUSDT",
+        "SOLUSDC"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "TRX",
+      "name": "TRON",
+      "fdv": 30522326153,
+      "marketCap": 30522328097,
+      "rank": 8,
+      "price": 0.321896,
+      "change24h": -1.4107,
+      "yziLabs": true,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/tron/",
+      "coinGeckoId": "tron",
+      "spotPairs": [
+        "TRXUSDT",
+        "TRXUSDC",
+        "TRXBTC",
+        "TRXETH",
+        "TRXBNB"
+      ],
+      "futuresPairs": [
+        "TRXUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "DOGE",
+      "name": "Dogecoin",
+      "fdv": 14355107339,
+      "marketCap": 13030609645,
+      "rank": 11,
+      "price": 0.08431,
+      "change24h": -2.92605,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/dogecoin/",
+      "coinGeckoId": "dogecoin",
+      "spotPairs": [
+        "DOGEUSDT",
+        "DOGEUSDC",
+        "DOGEFDUSD",
+        "DOGEBTC"
+      ],
+      "futuresPairs": [
+        "DOGEUSDT",
+        "DOGEUSDC"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "XLM",
+      "name": "Stellar",
+      "fdv": 9758400667,
+      "marketCap": 6584559005,
+      "rank": 16,
+      "price": 0.195234,
+      "change24h": -3.12629,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/stellar/",
+      "coinGeckoId": "stellar",
+      "spotPairs": [
+        "XLMUSDT",
+        "XLMUSDC",
+        "XLMETH"
+      ],
+      "futuresPairs": [
+        "XLMUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "TON",
+      "name": "Toncoin",
+      "fdv": 8835965841,
+      "marketCap": 4550765064,
+      "rank": 23,
+      "price": 1.7,
+      "change24h": -3.40636,
+      "yziLabs": true,
+      "okxVentures": true,
+      "cmcUrl": "https://coinmarketcap.com/currencies/tokamak-network/",
+      "coinGeckoId": "the-open-network",
+      "spotPairs": [
+        "TONUSDT",
+        "TONUSDC",
+        "TONFDUSD"
+      ],
+      "futuresPairs": [
+        "TONUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "LINK",
+      "name": "Chainlink",
+      "fdv": 7750177881,
+      "marketCap": 5635154108,
+      "rank": 20,
+      "price": 7.75,
+      "change24h": -3.48165,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/chainlink/",
+      "coinGeckoId": "chainlink",
+      "spotPairs": [
+        "LINKUSDT",
+        "LINKUSDC",
+        "LINKFDUSD",
+        "LINKBTC",
+        "LINKETH"
+      ],
+      "futuresPairs": [
+        "LINKUSDT",
+        "LINKUSDC"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "ADA",
+      "name": "Cardano",
+      "fdv": 7369796822,
+      "marketCap": 6086902043,
+      "rank": 18,
+      "price": 0.163773,
+      "change24h": -3.36235,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/cardano/",
+      "coinGeckoId": "cardano",
+      "spotPairs": [
+        "ADAUSDT",
+        "ADAUSDC",
+        "ADAFDUSD",
+        "ADABTC",
+        "ADAETH",
+        "ADABNB"
+      ],
+      "futuresPairs": [
+        "ADAUSDT",
+        "ADAUSDC"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "SUI",
+      "name": "Sui",
+      "fdv": 7339639344,
+      "marketCap": 2957285174,
+      "rank": 31,
+      "price": 0.734307,
+      "change24h": -3.89389,
+      "yziLabs": true,
+      "okxVentures": true,
+      "cmcUrl": "https://coinmarketcap.com/currencies/sui/",
+      "coinGeckoId": "sui",
+      "spotPairs": [
+        "SUIUSDT",
+        "SUIUSDC",
+        "SUIFDUSD",
+        "SUIBTC",
+        "SUIBNB"
+      ],
+      "futuresPairs": [
+        "SUIUSDT",
+        "SUIUSDC"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "ZEC",
+      "name": "Zcash",
+      "fdv": 7333891016,
+      "marketCap": 7333644169,
+      "rank": 15,
+      "price": 437.72,
+      "change24h": -2.10763,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/zcash/",
+      "coinGeckoId": "zcash",
+      "spotPairs": [
+        "ZECUSDT",
+        "ZECUSDC",
+        "ZECBTC",
+        "ZECETH"
+      ],
+      "futuresPairs": [
+        "ZECUSDT",
+        "ZECUSDC"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "WLFI",
+      "name": "World Liberty Financial",
+      "fdv": 5557156615,
+      "marketCap": 1765712034,
+      "rank": 44,
+      "price": 0.055532,
+      "change24h": -1.82333,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/world-liberty-financial-wlfi/",
+      "coinGeckoId": "world-liberty-financial",
+      "spotPairs": [
+        "WLFIUSDT",
+        "WLFIUSDC"
+      ],
+      "futuresPairs": [
+        "WLFIUSDT",
+        "WLFIUSDC"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "WLD",
+      "name": "Worldcoin",
+      "fdv": 5092626982,
+      "marketCap": 1725839004,
+      "rank": 45,
+      "price": 0.508645,
+      "change24h": 5.35476,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/worldcoin/",
+      "coinGeckoId": "worldcoin-wld",
+      "spotPairs": [
+        "WLDUSDT",
+        "WLDUSDC",
+        "WLDFDUSD",
+        "WLDBTC"
+      ],
+      "futuresPairs": [
+        "WLDUSDT",
+        "WLDUSDC"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "ASTER",
+      "name": "Aster",
+      "fdv": 4820332627,
+      "marketCap": 1649824094,
+      "rank": 49,
+      "price": 0.616052,
+      "change24h": -3.13869,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/aster/",
+      "coinGeckoId": "aster-2",
+      "spotPairs": [
+        "ASTERUSDT",
+        "ASTERUSDC"
+      ],
+      "futuresPairs": [
+        "ASTERUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "TAO",
+      "name": "Bittensor",
+      "fdv": 4395708097,
+      "marketCap": 2008941376,
+      "rank": 42,
+      "price": 209.43,
+      "change24h": -3.04596,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/bittensor/",
+      "coinGeckoId": "bittensor",
+      "spotPairs": [
+        "TAOUSDT",
+        "TAOUSDC",
+        "TAOFDUSD",
+        "TAOBTC"
+      ],
+      "futuresPairs": [
+        "TAOUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "BCH",
+      "name": "Bitcoin Cash",
+      "fdv": 4059722921,
+      "marketCap": 4059663430,
+      "rank": 26,
+      "price": 202.52,
+      "change24h": -3.47677,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/bitcoin-cash/",
+      "coinGeckoId": "bitcoin-cash",
+      "spotPairs": [
+        "BCHUSDT",
+        "BCHUSDC",
+        "BCHFDUSD",
+        "BCHBTC"
+      ],
+      "futuresPairs": [
+        "BCHUSDT",
+        "BCHUSDC"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "HBAR",
+      "name": "Hedera",
+      "fdv": 3977709256,
+      "marketCap": 3450544832,
+      "rank": 28,
+      "price": 0.079576,
+      "change24h": -3.44825,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/hedera-hashgraph/",
+      "coinGeckoId": "hedera-hashgraph",
+      "spotPairs": [
+        "HBARUSDT",
+        "HBARUSDC",
+        "HBARBTC",
+        "HBARBNB"
+      ],
+      "futuresPairs": [
+        "HBARUSDT",
+        "HBARUSDC"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "ONDO",
+      "name": "Ondo",
+      "fdv": 3583942901,
+      "marketCap": 1745140301,
+      "rank": 47,
+      "price": 0.358568,
+      "change24h": -2.64114,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/ondo-finance/",
+      "coinGeckoId": "ondo-finance",
+      "spotPairs": [
+        "ONDOUSDT",
+        "ONDOUSDC"
+      ],
+      "futuresPairs": [
+        "ONDOUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "LTC",
+      "name": "Litecoin",
+      "fdv": 3253527297,
+      "marketCap": 3253521770,
+      "rank": 29,
+      "price": 42.11,
+      "change24h": -2.51979,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/litecoin/",
+      "coinGeckoId": "litecoin",
+      "spotPairs": [
+        "LTCUSDT",
+        "LTCUSDC",
+        "LTCFDUSD",
+        "LTCBTC",
+        "LTCETH",
+        "LTCBNB"
+      ],
+      "futuresPairs": [
+        "LTCUSDT",
+        "LTCUSDC"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "AVAX",
+      "name": "Avalanche",
+      "fdv": 3038507182,
+      "marketCap": 2830871743,
+      "rank": 33,
+      "price": 6.55,
+      "change24h": -3.91795,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/avalanche/",
+      "coinGeckoId": "avalanche-2",
+      "spotPairs": [
+        "AVAXUSDT",
+        "AVAXUSDC",
+        "AVAXFDUSD",
+        "AVAXBTC"
+      ],
+      "futuresPairs": [
+        "AVAXUSDT",
+        "AVAXUSDC"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "XAUT",
+      "name": "Tether Gold",
+      "fdv": 3010826201,
+      "marketCap": 2607012533,
+      "rank": 38,
+      "price": 4251.69,
+      "change24h": -1.36334,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/tether-gold/",
+      "coinGeckoId": "tether-gold",
+      "spotPairs": [
+        "XAUTUSDT",
+        "XAUTUSDC",
+        "XAUTBTC"
+      ],
+      "futuresPairs": [
+        "XAUTUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "NEAR",
+      "name": "NEAR Protocol",
+      "fdv": 2682463417,
+      "marketCap": 2682463434,
+      "rank": 37,
+      "price": 2.06,
+      "change24h": -5.86256,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/near-protocol/",
+      "coinGeckoId": "near",
+      "spotPairs": [
+        "NEARUSDT",
+        "NEARUSDC",
+        "NEARBTC"
+      ],
+      "futuresPairs": [
+        "NEARUSDT",
+        "NEARUSDC"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "UNI",
+      "name": "Uniswap",
+      "fdv": 2213369926,
+      "marketCap": 1540045116,
+      "rank": 52,
+      "price": 2.47,
+      "change24h": -3.69294,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/uniswap/",
+      "coinGeckoId": "uniswap",
+      "spotPairs": [
+        "UNIUSDT",
+        "UNIUSDC",
+        "UNIBTC"
+      ],
+      "futuresPairs": [
+        "UNIUSDT",
+        "UNIUSDC"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "DEXE",
+      "name": "DeXe",
+      "fdv": 2059990700,
+      "marketCap": 997939002,
+      "rank": 66,
+      "price": 21.29,
+      "change24h": -7.15111,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/dexe/",
+      "coinGeckoId": "dexe",
+      "spotPairs": [
+        "DEXEUSDT"
+      ],
+      "futuresPairs": [
+        "DEXEUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "PAXG",
+      "name": "PAX Gold",
+      "fdv": 1948258024,
+      "marketCap": 1948258024,
+      "rank": 43,
+      "price": 4263.07,
+      "change24h": -1.48252,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/pax-gold/",
+      "coinGeckoId": "pax-gold",
+      "spotPairs": [
+        "PAXGUSDT",
+        "PAXGUSDC",
+        "PAXGBTC"
+      ],
+      "futuresPairs": [
+        "PAXGUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "KITE",
+      "name": "Kite",
+      "fdv": 1876487240,
+      "marketCap": 437639217,
+      "rank": 111,
+      "price": 0.187702,
+      "change24h": -1.8346,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/kite/",
+      "coinGeckoId": "kite-2",
+      "spotPairs": [
+        "KITEUSDT",
+        "KITEUSDC"
+      ],
+      "futuresPairs": [
+        "KITEUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "MORPHO",
+      "name": "Morpho",
+      "fdv": 1815820507,
+      "marketCap": 1173355582,
+      "rank": 62,
+      "price": 1.82,
+      "change24h": -3.40044,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/morpho/",
+      "coinGeckoId": "morpho",
+      "spotPairs": [
+        "MORPHOUSDT",
+        "MORPHOUSDC"
+      ],
+      "futuresPairs": [
+        "MORPHOUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "TRUMP",
+      "name": "Official Trump",
+      "fdv": 1635594493,
+      "marketCap": 388313097,
+      "rank": 117,
+      "price": 1.63,
+      "change24h": -4.23027,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/trumpcoin/",
+      "coinGeckoId": "official-trump",
+      "spotPairs": [
+        "TRUMPUSDT",
+        "TRUMPUSDC",
+        "TRUMPFDUSD"
+      ],
+      "futuresPairs": [
+        "TRUMPUSDT",
+        "TRUMPUSDC"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "DOT",
+      "name": "Polkadot",
+      "fdv": 1595681686,
+      "marketCap": 1595681686,
+      "rank": 50,
+      "price": 0.944675,
+      "change24h": -4.05673,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/polkadot-new/",
+      "coinGeckoId": "polkadot",
+      "spotPairs": [
+        "DOTUSDT",
+        "DOTUSDC",
+        "DOTFDUSD",
+        "DOTBTC",
+        "DOTBNB"
+      ],
+      "futuresPairs": [
+        "DOTUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "FIL",
+      "name": "Filecoin",
+      "fdv": 1471666774,
+      "marketCap": 592571388,
+      "rank": 92,
+      "price": 0.751085,
+      "change24h": -4.18815,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/filecoin/",
+      "coinGeckoId": "filecoin",
+      "spotPairs": [
+        "FILUSDT",
+        "FILUSDC",
+        "FILFDUSD",
+        "FILBTC"
+      ],
+      "futuresPairs": [
+        "FILUSDT",
+        "FILUSDC"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "SKY",
+      "name": "Sky",
+      "fdv": 1308399672,
+      "marketCap": 1297850101,
+      "rank": 59,
+      "price": 0.055733,
+      "change24h": -4.42011,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/skycoin/",
+      "coinGeckoId": "sky",
+      "spotPairs": [
+        "SKYUSDT",
+        "SKYUSDC"
+      ],
+      "futuresPairs": [
+        "SKYUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "PUMP",
+      "name": "Pump.fun",
+      "fdv": 1305394767,
+      "marketCap": 530590975,
+      "rank": 99,
+      "price": 0.00151556,
+      "change24h": -6.39493,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/pumpanomics/",
+      "coinGeckoId": "pump-fun",
+      "spotPairs": [
+        "PUMPUSDT",
+        "PUMPUSDC"
+      ],
+      "futuresPairs": [
+        "PUMPUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "ICP",
+      "name": "Internet Computer",
+      "fdv": 1255579072,
+      "marketCap": 1255579072,
+      "rank": 61,
+      "price": 2.27,
+      "change24h": -4.28844,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/dfinity/",
+      "coinGeckoId": "internet-computer",
+      "spotPairs": [
+        "ICPUSDT",
+        "ICPUSDC",
+        "ICPBTC"
+      ],
+      "futuresPairs": [
+        "ICPUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "ENA",
+      "name": "Ethena",
+      "fdv": 1206986132,
+      "marketCap": 747828491,
+      "rank": 81,
+      "price": 0.080319,
+      "change24h": -9.49727,
+      "yziLabs": true,
+      "okxVentures": true,
+      "cmcUrl": "https://coinmarketcap.com/currencies/ethena/",
+      "coinGeckoId": "ethena",
+      "spotPairs": [
+        "ENAUSDT",
+        "ENAUSDC",
+        "ENAFDUSD"
+      ],
+      "futuresPairs": [
+        "ENAUSDT",
+        "ENAUSDC"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "ETC",
+      "name": "Ethereum Classic",
+      "fdv": 1085504296,
+      "marketCap": 1085504296,
+      "rank": 64,
+      "price": 6.93,
+      "change24h": -3.30294,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/ethereum-classic/",
+      "coinGeckoId": "ethereum-classic",
+      "spotPairs": [
+        "ETCUSDT",
+        "ETCUSDC",
+        "ETCFDUSD",
+        "ETCBTC"
+      ],
+      "futuresPairs": [
+        "ETCUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "JUP",
+      "name": "Jupiter",
+      "fdv": 1052075188,
+      "marketCap": 509034884,
+      "rank": 101,
+      "price": 0.153309,
+      "change24h": -4.94577,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/jupiter/",
+      "coinGeckoId": "jupiter-exchange-solana",
+      "spotPairs": [
+        "JUPUSDT",
+        "JUPUSDC",
+        "JUPFDUSD"
+      ],
+      "futuresPairs": [
+        "JUPUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "AAVE",
+      "name": "Aave",
+      "fdv": 966829868,
+      "marketCap": 917274512,
+      "rank": 72,
+      "price": 60.43,
+      "change24h": -6.18187,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/aave/",
+      "coinGeckoId": "aave",
+      "spotPairs": [
+        "AAVEUSDT",
+        "AAVEUSDC",
+        "AAVEBTC",
+        "AAVEETH"
+      ],
+      "futuresPairs": [
+        "AAVEUSDT",
+        "AAVEUSDC"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "QNT",
+      "name": "Quant",
+      "fdv": 947278283,
+      "marketCap": 942849535,
+      "rank": 70,
+      "price": 64.85,
+      "change24h": -5.57452,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/quant/",
+      "coinGeckoId": "quant-network",
+      "spotPairs": [
+        "QNTUSDT",
+        "QNTUSDC",
+        "QNTBTC"
+      ],
+      "futuresPairs": [
+        "QNTUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "ATOM",
+      "name": "Cosmos Hub",
+      "fdv": 913587377,
+      "marketCap": 913583270,
+      "rank": 73,
+      "price": 1.78,
+      "change24h": 0.66219,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/cosmos/",
+      "coinGeckoId": "cosmos",
+      "spotPairs": [
+        "ATOMUSDT",
+        "ATOMUSDC",
+        "ATOMBTC"
+      ],
+      "futuresPairs": [
+        "ATOMUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "RENDER",
+      "name": "Render",
+      "fdv": 851682410,
+      "marketCap": 828119338,
+      "rank": 77,
+      "price": 1.59,
+      "change24h": -3.63467,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/render/",
+      "coinGeckoId": "render-token",
+      "spotPairs": [
+        "RENDERUSDT",
+        "RENDERUSDC",
+        "RENDERBTC"
+      ],
+      "futuresPairs": [
+        "RENDERUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "ZRO",
+      "name": "LayerZero",
+      "fdv": 830272168,
+      "marketCap": 209503948,
+      "rank": 168,
+      "price": 0.830663,
+      "change24h": -5.41656,
+      "yziLabs": true,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/layerzero/",
+      "coinGeckoId": "layerzero",
+      "spotPairs": [
+        "ZROUSDT",
+        "ZROUSDC",
+        "ZROFDUSD"
+      ],
+      "futuresPairs": [
+        "ZROUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "FF",
+      "name": "Falcon Finance",
+      "fdv": 807692515,
+      "marketCap": 232211598,
+      "rank": 153,
+      "price": 0.080808,
+      "change24h": -12.05842,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/falcon-finance-ff/",
+      "coinGeckoId": "falcon-finance-ff",
+      "spotPairs": [
+        "FFUSDT",
+        "FFUSDC",
+        "FFFDUSD"
+      ],
+      "futuresPairs": [
+        "FFUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "ALGO",
+      "name": "Algorand",
+      "fdv": 794733020,
+      "marketCap": 794696927,
+      "rank": 78,
+      "price": 0.089014,
+      "change24h": -5.65684,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/algorand/",
+      "coinGeckoId": "algorand",
+      "spotPairs": [
+        "ALGOUSDT",
+        "ALGOUSDC",
+        "ALGOBTC"
+      ],
+      "futuresPairs": [
+        "ALGOUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "ARB",
+      "name": "Arbitrum",
+      "fdv": 792695397,
+      "marketCap": 495896090,
+      "rank": 104,
+      "price": 0.079268,
+      "change24h": -5.48459,
+      "yziLabs": true,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/arbitrage/",
+      "coinGeckoId": "arbitrum",
+      "spotPairs": [
+        "ARBUSDT",
+        "ARBUSDC",
+        "ARBBTC",
+        "ARBETH"
+      ],
+      "futuresPairs": [
+        "ARBUSDT",
+        "ARBUSDC"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "APT",
+      "name": "Aptos",
+      "fdv": 788238775,
+      "marketCap": 537037759,
+      "rank": 97,
+      "price": 0.654626,
+      "change24h": -3.98833,
+      "yziLabs": true,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/aptos/",
+      "coinGeckoId": "aptos",
+      "spotPairs": [
+        "APTUSDT",
+        "APTUSDC",
+        "APTFDUSD",
+        "APTBTC"
+      ],
+      "futuresPairs": [
+        "APTUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "POL",
+      "name": "POL (ex-MATIC)",
+      "fdv": 783684030,
+      "marketCap": 783684030,
+      "rank": 79,
+      "price": 0.07356,
+      "change24h": -8.13903,
+      "yziLabs": false,
+      "okxVentures": true,
+      "cmcUrl": "https://coinmarketcap.com/currencies/proof-of-liquidity/",
+      "coinGeckoId": "polygon-ecosystem-token",
+      "spotPairs": [
+        "POLUSDT",
+        "POLUSDC",
+        "POLFDUSD",
+        "POLBTC",
+        "POLBNB"
+      ],
+      "futuresPairs": [
+        "POLUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "NIGHT",
+      "name": "Midnight",
+      "fdv": 730475227,
+      "marketCap": 505470577,
+      "rank": 102,
+      "price": 0.03048113,
+      "change24h": -3.77502,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/midnight/",
+      "coinGeckoId": "midnight-3",
+      "spotPairs": [
+        "NIGHTUSDT",
+        "NIGHTUSDC",
+        "NIGHTBNB"
+      ],
+      "futuresPairs": [
+        "NIGHTUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "2Z",
+      "name": "DoubleZero",
+      "fdv": 716314216,
+      "marketCap": 248586673,
+      "rank": 148,
+      "price": 0.071615,
+      "change24h": -4.39733,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/doublezero/",
+      "coinGeckoId": "doublezero",
+      "spotPairs": [
+        "2ZUSDT",
+        "2ZUSDC"
+      ],
+      "futuresPairs": [
+        "2ZUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "JST",
+      "name": "JUST",
+      "fdv": 697770023,
+      "marketCap": 697770023,
+      "rank": 84,
+      "price": 0.081613,
+      "change24h": 2.3088,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/just/",
+      "coinGeckoId": "just",
+      "spotPairs": [
+        "JSTUSDT",
+        "JSTBTC"
+      ],
+      "futuresPairs": [
+        "JSTUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "币安人生",
+      "name": "币安人生 (BinanceLife)",
+      "fdv": 685316809,
+      "marketCap": 685316809,
+      "rank": 85,
+      "price": 0.684552,
+      "change24h": -4.34439,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/bianrensheng/",
+      "coinGeckoId": "bianrensheng",
+      "spotPairs": [
+        "币安人生USDT",
+        "币安人生USDC"
+      ],
+      "futuresPairs": [
+        "币安人生USDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "XPL",
+      "name": "Plasma",
+      "fdv": 680959770,
+      "marketCap": 177318350,
+      "rank": 185,
+      "price": 0.067213,
+      "change24h": -6.10551,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/plasma/",
+      "coinGeckoId": "plasma",
+      "spotPairs": [
+        "XPLUSDT",
+        "XPLUSDC"
+      ],
+      "futuresPairs": [
+        "XPLUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "JTO",
+      "name": "Jito",
+      "fdv": 605729448,
+      "marketCap": 291295152,
+      "rank": 135,
+      "price": 0.606406,
+      "change24h": -4.69758,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/jito/",
+      "coinGeckoId": "jito-governance-token",
+      "spotPairs": [
+        "JTOUSDT",
+        "JTOUSDC"
+      ],
+      "futuresPairs": [
+        "JTOUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "VIRTUAL",
+      "name": "Virtuals Protocol",
+      "fdv": 564807556,
+      "marketCap": 371111081,
+      "rank": 122,
+      "price": 0.564808,
+      "change24h": -4.366,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/virtual-protocol/",
+      "coinGeckoId": "virtual-protocol",
+      "spotPairs": [
+        "VIRTUALUSDT",
+        "VIRTUALUSDC"
+      ],
+      "futuresPairs": [
+        "VIRTUALUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "INJ",
+      "name": "Injective",
+      "fdv": 554313640,
+      "marketCap": 554313640,
+      "rank": 95,
+      "price": 5.54,
+      "change24h": -2.4996,
+      "yziLabs": true,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/injective-protocol/",
+      "coinGeckoId": "injective-protocol",
+      "spotPairs": [
+        "INJUSDT",
+        "INJUSDC",
+        "INJFDUSD",
+        "INJBTC"
+      ],
+      "futuresPairs": [
+        "INJUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "FET",
+      "name": "Artificial Superintelligence Alliance",
+      "fdv": 540212804,
+      "marketCap": 449559179,
+      "rank": 109,
+      "price": 0.198988,
+      "change24h": -7.70027,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/fetch/",
+      "coinGeckoId": "fetch-ai",
+      "spotPairs": [
+        "FETUSDT",
+        "FETUSDC",
+        "FETBTC"
+      ],
+      "futuresPairs": [
+        "FETUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "PENGU",
+      "name": "Pudgy Penguins",
+      "fdv": 526936333,
+      "marketCap": 416711643,
+      "rank": 113,
+      "price": 0.00661006,
+      "change24h": -4.8177,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/pudgy-penguins/",
+      "coinGeckoId": "pudgy-penguins",
+      "spotPairs": [
+        "PENGUUSDT",
+        "PENGUUSDC"
+      ],
+      "futuresPairs": [
+        "PENGUUSDT",
+        "PENGUUSDC"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "SENT",
+      "name": "Sentient",
+      "fdv": 522206332,
+      "marketCap": 110002812,
+      "rank": 251,
+      "price": 0.01512368,
+      "change24h": 14.55205,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/sentinel/",
+      "coinGeckoId": "sentient",
+      "spotPairs": [
+        "SENTUSDT",
+        "SENTUSDC"
+      ],
+      "futuresPairs": [
+        "SENTUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "CRV",
+      "name": "Curve DAO",
+      "fdv": 473811285,
+      "marketCap": 302118084,
+      "rank": 133,
+      "price": 0.198619,
+      "change24h": -1.21763,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/curve-dao-token/",
+      "coinGeckoId": "curve-dao-token",
+      "spotPairs": [
+        "CRVUSDT",
+        "CRVUSDC"
+      ],
+      "futuresPairs": [
+        "CRVUSDT",
+        "CRVUSDC"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "SEI",
+      "name": "Sei",
+      "fdv": 468863296,
+      "marketCap": 315701286,
+      "rank": 130,
+      "price": 0.04691224,
+      "change24h": -6.22094,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/sei/",
+      "coinGeckoId": "sei-network",
+      "spotPairs": [
+        "SEIUSDT",
+        "SEIUSDC",
+        "SEIBTC"
+      ],
+      "futuresPairs": [
+        "SEIUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "MEGA",
+      "name": "MegaETH",
+      "fdv": 467444152,
+      "marketCap": 52811503,
+      "rank": 434,
+      "price": 0.04647999,
+      "change24h": -8.11493,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/megacryptopolis/",
+      "coinGeckoId": "megaeth",
+      "spotPairs": [
+        "MEGAUSDT",
+        "MEGAUSDC"
+      ],
+      "futuresPairs": [
+        "MEGAUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "ENS",
+      "name": "Ethereum Name Service",
+      "fdv": 459531182,
+      "marketCap": 185690336,
+      "rank": 179,
+      "price": 4.6,
+      "change24h": -4.77962,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/ethereum-name-service/",
+      "coinGeckoId": "ethereum-name-service",
+      "spotPairs": [
+        "ENSUSDT",
+        "ENSUSDC"
+      ],
+      "futuresPairs": [
+        "ENSUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "DASH",
+      "name": "Dash",
+      "fdv": 456520167,
+      "marketCap": 456517220,
+      "rank": 108,
+      "price": 35.92,
+      "change24h": -2.95904,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/dash/",
+      "coinGeckoId": "dash",
+      "spotPairs": [
+        "DASHUSDT",
+        "DASHUSDC",
+        "DASHBTC"
+      ],
+      "futuresPairs": [
+        "DASHUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "CAKE",
+      "name": "PancakeSwap",
+      "fdv": 435199338,
+      "marketCap": 419201651,
+      "rank": 112,
+      "price": 1.29,
+      "change24h": -2.2967,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/pancakeswap/",
+      "coinGeckoId": "pancakeswap-token",
+      "spotPairs": [
+        "CAKEUSDT",
+        "CAKEUSDC",
+        "CAKEBTC",
+        "CAKEBNB"
+      ],
+      "futuresPairs": [
+        "CAKEUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "GENIUS",
+      "name": "Genius",
+      "fdv": 428701454,
+      "marketCap": 150713473,
+      "rank": 204,
+      "price": 0.449385,
+      "change24h": 2.47861,
+      "yziLabs": true,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/genius-terminal/",
+      "coinGeckoId": "genius-3",
+      "spotPairs": [
+        "GENIUSUSDT",
+        "GENIUSUSDC"
+      ],
+      "futuresPairs": [
+        "GENIUSUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "VET",
+      "name": "VeChain",
+      "fdv": 414174941,
+      "marketCap": 414174941,
+      "rank": 114,
+      "price": 0.00481652,
+      "change24h": -3.39272,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/vechain/",
+      "coinGeckoId": "vechain",
+      "spotPairs": [
+        "VETUSDT",
+        "VETUSDC"
+      ],
+      "futuresPairs": [
+        "VETUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "KAITO",
+      "name": "KAITO",
+      "fdv": 413855274,
+      "marketCap": 99900065,
+      "rank": 274,
+      "price": 0.413883,
+      "change24h": -8.09095,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/kaito/",
+      "coinGeckoId": "kaito",
+      "spotPairs": [
+        "KAITOUSDT",
+        "KAITOUSDC"
+      ],
+      "futuresPairs": [
+        "KAITOUSDT",
+        "KAITOUSDC"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "OP",
+      "name": "Optimism",
+      "fdv": 400295093,
+      "marketCap": 200616910,
+      "rank": 173,
+      "price": 0.093207,
+      "change24h": -5.29001,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/optimism-ethereum/",
+      "coinGeckoId": "optimism",
+      "spotPairs": [
+        "OPUSDT",
+        "OPUSDC"
+      ],
+      "futuresPairs": [
+        "OPUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "TWT",
+      "name": "Trust Wallet",
+      "fdv": 369037754,
+      "marketCap": 153759543,
+      "rank": 201,
+      "price": 0.369253,
+      "change24h": -2.38248,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/trust-wallet-token/",
+      "coinGeckoId": "trust-wallet-token",
+      "spotPairs": [
+        "TWTUSDT",
+        "TWTUSDC"
+      ],
+      "futuresPairs": [
+        "TWTUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "TIA",
+      "name": "Celestia",
+      "fdv": 367787556,
+      "marketCap": 291656411,
+      "rank": 134,
+      "price": 0.314099,
+      "change24h": -3.13467,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/celestia/",
+      "coinGeckoId": "celestia",
+      "spotPairs": [
+        "TIAUSDT",
+        "TIAUSDC"
+      ],
+      "futuresPairs": [
+        "TIAUSDT",
+        "TIAUSDC"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "NXPC",
+      "name": "Nexpace",
+      "fdv": 367067978,
+      "marketCap": 104503684,
+      "rank": 265,
+      "price": 0.369555,
+      "change24h": 8.20703,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/maplestory-universe/",
+      "coinGeckoId": "nexpace",
+      "spotPairs": [
+        "NXPCUSDT",
+        "NXPCUSDC"
+      ],
+      "futuresPairs": [
+        "NXPCUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "ALLO",
+      "name": "Allora",
+      "fdv": 366261745,
+      "marketCap": 109330526,
+      "rank": 254,
+      "price": 0.464288,
+      "change24h": 6.54718,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/allo/",
+      "coinGeckoId": "allora",
+      "spotPairs": [
+        "ALLOUSDT",
+        "ALLOUSDC"
+      ],
+      "futuresPairs": [
+        "ALLOUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "CHIP",
+      "name": "USD.AI",
+      "fdv": 366074166,
+      "marketCap": 73214833,
+      "rank": 332,
+      "price": 0.0360955,
+      "change24h": 8.05709,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/usd-ai/",
+      "coinGeckoId": "chip-2",
+      "spotPairs": [
+        "CHIPUSDT",
+        "CHIPUSDC"
+      ],
+      "futuresPairs": [
+        "CHIPUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "PENDLE",
+      "name": "Pendle",
+      "fdv": 347373054,
+      "marketCap": 210570092,
+      "rank": 166,
+      "price": 1.23,
+      "change24h": -4.1047,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/pendle/",
+      "coinGeckoId": "pendle",
+      "spotPairs": [
+        "PENDLEUSDT",
+        "PENDLEUSDC",
+        "PENDLEBTC"
+      ],
+      "futuresPairs": [
+        "PENDLEUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "SUN",
+      "name": "Sun Token",
+      "fdv": 341381577,
+      "marketCap": 329896430,
+      "rank": 129,
+      "price": 0.01715927,
+      "change24h": -1.92294,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/sun/",
+      "coinGeckoId": "sun-token",
+      "spotPairs": [
+        "SUNUSDT"
+      ],
+      "futuresPairs": [
+        "SUNUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "STRK",
+      "name": "Starknet",
+      "fdv": 333505389,
+      "marketCap": 211948030,
+      "rank": 164,
+      "price": 0.03333273,
+      "change24h": -5.02767,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/starknet-token/",
+      "coinGeckoId": "starknet",
+      "spotPairs": [
+        "STRKUSDT",
+        "STRKUSDC"
+      ],
+      "futuresPairs": [
+        "STRKUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "EIGEN",
+      "name": "EigenCloud (prev. EigenLayer)",
+      "fdv": 332694587,
+      "marketCap": 134928064,
+      "rank": 220,
+      "price": 0.181897,
+      "change24h": -1.43894,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/eigenlayer/",
+      "coinGeckoId": "eigenlayer",
+      "spotPairs": [
+        "EIGENUSDT",
+        "EIGENUSDC",
+        "EIGENFDUSD"
+      ],
+      "futuresPairs": [
+        "EIGENUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "STX",
+      "name": "Stacks",
+      "fdv": 330727937,
+      "marketCap": 330727937,
+      "rank": 127,
+      "price": 0.178941,
+      "change24h": -5.97229,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/blockstack/",
+      "coinGeckoId": "blockstack",
+      "spotPairs": [
+        "STXUSDT",
+        "STXUSDC",
+        "STXBTC"
+      ],
+      "futuresPairs": [
+        "STXUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "ZAMA",
+      "name": "Zama",
+      "fdv": 310985740,
+      "marketCap": 62197148,
+      "rank": 383,
+      "price": 0.02827416,
+      "change24h": -11.67,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/zama/",
+      "coinGeckoId": "zama",
+      "spotPairs": [
+        "ZAMAUSDT",
+        "ZAMAUSDC"
+      ],
+      "futuresPairs": [
+        "ZAMAUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "PYTH",
+      "name": "Pyth Network",
+      "fdv": 304174131,
+      "marketCap": 239536578,
+      "rank": 150,
+      "price": 0.03040682,
+      "change24h": -5.04277,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/pyth-network/",
+      "coinGeckoId": "pyth-network",
+      "spotPairs": [
+        "PYTHUSDT",
+        "PYTHUSDC"
+      ],
+      "futuresPairs": [
+        "PYTHUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "ETHFI",
+      "name": "Ether.fi",
+      "fdv": 298340864,
+      "marketCap": 263123792,
+      "rank": 141,
+      "price": 0.29826,
+      "change24h": -3.78726,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/ether-fi-ethfi/",
+      "coinGeckoId": "ether-fi",
+      "spotPairs": [
+        "ETHFIUSDT",
+        "ETHFIUSDC"
+      ],
+      "futuresPairs": [
+        "ETHFIUSDT",
+        "ETHFIUSDC"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "0G",
+      "name": "0G",
+      "fdv": 293802174,
+      "marketCap": 62638542,
+      "rank": 379,
+      "price": 0.29378,
+      "change24h": -6.86985,
+      "yziLabs": false,
+      "okxVentures": true,
+      "cmcUrl": "https://coinmarketcap.com/currencies/zero-gravity/",
+      "coinGeckoId": "zero-gravity",
+      "spotPairs": [
+        "0GUSDT",
+        "0GUSDC"
+      ],
+      "futuresPairs": [
+        "0GUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "HOME",
+      "name": "HOME",
+      "fdv": 286002697,
+      "marketCap": 109682034,
+      "rank": 252,
+      "price": 0.02856878,
+      "change24h": -11.12441,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/defi-app/",
+      "coinGeckoId": "home",
+      "spotPairs": [
+        "HOMEUSDT",
+        "HOMEUSDC"
+      ],
+      "futuresPairs": [
+        "HOMEUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "CHZ",
+      "name": "Chiliz",
+      "fdv": 276091478,
+      "marketCap": 276091478,
+      "rank": 137,
+      "price": 0.02652889,
+      "change24h": 4.64431,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/chiliz/",
+      "coinGeckoId": "chiliz",
+      "spotPairs": [
+        "CHZUSDT",
+        "CHZUSDC"
+      ],
+      "futuresPairs": [
+        "CHZUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "IMX",
+      "name": "Immutable",
+      "fdv": 274879432,
+      "marketCap": 115785343,
+      "rank": 239,
+      "price": 0.137416,
+      "change24h": -3.38766,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/impact/",
+      "coinGeckoId": "immutable-x",
+      "spotPairs": [
+        "IMXUSDT",
+        "IMXUSDC"
+      ],
+      "futuresPairs": [
+        "IMXUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "FRAX",
+      "name": "Legacy Frax Dollar",
+      "fdv": 273103007,
+      "marketCap": 273103007,
+      "rank": 138,
+      "price": 0.99,
+      "change24h": -1.01815,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/frax/",
+      "coinGeckoId": "frax",
+      "spotPairs": [
+        "FRAXUSDT"
+      ],
+      "futuresPairs": [
+        "FRAXUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "XTZ",
+      "name": "Tezos",
+      "fdv": 262395617,
+      "marketCap": 257659805,
+      "rank": 143,
+      "price": 0.236964,
+      "change24h": -5.01934,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/tezos/",
+      "coinGeckoId": "tezos",
+      "spotPairs": [
+        "XTZUSDT",
+        "XTZUSDC",
+        "XTZBTC"
+      ],
+      "futuresPairs": [
+        "XTZUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "LDO",
+      "name": "Lido DAO",
+      "fdv": 257310009,
+      "marketCap": 217311332,
+      "rank": 160,
+      "price": 0.257268,
+      "change24h": -5.73615,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/lido-dao/",
+      "coinGeckoId": "lido-dao",
+      "spotPairs": [
+        "LDOUSDT",
+        "LDOUSDC",
+        "LDOFDUSD"
+      ],
+      "futuresPairs": [
+        "LDOUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "AXS",
+      "name": "Axie Infinity",
+      "fdv": 247755643,
+      "marketCap": 159100255,
+      "rank": 196,
+      "price": 0.916662,
+      "change24h": -4.07184,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/axie-infinity/",
+      "coinGeckoId": "axie-infinity",
+      "spotPairs": [
+        "AXSUSDT",
+        "AXSUSDC"
+      ],
+      "futuresPairs": [
+        "AXSUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "ESP",
+      "name": "Espresso",
+      "fdv": 238022490,
+      "marketCap": 34513261,
+      "rank": 569,
+      "price": 0.066386,
+      "change24h": -1.06437,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/espers/",
+      "coinGeckoId": "espresso",
+      "spotPairs": [
+        "ESPUSDT",
+        "ESPUSDC"
+      ],
+      "futuresPairs": [
+        "ESPUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "CFX",
+      "name": "Conflux",
+      "fdv": 230863800,
+      "marketCap": 230807441,
+      "rank": 154,
+      "price": 0.04436179,
+      "change24h": -4.35475,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/cryptoforex/",
+      "coinGeckoId": "conflux-token",
+      "spotPairs": [
+        "CFXUSDT",
+        "CFXUSDC"
+      ],
+      "futuresPairs": [
+        "CFXUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "JASMY",
+      "name": "JasmyCoin",
+      "fdv": 230146264,
+      "marketCap": 227591639,
+      "rank": 157,
+      "price": 0.00460049,
+      "change24h": -4.03103,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/jasmy/",
+      "coinGeckoId": "jasmycoin",
+      "spotPairs": [
+        "JASMYUSDT"
+      ],
+      "futuresPairs": [
+        "JASMYUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "HUMA",
+      "name": "Huma Finance",
+      "fdv": 229876601,
+      "marketCap": 39845278,
+      "rank": 510,
+      "price": 0.02299139,
+      "change24h": -6.69265,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/huma-finance/",
+      "coinGeckoId": "huma-finance",
+      "spotPairs": [
+        "HUMAUSDT",
+        "HUMAUSDC"
+      ],
+      "futuresPairs": [
+        "HUMAUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "IOTA",
+      "name": "IOTA",
+      "fdv": 221683836,
+      "marketCap": 202122661,
+      "rank": 171,
+      "price": 0.04517964,
+      "change24h": -6.68237,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/iota/",
+      "coinGeckoId": "iota",
+      "spotPairs": [
+        "IOTAUSDT",
+        "IOTAUSDC"
+      ],
+      "futuresPairs": [
+        "IOTAUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "NEO",
+      "name": "NEO",
+      "fdv": 213139916,
+      "marketCap": 150327583,
+      "rank": 205,
+      "price": 2.13,
+      "change24h": -3.61011,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/neo/",
+      "coinGeckoId": "neo",
+      "spotPairs": [
+        "NEOUSDT",
+        "NEOUSDC"
+      ],
+      "futuresPairs": [
+        "NEOUSDT",
+        "NEOUSDC"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "OPEN",
+      "name": "OpenLedger",
+      "fdv": 212630715,
+      "marketCap": 45821919,
+      "rank": 482,
+      "price": 0.212268,
+      "change24h": 5.47933,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/open-platform/",
+      "coinGeckoId": "openledger-2",
+      "spotPairs": [
+        "OPENUSDT",
+        "OPENUSDC",
+        "OPENFDUSD",
+        "OPENBNB"
+      ],
+      "futuresPairs": [
+        "OPENUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "KAIA",
+      "name": "Kaia",
+      "fdv": 211623027,
+      "marketCap": 211623020,
+      "rank": 165,
+      "price": 0.03609818,
+      "change24h": -5.34909,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/kaia/",
+      "coinGeckoId": "kaia",
+      "spotPairs": [
+        "KAIAUSDT",
+        "KAIAUSDC"
+      ],
+      "futuresPairs": [
+        "KAIAUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "ZK",
+      "name": "ZKsync",
+      "fdv": 210047570,
+      "marketCap": 97056239,
+      "rank": 278,
+      "price": 0.00997683,
+      "change24h": -6.03313,
+      "yziLabs": false,
+      "okxVentures": true,
+      "cmcUrl": "https://coinmarketcap.com/currencies/zksync/",
+      "coinGeckoId": "zksync",
+      "spotPairs": [
+        "ZKUSDT",
+        "ZKUSDC"
+      ],
+      "futuresPairs": [
+        "ZKUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "GRT",
+      "name": "The Graph",
+      "fdv": 209976896,
+      "marketCap": 209969214,
+      "rank": 167,
+      "price": 0.01943846,
+      "change24h": -4.16138,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/global-rental-token/",
+      "coinGeckoId": "the-graph",
+      "spotPairs": [
+        "GRTUSDT",
+        "GRTUSDC"
+      ],
+      "futuresPairs": [
+        "GRTUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "ROBO",
+      "name": "Fabric Protocol",
+      "fdv": 206569967,
+      "marketCap": 46085760,
+      "rank": 477,
+      "price": 0.02073209,
+      "change24h": 3.52961,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/fabric-foundation/",
+      "coinGeckoId": "robo-token-2",
+      "spotPairs": [
+        "ROBOUSDT",
+        "ROBOUSDC"
+      ],
+      "futuresPairs": [
+        "ROBOUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "SAHARA",
+      "name": "Sahara AI",
+      "fdv": 192994023,
+      "marketCap": 65752661,
+      "rank": 369,
+      "price": 0.01928693,
+      "change24h": -49.08834,
+      "yziLabs": true,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/sahara-ai/",
+      "coinGeckoId": "sahara-ai",
+      "spotPairs": [
+        "SAHARAUSDT",
+        "SAHARAUSDC"
+      ],
+      "futuresPairs": [
+        "SAHARAUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "SPK",
+      "name": "Spark",
+      "fdv": 189316613,
+      "marketCap": 52585637,
+      "rank": 436,
+      "price": 0.01876348,
+      "change24h": -2.62344,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/sparkspay/",
+      "coinGeckoId": "spark-2",
+      "spotPairs": [
+        "SPKUSDT",
+        "SPKUSDC"
+      ],
+      "futuresPairs": [
+        "SPKUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "PROVE",
+      "name": "Succinct",
+      "fdv": 177845145,
+      "marketCap": 34679803,
+      "rank": 566,
+      "price": 0.177767,
+      "change24h": -5.52483,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/prove-token/",
+      "coinGeckoId": "succinct",
+      "spotPairs": [
+        "PROVEUSDT",
+        "PROVEUSDC"
+      ],
+      "futuresPairs": [
+        "PROVEUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "COMP",
+      "name": "Compound",
+      "fdv": 176993889,
+      "marketCap": 171121042,
+      "rank": 187,
+      "price": 17.7,
+      "change24h": 3.9747,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/compound/",
+      "coinGeckoId": "compound-governance-token",
+      "spotPairs": [
+        "COMPUSDT",
+        "COMPUSDC"
+      ],
+      "futuresPairs": [
+        "COMPUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "LINEA",
+      "name": "Linea",
+      "fdv": 172833607,
+      "marketCap": 72062007,
+      "rank": 339,
+      "price": 0.00239259,
+      "change24h": -6.1171,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/linea/",
+      "coinGeckoId": "linea",
+      "spotPairs": [
+        "LINEAUSDT",
+        "LINEAUSDC"
+      ],
+      "futuresPairs": [
+        "LINEAUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "BABY",
+      "name": "Babylon",
+      "fdv": 165205065,
+      "marketCap": 56486944,
+      "rank": 410,
+      "price": 0.01529258,
+      "change24h": -4.4693,
+      "yziLabs": false,
+      "okxVentures": true,
+      "cmcUrl": "https://coinmarketcap.com/currencies/babylon/",
+      "coinGeckoId": "babylon",
+      "spotPairs": [
+        "BABYUSDT",
+        "BABYUSDC"
+      ],
+      "futuresPairs": [
+        "BABYUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "WAL",
+      "name": "Walrus",
+      "fdv": 157428879,
+      "marketCap": 75664255,
+      "rank": 319,
+      "price": 0.03143825,
+      "change24h": -11.49565,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/wal/",
+      "coinGeckoId": "walrus-2",
+      "spotPairs": [
+        "WALUSDT",
+        "WALUSDC",
+        "WALFDUSD",
+        "WALBNB"
+      ],
+      "futuresPairs": [
+        "WALUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "SYRUP",
+      "name": "Maple Finance",
+      "fdv": 156421728,
+      "marketCap": 149771368,
+      "rank": 207,
+      "price": 0.125689,
+      "change24h": -5.68745,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/syrup/",
+      "coinGeckoId": "syrup",
+      "spotPairs": [
+        "SYRUPUSDT",
+        "SYRUPUSDC"
+      ],
+      "futuresPairs": [
+        "SYRUPUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "BARD",
+      "name": "Lombard",
+      "fdv": 155651204,
+      "marketCap": 50197513,
+      "rank": 452,
+      "price": 0.155498,
+      "change24h": -5.58436,
+      "yziLabs": true,
+      "okxVentures": true,
+      "cmcUrl": "https://coinmarketcap.com/currencies/lombard/",
+      "coinGeckoId": "lombard-protocol",
+      "spotPairs": [
+        "BARDUSDT",
+        "BARDUSDC"
+      ],
+      "futuresPairs": [
+        "BARDUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "WIF",
+      "name": "dogwifhat",
+      "fdv": 153947053,
+      "marketCap": 153947053,
+      "rank": 200,
+      "price": 0.154161,
+      "change24h": -5.54058,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/dogwifhat/",
+      "coinGeckoId": "dogwifcoin",
+      "spotPairs": [
+        "WIFUSDT",
+        "WIFUSDC"
+      ],
+      "futuresPairs": [
+        "WIFUSDT",
+        "WIFUSDC"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "OPG",
+      "name": "OpenGradient",
+      "fdv": 150210367,
+      "marketCap": 28539970,
+      "rank": 650,
+      "price": 0.150379,
+      "change24h": -5.17967,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/opengradient/",
+      "coinGeckoId": "opengradient",
+      "spotPairs": [
+        "OPGUSDT",
+        "OPGUSDC"
+      ],
+      "futuresPairs": [
+        "OPGUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "SAND",
+      "name": "The Sandbox",
+      "fdv": 149092065,
+      "marketCap": 132557219,
+      "rank": 222,
+      "price": 0.04970752,
+      "change24h": -5.62972,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/the-sandbox/",
+      "coinGeckoId": "the-sandbox",
+      "spotPairs": [
+        "SANDUSDT",
+        "SANDUSDC"
+      ],
+      "futuresPairs": [
+        "SANDUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "THETA",
+      "name": "Theta Network",
+      "fdv": 148451666,
+      "marketCap": 148451666,
+      "rank": 209,
+      "price": 0.14816,
+      "change24h": -5.21589,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/theta/",
+      "coinGeckoId": "theta-token",
+      "spotPairs": [
+        "THETAUSDT",
+        "THETAUSDC",
+        "THETABTC"
+      ],
+      "futuresPairs": [
+        "THETAUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "KMNO",
+      "name": "Kamino",
+      "fdv": 147119037,
+      "marketCap": 70637592,
+      "rank": 345,
+      "price": 0.01468075,
+      "change24h": -5.58841,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/kamino-finance/",
+      "coinGeckoId": "kamino",
+      "spotPairs": [
+        "KMNOUSDT",
+        "KMNOUSDC"
+      ],
+      "futuresPairs": [
+        "KMNOUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "MOVE",
+      "name": "Movement",
+      "fdv": 146343758,
+      "marketCap": 58567992,
+      "rank": 400,
+      "price": 0.01463175,
+      "change24h": 5.80919,
+      "yziLabs": true,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/movement/",
+      "coinGeckoId": "movement",
+      "spotPairs": [
+        "MOVEUSDT",
+        "MOVEUSDC"
+      ],
+      "futuresPairs": [
+        "MOVEUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "FORM",
+      "name": "Four",
+      "fdv": 143889619,
+      "marketCap": 96010046,
+      "rank": 281,
+      "price": 0.249583,
+      "change24h": -7.56059,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/four/",
+      "coinGeckoId": "four",
+      "spotPairs": [
+        "FORMUSDT",
+        "FORMUSDC"
+      ],
+      "futuresPairs": [
+        "FORMUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "MANA",
+      "name": "Decentraland",
+      "fdv": 141599007,
+      "marketCap": 124937552,
+      "rank": 231,
+      "price": 0.064563,
+      "change24h": -4.43074,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/decentraland/",
+      "coinGeckoId": "decentraland",
+      "spotPairs": [
+        "MANAUSDT"
+      ],
+      "futuresPairs": [
+        "MANAUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "BAT",
+      "name": "Basic Attention",
+      "fdv": 139148735,
+      "marketCap": 138752129,
+      "rank": 215,
+      "price": 0.092766,
+      "change24h": 2.61424,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/basic-attention-token/",
+      "coinGeckoId": "basic-attention-token",
+      "spotPairs": [
+        "BATUSDT"
+      ],
+      "futuresPairs": [
+        "BATUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "COW",
+      "name": "CoW Protocol",
+      "fdv": 138096219,
+      "marketCap": 79887487,
+      "rank": 304,
+      "price": 0.138096,
+      "change24h": -2.9685,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/cowboy-finance/",
+      "coinGeckoId": "cow-protocol",
+      "spotPairs": [
+        "COWUSDT",
+        "COWUSDC"
+      ],
+      "futuresPairs": [
+        "COWUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "RSR",
+      "name": "Reserve Rights",
+      "fdv": 136650449,
+      "marketCap": 85479193,
+      "rank": 289,
+      "price": 0.0013649,
+      "change24h": -3.93024,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/reserve-rights/",
+      "coinGeckoId": "reserve-rights-token",
+      "spotPairs": [
+        "RSRUSDT",
+        "RSRUSDC"
+      ],
+      "futuresPairs": [
+        "RSRUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "BERA",
+      "name": "Berachain",
+      "fdv": 134326907,
+      "marketCap": 68498005,
+      "rank": 354,
+      "price": 0.247793,
+      "change24h": -9.45863,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/berachain/",
+      "coinGeckoId": "berachain-bera",
+      "spotPairs": [
+        "BERAUSDT",
+        "BERAUSDC"
+      ],
+      "futuresPairs": [
+        "BERAUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "A",
+      "name": "Vaulta",
+      "fdv": 131983376,
+      "marketCap": 103494396,
+      "rank": 267,
+      "price": 0.062742,
+      "change24h": -3.56139,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/alpha-token/",
+      "coinGeckoId": "vaulta",
+      "spotPairs": [
+        "AUSDT",
+        "AUSDC"
+      ],
+      "futuresPairs": [
+        "AUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "RUNE",
+      "name": "THORChain",
+      "fdv": 131437396,
+      "marketCap": 125553140,
+      "rank": 227,
+      "price": 0.371384,
+      "change24h": 6.01646,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/thorchain/",
+      "coinGeckoId": "thorchain",
+      "spotPairs": [
+        "RUNEUSDT",
+        "RUNEUSDC",
+        "RUNEBTC"
+      ],
+      "futuresPairs": [
+        "RUNEUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "ZBT",
+      "name": "ZEROBASE",
+      "fdv": 130612480,
+      "marketCap": 31999037,
+      "rank": 607,
+      "price": 0.130579,
+      "change24h": -0.69977,
+      "yziLabs": true,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/zerobase/",
+      "coinGeckoId": "zerobase",
+      "spotPairs": [
+        "ZBTUSDT",
+        "ZBTUSDC"
+      ],
+      "futuresPairs": [
+        "ZBTUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "CFG",
+      "name": "Centrifuge",
+      "fdv": 130012687,
+      "marketCap": 72727571,
+      "rank": 335,
+      "price": 0.191097,
+      "change24h": -7.84478,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/centrifuge/",
+      "coinGeckoId": "centrifuge-2",
+      "spotPairs": [
+        "CFGUSDT",
+        "CFGUSDC"
+      ],
+      "futuresPairs": [
+        "CFGUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "VANA",
+      "name": "Vana",
+      "fdv": 129959172,
+      "marketCap": 33356187,
+      "rank": 587,
+      "price": 1.081,
+      "change24h": -5.11189,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/vana/",
+      "coinGeckoId": "vana",
+      "spotPairs": [
+        "VANAUSDT",
+        "VANAUSDC"
+      ],
+      "futuresPairs": [
+        "VANAUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "IO",
+      "name": "io.net",
+      "fdv": 129292461,
+      "marketCap": 55994486,
+      "rank": 413,
+      "price": 0.160494,
+      "change24h": 15.85683,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/io/",
+      "coinGeckoId": "io",
+      "spotPairs": [
+        "IOUSDT",
+        "IOUSDC"
+      ],
+      "futuresPairs": [
+        "IOUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "HOLO",
+      "name": "Holoworld",
+      "fdv": 126876469,
+      "marketCap": 39692108,
+      "rank": 511,
+      "price": 0.061586,
+      "change24h": 1.85864,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/holo/",
+      "coinGeckoId": "holoworld",
+      "spotPairs": [
+        "HOLOUSDT",
+        "HOLOUSDC"
+      ],
+      "futuresPairs": [
+        "HOLOUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "AR",
+      "name": "Arweave",
+      "fdv": 125110368,
+      "marketCap": 125110368,
+      "rank": 230,
+      "price": 1.9,
+      "change24h": -4.09754,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/arweave/",
+      "coinGeckoId": "arweave",
+      "spotPairs": [
+        "ARUSDT",
+        "ARUSDC",
+        "ARBTC"
+      ],
+      "futuresPairs": [
+        "ARUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "AT",
+      "name": "Apro",
+      "fdv": 124836896,
+      "marketCap": 28712486,
+      "rank": 647,
+      "price": 0.124831,
+      "change24h": 1.09353,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/artfinity/",
+      "coinGeckoId": "apro",
+      "spotPairs": [
+        "ATUSDT",
+        "ATUSDC"
+      ],
+      "futuresPairs": [
+        "ATUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "DYDX",
+      "name": "dYdX",
+      "fdv": 124048885,
+      "marketCap": 109259130,
+      "rank": 253,
+      "price": 0.129441,
+      "change24h": -10.22689,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/dydx/",
+      "coinGeckoId": "dydx-chain",
+      "spotPairs": [
+        "DYDXUSDT",
+        "DYDXUSDC"
+      ],
+      "futuresPairs": [
+        "DYDXUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "GALA",
+      "name": "GALA",
+      "fdv": 123655285,
+      "marketCap": 123655285,
+      "rank": 233,
+      "price": 0.00255123,
+      "change24h": -4.49797,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/gala/",
+      "coinGeckoId": "gala",
+      "spotPairs": [
+        "GALAUSDT",
+        "GALAUSDC"
+      ],
+      "futuresPairs": [
+        "GALAUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "APE",
+      "name": "ApeCoin",
+      "fdv": 120956701,
+      "marketCap": 120956701,
+      "rank": 235,
+      "price": 0.121041,
+      "change24h": -5.48583,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/apecoin/",
+      "coinGeckoId": "apecoin",
+      "spotPairs": [
+        "APEUSDT",
+        "APEUSDC"
+      ],
+      "futuresPairs": [
+        "APEUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "CVX",
+      "name": "Convex Finance",
+      "fdv": 120134493,
+      "marketCap": 108584362,
+      "rank": 256,
+      "price": 1.2,
+      "change24h": -4.95429,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/convex-finance/",
+      "coinGeckoId": "convex-finance",
+      "spotPairs": [
+        "CVXUSDT",
+        "CVXUSDC"
+      ],
+      "futuresPairs": [
+        "CVXUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "ARKM",
+      "name": "Arkham",
+      "fdv": 118660468,
+      "marketCap": 76041942,
+      "rank": 318,
+      "price": 0.11866,
+      "change24h": -2.69293,
+      "yziLabs": true,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/arkham/",
+      "coinGeckoId": "arkham",
+      "spotPairs": [
+        "ARKMUSDT",
+        "ARKMUSDC"
+      ],
+      "futuresPairs": [
+        "ARKMUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "SFP",
+      "name": "SafePal",
+      "fdv": 115196713,
+      "marketCap": 115196713,
+      "rank": 240,
+      "price": 0.230366,
+      "change24h": -3.77235,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/safepal/",
+      "coinGeckoId": "safepal",
+      "spotPairs": [
+        "SFPUSDT"
+      ],
+      "futuresPairs": [
+        "SFPUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "S",
+      "name": "Sonic",
+      "fdv": 114831099,
+      "marketCap": 111854390,
+      "rank": 245,
+      "price": 0.02953853,
+      "change24h": -2.43719,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/sharpay/",
+      "coinGeckoId": "sonic-3",
+      "spotPairs": [
+        "SUSDT",
+        "SUSDC",
+        "SBNB"
+      ],
+      "futuresPairs": [
+        "SUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "FOGO",
+      "name": "Fogo",
+      "fdv": 110606869,
+      "marketCap": 42389732,
+      "rank": 494,
+      "price": 0.01104785,
+      "change24h": -5.42208,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/fogo/",
+      "coinGeckoId": "fogo",
+      "spotPairs": [
+        "FOGOUSDT",
+        "FOGOUSDC"
+      ],
+      "futuresPairs": [
+        "FOGOUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "GLM",
+      "name": "Golem",
+      "fdv": 107999143,
+      "marketCap": 107999143,
+      "rank": 257,
+      "price": 0.107894,
+      "change24h": -5.54693,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/golem-network-tokens/",
+      "coinGeckoId": "golem",
+      "spotPairs": [
+        "GLMUSDT",
+        "GLMBTC"
+      ],
+      "futuresPairs": [
+        "GLMUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "BANANAS31",
+      "name": "Banana For Scale",
+      "fdv": 107505742,
+      "marketCap": 107505742,
+      "rank": 258,
+      "price": 0.01072641,
+      "change24h": -0.96323,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/banana-for-scale/",
+      "coinGeckoId": "banana-for-scale-2",
+      "spotPairs": [
+        "BANANAS31USDT",
+        "BANANAS31USDC"
+      ],
+      "futuresPairs": [
+        "BANANAS31USDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "PLUME",
+      "name": "Plume",
+      "fdv": 106979706,
+      "marketCap": 61595467,
+      "rank": 386,
+      "price": 0.01068846,
+      "change24h": -6.02173,
+      "yziLabs": true,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/plume/",
+      "coinGeckoId": "plume",
+      "spotPairs": [
+        "PLUMEUSDT",
+        "PLUMEUSDC"
+      ],
+      "futuresPairs": [
+        "PLUMEUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "SOMI",
+      "name": "Somnia",
+      "fdv": 105767618,
+      "marketCap": 16943972,
+      "rank": 885,
+      "price": 0.105743,
+      "change24h": -7.23082,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/somnia/",
+      "coinGeckoId": "somnia",
+      "spotPairs": [
+        "SOMIUSDT",
+        "SOMIUSDC"
+      ],
+      "futuresPairs": [
+        "SOMIUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "AWE",
+      "name": "AWE Network",
+      "fdv": 105409764,
+      "marketCap": 105409764,
+      "rank": 263,
+      "price": 0.054326,
+      "change24h": -0.87405,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/awe-network/",
+      "coinGeckoId": "stp-network",
+      "spotPairs": [
+        "AWEUSDT"
+      ],
+      "futuresPairs": [
+        "AWEUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "1INCH",
+      "name": "1INCH",
+      "fdv": 105053784,
+      "marketCap": 98440576,
+      "rank": 275,
+      "price": 0.069972,
+      "change24h": -2.71763,
+      "yziLabs": true,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/1inch/",
+      "coinGeckoId": "1inch",
+      "spotPairs": [
+        "1INCHUSDT",
+        "1INCHUSDC"
+      ],
+      "futuresPairs": [
+        "1INCHUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "MMT",
+      "name": "Momentum",
+      "fdv": 104148744,
+      "marketCap": 21256282,
+      "rank": 771,
+      "price": 0.104308,
+      "change24h": -3.79011,
+      "yziLabs": false,
+      "okxVentures": true,
+      "cmcUrl": "https://coinmarketcap.com/currencies/momentum-token/",
+      "coinGeckoId": "momentum-3",
+      "spotPairs": [
+        "MMTUSDT",
+        "MMTUSDC"
+      ],
+      "futuresPairs": [
+        "MMTUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "1000CHEEMS",
+      "name": "Cheems Token",
+      "fdv": 103522991,
+      "marketCap": 103522991,
+      "rank": 266,
+      "price": 5.08319e-7,
+      "change24h": 1.62183,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/cheems-token/",
+      "coinGeckoId": "cheems-token",
+      "spotPairs": [
+        "1000CHEEMSUSDT",
+        "1000CHEEMSUSDC"
+      ],
+      "futuresPairs": [
+        "1000CHEEMSUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "BIO",
+      "name": "Bio Protocol",
+      "fdv": 100336013,
+      "marketCap": 64826405,
+      "rank": 373,
+      "price": 0.03011688,
+      "change24h": -8.70356,
+      "yziLabs": true,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/biocoin/",
+      "coinGeckoId": "bio-protocol",
+      "spotPairs": [
+        "BIOUSDT",
+        "BIOUSDC"
+      ],
+      "futuresPairs": [
+        "BIOUSDT",
+        "BIOUSDC"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "AVNT",
+      "name": "Avantis",
+      "fdv": 100224430,
+      "marketCap": 32473263,
+      "rank": 599,
+      "price": 0.099901,
+      "change24h": -3.11896,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/avantis/",
+      "coinGeckoId": "avantis",
+      "spotPairs": [
+        "AVNTUSDT",
+        "AVNTUSDC"
+      ],
+      "futuresPairs": [
+        "AVNTUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "MET",
+      "name": "Meteora",
+      "fdv": 99799025,
+      "marketCap": 52914468,
+      "rank": 430,
+      "price": 0.09981,
+      "change24h": -2.0405,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/metronome/",
+      "coinGeckoId": "meteora",
+      "spotPairs": [
+        "METUSDT",
+        "METUSDC"
+      ],
+      "futuresPairs": [
+        "METUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "ERA",
+      "name": "Caldera",
+      "fdv": 97616434,
+      "marketCap": 17058472,
+      "rank": 882,
+      "price": 0.097593,
+      "change24h": -4.7337,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/blakestar/",
+      "coinGeckoId": "caldera",
+      "spotPairs": [
+        "ERAUSDT",
+        "ERAUSDC",
+        "ERAFDUSD",
+        "ERABNB"
+      ],
+      "futuresPairs": [
+        "ERAUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "C",
+      "name": "Chainbase",
+      "fdv": 94034441,
+      "marketCap": 15045511,
+      "rank": 941,
+      "price": 0.09393,
+      "change24h": -6.36267,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/chainbase/",
+      "coinGeckoId": "chainbase",
+      "spotPairs": [
+        "CUSDT",
+        "CUSDC"
+      ],
+      "futuresPairs": [
+        "CUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "RED",
+      "name": "RedStone",
+      "fdv": 92963393,
+      "marketCap": 38261901,
+      "rank": 524,
+      "price": 0.092795,
+      "change24h": -5.56795,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/red/",
+      "coinGeckoId": "redstone-oracles",
+      "spotPairs": [
+        "REDUSDT",
+        "REDUSDC"
+      ],
+      "futuresPairs": [
+        "REDUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "ZEN",
+      "name": "Horizen",
+      "fdv": 91183030,
+      "marketCap": 78596875,
+      "rank": 310,
+      "price": 4.32,
+      "change24h": -4.73942,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/horizen/",
+      "coinGeckoId": "zencash",
+      "spotPairs": [
+        "ZENUSDT",
+        "ZENUSDC",
+        "ZENBTC"
+      ],
+      "futuresPairs": [
+        "ZENUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "SUPER",
+      "name": "SuperVerse",
+      "fdv": 91090303,
+      "marketCap": 58312783,
+      "rank": 402,
+      "price": 0.09105,
+      "change24h": -4.21336,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/supercoin/",
+      "coinGeckoId": "superfarm",
+      "spotPairs": [
+        "SUPERUSDT",
+        "SUPERBTC"
+      ],
+      "futuresPairs": [
+        "SUPERUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "NMR",
+      "name": "Numeraire",
+      "fdv": 90700083,
+      "marketCap": 60026006,
+      "rank": 391,
+      "price": 8.53,
+      "change24h": 3.80416,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/numeraire/",
+      "coinGeckoId": "numeraire",
+      "spotPairs": [
+        "NMRUSDT",
+        "NMRUSDC"
+      ],
+      "futuresPairs": [
+        "NMRUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "W",
+      "name": "Wormhole",
+      "fdv": 88313352,
+      "marketCap": 52672352,
+      "rank": 435,
+      "price": 0.00883091,
+      "change24h": -8.63638,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/wormhole/",
+      "coinGeckoId": "wormhole",
+      "spotPairs": [
+        "WUSDT",
+        "WUSDC"
+      ],
+      "futuresPairs": [
+        "WUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "ZRX",
+      "name": "0x Protocol",
+      "fdv": 87660264,
+      "marketCap": 74370666,
+      "rank": 329,
+      "price": 0.087436,
+      "change24h": 1.77279,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/0x/",
+      "coinGeckoId": "0x",
+      "spotPairs": [
+        "ZRXUSDT"
+      ],
+      "futuresPairs": [
+        "ZRXUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "EGLD",
+      "name": "MultiversX",
+      "fdv": 86277691,
+      "marketCap": 86277691,
+      "rank": 287,
+      "price": 2.86,
+      "change24h": -5.10487,
+      "yziLabs": true,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/elrond-egld/",
+      "coinGeckoId": "elrond-erd-2",
+      "spotPairs": [
+        "EGLDUSDT",
+        "EGLDUSDC",
+        "EGLDETH"
+      ],
+      "futuresPairs": [
+        "EGLDUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "LPT",
+      "name": "Livepeer",
+      "fdv": 85892589,
+      "marketCap": 85892589,
+      "rank": 288,
+      "price": 1.73,
+      "change24h": -5.19675,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/livepeer/",
+      "coinGeckoId": "livepeer",
+      "spotPairs": [
+        "LPTUSDT",
+        "LPTUSDC",
+        "LPTBTC"
+      ],
+      "futuresPairs": [
+        "LPTUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "SIGN",
+      "name": "Sign",
+      "fdv": 84422472,
+      "marketCap": 19445309,
+      "rank": 818,
+      "price": 0.00844148,
+      "change24h": -5.28032,
+      "yziLabs": true,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/signature-chain/",
+      "coinGeckoId": "sign-global",
+      "spotPairs": [
+        "SIGNUSDT",
+        "SIGNUSDC",
+        "SIGNBNB"
+      ],
+      "futuresPairs": [
+        "SIGNUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "OPN",
+      "name": "Opinion",
+      "fdv": 84069778,
+      "marketCap": 15278360,
+      "rank": 935,
+      "price": 0.084824,
+      "change24h": -23.34637,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/opinion/",
+      "coinGeckoId": "opinion",
+      "spotPairs": [
+        "OPNUSDT",
+        "OPNUSDC"
+      ],
+      "futuresPairs": [
+        "OPNUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "BEAMX",
+      "name": "Beam",
+      "fdv": 84018855,
+      "marketCap": 73715908,
+      "rank": 330,
+      "price": 0.00143701,
+      "change24h": -3.98637,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/beam/",
+      "coinGeckoId": "beam-2",
+      "spotPairs": [
+        "BEAMXUSDT",
+        "BEAMXUSDC"
+      ],
+      "futuresPairs": [
+        "BEAMXUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "SNX",
+      "name": "Synthetix",
+      "fdv": 82190579,
+      "marketCap": 82089638,
+      "rank": 297,
+      "price": 0.238297,
+      "change24h": -4.78938,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/synthetix-network-token/",
+      "coinGeckoId": "havven",
+      "spotPairs": [
+        "SNXUSDT",
+        "SNXUSDC"
+      ],
+      "futuresPairs": [
+        "SNXUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "BREV",
+      "name": "Brevis",
+      "fdv": 78627105,
+      "marketCap": 19656776,
+      "rank": 813,
+      "price": 0.078686,
+      "change24h": -4.39429,
+      "yziLabs": true,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/brevis/",
+      "coinGeckoId": "brevis",
+      "spotPairs": [
+        "BREVUSDT",
+        "BREVUSDC"
+      ],
+      "futuresPairs": [
+        "BREVUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "ACH",
+      "name": "Alchemy Pay",
+      "fdv": 77999077,
+      "marketCap": 0,
+      "rank": null,
+      "price": 0.00508262,
+      "change24h": -5.16736,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/alchemy-pay/",
+      "coinGeckoId": "alchemy-pay",
+      "spotPairs": [
+        "ACHUSDT",
+        "ACHUSDC"
+      ],
+      "futuresPairs": [
+        "ACHUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "SAPIEN",
+      "name": "Sapien",
+      "fdv": 76883658,
+      "marketCap": 19220914,
+      "rank": 825,
+      "price": 0.076953,
+      "change24h": -5.18224,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/sapien/",
+      "coinGeckoId": "sapien-2",
+      "spotPairs": [
+        "SAPIENUSDT",
+        "SAPIENUSDC"
+      ],
+      "futuresPairs": [
+        "SAPIENUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "MANTA",
+      "name": "Manta Network",
+      "fdv": 76559898,
+      "marketCap": 36250709,
+      "rank": 546,
+      "price": 0.076552,
+      "change24h": -0.80691,
+      "yziLabs": true,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/manta-network/",
+      "coinGeckoId": "manta-network",
+      "spotPairs": [
+        "MANTAUSDT",
+        "MANTAUSDC"
+      ],
+      "futuresPairs": [
+        "MANTAUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "QTUM",
+      "name": "Qtum",
+      "fdv": 74222429,
+      "marketCap": 72996696,
+      "rank": 333,
+      "price": 0.690476,
+      "change24h": -3.22893,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/qtum/",
+      "coinGeckoId": "qtum",
+      "spotPairs": [
+        "QTUMUSDT"
+      ],
+      "futuresPairs": [
+        "QTUMUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "ORCA",
+      "name": "Orca",
+      "fdv": 74073431,
+      "marketCap": 60048019,
+      "rank": 390,
+      "price": 0.987896,
+      "change24h": -7.59039,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/orca-alliance/",
+      "coinGeckoId": "orca",
+      "spotPairs": [
+        "ORCAUSDT",
+        "ORCAUSDC"
+      ],
+      "futuresPairs": [
+        "ORCAUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "XVS",
+      "name": "Venus",
+      "fdv": 71995868,
+      "marketCap": 40726372,
+      "rank": 501,
+      "price": 2.42,
+      "change24h": -0.30155,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/venus/",
+      "coinGeckoId": "venus",
+      "spotPairs": [
+        "XVSUSDT"
+      ],
+      "futuresPairs": [
+        "XVSUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "GAS",
+      "name": "Gas",
+      "fdv": 71565688,
+      "marketCap": 71565688,
+      "rank": 341,
+      "price": 1.1,
+      "change24h": -4.80538,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/gas/",
+      "coinGeckoId": "gas",
+      "spotPairs": [
+        "GASUSDT"
+      ],
+      "futuresPairs": [
+        "GASUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "RVN",
+      "name": "Ravencoin",
+      "fdv": 68484882,
+      "marketCap": 68476100,
+      "rank": 355,
+      "price": 0.00420029,
+      "change24h": -2.83941,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/ravencoin/",
+      "coinGeckoId": "ravencoin",
+      "spotPairs": [
+        "RVNUSDT",
+        "RVNUSDC"
+      ],
+      "futuresPairs": [
+        "RVNUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "LA",
+      "name": "Lagrange",
+      "fdv": 68334372,
+      "marketCap": 13188534,
+      "rank": 989,
+      "price": 0.06815,
+      "change24h": -9.25937,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/latoken/",
+      "coinGeckoId": "lagrange",
+      "spotPairs": [
+        "LAUSDT",
+        "LAUSDC"
+      ],
+      "futuresPairs": [
+        "LAUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "YFI",
+      "name": "yearn.finance",
+      "fdv": 68214180,
+      "marketCap": 66632724,
+      "rank": 365,
+      "price": 1859.62,
+      "change24h": -3.82816,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/yearn-finance/",
+      "coinGeckoId": "yearn-finance",
+      "spotPairs": [
+        "YFIUSDT"
+      ],
+      "futuresPairs": [
+        "YFIUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "GPS",
+      "name": "GoPlus Security",
+      "fdv": 67763575,
+      "marketCap": 29877638,
+      "rank": 633,
+      "price": 0.00676659,
+      "change24h": -1.98197,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/goplus-security/",
+      "coinGeckoId": "goplus-security",
+      "spotPairs": [
+        "GPSUSDT",
+        "GPSUSDC"
+      ],
+      "futuresPairs": [
+        "GPSUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "LAYER",
+      "name": "Solayer",
+      "fdv": 66556969,
+      "marketCap": 13976963,
+      "rank": 969,
+      "price": 0.066562,
+      "change24h": -2.96621,
+      "yziLabs": true,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/unilayer/",
+      "coinGeckoId": "solayer",
+      "spotPairs": [
+        "LAYERUSDT",
+        "LAYERUSDC"
+      ],
+      "futuresPairs": [
+        "LAYERUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "1MBABYDOGE",
+      "name": "1MBABYDOGE",
+      "fdv": 66367001,
+      "marketCap": 0,
+      "rank": null,
+      "price": 0.00032738,
+      "change24h": -5.17705,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/babydoge-coin/",
+      "coinGeckoId": "1mbabydoge",
+      "spotPairs": [
+        "1MBABYDOGEUSDT",
+        "1MBABYDOGEUSDC"
+      ],
+      "futuresPairs": [
+        "1MBABYDOGEUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "KSM",
+      "name": "Kusama",
+      "fdv": 65129332,
+      "marketCap": 65129332,
+      "rank": 371,
+      "price": 3.54,
+      "change24h": -4.79241,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/kusama/",
+      "coinGeckoId": "kusama",
+      "spotPairs": [
+        "KSMUSDT"
+      ],
+      "futuresPairs": [
+        "KSMUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "YB",
+      "name": "Yield Basis",
+      "fdv": 64938156,
+      "marketCap": 18597132,
+      "rank": 844,
+      "price": 0.088051,
+      "change24h": -4.76322,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/yieldbasis/",
+      "coinGeckoId": "yield-basis",
+      "spotPairs": [
+        "YBUSDT",
+        "YBUSDC"
+      ],
+      "futuresPairs": [
+        "YBUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "ORDI",
+      "name": "ORDI",
+      "fdv": 63814918,
+      "marketCap": 63814918,
+      "rank": 375,
+      "price": 3.04,
+      "change24h": -1.84313,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/ordi/",
+      "coinGeckoId": "ordinals",
+      "spotPairs": [
+        "ORDIUSDT",
+        "ORDIUSDC"
+      ],
+      "futuresPairs": [
+        "ORDIUSDT",
+        "ORDIUSDC"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "ZIL",
+      "name": "Zilliqa",
+      "fdv": 62156332,
+      "marketCap": 59227968,
+      "rank": 397,
+      "price": 0.00303072,
+      "change24h": -2.88344,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/zilliqa/",
+      "coinGeckoId": "zilliqa",
+      "spotPairs": [
+        "ZILUSDT"
+      ],
+      "futuresPairs": [
+        "ZILUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "ROSE",
+      "name": "Oasis",
+      "fdv": 61807228,
+      "marketCap": 47394940,
+      "rank": 468,
+      "price": 0.00617316,
+      "change24h": -7.63508,
+      "yziLabs": true,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/oasis-network/",
+      "coinGeckoId": "oasis-network",
+      "spotPairs": [
+        "ROSEUSDT",
+        "ROSEUSDC"
+      ],
+      "futuresPairs": [
+        "ROSEUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "GUN",
+      "name": "Gunz",
+      "fdv": 61767852,
+      "marketCap": 14322821,
+      "rank": 959,
+      "price": 0.0061608,
+      "change24h": -5.99186,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/gunz/",
+      "coinGeckoId": "gunz",
+      "spotPairs": [
+        "GUNUSDT",
+        "GUNUSDC",
+        "GUNBNB"
+      ],
+      "futuresPairs": [
+        "GUNUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "RONIN",
+      "name": "Ronin",
+      "fdv": 61282149,
+      "marketCap": 47334435,
+      "rank": 469,
+      "price": 0.060956,
+      "change24h": -4.89209,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/ronin/",
+      "coinGeckoId": "ronin",
+      "spotPairs": [
+        "RONINUSDT"
+      ],
+      "futuresPairs": [
+        "RONINUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "RIF",
+      "name": "Rootstock Infrastructure Framework",
+      "fdv": 59749450,
+      "marketCap": 59749450,
+      "rank": 395,
+      "price": 0.05961,
+      "change24h": -10.99368,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/rsk-infrastructure-framework/",
+      "coinGeckoId": "rif-token",
+      "spotPairs": [
+        "RIFUSDT"
+      ],
+      "futuresPairs": [
+        "RIFUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "ENJ",
+      "name": "Enjin Coin",
+      "fdv": 59276321,
+      "marketCap": 58588161,
+      "rank": 399,
+      "price": 0.0296124,
+      "change24h": -3.68672,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/enjin-coin/",
+      "coinGeckoId": "enjincoin",
+      "spotPairs": [
+        "ENJUSDT",
+        "ENJUSDC"
+      ],
+      "futuresPairs": [
+        "ENJUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "ALT",
+      "name": "AltLayer",
+      "fdv": 58946510,
+      "marketCap": 37749304,
+      "rank": 530,
+      "price": 0.00589488,
+      "change24h": 1.88554,
+      "yziLabs": true,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/alt-estate-token/",
+      "coinGeckoId": "altlayer",
+      "spotPairs": [
+        "ALTUSDT",
+        "ALTUSDC"
+      ],
+      "futuresPairs": [
+        "ALTUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "CELO",
+      "name": "Celo",
+      "fdv": 58591275,
+      "marketCap": 35284314,
+      "rank": 555,
+      "price": 0.058617,
+      "change24h": -4.37921,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/celo/",
+      "coinGeckoId": "celo",
+      "spotPairs": [
+        "CELOUSDT"
+      ],
+      "futuresPairs": [
+        "CELOUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "ME",
+      "name": "Magic Eden",
+      "fdv": 58380459,
+      "marketCap": 32643478,
+      "rank": 598,
+      "price": 0.058392,
+      "change24h": -6.39026,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/all-me/",
+      "coinGeckoId": "magic-eden",
+      "spotPairs": [
+        "MEUSDT",
+        "MEUSDC"
+      ],
+      "futuresPairs": [
+        "MEUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "INIT",
+      "name": "Initia",
+      "fdv": 57708129,
+      "marketCap": 11400742,
+      "rank": 1072,
+      "price": 0.057439,
+      "change24h": 3.89205,
+      "yziLabs": true,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/initia/",
+      "coinGeckoId": "initia",
+      "spotPairs": [
+        "INITUSDT",
+        "INITUSDC"
+      ],
+      "futuresPairs": [
+        "INITUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "GMX",
+      "name": "GMX",
+      "fdv": 57327990,
+      "marketCap": 57327982,
+      "rank": 405,
+      "price": 5.5,
+      "change24h": -4.92381,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/gmx/",
+      "coinGeckoId": "gmx",
+      "spotPairs": [
+        "GMXUSDT",
+        "GMXUSDC"
+      ],
+      "futuresPairs": [
+        "GMXUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "TURBO",
+      "name": "Turbo",
+      "fdv": 57276162,
+      "marketCap": 57276162,
+      "rank": 406,
+      "price": 0.00083012,
+      "change24h": -6.13132,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/turbo/",
+      "coinGeckoId": "turbo",
+      "spotPairs": [
+        "TURBOUSDT",
+        "TURBOUSDC"
+      ],
+      "futuresPairs": [
+        "TURBOUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "ENSO",
+      "name": "Enso",
+      "fdv": 56302408,
+      "marketCap": 11592666,
+      "rank": 1062,
+      "price": 0.563186,
+      "change24h": -4.55324,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/enso/",
+      "coinGeckoId": "enso",
+      "spotPairs": [
+        "ENSOUSDT",
+        "ENSOUSDC",
+        "ENSOBNB"
+      ],
+      "futuresPairs": [
+        "ENSOUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "MINA",
+      "name": "Mina Protocol",
+      "fdv": 53751360,
+      "marketCap": 53751360,
+      "rank": 422,
+      "price": 0.04163448,
+      "change24h": -5.6376,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/mina/",
+      "coinGeckoId": "mina-protocol",
+      "spotPairs": [
+        "MINAUSDT",
+        "MINAUSDC"
+      ],
+      "futuresPairs": [
+        "MINAUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "HYPER",
+      "name": "Hyperlane",
+      "fdv": 53530431,
+      "marketCap": 22422710,
+      "rank": 749,
+      "price": 0.066333,
+      "change24h": -5.95686,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/hyperlane/",
+      "coinGeckoId": "hyperlane",
+      "spotPairs": [
+        "HYPERUSDT",
+        "HYPERUSDC"
+      ],
+      "futuresPairs": [
+        "HYPERUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "MIRA",
+      "name": "Mira",
+      "fdv": 53405436,
+      "marketCap": 15089200,
+      "rank": 939,
+      "price": 0.05345,
+      "change24h": -10.02181,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/mira-network/",
+      "coinGeckoId": "mira-3",
+      "spotPairs": [
+        "MIRAUSDT",
+        "MIRAUSDC"
+      ],
+      "futuresPairs": [
+        "MIRAUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "HOT",
+      "name": "Holo",
+      "fdv": 53351663,
+      "marketCap": 53351663,
+      "rank": 427,
+      "price": 0.00029981,
+      "change24h": -6.15068,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/holo/",
+      "coinGeckoId": "holotoken",
+      "spotPairs": [
+        "HOTUSDT"
+      ],
+      "futuresPairs": [
+        "HOTUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "AXL",
+      "name": "Axelar",
+      "fdv": 52816457,
+      "marketCap": 50272046,
+      "rank": 451,
+      "price": 0.04241909,
+      "change24h": -3.33272,
+      "yziLabs": true,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/axial-entertainment-digital-asset/",
+      "coinGeckoId": "axelar",
+      "spotPairs": [
+        "AXLUSDT"
+      ],
+      "futuresPairs": [
+        "AXLUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "BLUR",
+      "name": "Blur",
+      "fdv": 52460581,
+      "marketCap": 49266266,
+      "rank": 460,
+      "price": 0.01748595,
+      "change24h": -2.20711,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/blur/",
+      "coinGeckoId": "blur",
+      "spotPairs": [
+        "BLURUSDT",
+        "BLURUSDC"
+      ],
+      "futuresPairs": [
+        "BLURUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "PARTI",
+      "name": "Particle Network",
+      "fdv": 52383834,
+      "marketCap": 12205433,
+      "rank": 1035,
+      "price": 0.052419,
+      "change24h": -3.32126,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/particle-network/",
+      "coinGeckoId": "particle-network",
+      "spotPairs": [
+        "PARTIUSDT",
+        "PARTIUSDC",
+        "PARTIFDUSD",
+        "PARTIBNB"
+      ],
+      "futuresPairs": [
+        "PARTIUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "CKB",
+      "name": "Nervos Network",
+      "fdv": 52363919,
+      "marketCap": 51508935,
+      "rank": 442,
+      "price": 0.00105218,
+      "change24h": -3.21991,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/nervos-network/",
+      "coinGeckoId": "nervos-network",
+      "spotPairs": [
+        "CKBUSDT",
+        "CKBUSDC"
+      ],
+      "futuresPairs": [
+        "CKBUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "ZKP",
+      "name": "zkPass",
+      "fdv": 51998621,
+      "marketCap": 10486389,
+      "rank": 1114,
+      "price": 0.052004,
+      "change24h": -4.91511,
+      "yziLabs": true,
+      "okxVentures": true,
+      "cmcUrl": "https://coinmarketcap.com/currencies/zkpass/",
+      "coinGeckoId": "zkpass",
+      "spotPairs": [
+        "ZKPUSDT",
+        "ZKPUSDC"
+      ],
+      "futuresPairs": [
+        "ZKPUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "SOPH",
+      "name": "Sophon",
+      "fdv": 51599957,
+      "marketCap": 17816075,
+      "rank": 863,
+      "price": 0.00514351,
+      "change24h": -7.80135,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/sophon/",
+      "coinGeckoId": "sophon",
+      "spotPairs": [
+        "SOPHUSDT",
+        "SOPHUSDC"
+      ],
+      "futuresPairs": [
+        "SOPHUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "KAT",
+      "name": "Katana",
+      "fdv": 51449021,
+      "marketCap": 12049361,
+      "rank": 1042,
+      "price": 0.00514803,
+      "change24h": -2.48412,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/kambria/",
+      "coinGeckoId": "katana-network-token",
+      "spotPairs": [
+        "KATUSDT",
+        "KATUSDC"
+      ],
+      "futuresPairs": [
+        "KATUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "HIVE",
+      "name": "Hive",
+      "fdv": 51275991,
+      "marketCap": 25221615,
+      "rank": 704,
+      "price": 0.04576406,
+      "change24h": -7.54075,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/hive-blockchain/",
+      "coinGeckoId": "hive",
+      "spotPairs": [
+        "HIVEUSDT",
+        "HIVEUSDC"
+      ],
+      "futuresPairs": [
+        "HIVEUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "DUSK",
+      "name": "DUSK",
+      "fdv": 51111802,
+      "marketCap": 51111620,
+      "rank": 446,
+      "price": 0.086749,
+      "change24h": -7.04087,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/dusk-network/",
+      "coinGeckoId": "dusk-network",
+      "spotPairs": [
+        "DUSKUSDT",
+        "DUSKBTC"
+      ],
+      "futuresPairs": [
+        "DUSKUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "NEWT",
+      "name": "Newton Protocol",
+      "fdv": 50756888,
+      "marketCap": 10912731,
+      "rank": 1096,
+      "price": 0.050739,
+      "change24h": -8.49974,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/newton-protocol/",
+      "coinGeckoId": "newton-protocol",
+      "spotPairs": [
+        "NEWTUSDT",
+        "NEWTUSDC"
+      ],
+      "futuresPairs": [
+        "NEWTUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "MANTRA",
+      "name": "MANTRA",
+      "fdv": 50432516,
+      "marketCap": 36323601,
+      "rank": 548,
+      "price": 0.00703906,
+      "change24h": -4.98976,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/mantra/",
+      "coinGeckoId": "mantra",
+      "spotPairs": [
+        "MANTRAUSDT",
+        "MANTRAUSDC"
+      ],
+      "futuresPairs": [
+        "MANTRAUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "STO",
+      "name": "StakeStone",
+      "fdv": 49983989,
+      "marketCap": 11263059,
+      "rank": 1080,
+      "price": 0.04996619,
+      "change24h": -5.23761,
+      "yziLabs": true,
+      "okxVentures": true,
+      "cmcUrl": "https://coinmarketcap.com/currencies/storeum/",
+      "coinGeckoId": "stakestone",
+      "spotPairs": [
+        "STOUSDT",
+        "STOUSDC"
+      ],
+      "futuresPairs": [
+        "STOUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "ZKC",
+      "name": "Boundless",
+      "fdv": 49926799,
+      "marketCap": 13800506,
+      "rank": 976,
+      "price": 0.04741106,
+      "change24h": -6.18552,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/boundless/",
+      "coinGeckoId": "boundless",
+      "spotPairs": [
+        "ZKCUSDT",
+        "ZKCUSDC"
+      ],
+      "futuresPairs": [
+        "ZKCUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "HEMI",
+      "name": "Hemi",
+      "fdv": 49255759,
+      "marketCap": 4814750,
+      "rank": 1597,
+      "price": 0.00491929,
+      "change24h": -11.96695,
+      "yziLabs": true,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/hemi/",
+      "coinGeckoId": "hemi",
+      "spotPairs": [
+        "HEMIUSDT",
+        "HEMIUSDC"
+      ],
+      "futuresPairs": [
+        "HEMIUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "UMA",
+      "name": "UMA",
+      "fdv": 48578902,
+      "marketCap": 34146767,
+      "rank": 573,
+      "price": 0.376905,
+      "change24h": -4.01977,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/uma/",
+      "coinGeckoId": "uma",
+      "spotPairs": [
+        "UMAUSDT",
+        "UMAUSDC"
+      ],
+      "futuresPairs": [
+        "UMAUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "POLYX",
+      "name": "Polymesh",
+      "fdv": 48441011,
+      "marketCap": 48441011,
+      "rank": 464,
+      "price": 0.03769493,
+      "change24h": -5.539,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/polymesh/",
+      "coinGeckoId": "polymesh",
+      "spotPairs": [
+        "POLYXUSDT"
+      ],
+      "futuresPairs": [
+        "POLYXUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "POWR",
+      "name": "Powerledger",
+      "fdv": 48228620,
+      "marketCap": 25562309,
+      "rank": 699,
+      "price": 0.04779331,
+      "change24h": -5.2998,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/power-ledger/",
+      "coinGeckoId": "power-ledger",
+      "spotPairs": [
+        "POWRUSDT"
+      ],
+      "futuresPairs": [
+        "POWRUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "ID",
+      "name": "SPACE ID",
+      "fdv": 47707337,
+      "marketCap": 10286549,
+      "rank": 1131,
+      "price": 0.02391201,
+      "change24h": -10.69187,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/space-id/",
+      "coinGeckoId": "space-id",
+      "spotPairs": [
+        "IDUSDT"
+      ],
+      "futuresPairs": [
+        "IDUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "KERNEL",
+      "name": "KernelDAO",
+      "fdv": 47452237,
+      "marketCap": 13657134,
+      "rank": 981,
+      "price": 0.04737426,
+      "change24h": -5.55365,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/kerneldao/",
+      "coinGeckoId": "kernel-2",
+      "spotPairs": [
+        "KERNELUSDT",
+        "KERNELUSDC"
+      ],
+      "futuresPairs": [
+        "KERNELUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "SUSHI",
+      "name": "Sushi",
+      "fdv": 46964906,
+      "marketCap": 43984036,
+      "rank": 490,
+      "price": 0.161098,
+      "change24h": -5.86059,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/sushiswap/",
+      "coinGeckoId": "sushi",
+      "spotPairs": [
+        "SUSHIUSDT",
+        "SUSHIUSDC"
+      ],
+      "futuresPairs": [
+        "SUSHIUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "ASTR",
+      "name": "Astar",
+      "fdv": 46930839,
+      "marketCap": 46926642,
+      "rank": 472,
+      "price": 0.00539036,
+      "change24h": -6.44495,
+      "yziLabs": false,
+      "okxVentures": true,
+      "cmcUrl": "https://coinmarketcap.com/currencies/astar/",
+      "coinGeckoId": "astar",
+      "spotPairs": [
+        "ASTRUSDT"
+      ],
+      "futuresPairs": [
+        "ASTRUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "CATI",
+      "name": "Catizen",
+      "fdv": 46285213,
+      "marketCap": 21001834,
+      "rank": 780,
+      "price": 0.04614392,
+      "change24h": 3.58326,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/catizen/",
+      "coinGeckoId": "catizen",
+      "spotPairs": [
+        "CATIUSDT",
+        "CATIUSDC"
+      ],
+      "futuresPairs": [
+        "CATIUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "ONT",
+      "name": "Ontology",
+      "fdv": 45993457,
+      "marketCap": 45993457,
+      "rank": 478,
+      "price": 0.04585495,
+      "change24h": -6.32404,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/ontology/",
+      "coinGeckoId": "ontology",
+      "spotPairs": [
+        "ONTUSDT",
+        "ONTUSDC",
+        "ONTBTC"
+      ],
+      "futuresPairs": [
+        "ONTUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "KAVA",
+      "name": "Kava",
+      "fdv": 45356310,
+      "marketCap": 45356310,
+      "rank": 484,
+      "price": 0.04181054,
+      "change24h": -4.74272,
+      "yziLabs": true,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/kava/",
+      "coinGeckoId": "kava",
+      "spotPairs": [
+        "KAVAUSDT",
+        "KAVABTC"
+      ],
+      "futuresPairs": [
+        "KAVAUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "BB",
+      "name": "BounceBit",
+      "fdv": 44255195,
+      "marketCap": 8629763,
+      "rank": 1215,
+      "price": 0.02091608,
+      "change24h": -5.17179,
+      "yziLabs": true,
+      "okxVentures": true,
+      "cmcUrl": "https://coinmarketcap.com/currencies/bouncebit/",
+      "coinGeckoId": "bouncebit",
+      "spotPairs": [
+        "BBUSDT",
+        "BBUSDC"
+      ],
+      "futuresPairs": [
+        "BBUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "FLOW",
+      "name": "Flow",
+      "fdv": 43689405,
+      "marketCap": 43689405,
+      "rank": 492,
+      "price": 0.02620719,
+      "change24h": -4.06014,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/flow-protocol/",
+      "coinGeckoId": "flow",
+      "spotPairs": [
+        "FLOWUSDT"
+      ],
+      "futuresPairs": [
+        "FLOWUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "BIGTIME",
+      "name": "Big Time",
+      "fdv": 43335517,
+      "marketCap": 16538957,
+      "rank": 898,
+      "price": 0.00866767,
+      "change24h": -7.21125,
+      "yziLabs": false,
+      "okxVentures": true,
+      "cmcUrl": "https://coinmarketcap.com/currencies/big-time/",
+      "coinGeckoId": "big-time",
+      "spotPairs": [
+        "BIGTIMEUSDT",
+        "BIGTIMEUSDC"
+      ],
+      "futuresPairs": [
+        "BIGTIMEUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "EDEN",
+      "name": "OpenEden",
+      "fdv": 42728310,
+      "marketCap": 7856454,
+      "rank": 1275,
+      "price": 0.0428752,
+      "change24h": -10.78831,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/openeden/",
+      "coinGeckoId": "openeden",
+      "spotPairs": [
+        "EDENUSDT",
+        "EDENUSDC"
+      ],
+      "futuresPairs": [
+        "EDENUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "ACX",
+      "name": "Across Protocol",
+      "fdv": 42535315,
+      "marketCap": 29972835,
+      "rank": 631,
+      "price": 0.04252488,
+      "change24h": 1.91915,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/ac-index/",
+      "coinGeckoId": "across-protocol",
+      "spotPairs": [
+        "ACXUSDT",
+        "ACXUSDC"
+      ],
+      "futuresPairs": [
+        "ACXUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "API3",
+      "name": "Api3",
+      "fdv": 42295880,
+      "marketCap": 35261631,
+      "rank": 557,
+      "price": 0.247195,
+      "change24h": -5.26833,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/api3/",
+      "coinGeckoId": "api3",
+      "spotPairs": [
+        "API3USDT",
+        "API3USDC"
+      ],
+      "futuresPairs": [
+        "API3USDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "T",
+      "name": "Threshold Network",
+      "fdv": 41236989,
+      "marketCap": 41236989,
+      "rank": 497,
+      "price": 0.00370913,
+      "change24h": -6.09221,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/t/",
+      "coinGeckoId": "threshold-network-token",
+      "spotPairs": [
+        "TUSDT",
+        "TUSDC"
+      ],
+      "futuresPairs": [
+        "TUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "PNUT",
+      "name": "Peanut the Squirrel",
+      "fdv": 41173825,
+      "marketCap": 41173825,
+      "rank": 499,
+      "price": 0.04108152,
+      "change24h": -3.39983,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/peanut-the-squirrel/",
+      "coinGeckoId": "peanut-the-squirrel",
+      "spotPairs": [
+        "PNUTUSDT",
+        "PNUTUSDC"
+      ],
+      "futuresPairs": [
+        "PNUTUSDT",
+        "PNUTUSDC"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "XVG",
+      "name": "Verge",
+      "fdv": 40840031,
+      "marketCap": 40758502,
+      "rank": 500,
+      "price": 0.00246587,
+      "change24h": -5.84152,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/verge/",
+      "coinGeckoId": "verge",
+      "spotPairs": [
+        "XVGUSDT",
+        "XVGUSDC"
+      ],
+      "futuresPairs": [
+        "XVGUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "SXT",
+      "name": "Space and Time",
+      "fdv": 40527296,
+      "marketCap": 21064578,
+      "rank": 776,
+      "price": 0.00807193,
+      "change24h": -6.18519,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/space-and-time/",
+      "coinGeckoId": "space-and-time",
+      "spotPairs": [
+        "SXTUSDT",
+        "SXTUSDC"
+      ],
+      "futuresPairs": [
+        "SXTUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "LISTA",
+      "name": "Lista DAO",
+      "fdv": 40523134,
+      "marketCap": 19602889,
+      "rank": 815,
+      "price": 0.050885,
+      "change24h": -4.50961,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/lista-dao/",
+      "coinGeckoId": "lista",
+      "spotPairs": [
+        "LISTAUSDT",
+        "LISTAUSDC"
+      ],
+      "futuresPairs": [
+        "LISTAUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "MEME",
+      "name": "Memecoin",
+      "fdv": 39584356,
+      "marketCap": 36438482,
+      "rank": 543,
+      "price": 0.00057531,
+      "change24h": -1.30232,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/degenerator-meme/",
+      "coinGeckoId": "memecoin-2",
+      "spotPairs": [
+        "MEMEUSDT",
+        "MEMEUSDC"
+      ],
+      "futuresPairs": [
+        "MEMEUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "VTHO",
+      "name": "VeThor",
+      "fdv": 39187402,
+      "marketCap": 39139057,
+      "rank": 515,
+      "price": 0.00038922,
+      "change24h": -4.07658,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/vethor-token/",
+      "coinGeckoId": "vethor-token",
+      "spotPairs": [
+        "VTHOUSDT"
+      ],
+      "futuresPairs": [
+        "VTHOUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "GMT",
+      "name": "GMT",
+      "fdv": 38958053,
+      "marketCap": 23889963,
+      "rank": 731,
+      "price": 0.00767669,
+      "change24h": -4.73917,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/green-metaverse-token/",
+      "coinGeckoId": "stepn",
+      "spotPairs": [
+        "GMTUSDT",
+        "GMTUSDC"
+      ],
+      "futuresPairs": [
+        "GMTUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "NOT",
+      "name": "Notcoin",
+      "fdv": 37853712,
+      "marketCap": 36736676,
+      "rank": 539,
+      "price": 0.00036924,
+      "change24h": -4.91771,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/notcoin/",
+      "coinGeckoId": "notcoin",
+      "spotPairs": [
+        "NOTUSDT",
+        "NOTUSDC",
+        "NOTFDUSD"
+      ],
+      "futuresPairs": [
+        "NOTUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "ONG",
+      "name": "Ontology Gas",
+      "fdv": 37348571,
+      "marketCap": 22059518,
+      "rank": 757,
+      "price": 0.04668153,
+      "change24h": -6.11363,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/ongsocial/",
+      "coinGeckoId": "ong",
+      "spotPairs": [
+        "ONGUSDT",
+        "ONGBTC"
+      ],
+      "futuresPairs": [
+        "ONGUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "ANKR",
+      "name": "Ankr Network",
+      "fdv": 37280118,
+      "marketCap": 37280118,
+      "rank": 535,
+      "price": 0.00372324,
+      "change24h": -4.81216,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/ankr/",
+      "coinGeckoId": "ankr",
+      "spotPairs": [
+        "ANKRUSDT"
+      ],
+      "futuresPairs": [
+        "ANKRUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "NIL",
+      "name": "Nillion",
+      "fdv": 37107543,
+      "marketCap": 17362369,
+      "rank": 872,
+      "price": 0.0369972,
+      "change24h": -9.1108,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/nillion/",
+      "coinGeckoId": "nillion",
+      "spotPairs": [
+        "NILUSDT",
+        "NILUSDC"
+      ],
+      "futuresPairs": [
+        "NILUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "TRB",
+      "name": "Tellor Tributes",
+      "fdv": 37014112,
+      "marketCap": 36061487,
+      "rank": 549,
+      "price": 12.96,
+      "change24h": -3.99761,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/tellor/",
+      "coinGeckoId": "tellor",
+      "spotPairs": [
+        "TRBUSDT",
+        "TRBUSDC"
+      ],
+      "futuresPairs": [
+        "TRBUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "F",
+      "name": "SynFutures",
+      "fdv": 36927315,
+      "marketCap": 15832259,
+      "rank": 918,
+      "price": 0.00368646,
+      "change24h": -8.22616,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/synfutures/",
+      "coinGeckoId": "synfutures",
+      "spotPairs": [
+        "FUSDT",
+        "FUSDC"
+      ],
+      "futuresPairs": [
+        "FUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "USTC",
+      "name": "TerraClassicUSD",
+      "fdv": 36820991,
+      "marketCap": 33774235,
+      "rank": 580,
+      "price": 0.00605639,
+      "change24h": -3.41212,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/terrausd/",
+      "coinGeckoId": "terrausd",
+      "spotPairs": [
+        "USTCUSDT"
+      ],
+      "futuresPairs": [
+        "USTCUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "LSK",
+      "name": "Lisk",
+      "fdv": 36610779,
+      "marketCap": 21333531,
+      "rank": 778,
+      "price": 0.091236,
+      "change24h": -5.9902,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/lisk/",
+      "coinGeckoId": "lisk",
+      "spotPairs": [
+        "LSKUSDT",
+        "LSKUSDC"
+      ],
+      "futuresPairs": [
+        "LSKUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "VELODROME",
+      "name": "Velodrome Finance",
+      "fdv": 34706845,
+      "marketCap": 16754581,
+      "rank": 889,
+      "price": 0.01395119,
+      "change24h": 0.73259,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/velodrome-finance/",
+      "coinGeckoId": "velodrome-finance",
+      "spotPairs": [
+        "VELODROMEUSDT",
+        "VELODROMEUSDC"
+      ],
+      "futuresPairs": [
+        "VELODROMEUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "CYBER",
+      "name": "CYBER",
+      "fdv": 34500226,
+      "marketCap": 23074850,
+      "rank": 737,
+      "price": 0.345164,
+      "change24h": -6.53244,
+      "yziLabs": true,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/cyberway/",
+      "coinGeckoId": "cyberconnect",
+      "spotPairs": [
+        "CYBERUSDT",
+        "CYBERUSDC"
+      ],
+      "futuresPairs": [
+        "CYBERUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "MASK",
+      "name": "Mask Network",
+      "fdv": 34431249,
+      "marketCap": 34431249,
+      "rank": 570,
+      "price": 0.343964,
+      "change24h": -4.57619,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/mask-network/",
+      "coinGeckoId": "mask-network",
+      "spotPairs": [
+        "MASKUSDT",
+        "MASKUSDC"
+      ],
+      "futuresPairs": [
+        "MASKUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "STG",
+      "name": "Stargate Finance",
+      "fdv": 33364822,
+      "marketCap": 33364822,
+      "rank": 586,
+      "price": 0.284324,
+      "change24h": 11.56069,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/stargate-finance/",
+      "coinGeckoId": "stargate-finance",
+      "spotPairs": [
+        "STGUSDT"
+      ],
+      "futuresPairs": [
+        "STGUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "SCR",
+      "name": "Scroll",
+      "fdv": 32677833,
+      "marketCap": 6208788,
+      "rank": 1416,
+      "price": 0.03268992,
+      "change24h": -5.79998,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/scorum-coins/",
+      "coinGeckoId": "scroll",
+      "spotPairs": [
+        "SCRUSDT"
+      ],
+      "futuresPairs": [
+        "SCRUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "STORJ",
+      "name": "Storj",
+      "fdv": 32225535,
+      "marketCap": 10902652,
+      "rank": 1097,
+      "price": 0.075845,
+      "change24h": -4.91541,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/storj/",
+      "coinGeckoId": "storj",
+      "spotPairs": [
+        "STORJUSDT"
+      ],
+      "futuresPairs": [
+        "STORJUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "ICX",
+      "name": "ICON",
+      "fdv": 32170875,
+      "marketCap": 31832007,
+      "rank": 609,
+      "price": 0.02901434,
+      "change24h": -4.25931,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/icon/",
+      "coinGeckoId": "icon",
+      "spotPairs": [
+        "ICXUSDT"
+      ],
+      "futuresPairs": [
+        "ICXUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "G",
+      "name": "Gravity (by Galxe)",
+      "fdv": 31524059,
+      "marketCap": 19000338,
+      "rank": 829,
+      "price": 0.00262418,
+      "change24h": -5.86329,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/g-token/",
+      "coinGeckoId": "g-token",
+      "spotPairs": [
+        "GUSDT"
+      ],
+      "futuresPairs": [
+        "GUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "IOTX",
+      "name": "IoTeX",
+      "fdv": 31245804,
+      "marketCap": 31245804,
+      "rank": 615,
+      "price": 0.0032942,
+      "change24h": -5.45387,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/iotex/",
+      "coinGeckoId": "iotex",
+      "spotPairs": [
+        "IOTXUSDT"
+      ],
+      "futuresPairs": [
+        "IOTXUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "ILV",
+      "name": "Illuvium",
+      "fdv": 30873597,
+      "marketCap": 26654757,
+      "rank": 675,
+      "price": 3.21,
+      "change24h": -5.64702,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/illuvium/",
+      "coinGeckoId": "illuvium",
+      "spotPairs": [
+        "ILVUSDT",
+        "ILVUSDC"
+      ],
+      "futuresPairs": [
+        "ILVUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "PHA",
+      "name": "PHALA",
+      "fdv": 30678693,
+      "marketCap": 25762904,
+      "rank": 696,
+      "price": 0.03063507,
+      "change24h": -7.55335,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/phala-network/",
+      "coinGeckoId": "pha",
+      "spotPairs": [
+        "PHAUSDT",
+        "PHAUSDC"
+      ],
+      "futuresPairs": [
+        "PHAUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "REZ",
+      "name": "Renzo",
+      "fdv": 30496722,
+      "marketCap": 26779836,
+      "rank": 674,
+      "price": 0.00309807,
+      "change24h": -6.48699,
+      "yziLabs": true,
+      "okxVentures": true,
+      "cmcUrl": "https://coinmarketcap.com/currencies/renzo/",
+      "coinGeckoId": "renzo",
+      "spotPairs": [
+        "REZUSDT",
+        "REZUSDC"
+      ],
+      "futuresPairs": [
+        "REZUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "SSV",
+      "name": "SSV Network",
+      "fdv": 29807881,
+      "marketCap": 29807881,
+      "rank": 635,
+      "price": 2.03,
+      "change24h": -3.44105,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/ssv-network/",
+      "coinGeckoId": "ssv-network",
+      "spotPairs": [
+        "SSVUSDT",
+        "SSVUSDC"
+      ],
+      "futuresPairs": [
+        "SSVUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "BNT",
+      "name": "Bancor Network",
+      "fdv": 29731343,
+      "marketCap": 29731343,
+      "rank": 636,
+      "price": 0.275632,
+      "change24h": -1.13489,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/bancor/",
+      "coinGeckoId": "bancor",
+      "spotPairs": [
+        "BNTUSDT"
+      ],
+      "futuresPairs": [
+        "BNTUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "BAND",
+      "name": "Band",
+      "fdv": 29562027,
+      "marketCap": 29511919,
+      "rank": 637,
+      "price": 0.166637,
+      "change24h": -5.19389,
+      "yziLabs": true,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/band-protocol/",
+      "coinGeckoId": "band-protocol",
+      "spotPairs": [
+        "BANDUSDT"
+      ],
+      "futuresPairs": [
+        "BANDUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "RPL",
+      "name": "Rocket Pool",
+      "fdv": 29210575,
+      "marketCap": 29210575,
+      "rank": 641,
+      "price": 1.29,
+      "change24h": -5.13009,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/rocket-pool/",
+      "coinGeckoId": "rocket-pool",
+      "spotPairs": [
+        "RPLUSDT",
+        "RPLUSDC"
+      ],
+      "futuresPairs": [
+        "RPLUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "RLC",
+      "name": "iExec RLC",
+      "fdv": 29085464,
+      "marketCap": 24198680,
+      "rank": 724,
+      "price": 0.334329,
+      "change24h": -4.43927,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/rlc/",
+      "coinGeckoId": "iexec-rlc",
+      "spotPairs": [
+        "RLCUSDT"
+      ],
+      "futuresPairs": [
+        "RLCUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "NEIRO",
+      "name": "Neiro",
+      "fdv": 29028270,
+      "marketCap": 29028270,
+      "rank": 644,
+      "price": 0.00006901,
+      "change24h": 2.4455,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/neiro/",
+      "coinGeckoId": "neiro-3",
+      "spotPairs": [
+        "NEIROUSDT",
+        "NEIROUSDC"
+      ],
+      "futuresPairs": [
+        "NEIROUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "ANIME",
+      "name": "Animecoin",
+      "fdv": 28710647,
+      "marketCap": 15901692,
+      "rank": 914,
+      "price": 0.0028619,
+      "change24h": -6.74382,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/animecoin/",
+      "coinGeckoId": "anime",
+      "spotPairs": [
+        "ANIMEUSDT",
+        "ANIMEUSDC"
+      ],
+      "futuresPairs": [
+        "ANIMEUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "KNC",
+      "name": "Kyber Network Crystal",
+      "fdv": 28483847,
+      "marketCap": 20113522,
+      "rank": 806,
+      "price": 0.118021,
+      "change24h": -2.78715,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/kyber-network/",
+      "coinGeckoId": "kyber-network-crystal",
+      "spotPairs": [
+        "KNCUSDT",
+        "KNCBTC"
+      ],
+      "futuresPairs": [
+        "KNCUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "TNSR",
+      "name": "Tensor",
+      "fdv": 28419241,
+      "marketCap": 9509284,
+      "rank": 1167,
+      "price": 0.02841924,
+      "change24h": -6.09871,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/tensor/",
+      "coinGeckoId": "tensor",
+      "spotPairs": [
+        "TNSRUSDT",
+        "TNSRUSDC"
+      ],
+      "futuresPairs": [
+        "TNSRUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "AUCTION",
+      "name": "Bounce",
+      "fdv": 28223734,
+      "marketCap": 27408805,
+      "rank": 666,
+      "price": 3.69,
+      "change24h": -4.70112,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/bounce-token/",
+      "coinGeckoId": "auction",
+      "spotPairs": [
+        "AUCTIONUSDT",
+        "AUCTIONUSDC"
+      ],
+      "futuresPairs": [
+        "AUCTIONUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "GIGGLE",
+      "name": "Giggle Fund",
+      "fdv": 28079462,
+      "marketCap": 28079462,
+      "rank": 658,
+      "price": 28.13,
+      "change24h": -5.20309,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/giggle-fund/",
+      "coinGeckoId": "giggle-fund",
+      "spotPairs": [
+        "GIGGLEUSDT",
+        "GIGGLEUSDC"
+      ],
+      "futuresPairs": [
+        "GIGGLEUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "BOME",
+      "name": "BOOK OF MEME",
+      "fdv": 28021551,
+      "marketCap": 28021551,
+      "rank": 660,
+      "price": 0.00040611,
+      "change24h": -4.6849,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/book-of-meme/",
+      "coinGeckoId": "book-of-meme",
+      "spotPairs": [
+        "BOMEUSDT",
+        "BOMEUSDC"
+      ],
+      "futuresPairs": [
+        "BOMEUSDT",
+        "BOMEUSDC"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "COTI",
+      "name": "COTI",
+      "fdv": 27891302,
+      "marketCap": 27891000,
+      "rank": 662,
+      "price": 0.00973962,
+      "change24h": -4.11126,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/coti/",
+      "coinGeckoId": "coti",
+      "spotPairs": [
+        "COTIUSDT",
+        "COTIUSDC"
+      ],
+      "futuresPairs": [
+        "COTIUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "SOLV",
+      "name": "Solv Protocol",
+      "fdv": 27671726,
+      "marketCap": 4884060,
+      "rank": 1586,
+      "price": 0.00329865,
+      "change24h": -4.33592,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/solv-protocol/",
+      "coinGeckoId": "solv-protocol",
+      "spotPairs": [
+        "SOLVUSDT",
+        "SOLVUSDC"
+      ],
+      "futuresPairs": [
+        "SOLVUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "EDU",
+      "name": "Open Campus",
+      "fdv": 27057419,
+      "marketCap": 20959166,
+      "rank": 781,
+      "price": 0.02704511,
+      "change24h": -10.40842,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/edu-coin/",
+      "coinGeckoId": "edu-coin",
+      "spotPairs": [
+        "EDUUSDT"
+      ],
+      "futuresPairs": [
+        "EDUUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "IOST",
+      "name": "IOST",
+      "fdv": 26514063,
+      "marketCap": 26514063,
+      "rank": 676,
+      "price": 0.00077832,
+      "change24h": -6.17382,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/iostoken/",
+      "coinGeckoId": "iostoken",
+      "spotPairs": [
+        "IOSTUSDT"
+      ],
+      "futuresPairs": [
+        "IOSTUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "SKL",
+      "name": "SKALE",
+      "fdv": 26481743,
+      "marketCap": 25943540,
+      "rank": 690,
+      "price": 0.00425569,
+      "change24h": -6.50989,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/skale-network/",
+      "coinGeckoId": "skale",
+      "spotPairs": [
+        "SKLUSDT",
+        "SKLUSDC"
+      ],
+      "futuresPairs": [
+        "SKLUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "PEOPLE",
+      "name": "ConstitutionDAO",
+      "fdv": 26272572,
+      "marketCap": 26272572,
+      "rank": 682,
+      "price": 0.00518035,
+      "change24h": -5.13407,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/constitutiondao/",
+      "coinGeckoId": "constitutiondao",
+      "spotPairs": [
+        "PEOPLEUSDT",
+        "PEOPLEUSDC"
+      ],
+      "futuresPairs": [
+        "PEOPLEUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "PIXEL",
+      "name": "Pixels",
+      "fdv": 26113591,
+      "marketCap": 4026933,
+      "rank": 1705,
+      "price": 0.00522361,
+      "change24h": -4.14934,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/pixels/",
+      "coinGeckoId": "pixels",
+      "spotPairs": [
+        "PIXELUSDT",
+        "PIXELUSDC"
+      ],
+      "futuresPairs": [
+        "PIXELUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "SHELL",
+      "name": "MyShell",
+      "fdv": 25116622,
+      "marketCap": 6781488,
+      "rank": 1353,
+      "price": 0.02511664,
+      "change24h": -5.59067,
+      "yziLabs": true,
+      "okxVentures": true,
+      "cmcUrl": "https://coinmarketcap.com/currencies/myshell/",
+      "coinGeckoId": "myshell",
+      "spotPairs": [
+        "SHELLUSDT",
+        "SHELLUSDC"
+      ],
+      "futuresPairs": [
+        "SHELLUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "YGG",
+      "name": "Yield Guild Games",
+      "fdv": 25032772,
+      "marketCap": 19242308,
+      "rank": 824,
+      "price": 0.02505047,
+      "change24h": -5.58623,
+      "yziLabs": false,
+      "okxVentures": true,
+      "cmcUrl": "https://coinmarketcap.com/currencies/yield-guild-games/",
+      "coinGeckoId": "yield-guild-games",
+      "spotPairs": [
+        "YGGUSDT",
+        "YGGUSDC"
+      ],
+      "futuresPairs": [
+        "YGGUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "METIS",
+      "name": "Metis",
+      "fdv": 24841103,
+      "marketCap": 18612033,
+      "rank": 843,
+      "price": 2.48,
+      "change24h": -6.41365,
+      "yziLabs": false,
+      "okxVentures": true,
+      "cmcUrl": "https://coinmarketcap.com/currencies/metisdao/",
+      "coinGeckoId": "metis-token",
+      "spotPairs": [
+        "METISUSDT"
+      ],
+      "futuresPairs": [
+        "METISUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "WOO",
+      "name": "WOO",
+      "fdv": 24328948,
+      "marketCap": 24328948,
+      "rank": 716,
+      "price": 0.01289023,
+      "change24h": -5.95234,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/wootrade/",
+      "coinGeckoId": "woo-network",
+      "spotPairs": [
+        "WOOUSDT"
+      ],
+      "futuresPairs": [
+        "WOOUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "BANANA",
+      "name": "Banana Gun",
+      "fdv": 24242167,
+      "marketCap": 11587273,
+      "rank": 1061,
+      "price": 2.89,
+      "change24h": -4.32072,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/banana-finance/",
+      "coinGeckoId": "banana-gun",
+      "spotPairs": [
+        "BANANAUSDT",
+        "BANANAUSDC"
+      ],
+      "futuresPairs": [
+        "BANANAUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "STEEM",
+      "name": "Steem",
+      "fdv": 24224361,
+      "marketCap": 24220720,
+      "rank": 723,
+      "price": 0.04408061,
+      "change24h": -3.44867,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/steem/",
+      "coinGeckoId": "steem",
+      "spotPairs": [
+        "STEEMUSDT",
+        "STEEMUSDC"
+      ],
+      "futuresPairs": [
+        "STEEMUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "SPELL",
+      "name": "Spell",
+      "fdv": 23722883,
+      "marketCap": 20757873,
+      "rank": 789,
+      "price": 0.0001211,
+      "change24h": -4.64,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/spell-token/",
+      "coinGeckoId": "spell-token",
+      "spotPairs": [
+        "SPELLUSDT"
+      ],
+      "futuresPairs": [
+        "SPELLUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "OGN",
+      "name": "Origin Token",
+      "fdv": 23648900,
+      "marketCap": 11150553,
+      "rank": 1086,
+      "price": 0.01678012,
+      "change24h": -6.75318,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/origin-protocol/",
+      "coinGeckoId": "origin-protocol",
+      "spotPairs": [
+        "OGNUSDT"
+      ],
+      "futuresPairs": [
+        "OGNUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "FIDA",
+      "name": "Bonfida",
+      "fdv": 23571767,
+      "marketCap": 23571767,
+      "rank": 733,
+      "price": 0.02378537,
+      "change24h": -13.77716,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/bonfida/",
+      "coinGeckoId": "bonfida",
+      "spotPairs": [
+        "FIDAUSDT"
+      ],
+      "futuresPairs": [
+        "FIDAUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "PUNDIX",
+      "name": "Pundi X",
+      "fdv": 23416020,
+      "marketCap": 23416020,
+      "rank": 735,
+      "price": 0.090654,
+      "change24h": -10.89633,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/pundix-new/",
+      "coinGeckoId": "pundi-x-2",
+      "spotPairs": [
+        "PUNDIXUSDT"
+      ],
+      "futuresPairs": [
+        "PUNDIXUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "EUL",
+      "name": "Euler",
+      "fdv": 23136534,
+      "marketCap": 20552030,
+      "rank": 798,
+      "price": 0.855304,
+      "change24h": -5.08844,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/euler-finance/",
+      "coinGeckoId": "euler",
+      "spotPairs": [
+        "EULUSDT",
+        "EULUSDC"
+      ],
+      "futuresPairs": [
+        "EULUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "TOWNS",
+      "name": "Towns",
+      "fdv": 23058379,
+      "marketCap": 4802220,
+      "rank": 1601,
+      "price": 0.00227845,
+      "change24h": -3.37342,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/towns/",
+      "coinGeckoId": "towns",
+      "spotPairs": [
+        "TOWNSUSDT",
+        "TOWNSUSDC"
+      ],
+      "futuresPairs": [
+        "TOWNSUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "CTSI",
+      "name": "Cartesi",
+      "fdv": 22607728,
+      "marketCap": 20931996,
+      "rank": 782,
+      "price": 0.02260632,
+      "change24h": -8.68434,
+      "yziLabs": true,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/cartesi/",
+      "coinGeckoId": "cartesi",
+      "spotPairs": [
+        "CTSIUSDT"
+      ],
+      "futuresPairs": [
+        "CTSIUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "ARK",
+      "name": "ARK",
+      "fdv": 22378860,
+      "marketCap": 22378830,
+      "rank": 751,
+      "price": 0.112889,
+      "change24h": -7.69932,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/ark/",
+      "coinGeckoId": "ark",
+      "spotPairs": [
+        "ARKUSDT"
+      ],
+      "futuresPairs": [
+        "ARKUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "DOLO",
+      "name": "Dolomite",
+      "fdv": 22368790,
+      "marketCap": 10924233,
+      "rank": 1094,
+      "price": 0.02239954,
+      "change24h": -4.50969,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/dolomite/",
+      "coinGeckoId": "dolomite",
+      "spotPairs": [
+        "DOLOUSDT",
+        "DOLOUSDC"
+      ],
+      "futuresPairs": [
+        "DOLOUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "CVC",
+      "name": "Civic",
+      "fdv": 22259933,
+      "marketCap": 17852466,
+      "rank": 860,
+      "price": 0.02226427,
+      "change24h": -5.60642,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/civic/",
+      "coinGeckoId": "civic",
+      "spotPairs": [
+        "CVCUSDT",
+        "CVCUSDC"
+      ],
+      "futuresPairs": [
+        "CVCUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "MTL",
+      "name": "Metal DAO",
+      "fdv": 22112773,
+      "marketCap": 22112773,
+      "rank": 756,
+      "price": 0.244068,
+      "change24h": -4.15093,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/metal/",
+      "coinGeckoId": "metal",
+      "spotPairs": [
+        "MTLUSDT"
+      ],
+      "futuresPairs": [
+        "MTLUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "DOGS",
+      "name": "Dogs",
+      "fdv": 21833093,
+      "marketCap": 20513183,
+      "rank": 800,
+      "price": 0.00003963,
+      "change24h": -4.30108,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/dogs/",
+      "coinGeckoId": "dogs-2",
+      "spotPairs": [
+        "DOGSUSDT",
+        "DOGSUSDC"
+      ],
+      "futuresPairs": [
+        "DOGSUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "ONE",
+      "name": "Harmony",
+      "fdv": 21503951,
+      "marketCap": 21503949,
+      "rank": 768,
+      "price": 0.00144549,
+      "change24h": -7.22161,
+      "yziLabs": true,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/harmony/",
+      "coinGeckoId": "harmony",
+      "spotPairs": [
+        "ONEUSDT"
+      ],
+      "futuresPairs": [
+        "ONEUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "CELR",
+      "name": "Celer Network",
+      "fdv": 21363187,
+      "marketCap": 12060491,
+      "rank": 1044,
+      "price": 0.00213501,
+      "change24h": -4.56767,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/celer-network/",
+      "coinGeckoId": "celer-network",
+      "spotPairs": [
+        "CELRUSDT"
+      ],
+      "futuresPairs": [
+        "CELRUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "AIXBT",
+      "name": "aixbt",
+      "fdv": 21271607,
+      "marketCap": 21157983,
+      "rank": 773,
+      "price": 0.02126705,
+      "change24h": -4.92835,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/aixbt/",
+      "coinGeckoId": "aixbt",
+      "spotPairs": [
+        "AIXBTUSDT",
+        "AIXBTUSDC"
+      ],
+      "futuresPairs": [
+        "AIXBTUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "CGPT",
+      "name": "ChainGPT",
+      "fdv": 20931366,
+      "marketCap": 19429238,
+      "rank": 821,
+      "price": 0.0209605,
+      "change24h": 3.26703,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/chaingpt/",
+      "coinGeckoId": "chaingpt",
+      "spotPairs": [
+        "CGPTUSDT",
+        "CGPTUSDC"
+      ],
+      "futuresPairs": [
+        "CGPTUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "MAV",
+      "name": "Maverick Protocol",
+      "fdv": 20902651,
+      "marketCap": 9707951,
+      "rank": 1159,
+      "price": 0.01046267,
+      "change24h": -5.50346,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/maverick-protocol/",
+      "coinGeckoId": "maverick-protocol",
+      "spotPairs": [
+        "MAVUSDT"
+      ],
+      "futuresPairs": [
+        "MAVUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "SCRT",
+      "name": "Secret",
+      "fdv": 20830931,
+      "marketCap": 19994704,
+      "rank": 809,
+      "price": 0.057867,
+      "change24h": -6.29666,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/secret/",
+      "coinGeckoId": "secret",
+      "spotPairs": [
+        "SCRTUSDT"
+      ],
+      "futuresPairs": [
+        "SCRTUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "FLUX",
+      "name": "Flux",
+      "fdv": 20751367,
+      "marketCap": 20747634,
+      "rank": 790,
+      "price": 0.050433,
+      "change24h": -5.33892,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/flux/",
+      "coinGeckoId": "zelcash",
+      "spotPairs": [
+        "FLUXUSDT",
+        "FLUXUSDC"
+      ],
+      "futuresPairs": [
+        "FLUXUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "MITO",
+      "name": "Mitosis",
+      "fdv": 20542067,
+      "marketCap": 7244502,
+      "rank": 1314,
+      "price": 0.02068975,
+      "change24h": -9.07849,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/mitosis/",
+      "coinGeckoId": "mitosis",
+      "spotPairs": [
+        "MITOUSDT",
+        "MITOUSDC"
+      ],
+      "futuresPairs": [
+        "MITOUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "WAXP",
+      "name": "WAX",
+      "fdv": 20419510,
+      "marketCap": 20419510,
+      "rank": 799,
+      "price": 0.00441988,
+      "change24h": -8.16633,
+      "yziLabs": false,
+      "okxVentures": true,
+      "cmcUrl": "https://coinmarketcap.com/currencies/wax/",
+      "coinGeckoId": "wax",
+      "spotPairs": [
+        "WAXPUSDT"
+      ],
+      "futuresPairs": [
+        "WAXPUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "DIA",
+      "name": "DIA",
+      "fdv": 20232137,
+      "marketCap": 14342748,
+      "rank": 957,
+      "price": 0.11982,
+      "change24h": -5.50599,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/dia/",
+      "coinGeckoId": "dia-data",
+      "spotPairs": [
+        "DIAUSDT"
+      ],
+      "futuresPairs": [
+        "DIAUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "LQTY",
+      "name": "Liquity",
+      "fdv": 19606172,
+      "marketCap": 19355983,
+      "rank": 822,
+      "price": 0.195873,
+      "change24h": -5.61695,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/liquity/",
+      "coinGeckoId": "liquity",
+      "spotPairs": [
+        "LQTYUSDT"
+      ],
+      "futuresPairs": [
+        "LQTYUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "PROM",
+      "name": "Prom",
+      "fdv": 19451838,
+      "marketCap": 18441353,
+      "rank": 848,
+      "price": 1.008,
+      "change24h": -1.21306,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/prometeus/",
+      "coinGeckoId": "prometeus",
+      "spotPairs": [
+        "PROMUSDT"
+      ],
+      "futuresPairs": [
+        "PROMUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "SANTOS",
+      "name": "Santos FC Fan Token",
+      "fdv": 19363280,
+      "marketCap": 10388306,
+      "rank": 1124,
+      "price": 0.645444,
+      "change24h": 1.03934,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/santos-fc-fan-token/",
+      "coinGeckoId": "santos-fc-fan-token",
+      "spotPairs": [
+        "SANTOSUSDT"
+      ],
+      "futuresPairs": [
+        "SANTOSUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "1000SATS",
+      "name": "1000SATS (Ordinals)",
+      "fdv": 19334696,
+      "marketCap": 0,
+      "rank": null,
+      "price": 0.00000922,
+      "change24h": -4.07332,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/sats/",
+      "coinGeckoId": "1000sats-ordinals",
+      "spotPairs": [
+        "1000SATSUSDT",
+        "1000SATSUSDC"
+      ],
+      "futuresPairs": [
+        "1000SATSUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "CTK",
+      "name": "Shentu",
+      "fdv": 19261813,
+      "marketCap": 18977189,
+      "rank": 830,
+      "price": 0.120332,
+      "change24h": -6.98442,
+      "yziLabs": true,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/cryptyk-token/",
+      "coinGeckoId": "certik",
+      "spotPairs": [
+        "CTKUSDT",
+        "CTKBTC",
+        "CTKBNB"
+      ],
+      "futuresPairs": [
+        "CTKUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "LUMIA",
+      "name": "Lumia",
+      "fdv": 19130561,
+      "marketCap": 11090958,
+      "rank": 1088,
+      "price": 0.079703,
+      "change24h": -4.23659,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/lumia/",
+      "coinGeckoId": "lumia",
+      "spotPairs": [
+        "LUMIAUSDT"
+      ],
+      "futuresPairs": [
+        "LUMIAUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "HAEDAL",
+      "name": "Haedal Protocol",
+      "fdv": 18742152,
+      "marketCap": 3654720,
+      "rank": 1778,
+      "price": 0.01884377,
+      "change24h": -15.659,
+      "yziLabs": false,
+      "okxVentures": true,
+      "cmcUrl": "https://coinmarketcap.com/currencies/haedal-protocol/",
+      "coinGeckoId": "haedal",
+      "spotPairs": [
+        "HAEDALUSDT",
+        "HAEDALUSDC"
+      ],
+      "futuresPairs": [
+        "HAEDALUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "AEVO",
+      "name": "Aevo",
+      "fdv": 18735902,
+      "marketCap": 17183544,
+      "rank": 879,
+      "price": 0.0187359,
+      "change24h": -6.59704,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/aevo-coin/",
+      "coinGeckoId": "aevo-exchange",
+      "spotPairs": [
+        "AEVOUSDT",
+        "AEVOUSDC"
+      ],
+      "futuresPairs": [
+        "AEVOUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "TREE",
+      "name": "Tree",
+      "fdv": 18575054,
+      "marketCap": 16552767,
+      "rank": 899,
+      "price": 0.163304,
+      "change24h": -2.33897,
+      "yziLabs": true,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/treehouse/",
+      "coinGeckoId": "tree-capital",
+      "spotPairs": [
+        "TREEUSDT",
+        "TREEUSDC"
+      ],
+      "futuresPairs": [
+        "TREEUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "THE",
+      "name": "Thena",
+      "fdv": 18549465,
+      "marketCap": 8678152,
+      "rank": 1212,
+      "price": 0.065401,
+      "change24h": -6.15416,
+      "yziLabs": true,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/thenode/",
+      "coinGeckoId": "thena",
+      "spotPairs": [
+        "THEUSDT",
+        "THEUSDC"
+      ],
+      "futuresPairs": [
+        "THEUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "SLP",
+      "name": "Smooth Love Potion",
+      "fdv": 17982301,
+      "marketCap": 17982301,
+      "rank": 857,
+      "price": 0.00049502,
+      "change24h": -5.44295,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/small-love-potion/",
+      "coinGeckoId": "smooth-love-potion",
+      "spotPairs": [
+        "SLPUSDT"
+      ],
+      "futuresPairs": [
+        "SLPUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "CETUS",
+      "name": "Cetus Protocol",
+      "fdv": 17872531,
+      "marketCap": 16940051,
+      "rank": 886,
+      "price": 0.01788444,
+      "change24h": -6.00247,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/cetus-protocol/",
+      "coinGeckoId": "cetus-protocol",
+      "spotPairs": [
+        "CETUSUSDT",
+        "CETUSUSDC"
+      ],
+      "futuresPairs": [
+        "CETUSUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "BICO",
+      "name": "Biconomy",
+      "fdv": 17758250,
+      "marketCap": 12751306,
+      "rank": 1014,
+      "price": 0.01777643,
+      "change24h": -6.6664,
+      "yziLabs": true,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/biconomy/",
+      "coinGeckoId": "biconomy",
+      "spotPairs": [
+        "BICOUSDT"
+      ],
+      "futuresPairs": [
+        "BICOUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "HMSTR",
+      "name": "Hamster Kombat",
+      "fdv": 17734623,
+      "marketCap": 11416664,
+      "rank": 1071,
+      "price": 0.00017642,
+      "change24h": 6.04316,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/hamster-kombat/",
+      "coinGeckoId": "hamster-kombat",
+      "spotPairs": [
+        "HMSTRUSDT",
+        "HMSTRUSDC"
+      ],
+      "futuresPairs": [
+        "HMSTRUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "USUAL",
+      "name": "Usual",
+      "fdv": 17454596,
+      "marketCap": 17033113,
+      "rank": 883,
+      "price": 0.0094989,
+      "change24h": -3.53819,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/usual/",
+      "coinGeckoId": "usual",
+      "spotPairs": [
+        "USUALUSDT",
+        "USUALUSDC"
+      ],
+      "futuresPairs": [
+        "USUALUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "RESOLV",
+      "name": "Resolv",
+      "fdv": 17049845,
+      "marketCap": 6760537,
+      "rank": 1355,
+      "price": 0.01707699,
+      "change24h": -6.03547,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/resolv/",
+      "coinGeckoId": "resolv",
+      "spotPairs": [
+        "RESOLVUSDT",
+        "RESOLVUSDC"
+      ],
+      "futuresPairs": [
+        "RESOLVUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "XAI",
+      "name": "Xai",
+      "fdv": 16938022,
+      "marketCap": 15846060,
+      "rank": 913,
+      "price": 0.00767512,
+      "change24h": -5.68938,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/xai/",
+      "coinGeckoId": "xai-blockchain",
+      "spotPairs": [
+        "XAIUSDT",
+        "XAIUSDC"
+      ],
+      "futuresPairs": [
+        "XAIUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "BANK",
+      "name": "Lorenzo Protocol",
+      "fdv": 16770790,
+      "marketCap": 16770790,
+      "rank": 888,
+      "price": 0.03906757,
+      "change24h": -5.22989,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/the-bank-coin/",
+      "coinGeckoId": "lorenzo-protocol",
+      "spotPairs": [
+        "BANKUSDT",
+        "BANKUSDC"
+      ],
+      "futuresPairs": [
+        "BANKUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "AGLD",
+      "name": "Adventure Gold",
+      "fdv": 16647178,
+      "marketCap": 15678798,
+      "rank": 923,
+      "price": 0.179527,
+      "change24h": -7.91,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/adventure-gold/",
+      "coinGeckoId": "adventure-gold",
+      "spotPairs": [
+        "AGLDUSDT"
+      ],
+      "futuresPairs": [
+        "AGLDUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "ARPA",
+      "name": "ARPA",
+      "fdv": 16526063,
+      "marketCap": 8115740,
+      "rank": 1254,
+      "price": 0.00823068,
+      "change24h": -3.55171,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/arpa-chain/",
+      "coinGeckoId": "arpa",
+      "spotPairs": [
+        "ARPAUSDT"
+      ],
+      "futuresPairs": [
+        "ARPAUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "PORTAL",
+      "name": "Portal",
+      "fdv": 16310170,
+      "marketCap": 13060111,
+      "rank": 994,
+      "price": 0.01631017,
+      "change24h": -0.27309,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/portal/",
+      "coinGeckoId": "portal-2",
+      "spotPairs": [
+        "PORTALUSDT"
+      ],
+      "futuresPairs": [
+        "PORTALUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "DYM",
+      "name": "Dymension",
+      "fdv": 16179967,
+      "marketCap": 8206065,
+      "rank": 1242,
+      "price": 0.01515703,
+      "change24h": -6.57905,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/dymension/",
+      "coinGeckoId": "dymension",
+      "spotPairs": [
+        "DYMUSDT",
+        "DYMUSDC"
+      ],
+      "futuresPairs": [
+        "DYMUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "MAGIC",
+      "name": "Treasure",
+      "fdv": 15877681,
+      "marketCap": 15344841,
+      "rank": 933,
+      "price": 0.04565179,
+      "change24h": -4.06345,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/magic-token/",
+      "coinGeckoId": "magic",
+      "spotPairs": [
+        "MAGICUSDT",
+        "MAGICUSDC"
+      ],
+      "futuresPairs": [
+        "MAGICUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "MOVR",
+      "name": "Moonriver",
+      "fdv": 15692068,
+      "marketCap": 15249787,
+      "rank": 936,
+      "price": 1.25,
+      "change24h": -2.10439,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/moonriver/",
+      "coinGeckoId": "moonriver",
+      "spotPairs": [
+        "MOVRUSDT"
+      ],
+      "futuresPairs": [
+        "MOVRUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "EPIC",
+      "name": "Epic Chain",
+      "fdv": 15542530,
+      "marketCap": 15542530,
+      "rank": 927,
+      "price": 0.463964,
+      "change24h": 3.71371,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/epic-cash/",
+      "coinGeckoId": "epic-chain",
+      "spotPairs": [
+        "EPICUSDT",
+        "EPICUSDC"
+      ],
+      "futuresPairs": [
+        "EPICUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "JOE",
+      "name": "JOE",
+      "fdv": 14975684,
+      "marketCap": 12094666,
+      "rank": 1040,
+      "price": 0.02986985,
+      "change24h": -5.51926,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/joe/",
+      "coinGeckoId": "joe",
+      "spotPairs": [
+        "JOEUSDT"
+      ],
+      "futuresPairs": [
+        "JOEUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "CHR",
+      "name": "Chromia",
+      "fdv": 14800718,
+      "marketCap": 14800718,
+      "rank": 949,
+      "price": 0.01518367,
+      "change24h": -6.32016,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/chromia/",
+      "coinGeckoId": "chromaway",
+      "spotPairs": [
+        "CHRUSDT"
+      ],
+      "futuresPairs": [
+        "CHRUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "TST",
+      "name": "Test",
+      "fdv": 14448376,
+      "marketCap": 14448376,
+      "rank": 954,
+      "price": 0.01537526,
+      "change24h": 3.23874,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/touch-social/",
+      "coinGeckoId": "test-3",
+      "spotPairs": [
+        "TSTUSDT",
+        "TSTUSDC"
+      ],
+      "futuresPairs": [
+        "TSTUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "C98",
+      "name": "Coin98",
+      "fdv": 14366284,
+      "marketCap": 14366268,
+      "rank": 955,
+      "price": 0.01435887,
+      "change24h": -5.3755,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/coin98/",
+      "coinGeckoId": "coin98",
+      "spotPairs": [
+        "C98USDT"
+      ],
+      "futuresPairs": [
+        "C98USDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "OG",
+      "name": "OG Fan Token",
+      "fdv": 13986705,
+      "marketCap": 13146932,
+      "rank": 992,
+      "price": 2.8,
+      "change24h": 3.54501,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/og-fan-token/",
+      "coinGeckoId": "og-fan-token",
+      "spotPairs": [
+        "OGUSDT"
+      ],
+      "futuresPairs": [
+        "OGUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "SAGA",
+      "name": "Saga",
+      "fdv": 13823368,
+      "marketCap": 5072727,
+      "rank": 1561,
+      "price": 0.01254253,
+      "change24h": -8.72092,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/darksaga/",
+      "coinGeckoId": "saga-2",
+      "spotPairs": [
+        "SAGAUSDT",
+        "SAGAUSDC",
+        "SAGAFDUSD"
+      ],
+      "futuresPairs": [
+        "SAGAUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "ALPINE",
+      "name": "Alpine F1 Team Fan Token",
+      "fdv": 13590245,
+      "marketCap": 3859630,
+      "rank": 1737,
+      "price": 0.33984,
+      "change24h": -4.92254,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/alpine-f1-team-fan-token/",
+      "coinGeckoId": "alpine-f1-team-fan-token",
+      "spotPairs": [
+        "ALPINEUSDT"
+      ],
+      "futuresPairs": [
+        "ALPINEUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "AVA",
+      "name": "AVA (Travala)",
+      "fdv": 12784563,
+      "marketCap": 12784563,
+      "rank": 1011,
+      "price": 0.174458,
+      "change24h": -6.71304,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/travala/",
+      "coinGeckoId": "concierge-io",
+      "spotPairs": [
+        "AVAUSDT"
+      ],
+      "futuresPairs": [
+        "AVAUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "RARE",
+      "name": "SuperRare",
+      "fdv": 12666940,
+      "marketCap": 10393341,
+      "rank": 1123,
+      "price": 0.01266127,
+      "change24h": -5.10159,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/rare/",
+      "coinGeckoId": "superrare",
+      "spotPairs": [
+        "RAREUSDT",
+        "RAREUSDC"
+      ],
+      "futuresPairs": [
+        "RAREUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "BMT",
+      "name": "Bubblemaps",
+      "fdv": 12383336,
+      "marketCap": 3172374,
+      "rank": 1876,
+      "price": 0.01238467,
+      "change24h": -5.01272,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/bubblemaps/",
+      "coinGeckoId": "bubblemaps",
+      "spotPairs": [
+        "BMTUSDT",
+        "BMTUSDC"
+      ],
+      "futuresPairs": [
+        "BMTUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "ACE",
+      "name": "Fusionist",
+      "fdv": 12245604,
+      "marketCap": 8515140,
+      "rank": 1224,
+      "price": 0.083666,
+      "change24h": -7.32502,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/ace/",
+      "coinGeckoId": "endurance",
+      "spotPairs": [
+        "ACEUSDT"
+      ],
+      "futuresPairs": [
+        "ACEUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "NOM",
+      "name": "Nomina",
+      "fdv": 12053788,
+      "marketCap": 4805695,
+      "rank": 1596,
+      "price": 0.00165999,
+      "change24h": -7.89409,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/nomina/",
+      "coinGeckoId": "nomina",
+      "spotPairs": [
+        "NOMUSDT",
+        "NOMUSDC"
+      ],
+      "futuresPairs": [
+        "NOMUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "MUBARAK",
+      "name": "Mubarak",
+      "fdv": 10425487,
+      "marketCap": 10425487,
+      "rank": 1121,
+      "price": 0.01036965,
+      "change24h": -4.25093,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/mubarak/",
+      "coinGeckoId": "mubarak",
+      "spotPairs": [
+        "MUBARAKUSDT",
+        "MUBARAKUSDC"
+      ],
+      "futuresPairs": [
+        "MUBARAKUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "ALICE",
+      "name": "My Neighbor Alice",
+      "fdv": 10166589,
+      "marketCap": 10166589,
+      "rank": 1136,
+      "price": 0.102314,
+      "change24h": -5.46005,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/myneighboralice/",
+      "coinGeckoId": "my-neighbor-alice",
+      "spotPairs": [
+        "ALICEUSDT"
+      ],
+      "futuresPairs": [
+        "ALICEUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "ASR",
+      "name": "AS Roma Fan Token",
+      "fdv": 9840324,
+      "marketCap": 8461858,
+      "rank": 1232,
+      "price": 0.984263,
+      "change24h": 2.05774,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/as-roma-fan-token/",
+      "coinGeckoId": "as-roma-fan-token",
+      "spotPairs": [
+        "ASRUSDT"
+      ],
+      "futuresPairs": [
+        "ASRUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "HFT",
+      "name": "Hashflow",
+      "fdv": 9514557,
+      "marketCap": 7792114,
+      "rank": 1278,
+      "price": 0.00959486,
+      "change24h": -8.40302,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/hashflow/",
+      "coinGeckoId": "hashflow",
+      "spotPairs": [
+        "HFTUSDT"
+      ],
+      "futuresPairs": [
+        "HFTUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "COOKIE",
+      "name": "Cookie DAO",
+      "fdv": 9428547,
+      "marketCap": 7252229,
+      "rank": 1315,
+      "price": 0.00943268,
+      "change24h": -4.88518,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/cookie/",
+      "coinGeckoId": "cookie",
+      "spotPairs": [
+        "COOKIEUSDT",
+        "COOKIEUSDC"
+      ],
+      "futuresPairs": [
+        "COOKIEUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "ACT",
+      "name": "Act I The AI Prophecy",
+      "fdv": 9128745,
+      "marketCap": 9128745,
+      "rank": 1192,
+      "price": 0.00963639,
+      "change24h": -5.01825,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/achain/",
+      "coinGeckoId": "act-i-the-ai-prophecy",
+      "spotPairs": [
+        "ACTUSDT",
+        "ACTUSDC"
+      ],
+      "futuresPairs": [
+        "ACTUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "HEI",
+      "name": "Heima",
+      "fdv": 8548301,
+      "marketCap": 8356653,
+      "rank": 1238,
+      "price": 0.086194,
+      "change24h": -8.05703,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/heima/",
+      "coinGeckoId": "heima",
+      "spotPairs": [
+        "HEIUSDT",
+        "HEIUSDC"
+      ],
+      "futuresPairs": [
+        "HEIUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "TUT",
+      "name": "Tutorial",
+      "fdv": 8254443,
+      "marketCap": 8254443,
+      "rank": 1241,
+      "price": 0.00986536,
+      "change24h": -2.81999,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/tutorial/",
+      "coinGeckoId": "tutorial",
+      "spotPairs": [
+        "TUTUSDT",
+        "TUTUSDC"
+      ],
+      "futuresPairs": [
+        "TUTUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "BEL",
+      "name": "Bella Protocol",
+      "fdv": 8155812,
+      "marketCap": 6524650,
+      "rank": 1383,
+      "price": 0.081565,
+      "change24h": -5.39285,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/bella-protocol/",
+      "coinGeckoId": "bella-protocol",
+      "spotPairs": [
+        "BELUSDT"
+      ],
+      "futuresPairs": [
+        "BELUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "NFP",
+      "name": "NFPrompt",
+      "fdv": 8137233,
+      "marketCap": 5204974,
+      "rank": 1540,
+      "price": 0.00813523,
+      "change24h": -2.96659,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/nfprompt/",
+      "coinGeckoId": "nfprompt-token",
+      "spotPairs": [
+        "NFPUSDT"
+      ],
+      "futuresPairs": [
+        "NFPUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "SYN",
+      "name": "Synapse",
+      "fdv": 8008206,
+      "marketCap": 7017319,
+      "rank": 1333,
+      "price": 0.03212941,
+      "change24h": -20.21144,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/synlev/",
+      "coinGeckoId": "synapse-2",
+      "spotPairs": [
+        "SYNUSDT",
+        "SYNUSDC"
+      ],
+      "futuresPairs": [
+        "SYNUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "VIC",
+      "name": "Viction",
+      "fdv": 7968395,
+      "marketCap": 4812096,
+      "rank": 1598,
+      "price": 0.03796625,
+      "change24h": -10.58285,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/viridi/",
+      "coinGeckoId": "tomochain",
+      "spotPairs": [
+        "VICUSDT"
+      ],
+      "futuresPairs": [
+        "VICUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "GTC",
+      "name": "Gitcoin",
+      "fdv": 7554699,
+      "marketCap": 6609719,
+      "rank": 1372,
+      "price": 0.075547,
+      "change24h": -2.69718,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/game/",
+      "coinGeckoId": "gitcoin",
+      "spotPairs": [
+        "GTCUSDT"
+      ],
+      "futuresPairs": [
+        "GTCUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "VANRY",
+      "name": "Vanar Chain",
+      "fdv": 7378215,
+      "marketCap": 7340336,
+      "rank": 1304,
+      "price": 0.0034202,
+      "change24h": -5.88991,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/vanar/",
+      "coinGeckoId": "vanar-chain",
+      "spotPairs": [
+        "VANRYUSDT",
+        "VANRYUSDC"
+      ],
+      "futuresPairs": [
+        "VANRYUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "TLM",
+      "name": "Alien Worlds",
+      "fdv": 7055900,
+      "marketCap": 6822015,
+      "rank": 1351,
+      "price": 0.00100625,
+      "change24h": -7.45119,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/alien-worlds/",
+      "coinGeckoId": "alien-worlds",
+      "spotPairs": [
+        "TLMUSDT",
+        "TLMUSDC"
+      ],
+      "futuresPairs": [
+        "TLMUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "HIGH",
+      "name": "Highstreet",
+      "fdv": 6666419,
+      "marketCap": 0,
+      "rank": null,
+      "price": 0.066672,
+      "change24h": -12.73347,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/highstreet/",
+      "coinGeckoId": "highstreet",
+      "spotPairs": [
+        "HIGHUSDT"
+      ],
+      "futuresPairs": [
+        "HIGHUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "COS",
+      "name": "Contentos",
+      "fdv": 5570918,
+      "marketCap": 2912752,
+      "rank": 1942,
+      "price": 0.00056271,
+      "change24h": -17.02376,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/contentos/",
+      "coinGeckoId": "contentos",
+      "spotPairs": [
+        "COSUSDT"
+      ],
+      "futuresPairs": [
+        "COSUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "D",
+      "name": "Dar Open Network",
+      "fdv": 4301244,
+      "marketCap": 3457730,
+      "rank": 1821,
+      "price": 0.00537587,
+      "change24h": -8.10545,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/dar-open-network/",
+      "coinGeckoId": "dar-open-network",
+      "spotPairs": [
+        "DUSDT"
+      ],
+      "futuresPairs": [
+        "DUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "MBOX",
+      "name": "Mobox",
+      "fdv": 3234021,
+      "marketCap": 3234021,
+      "rank": 1865,
+      "price": 0.00587659,
+      "change24h": -16.49225,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/mobox/",
+      "coinGeckoId": "mobox",
+      "spotPairs": [
+        "MBOXUSDT"
+      ],
+      "futuresPairs": [
+        "MBOXUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "TURTLE",
+      "name": "Turtle",
+      "fdv": 125453,
+      "marketCap": 125453,
+      "rank": 5275,
+      "price": 0.00012534,
+      "change24h": -3.83178,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/turtle/",
+      "coinGeckoId": "turtle-2",
+      "spotPairs": [
+        "TURTLEUSDT",
+        "TURTLEUSDC"
+      ],
+      "futuresPairs": [
+        "TURTLEUSDT"
+      ],
+      "dataStatus": "ok"
+    },
+    {
+      "asset": "1000CAT",
+      "name": "1000CAT",
+      "fdv": null,
+      "marketCap": 0,
+      "rank": null,
+      "price": 0.00151123,
+      "change24h": -3.55376,
+      "yziLabs": false,
+      "okxVentures": false,
+      "cmcUrl": "https://coinmarketcap.com/currencies/cat/",
+      "coinGeckoId": "1000cat",
+      "spotPairs": [
+        "1000CATUSDT",
+        "1000CATUSDC"
+      ],
+      "futuresPairs": [
+        "1000CATUSDT"
+      ],
+      "dataStatus": "no_fdv"
+    },
+    {
+      "asset": "AIGENSYN",
+      "name": "AIGENSYN",
+      "fdv": null,
+      "marketCap": null,
+      "rank": null,
+      "price": null,
+      "change24h": null,
+      "yziLabs": null,
+      "okxVentures": null,
+      "cmcUrl": "https://coinmarketcap.com/currencies/gensyn/",
+      "coinGeckoId": null,
+      "spotPairs": [
+        "AIGENSYNUSDT",
+        "AIGENSYNUSDC"
+      ],
+      "futuresPairs": [
+        "AIGENSYNUSDT"
+      ],
+      "dataStatus": "unmatched"
+    },
+    {
+      "asset": "BROCCOLI714",
+      "name": "BROCCOLI714",
+      "fdv": null,
+      "marketCap": null,
+      "rank": null,
+      "price": null,
+      "change24h": null,
+      "yziLabs": null,
+      "okxVentures": null,
+      "cmcUrl": "https://coinmarketcap.com/currencies/broccoli-714/",
+      "coinGeckoId": null,
+      "spotPairs": [
+        "BROCCOLI714USDT",
+        "BROCCOLI714USDC"
+      ],
+      "futuresPairs": [
+        "BROCCOLI714USDT"
+      ],
+      "dataStatus": "unmatched"
+    },
+    {
+      "asset": "WCT",
+      "name": "WCT",
+      "fdv": null,
+      "marketCap": null,
+      "rank": null,
+      "price": null,
+      "change24h": null,
+      "yziLabs": null,
+      "okxVentures": null,
+      "cmcUrl": "https://coinmarketcap.com/currencies/walletconnect-token/",
+      "coinGeckoId": null,
+      "spotPairs": [
+        "WCTUSDT",
+        "WCTUSDC"
+      ],
+      "futuresPairs": [
+        "WCTUSDT"
+      ],
+      "dataStatus": "unmatched"
+    }
+  ]
+}
