@@ -94,21 +94,35 @@ for (const coins of marketsBySymbol.values()) {
   coins.sort((a, b) => (a.market_cap_rank || 999999) - (b.market_cap_rank || 999999));
 }
 
-function parsePortfolioHtml(file) {
-  const html = readText(file);
-  const entries = new Map();
-  const coinRe = /\{"id":\d+,"name":"([^"]+)","symbol":"([^"]+)","slug":"([^"]+)"/g;
-  let match;
-  while ((match = coinRe.exec(html))) {
-    const symbol = match[2].toUpperCase();
-    if (!symbol || symbol === "USD" || symbol === "-") continue;
-    entries.set(symbol, match[3]);
+function buildCoinGeckoPortfolio(file, label, sourceUrl) {
+  const entries = fs.existsSync(file) ? readJson(file) : [];
+  const byId = new Map();
+  const bySymbol = new Map();
+  for (const coin of entries) {
+    const entry = {
+      id: coin.id,
+      symbol: coin.symbol.toUpperCase(),
+      name: coin.name,
+      source: label,
+      sourceUrl,
+    };
+    byId.set(entry.id, entry);
+    if (!bySymbol.has(entry.symbol)) bySymbol.set(entry.symbol, []);
+    bySymbol.get(entry.symbol).push(entry);
   }
-  return entries;
+  return { byId, bySymbol };
 }
 
-const yziPortfolio = parsePortfolioHtml("cmc_yzi.html");
-const okxPortfolio = parsePortfolioHtml("cmc_okx.html");
+const yziPortfolio = buildCoinGeckoPortfolio(
+  "cg_yzi_api.json",
+  "CoinGecko YZi Labs Portfolio",
+  "https://www.coingecko.com/en/categories/yzi-labs-portfolio",
+);
+const okxPortfolio = buildCoinGeckoPortfolio(
+  "cg_okx_api.json",
+  "CoinGecko OKX Ventures Portfolio",
+  "https://www.coingecko.com/en/categories/okx-ventures-portfolio",
+);
 
 const cmcQuick = readJson("cmc_quick_search.json");
 const cmcBySymbol = new Map();
@@ -123,12 +137,60 @@ function cmcSlugFor(asset, cgCoin) {
   if (manualCmcSlugs[asset]) return manualCmcSlugs[asset];
   const quick = cmcBySymbol.get(asset)?.[0];
   if (quick) return quick.slug;
-  if (yziPortfolio.has(asset)) return yziPortfolio.get(asset);
-  if (okxPortfolio.has(asset)) return okxPortfolio.get(asset);
   if (cgCoin && cmcBySymbol.get(cgCoin.symbol.toUpperCase())?.[0]) {
     return cmcBySymbol.get(cgCoin.symbol.toUpperCase())[0].slug;
   }
   return null;
+}
+
+function verifyInvestment(row, portfolio) {
+  if (row.coinGeckoId && portfolio.byId.has(row.coinGeckoId)) {
+    const entry = portfolio.byId.get(row.coinGeckoId);
+    return {
+      invested: true,
+      source: entry.source,
+      sourceUrl: entry.sourceUrl,
+      matchType: "coingecko_id",
+      matchedName: entry.name,
+      matchedId: entry.id,
+      review: false,
+    };
+  }
+  const matches = portfolio.bySymbol.get(row.asset) || [];
+  if (matches.length === 1) {
+    const entry = matches[0];
+    return {
+      invested: true,
+      source: entry.source,
+      sourceUrl: entry.sourceUrl,
+      matchType: "symbol_unique",
+      matchedName: entry.name,
+      matchedId: entry.id,
+      review: row.coinGeckoId ? row.coinGeckoId !== entry.id : true,
+    };
+  }
+  if (matches.length > 1) {
+    return {
+      invested: false,
+      source: "CoinGecko portfolio category",
+      sourceUrl: matches[0].sourceUrl,
+      matchType: "symbol_ambiguous",
+      matchedName: matches.map((entry) => entry.name).join(" / "),
+      matchedId: matches.map((entry) => entry.id).join(" / "),
+      review: true,
+    };
+  }
+  return {
+    invested: false,
+    source: "CoinGecko portfolio category",
+    sourceUrl: portfolio === yziPortfolio
+      ? "https://www.coingecko.com/en/categories/yzi-labs-portfolio"
+      : "https://www.coingecko.com/en/categories/okx-ventures-portfolio",
+    matchType: "not_listed",
+    matchedName: "",
+    matchedId: "",
+    review: false,
+  };
 }
 
 function compactPairList(pairs) {
@@ -147,7 +209,7 @@ const rows = assets.map((asset) => {
   const fdv = cgCoin?.fully_diluted_valuation ?? null;
   const marketCap = cgCoin?.market_cap ?? null;
   const rank = cgCoin?.market_cap_rank ?? null;
-  return {
+  const row = {
     asset,
     name: cgCoin?.name || asset,
     fdv,
@@ -155,8 +217,6 @@ const rows = assets.map((asset) => {
     rank,
     price: cgCoin?.current_price ?? null,
     change24h: cgCoin?.price_change_percentage_24h ?? null,
-    yziLabs: yziPortfolio.has(asset) || (cgCoin && yziPortfolio.has(cgCoin.symbol.toUpperCase())),
-    okxVentures: okxPortfolio.has(asset) || (cgCoin && okxPortfolio.has(cgCoin.symbol.toUpperCase())),
     cmcUrl: slug
       ? `https://coinmarketcap.com/currencies/${slug}/`
       : `https://coinmarketcap.com/search/?q=${encodeURIComponent(asset)}`,
@@ -165,6 +225,15 @@ const rows = assets.map((asset) => {
     futuresPairs: compactPairList(futuresByAsset.get(asset)),
     dataStatus: cgCoin ? (fdv ? "ok" : "no_fdv") : "unmatched",
   };
+  const yzi = verifyInvestment(row, yziPortfolio);
+  const okx = verifyInvestment(row, okxPortfolio);
+  row.yziLabs = yzi.invested;
+  row.okxVentures = okx.invested;
+  row.investmentVerification = { yziLabs: yzi, okxVentures: okx };
+  row.investmentSourceSummary = [row.yziLabs ? `YZi:${yzi.matchType}` : null, row.okxVentures ? `OKX:${okx.matchType}` : null]
+    .filter(Boolean)
+    .join("; ") || "not_listed";
+  return row;
 });
 
 rows.sort((a, b) => (b.fdv || 0) - (a.fdv || 0) || a.asset.localeCompare(b.asset));
@@ -179,18 +248,21 @@ const source = {
     withFdv: rows.filter((row) => row.fdv).length,
     yziLabs: rows.filter((row) => row.yziLabs).length,
     okxVentures: rows.filter((row) => row.okxVentures).length,
+    needsInvestmentReview: rows.filter(
+      (row) => row.investmentVerification?.yziLabs?.review || row.investmentVerification?.okxVentures?.review,
+    ).length,
   },
   sources: [
     "https://api.binance.com/api/v3/exchangeInfo",
     "https://fapi.binance.com/fapi/v1/exchangeInfo",
     "https://api.coingecko.com/api/v3/coins/markets",
-    "https://coinmarketcap.com/view/binance-labs-portfolio/",
-    "https://coinmarketcap.com/view/okx-ventures-portfolio/",
+    "https://api.coingecko.com/api/v3/coins/markets?category=yzi-labs-portfolio",
+    "https://api.coingecko.com/api/v3/coins/markets?category=okx-ventures-portfolio",
     "https://s2.coinmarketcap.com/generated/search/quick_search.json",
   ],
   notes: [
-    "YZi Labs uses the former Binance Labs portfolio page where applicable.",
-    "CMC direct links use CMC slugs when available; otherwise they fall back to CMC search links.",
+    "Investment tags are verified against CoinGecko portfolio category membership, primarily by CoinGecko ID; unique-symbol fallback is flagged for review.",
+    "CMC direct links use verified /currencies/<slug>/ pages.",
     "Some Binance multiplier assets such as 1000SATS or 1MBABYDOGE are matched to their closest market-data token.",
   ],
   rows,

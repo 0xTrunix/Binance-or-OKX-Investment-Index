@@ -295,7 +295,7 @@ tbody tr:hover td {
 
 th:nth-child(1),
 td:nth-child(1) {
-  width: 28%;
+  width: 24%;
 }
 
 th:nth-child(2),
@@ -307,15 +307,15 @@ th:nth-child(3),
 td:nth-child(3),
 th:nth-child(4),
 td:nth-child(4) {
-  width: 21%;
+  width: 19%;
 }
 
 th:nth-child(5),
 td:nth-child(5),
 th:nth-child(6),
 td:nth-child(6) {
-  width: 8%;
-  text-align: center;
+  width: 12%;
+  text-align: left;
 }
 
 th:nth-child(7),
@@ -423,6 +423,43 @@ td:nth-child(7) {
 .badge.no {
   background: #f2f4f7;
   color: var(--muted);
+}
+
+.investment-cell {
+  display: grid;
+  gap: 6px;
+  justify-items: start;
+}
+
+.investment-cell small {
+  display: block;
+  color: var(--muted);
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+.verify-source {
+  color: var(--blue);
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.verify-source:hover {
+  text-decoration: underline;
+}
+
+.review-flag {
+  display: inline-flex;
+  width: fit-content;
+  min-height: 22px;
+  align-items: center;
+  border-radius: 999px;
+  background: #fff7ed;
+  color: var(--red);
+  padding: 0 8px;
+  font-size: 11px;
+  font-weight: 900;
 }
 
 .cmc {

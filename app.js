@@ -33,7 +33,7 @@ function renderMetrics(data) {
     metric("有 FDV 数据", data.counts.withFdv),
     metric("YZi Labs 投资", data.counts.yziLabs),
     metric("OKX Ventures 投资", data.counts.okxVentures),
-    metric("现货资产池", data.counts.spotAssets),
+    metric("需人工复核", data.counts.needsInvestmentReview || 0),
   ].join("");
 
   const time = new Date(data.generatedAt).toLocaleString("zh-CN", {
@@ -41,7 +41,7 @@ function renderMetrics(data) {
     hour12: false,
   });
   document.getElementById("sourceLine").textContent =
-    `筛选条件：已上 Binance 现货且已上 Binance USD-M 永续合约。生成时间：${time}`;
+    `筛选条件：已上 Binance 现货且已上 Binance USD-M 永续合约。投资标签按 CoinGecko portfolio category 会员关系验证，优先使用 CoinGecko ID 匹配。生成时间：${time}`;
 }
 
 function getFilteredRows() {
@@ -69,6 +69,35 @@ function renderPairs(pairs) {
   }</div>`;
 }
 
+function readableMatchType(type) {
+  const labels = {
+    coingecko_id: "ID 精确匹配",
+    symbol_unique: "唯一 ticker 匹配",
+    symbol_ambiguous: "ticker 冲突",
+    not_listed: "未在组合列表",
+  };
+  return labels[type] || type || "-";
+}
+
+function renderInvestment(row, key) {
+  const verification = row.investmentVerification?.[key];
+  const yes = key === "yziLabs" ? row.yziLabs : row.okxVentures;
+  const className = key === "yziLabs" ? "yzi" : "okx";
+  const label = yes ? "Yes" : "No";
+  const details = verification
+    ? `${readableMatchType(verification.matchType)}${verification.matchedName ? ` · ${verification.matchedName}` : ""}`
+    : "未验证";
+  const review = verification?.review ? `<span class="review-flag">需复核</span>` : "";
+  const source = verification?.sourceUrl
+    ? `<a class="verify-source" href="${verification.sourceUrl}" target="_blank" rel="noreferrer">CoinGecko</a>`
+    : "";
+  return `<div class="investment-cell">
+    <span class="badge ${yes ? `yes ${className}` : "no"}">${label}</span>
+    <small>${escapeHtml(details)} ${source}</small>
+    ${review}
+  </div>`;
+}
+
 function renderRows() {
   const rows = getFilteredRows();
   document.getElementById("resultCount").textContent = `当前显示 ${rows.length} / ${state.data.rows.length} 个币种`;
@@ -90,8 +119,8 @@ function renderRows() {
         </td>
         <td data-label="Binance 现货">${renderPairs(row.spotPairs)}</td>
         <td data-label="Binance 合约">${renderPairs(row.futuresPairs)}</td>
-        <td data-label="YZi Labs"><span class="badge ${row.yziLabs ? "yes yzi" : "no"}">${row.yziLabs ? "Yes" : "No"}</span></td>
-        <td data-label="OKX Ventures"><span class="badge ${row.okxVentures ? "yes okx" : "no"}">${row.okxVentures ? "Yes" : "No"}</span></td>
+        <td data-label="YZi Labs">${renderInvestment(row, "yziLabs")}</td>
+        <td data-label="OKX Ventures">${renderInvestment(row, "okxVentures")}</td>
         <td data-label="CMC"><a class="cmc" href="${row.cmcUrl}" target="_blank" rel="noreferrer">CMC</a></td>
       </tr>`,
     )

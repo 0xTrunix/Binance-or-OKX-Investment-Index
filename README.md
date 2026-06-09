@@ -47,3 +47,10 @@ python3 -m http.server 8080
 - 排除 Binance TradFi equity perpetual
 
 CMC 链接均为 `/currencies/<slug>/` 直达页格式，没有使用搜索页兜底。
+
+投资标签采用更严格的验证口径：
+
+- YZi Labs：CoinGecko `YZi Labs Portfolio` category
+- OKX Ventures：CoinGecko `OKX Ventures Portfolio` category
+- 优先按 CoinGecko ID 精确匹配
+- ID 缺失时仅允许唯一 ticker fallback，并在数据中标记为需复核
