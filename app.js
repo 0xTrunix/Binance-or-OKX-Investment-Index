@@ -33,7 +33,6 @@ function renderMetrics(data) {
     metric("有 FDV 数据", data.counts.withFdv),
     metric("YZi Labs 投资", data.counts.yziLabs),
     metric("OKX Ventures 投资", data.counts.okxVentures),
-    metric("需人工复核", data.counts.needsInvestmentReview || 0),
   ].join("");
 
   const time = new Date(data.generatedAt).toLocaleString("zh-CN", {
