@@ -1,6 +1,10 @@
 # Binance Spot + Futures Crypto Screener
 
-一个可直接部署到 Vercel 的静态前端列表，用于展示同时上线 Binance 现货与 Binance USD-M 永续合约的币种，并补充 FDV、YZi Labs / OKX Ventures 投资标签和 CoinMarketCap 直达链接。
+一个可直接部署到 Vercel 的静态前端筛选工具，包含：
+
+- 同时上线 Binance 现货与 Binance USD-M 永续合约的币种列表
+- Binance 全现货币种 FDV 区间筛选页面
+- YZi Labs / OKX Ventures 投资标签和 CoinMarketCap 直达链接
 
 ## 内容
 
@@ -8,6 +12,9 @@
 - `styles.css`：白色简约响应式 UI
 - `app.js`：筛选、排序、渲染逻辑
 - `assets-data.json`：当前前端使用的数据
+- `spot-fdv.html`：Binance 全现货 FDV 区间筛选页面
+- `spot-fdv.js`：全现货搜索和 FDV 上下限筛选逻辑
+- `spot-assets-data.json`：Binance 全现货 FDV 数据
 - `cmc-slugs.json`：CMC 直达链接 slug 覆盖表
 - `scripts/`：数据清洗脚本备份
 
@@ -21,6 +28,17 @@ npm run dev
 
 ```text
 http://localhost:8080
+```
+
+全现货 FDV 页面：
+
+```text
+http://localhost:8080/spot-fdv.html
+```
+
+## 在线预览
+```text
+https://binance-or-okx-investment-index-4pf.vercel.app/
 ```
 
 也可以不用 npm，直接运行：
@@ -47,6 +65,12 @@ python3 -m http.server 8080
 - 排除 Binance TradFi equity perpetual
 
 CMC 链接均为 `/currencies/<slug>/` 直达页格式，没有使用搜索页兜底。
+
+全现货数据可以通过以下命令刷新：
+
+```bash
+npm run build:spot-data
+```
 
 投资标签采用更严格的验证口径：
 

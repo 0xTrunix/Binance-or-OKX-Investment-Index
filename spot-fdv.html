@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Binance Spot FDV Screener</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="shell">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">Binance Spot FDV Screener</p>
+          <h1>Binance 全现货 FDV 筛选</h1>
+          <p id="spotSourceLine" class="source-line">Loading data...</p>
+        </div>
+        <div class="header-actions">
+          <a class="source-link primary-link" href="index.html">现货 + 合约列表</a>
+          <a class="source-link" href="spot-assets-data.json" target="_blank" rel="noreferrer">查看数据 JSON</a>
+        </div>
+      </header>
+
+      <section class="metrics spot-metrics" id="spotMetrics"></section>
+
+      <form class="range-toolbar" id="rangeForm" aria-label="FDV 区间筛选">
+        <label class="search spot-search">
+          <span>搜索币种</span>
+          <input id="spotSearchInput" type="search" placeholder="Ticker / 名称" autocomplete="off" />
+        </label>
+        <label class="range-field">
+          <span>FDV 下限</span>
+          <input id="minFdvInput" type="text" inputmode="decimal" placeholder="例如 5B" autocomplete="off" />
+        </label>
+        <label class="range-field">
+          <span>FDV 上限</span>
+          <input id="maxFdvInput" type="text" inputmode="decimal" placeholder="例如 7B" autocomplete="off" />
+        </label>
+        <div class="range-actions">
+          <button class="action-button primary-action" type="submit">应用区间</button>
+          <button class="action-button" id="clearRangeButton" type="button">清除</button>
+        </div>
+        <p class="range-error" id="rangeError" role="alert"></p>
+      </form>
+
+      <section class="list-head spot-list-head">
+        <div>
+          <div id="spotResultCount"></div>
+          <small id="activeRange" class="active-range">全部 FDV 区间</small>
+        </div>
+        <span class="sort-note">默认按 FDV 从高到低</span>
+      </section>
+
+      <section class="table-wrap">
+        <table class="spot-table">
+          <thead>
+            <tr>
+              <th>币种</th>
+              <th>FDV</th>
+              <th>市值</th>
+              <th>Binance 现货交易对</th>
+              <th>CMC</th>
+            </tr>
+          </thead>
+          <tbody id="spotAssetRows"></tbody>
+        </table>
+      </section>
+      <div class="load-more-wrap">
+        <button class="action-button load-more-button" id="loadMoreButton" type="button">显示更多</button>
+      </div>
+    </main>
+    <script src="spot-fdv.js"></script>
+  </body>
+</html>
