@@ -51,37 +51,21 @@ const manualCoinGeckoIds = {
   SYN: "synapse-2",
   VIC: "tomochain",
   COOKIE: "cookie",
-  TURTLE: "turtle-2",
-  "1000CHEEMS": "cheems-token",
+  TURTLE: "turtle-4",
+  AI: "sleepless-ai",
+  FRAX: "frax-share",
+  TREE: "treehouse",
+  "1000CHEEMS": "1000chems",
+  "1000SATS": "1000sats-ordinals",
+  "1MBABYDOGE": "1mbabydoge",
 };
 
-const generatedCmcSlugs = fs.existsSync("cmc-slugs.json") ? readJson("cmc-slugs.json") : {};
-
-const manualCmcSlugs = {
-  BEAMX: "beam",
-  RONIN: "ronin",
-  VELODROME: "velodrome-finance",
-  BMT: "bubblemaps",
-  D: "dar-open-network",
-  EDEN: "openeden",
-  NOM: "nomina",
-  SHELL: "myshell",
-  WCT: "walletconnect-token",
-  WLFI: "world-liberty-financial-wlfi",
-  NXPC: "maplestory-universe",
-  HOME: "defi-app",
-  ROBO: "fabric-foundation",
-  KMNO: "kamino-finance",
-  YB: "yieldbasis",
-  MIRA: "mira-network",
-  GMT: "green-metaverse-token",
-  EUL: "euler-finance",
-  VANRY: "vanar",
-  AIGENSYN: "gensyn",
-  "1000SATS": "sats",
-  "1MBABYDOGE": "babydoge-coin",
-  ...generatedCmcSlugs,
-};
+const binanceCoinGeckoIds = fs.existsSync("coingecko-binance-ids.json")
+  ? readJson("coingecko-binance-ids.json")
+  : {};
+const verifiedIdOverrides = fs.existsSync("coingecko-id-overrides.json")
+  ? readJson("coingecko-id-overrides.json")
+  : {};
 
 const marketById = new Map(markets.map((coin) => [coin.id, coin]));
 const marketsBySymbol = new Map();
@@ -123,25 +107,6 @@ const okxPortfolio = buildCoinGeckoPortfolio(
   "CoinGecko OKX Ventures Portfolio",
   "https://www.coingecko.com/en/categories/okx-ventures-portfolio",
 );
-
-const cmcQuick = readJson("cmc_quick_search.json");
-const cmcBySymbol = new Map();
-for (const coin of cmcQuick) {
-  const symbol = coin.symbol.toUpperCase();
-  if (!cmcBySymbol.has(symbol)) cmcBySymbol.set(symbol, []);
-  cmcBySymbol.get(symbol).push(coin);
-}
-for (const coins of cmcBySymbol.values()) coins.sort((a, b) => (a.rank || 999999) - (b.rank || 999999));
-
-function cmcSlugFor(asset, cgCoin) {
-  if (manualCmcSlugs[asset]) return manualCmcSlugs[asset];
-  const quick = cmcBySymbol.get(asset)?.[0];
-  if (quick) return quick.slug;
-  if (cgCoin && cmcBySymbol.get(cgCoin.symbol.toUpperCase())?.[0]) {
-    return cmcBySymbol.get(cgCoin.symbol.toUpperCase())[0].slug;
-  }
-  return null;
-}
 
 function verifyInvestment(row, portfolio) {
   if (row.coinGeckoId && portfolio.byId.has(row.coinGeckoId)) {
@@ -203,9 +168,11 @@ function compactPairList(pairs) {
 }
 
 const rows = assets.map((asset) => {
-  const manualId = manualCoinGeckoIds[asset];
-  const cgCoin = (manualId && marketById.get(manualId)) || marketsBySymbol.get(asset)?.[0] || null;
-  const slug = cmcSlugFor(asset, cgCoin);
+  const preferredId = binanceCoinGeckoIds[asset] || verifiedIdOverrides[asset] || manualCoinGeckoIds[asset];
+  const candidates = marketsBySymbol.get(asset) || [];
+  const cgCoin =
+    (preferredId && marketById.get(preferredId)) ||
+    (candidates.length === 1 ? candidates[0] : null);
   const fdv = cgCoin?.fully_diluted_valuation ?? null;
   const marketCap = cgCoin?.market_cap ?? null;
   const rank = cgCoin?.market_cap_rank ?? null;
@@ -217,10 +184,8 @@ const rows = assets.map((asset) => {
     rank,
     price: cgCoin?.current_price ?? null,
     change24h: cgCoin?.price_change_percentage_24h ?? null,
-    cmcUrl: slug
-      ? `https://coinmarketcap.com/currencies/${slug}/`
-      : `https://coinmarketcap.com/search/?q=${encodeURIComponent(asset)}`,
     coinGeckoId: cgCoin?.id || null,
+    coinGeckoUrl: cgCoin?.id ? `https://www.coingecko.com/en/coins/${cgCoin.id}` : null,
     spotPairs: compactPairList(spotByAsset.get(asset)),
     futuresPairs: compactPairList(futuresByAsset.get(asset)),
     dataStatus: cgCoin ? (fdv ? "ok" : "no_fdv") : "unmatched",
@@ -258,11 +223,10 @@ const source = {
     "https://api.coingecko.com/api/v3/coins/markets",
     "https://api.coingecko.com/api/v3/coins/markets?category=yzi-labs-portfolio",
     "https://api.coingecko.com/api/v3/coins/markets?category=okx-ventures-portfolio",
-    "https://s2.coinmarketcap.com/generated/search/quick_search.json",
   ],
   notes: [
     "Investment tags are verified against CoinGecko portfolio category membership, primarily by CoinGecko ID; unique-symbol fallback is flagged for review.",
-    "CMC direct links use verified /currencies/<slug>/ pages.",
+    "Coin links are generated from the same verified CoinGecko IDs used for market data.",
     "Some Binance multiplier assets such as 1000SATS or 1MBABYDOGE are matched to their closest market-data token.",
   ],
   rows,

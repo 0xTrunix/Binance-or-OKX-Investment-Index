@@ -5,7 +5,7 @@
 - 同时上线 Binance 现货与 Binance USD-M 永续合约的币种列表
 - Binance 全现货币种 FDV 区间筛选页面
 - 可叠加筛选是否已上线 Binance 合约
-- YZi Labs / OKX Ventures 投资标签和 CoinMarketCap 直达链接
+- YZi Labs / OKX Ventures 投资标签和 CoinGecko 直达链接
 
 ## 内容
 
@@ -16,7 +16,8 @@
 - `spot-fdv.html`：Binance 全现货 FDV 区间筛选页面
 - `spot-fdv.js`：全现货搜索和 FDV 上下限筛选逻辑
 - `spot-assets-data.json`：Binance 全现货 FDV 数据
-- `cmc-slugs.json`：CMC 直达链接 slug 覆盖表
+- `coingecko-binance-ids.json`：CoinGecko Binance 交易对精确 ID 映射
+- `coingecko-id-overrides.json`：CoinGecko 交易对接口未覆盖资产的人工核验 ID
 - `scripts/`：数据清洗脚本备份
 
 ## 本地预览
@@ -65,7 +66,7 @@ python3 -m http.server 8080
 - Binance USD-M 永续合约可交易
 - 排除 Binance TradFi equity perpetual
 
-CMC 链接均为 `/currencies/<slug>/` 直达页格式，没有使用搜索页兜底。
+币种链接与 FDV 使用同一个 CoinGecko ID，格式为 `/en/coins/<id>`，避免同 ticker 项目误跳转。
 
 全现货数据可以通过以下命令刷新：
 

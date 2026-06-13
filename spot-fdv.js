@@ -106,9 +106,9 @@ function renderSpotRows() {
             ? renderSpotPairs(row.futuresPairs)
             : '<span class="badge no">No</span>'
         }</td>
-        <td data-label="CMC">${
-          row.cmcUrl
-            ? `<a class="cmc" href="${row.cmcUrl}" target="_blank" rel="noreferrer">CMC</a>`
+        <td data-label="CoinGecko">${
+          row.coinGeckoUrl
+            ? `<a class="coin-link" href="${row.coinGeckoUrl}" target="_blank" rel="noreferrer">CoinGecko</a>`
             : '<span class="muted">-</span>'
         }</td>
       </tr>`).join("")

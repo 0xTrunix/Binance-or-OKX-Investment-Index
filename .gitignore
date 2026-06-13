@@ -2,7 +2,6 @@
 node_modules
 .vercel/
 outputs/
-cmc_*.html
 cg_*.html
 scripts/export-excel.mjs
 *.log

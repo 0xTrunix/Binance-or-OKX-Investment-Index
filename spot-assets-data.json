@@ -10,12 +10,12 @@
   "sources": [
     "https://data-api.binance.vision/api/v3/exchangeInfo",
     "https://api.coingecko.com/api/v3/coins/markets",
-    "https://s2.coinmarketcap.com/generated/search/quick_search.json"
+    "https://api.coingecko.com/api/v3/exchanges/binance/tickers"
   ],
   "notes": [
     "Rows are sorted by FDV descending; assets without FDV appear last.",
-    "Existing verified CoinGecko IDs are reused before unique symbol matching.",
-    "Existing recent FDV values are retained when a low-ranked asset is outside the fetched CoinGecko market pages.",
+    "CoinGecko IDs are verified against CoinGecko's Binance exchange ticker mapping before market data and links are generated.",
+    "Coin links and FDV use the same CoinGecko ID; symbol-only URL guessing is not used.",
     "Binance futures status follows the verified spot-plus-futures dataset used by the main screener.",
     "FDV is point-in-time market data and changes with price and supply."
   ],
@@ -51,8 +51,9 @@
         "BTCUSDT",
         "BTCUSDC"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/bitcoin/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/bitcoin",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "ETH",
@@ -86,8 +87,9 @@
         "ETHUSDT",
         "ETHUSDC"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/ethereum/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/ethereum",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "USDT",
@@ -113,8 +115,9 @@
       ],
       "hasBinanceFutures": false,
       "futuresPairs": [],
-      "cmcUrl": "https://coinmarketcap.com/currencies/tether/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/tether",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "XRP",
@@ -145,8 +148,9 @@
         "XRPUSDT",
         "XRPUSDC"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/xrp/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/ripple",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "BNB",
@@ -176,8 +180,9 @@
         "BNBUSDT",
         "BNBUSDC"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/binance-coin/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/binancecoin",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "USDC",
@@ -200,8 +205,9 @@
       "futuresPairs": [
         "USDCUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/usd-coin/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/usd-coin",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "SOL",
@@ -233,8 +239,9 @@
         "SOLUSDT",
         "SOLUSDC"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/solana/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/solana",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "TRX",
@@ -261,8 +268,9 @@
       "futuresPairs": [
         "TRXUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/tron/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/tron",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "DOGE",
@@ -290,8 +298,9 @@
         "DOGEUSDT",
         "DOGEUSDC"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/dogecoin/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/dogecoin",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "USDS",
@@ -306,8 +315,9 @@
       ],
       "hasBinanceFutures": false,
       "futuresPairs": [],
-      "cmcUrl": "https://coinmarketcap.com/currencies/stableusd/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/usds",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "XLM",
@@ -329,8 +339,9 @@
       "futuresPairs": [
         "XLMUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/stellar/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/stellar",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "TON",
@@ -353,8 +364,9 @@
       "futuresPairs": [
         "TONUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/tokamak-network/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/the-open-network",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "LINK",
@@ -382,8 +394,9 @@
         "LINKUSDT",
         "LINKUSDC"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/chainlink/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/chainlink",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "ADA",
@@ -412,8 +425,9 @@
         "ADAUSDT",
         "ADAUSDC"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/cardano/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/cardano",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "SUI",
@@ -442,8 +456,9 @@
         "SUIUSDT",
         "SUIUSDC"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/sui/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/sui",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "ZEC",
@@ -466,8 +481,9 @@
         "ZECUSDT",
         "ZECUSDC"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/zcash/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/zcash",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "WLFI",
@@ -490,8 +506,9 @@
         "WLFIUSDT",
         "WLFIUSDC"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/world-liberty-financial-wlfi/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/world-liberty-financial",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "ASTER",
@@ -513,8 +530,9 @@
       "futuresPairs": [
         "ASTERUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/aster/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/aster-2",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "WLD",
@@ -539,8 +557,9 @@
         "WLDUSDT",
         "WLDUSDC"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/worldcoin/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/worldcoin-wld",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "TAO",
@@ -565,8 +584,9 @@
       "futuresPairs": [
         "TAOUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/bittensor/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/bittensor",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "USDE",
@@ -582,8 +602,9 @@
       ],
       "hasBinanceFutures": false,
       "futuresPairs": [],
-      "cmcUrl": "https://coinmarketcap.com/currencies/dollar-electrino/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/ethena-usde",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "USD1",
@@ -601,8 +622,9 @@
       ],
       "hasBinanceFutures": false,
       "futuresPairs": [],
-      "cmcUrl": null,
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/usd1-wlfi",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "BCH",
@@ -628,8 +650,9 @@
         "BCHUSDT",
         "BCHUSDC"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/bitcoin-cash/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/bitcoin-cash",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "HBAR",
@@ -652,8 +675,9 @@
         "HBARUSDT",
         "HBARUSDC"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/hedera-hashgraph/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/hedera-hashgraph",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "ONDO",
@@ -673,8 +697,9 @@
       "futuresPairs": [
         "ONDOUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/ondo-finance/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/ondo-finance",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "LTC",
@@ -703,8 +728,9 @@
         "LTCUSDT",
         "LTCUSDC"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/litecoin/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/litecoin",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "AVAX",
@@ -731,8 +757,9 @@
         "AVAXUSDT",
         "AVAXUSDC"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/avalanche/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/avalanche-2",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "XAUT",
@@ -754,8 +781,9 @@
       "futuresPairs": [
         "XAUTUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/tether-gold/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/tether-gold",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "SHIB",
@@ -776,8 +804,9 @@
       ],
       "hasBinanceFutures": false,
       "futuresPairs": [],
-      "cmcUrl": "https://coinmarketcap.com/currencies/shiba-inu/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/shiba-inu",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "NEAR",
@@ -803,8 +832,9 @@
         "NEARUSDT",
         "NEARUSDC"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/near-protocol/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/near",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "TRUMP",
@@ -828,8 +858,9 @@
         "TRUMPUSDT",
         "TRUMPUSDC"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/trumpcoin/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/official-trump",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "UNI",
@@ -852,8 +883,9 @@
         "UNIUSDT",
         "UNIUSDC"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/uniswap/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/uniswap",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "MORPHO",
@@ -872,8 +904,9 @@
       "futuresPairs": [
         "MORPHOUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/morpho/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/morpho",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "KITE",
@@ -892,8 +925,9 @@
       "futuresPairs": [
         "KITEUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/kite/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/kite-2",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "PAXG",
@@ -915,8 +949,9 @@
       "futuresPairs": [
         "PAXGUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/pax-gold/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/pax-gold",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "DEXE",
@@ -933,8 +968,9 @@
       "futuresPairs": [
         "DEXEUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/dexe/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/dexe",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "RLUSD",
@@ -950,8 +986,9 @@
       ],
       "hasBinanceFutures": false,
       "futuresPairs": [],
-      "cmcUrl": null,
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/ripple-usd",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "DOT",
@@ -974,8 +1011,9 @@
       "futuresPairs": [
         "DOTUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/polkadot-new/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/polkadot",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "FIL",
@@ -997,8 +1035,9 @@
         "FILUSDT",
         "FILUSDC"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/filecoin/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/filecoin",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "ICP",
@@ -1019,8 +1058,9 @@
       "futuresPairs": [
         "ICPUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/dfinity/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/internet-computer",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "SKY",
@@ -1039,8 +1079,9 @@
       "futuresPairs": [
         "SKYUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/skycoin/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/sky",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "BFUSD",
@@ -1056,8 +1097,9 @@
       ],
       "hasBinanceFutures": false,
       "futuresPairs": [],
-      "cmcUrl": null,
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/bfusd",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "PUMP",
@@ -1076,8 +1118,9 @@
       "futuresPairs": [
         "PUMPUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/pumpanomics/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/pump-fun",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "PEPE",
@@ -1100,8 +1143,9 @@
       ],
       "hasBinanceFutures": false,
       "futuresPairs": [],
-      "cmcUrl": null,
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/pepe",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "JUP",
@@ -1121,8 +1165,9 @@
       "futuresPairs": [
         "JUPUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/jupiter/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/jupiter-exchange-solana",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "ENA",
@@ -1144,8 +1189,9 @@
         "ENAUSDT",
         "ENAUSDC"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/ethena/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/ethena",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "ETC",
@@ -1166,8 +1212,9 @@
       "futuresPairs": [
         "ETCUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/ethereum-classic/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/ethereum-classic",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "AAVE",
@@ -1190,8 +1237,9 @@
         "AAVEUSDT",
         "AAVEUSDC"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/aave/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/aave",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "ATOM",
@@ -1212,8 +1260,9 @@
       "futuresPairs": [
         "ATOMUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/cosmos/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/cosmos",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "U",
@@ -1231,8 +1280,9 @@
       ],
       "hasBinanceFutures": false,
       "futuresPairs": [],
-      "cmcUrl": null,
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/united-stables",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "QNT",
@@ -1251,8 +1301,9 @@
       "futuresPairs": [
         "QNTUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/quant/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/quant-network",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "ZRO",
@@ -1272,8 +1323,9 @@
       "futuresPairs": [
         "ZROUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/layerzero/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/layerzero",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "RENDER",
@@ -1296,8 +1348,9 @@
       "futuresPairs": [
         "RENDERUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/render/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/render-token",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "ARB",
@@ -1320,8 +1373,9 @@
         "ARBUSDT",
         "ARBUSDC"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/arbitrage/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/arbitrum",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "NIGHT",
@@ -1341,8 +1395,9 @@
       "futuresPairs": [
         "NIGHTUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/midnight/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/midnight-3",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "XPL",
@@ -1361,8 +1416,9 @@
       "futuresPairs": [
         "XPLUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/plasma/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/plasma",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "FF",
@@ -1382,8 +1438,9 @@
       "futuresPairs": [
         "FFUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/falcon-finance-ff/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/falcon-finance-ff",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "POL",
@@ -1409,8 +1466,9 @@
       "futuresPairs": [
         "POLUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/proof-of-liquidity/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/polygon-ecosystem-token",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "NEXO",
@@ -1426,8 +1484,9 @@
       ],
       "hasBinanceFutures": false,
       "futuresPairs": [],
-      "cmcUrl": "https://coinmarketcap.com/currencies/nexo/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/nexo",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "APT",
@@ -1451,8 +1510,9 @@
       "futuresPairs": [
         "APTUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/aptos/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/aptos",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "ALGO",
@@ -1472,8 +1532,9 @@
       "futuresPairs": [
         "ALGOUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/algorand/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/algorand",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "2Z",
@@ -1492,8 +1553,9 @@
       "futuresPairs": [
         "2ZUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/doublezero/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/doublezero",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "币安人生",
@@ -1513,8 +1575,9 @@
       "futuresPairs": [
         "币安人生USDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/bianrensheng/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/bianrensheng",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "JST",
@@ -1532,8 +1595,9 @@
       "futuresPairs": [
         "JSTUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/just/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/just",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "VIRTUAL",
@@ -1553,8 +1617,9 @@
       "futuresPairs": [
         "VIRTUALUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/virtual-protocol/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/virtual-protocol",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "CRV",
@@ -1574,16 +1639,17 @@
         "CRVUSDT",
         "CRVUSDC"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/curve-dao-token/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/curve-dao-token",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "SENT",
       "name": "Sentient",
-      "fdv": 551892216,
-      "marketCap": 116256146,
-      "rank": 244,
-      "price": 0.01606033,
+      "fdv": 547086585,
+      "marketCap": 115243840,
+      "rank": 245,
+      "price": 0.01591277,
       "coinGeckoId": "sentient",
       "spotPairs": [
         "SENTUSDT",
@@ -1594,8 +1660,9 @@
       "futuresPairs": [
         "SENTUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/sentinel/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/sentient",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "SEI",
@@ -1616,8 +1683,9 @@
       "futuresPairs": [
         "SEIUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/sei/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/sei-network",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "PENGU",
@@ -1637,8 +1705,9 @@
         "PENGUUSDT",
         "PENGUUSDC"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/pudgy-penguins/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/pudgy-penguins",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "JTO",
@@ -1657,8 +1726,9 @@
       "futuresPairs": [
         "JTOUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/jito/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/jito-governance-token",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "INJ",
@@ -1679,8 +1749,9 @@
       "futuresPairs": [
         "INJUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/injective-protocol/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/injective-protocol",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "FET",
@@ -1702,8 +1773,9 @@
       "futuresPairs": [
         "FETUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/fetch/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/fetch-ai",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "MEGA",
@@ -1723,8 +1795,9 @@
       "futuresPairs": [
         "MEGAUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/megacryptopolis/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/megaeth",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "TUSD",
@@ -1739,8 +1812,9 @@
       ],
       "hasBinanceFutures": false,
       "futuresPairs": [],
-      "cmcUrl": "https://coinmarketcap.com/currencies/trueusd/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/true-usd",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "ENS",
@@ -1759,8 +1833,9 @@
       "futuresPairs": [
         "ENSUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/ethereum-name-service/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/ethereum-name-service",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "CAKE",
@@ -1781,8 +1856,9 @@
       "futuresPairs": [
         "CAKEUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/pancakeswap/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/pancakeswap-token",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "LUNC",
@@ -1799,8 +1875,9 @@
       ],
       "hasBinanceFutures": false,
       "futuresPairs": [],
-      "cmcUrl": null,
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/terra-luna",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "DASH",
@@ -1820,8 +1897,9 @@
       "futuresPairs": [
         "DASHUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/dash/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/dash",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "OP",
@@ -1840,8 +1918,9 @@
       "futuresPairs": [
         "OPUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/optimism-ethereum/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/optimism",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "VET",
@@ -1861,8 +1940,9 @@
       "futuresPairs": [
         "VETUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/vechain/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/vechain",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "KAITO",
@@ -1882,8 +1962,9 @@
         "KAITOUSDT",
         "KAITOUSDC"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/kaito/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/kaito",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "GENIUS",
@@ -1902,8 +1983,9 @@
       "futuresPairs": [
         "GENIUSUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/genius-terminal/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/genius-3",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "TWT",
@@ -1922,8 +2004,9 @@
       "futuresPairs": [
         "TWTUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/trust-wallet-token/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/trust-wallet-token",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "BONK",
@@ -1941,8 +2024,9 @@
       ],
       "hasBinanceFutures": false,
       "futuresPairs": [],
-      "cmcUrl": "https://coinmarketcap.com/currencies/bonk/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/bonk",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "TIA",
@@ -1962,8 +2046,9 @@
         "TIAUSDT",
         "TIAUSDC"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/celestia/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/celestia",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "PYTH",
@@ -1982,8 +2067,9 @@
       "futuresPairs": [
         "PYTHUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/pyth-network/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/pyth-network",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "PENDLE",
@@ -2003,8 +2089,9 @@
       "futuresPairs": [
         "PENDLEUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/pendle/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/pendle",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "NXPC",
@@ -2023,8 +2110,9 @@
       "futuresPairs": [
         "NXPCUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/maplestory-universe/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/nexpace",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "ZAMA",
@@ -2043,8 +2131,9 @@
       "futuresPairs": [
         "ZAMAUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/zama/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/zama",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "SUN",
@@ -2062,8 +2151,9 @@
       "futuresPairs": [
         "SUNUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/sun/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/sun-token",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "STRK",
@@ -2082,8 +2172,9 @@
       "futuresPairs": [
         "STRKUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/starknet-token/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/starknet",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "FDUSD",
@@ -2100,8 +2191,9 @@
       ],
       "hasBinanceFutures": false,
       "futuresPairs": [],
-      "cmcUrl": null,
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/first-digital-usd",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "STX",
@@ -2121,8 +2213,9 @@
       "futuresPairs": [
         "STXUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/blockstack/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/blockstack",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "RAY",
@@ -2139,8 +2232,9 @@
       ],
       "hasBinanceFutures": false,
       "futuresPairs": [],
-      "cmcUrl": null,
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/raydium",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "EIGEN",
@@ -2160,8 +2254,9 @@
       "futuresPairs": [
         "EIGENUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/eigenlayer/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/eigenlayer",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "CHIP",
@@ -2182,8 +2277,9 @@
       "futuresPairs": [
         "CHIPUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/usd-ai/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/chip-2",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "ETHFI",
@@ -2203,8 +2299,9 @@
         "ETHFIUSDT",
         "ETHFIUSDC"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/ether-fi-ethfi/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/ether-fi",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "GNO",
@@ -2219,8 +2316,9 @@
       ],
       "hasBinanceFutures": false,
       "futuresPairs": [],
-      "cmcUrl": "https://coinmarketcap.com/currencies/gnosis-gno/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/gnosis",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "ALLO",
@@ -2239,8 +2337,9 @@
       "futuresPairs": [
         "ALLOUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/allo/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/allora",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "HOME",
@@ -2259,8 +2358,9 @@
       "futuresPairs": [
         "HOMEUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/defi-app/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/home",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "0G",
@@ -2279,8 +2379,9 @@
       "futuresPairs": [
         "0GUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/zero-gravity/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/zero-gravity",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "IMX",
@@ -2298,8 +2399,9 @@
       "futuresPairs": [
         "IMXUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/impact/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/immutable-x",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "CHZ",
@@ -2318,8 +2420,9 @@
       "futuresPairs": [
         "CHZUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/chiliz/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/chiliz",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "AXS",
@@ -2338,8 +2441,9 @@
       "futuresPairs": [
         "AXSUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/axie-infinity/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/axie-infinity",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "LDO",
@@ -2359,8 +2463,9 @@
       "futuresPairs": [
         "LDOUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/lido-dao/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/lido-dao",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "XTZ",
@@ -2380,8 +2485,9 @@
       "futuresPairs": [
         "XTZUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/tezos/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/tezos",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "ESP",
@@ -2400,25 +2506,9 @@
       "futuresPairs": [
         "ESPUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/espers/",
-      "dataStatus": "ok"
-    },
-    {
-      "asset": "AI",
-      "name": "Gensyn",
-      "fdv": 255375176,
-      "marketCap": 33318169,
-      "rank": 587,
-      "price": 0.02550494,
-      "coinGeckoId": "gensyn",
-      "spotPairs": [
-        "AIUSDT",
-        "AITRY"
-      ],
-      "hasBinanceFutures": false,
-      "futuresPairs": [],
-      "cmcUrl": null,
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/espresso",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "ZK",
@@ -2437,8 +2527,9 @@
       "futuresPairs": [
         "ZKUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/zksync/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/zksync",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "FLOKI",
@@ -2456,26 +2547,9 @@
       ],
       "hasBinanceFutures": false,
       "futuresPairs": [],
-      "cmcUrl": null,
-      "dataStatus": "ok"
-    },
-    {
-      "asset": "FRAX",
-      "name": "Legacy Frax Dollar",
-      "fdv": 240216091,
-      "marketCap": 240216091,
-      "rank": 150,
-      "price": 0.993249,
-      "coinGeckoId": "frax",
-      "spotPairs": [
-        "FRAXUSDT"
-      ],
-      "hasBinanceFutures": true,
-      "futuresPairs": [
-        "FRAXUSDT"
-      ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/frax/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/floki",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "CFX",
@@ -2494,8 +2568,9 @@
       "futuresPairs": [
         "CFXUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/cryptoforex/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/conflux-token",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "JASMY",
@@ -2513,8 +2588,9 @@
       "futuresPairs": [
         "JASMYUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/jasmy/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/jasmycoin",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "HUMA",
@@ -2533,8 +2609,9 @@
       "futuresPairs": [
         "HUMAUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/huma-finance/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/huma-finance",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "IOTA",
@@ -2553,8 +2630,9 @@
       "futuresPairs": [
         "IOTAUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/iota/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/iota",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "NEO",
@@ -2574,8 +2652,9 @@
         "NEOUSDT",
         "NEOUSDC"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/neo/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/neo",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "OPEN",
@@ -2596,8 +2675,9 @@
       "futuresPairs": [
         "OPENUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/open-platform/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/openledger-2",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "ROBO",
@@ -2616,8 +2696,9 @@
       "futuresPairs": [
         "ROBOUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/fabric-foundation/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/robo-token-2",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "GRT",
@@ -2636,8 +2717,9 @@
       "futuresPairs": [
         "GRTUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/global-rental-token/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/the-graph",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "KAIA",
@@ -2655,8 +2737,9 @@
       "futuresPairs": [
         "KAIAUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/kaia/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/kaia",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "DCR",
@@ -2671,8 +2754,9 @@
       ],
       "hasBinanceFutures": false,
       "futuresPairs": [],
-      "cmcUrl": "https://coinmarketcap.com/currencies/decred/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/decred",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "SPK",
@@ -2691,8 +2775,9 @@
       "futuresPairs": [
         "SPKUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/sparkspay/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/spark-2",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "PROVE",
@@ -2711,8 +2796,9 @@
       "futuresPairs": [
         "PROVEUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/prove-token/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/succinct",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "KMNO",
@@ -2730,8 +2816,9 @@
       "futuresPairs": [
         "KMNOUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/kamino-finance/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/kamino",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "LINEA",
@@ -2750,8 +2837,9 @@
       "futuresPairs": [
         "LINEAUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/linea/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/linea",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "COMP",
@@ -2770,8 +2858,9 @@
       "futuresPairs": [
         "COMPUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/compound/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/compound-governance-token",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "WAL",
@@ -2792,8 +2881,9 @@
       "futuresPairs": [
         "WALUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/wal/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/walrus-2",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "BARD",
@@ -2812,8 +2902,9 @@
       "futuresPairs": [
         "BARDUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/lombard/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/lombard-protocol",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "SYRUP",
@@ -2832,8 +2923,9 @@
       "futuresPairs": [
         "SYRUPUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/syrup/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/syrup",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "WIF",
@@ -2854,8 +2946,9 @@
         "WIFUSDT",
         "WIFUSDC"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/dogwifhat/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/dogwifcoin",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "AT",
@@ -2874,8 +2967,9 @@
       "futuresPairs": [
         "ATUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/artfinity/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/apro",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "THETA",
@@ -2895,8 +2989,9 @@
       "futuresPairs": [
         "THETAUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/theta/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/theta-token",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "SAND",
@@ -2915,8 +3010,9 @@
       "futuresPairs": [
         "SANDUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/the-sandbox/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/the-sandbox",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "OPG",
@@ -2935,8 +3031,9 @@
       "futuresPairs": [
         "OPGUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/opengradient/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/opengradient",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "SAHARA",
@@ -2955,8 +3052,9 @@
       "futuresPairs": [
         "SAHARAUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/sahara-ai/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/sahara-ai",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "A",
@@ -2975,8 +3073,9 @@
       "futuresPairs": [
         "AUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/alpha-token/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/vaulta",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "BABY",
@@ -2995,8 +3094,9 @@
       "futuresPairs": [
         "BABYUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/babylon/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/babylon",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "MANA",
@@ -3014,8 +3114,9 @@
       "futuresPairs": [
         "MANAUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/decentraland/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/decentraland",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "COW",
@@ -3034,8 +3135,9 @@
       "futuresPairs": [
         "COWUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/cowboy-finance/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/cow-protocol",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "CFG",
@@ -3054,8 +3156,9 @@
       "futuresPairs": [
         "CFGUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/centrifuge/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/centrifuge-2",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "RUNE",
@@ -3074,28 +3177,9 @@
       "futuresPairs": [
         "RUNEUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/thorchain/",
-      "dataStatus": "ok"
-    },
-    {
-      "asset": "1MBABYDOGE",
-      "name": "Baby Doge Coin",
-      "fdv": 138313372,
-      "marketCap": 60262825,
-      "rank": 394,
-      "price": 3.29347e-10,
-      "coinGeckoId": "baby-doge-coin",
-      "spotPairs": [
-        "1MBABYDOGEUSDT",
-        "1MBABYDOGEUSDC",
-        "1MBABYDOGETRY"
-      ],
-      "hasBinanceFutures": true,
-      "futuresPairs": [
-        "1MBABYDOGEUSDT"
-      ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/babydoge-coin/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/thorchain",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "BERA",
@@ -3114,8 +3198,9 @@
       "futuresPairs": [
         "BERAUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/berachain/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/berachain-bera",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "IO",
@@ -3134,8 +3219,9 @@
       "futuresPairs": [
         "IOUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/io/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/io",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "RSR",
@@ -3154,8 +3240,9 @@
       "futuresPairs": [
         "RSRUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/reserve-rights/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/reserve-rights-token",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "CVX",
@@ -3173,8 +3260,9 @@
       "futuresPairs": [
         "CVXUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/convex-finance/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/convex-finance",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "VANA",
@@ -3193,8 +3281,9 @@
       "futuresPairs": [
         "VANAUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/vana/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/vana",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "BAT",
@@ -3211,8 +3300,9 @@
       "futuresPairs": [
         "BATUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/basic-attention-token/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/basic-attention-token",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "FORM",
@@ -3231,8 +3321,9 @@
       "futuresPairs": [
         "FORMUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/four/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/four",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "GALA",
@@ -3251,8 +3342,9 @@
       "futuresPairs": [
         "GALAUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/gala/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/gala",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "APE",
@@ -3271,8 +3363,9 @@
       "futuresPairs": [
         "APEUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/apecoin/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/apecoin",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "AR",
@@ -3292,8 +3385,29 @@
       "futuresPairs": [
         "ARUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/arweave/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/arweave",
+      "mappingSource": "coingecko_binance_ticker"
+    },
+    {
+      "asset": "1000CHEEMS",
+      "name": "1000CHEMS",
+      "fdv": 125764382,
+      "marketCap": 0,
+      "rank": null,
+      "price": 0.00061846,
+      "coinGeckoId": "1000chems",
+      "spotPairs": [
+        "1000CHEEMSUSDT",
+        "1000CHEEMSUSDC"
+      ],
+      "hasBinanceFutures": true,
+      "futuresPairs": [
+        "1000CHEEMSUSDT"
+      ],
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/1000chems",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "HOLO",
@@ -3312,27 +3426,9 @@
       "futuresPairs": [
         "HOLOUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/holo/",
-      "dataStatus": "ok"
-    },
-    {
-      "asset": "1000CHEEMS",
-      "name": "Cheems Token",
-      "fdv": 125202331,
-      "marketCap": 125202331,
-      "rank": 232,
-      "price": 6.13194e-7,
-      "coinGeckoId": "cheems-token",
-      "spotPairs": [
-        "1000CHEEMSUSDT",
-        "1000CHEEMSUSDC"
-      ],
-      "hasBinanceFutures": true,
-      "futuresPairs": [
-        "1000CHEEMSUSDT"
-      ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/cheems-token/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/holoworld",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "FOGO",
@@ -3351,8 +3447,9 @@
       "futuresPairs": [
         "FOGOUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/fogo/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/fogo",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "ARKM",
@@ -3371,8 +3468,9 @@
       "futuresPairs": [
         "ARKMUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/arkham/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/arkham",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "SFP",
@@ -3389,8 +3487,9 @@
       "futuresPairs": [
         "SFPUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/safepal/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/safepal",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "MOVE",
@@ -3409,8 +3508,9 @@
       "futuresPairs": [
         "MOVEUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/movement/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/movement",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "ZBT",
@@ -3429,8 +3529,9 @@
       "futuresPairs": [
         "ZBTUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/zerobase/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/zerobase",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "S",
@@ -3450,8 +3551,9 @@
       "futuresPairs": [
         "SUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/sharpay/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/sonic-3",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "DYDX",
@@ -3470,8 +3572,9 @@
       "futuresPairs": [
         "DYDXUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/dydx/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/dydx-chain",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "MMT",
@@ -3490,8 +3593,9 @@
       "futuresPairs": [
         "MMTUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/momentum-token/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/momentum-3",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "SOMI",
@@ -3510,8 +3614,9 @@
       "futuresPairs": [
         "SOMIUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/somnia/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/somnia",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "GLM",
@@ -3529,8 +3634,9 @@
       "futuresPairs": [
         "GLMUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/golem-network-tokens/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/golem",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "XEC",
@@ -3546,8 +3652,9 @@
       ],
       "hasBinanceFutures": false,
       "futuresPairs": [],
-      "cmcUrl": null,
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/ecash",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "AVNT",
@@ -3567,8 +3674,9 @@
       "futuresPairs": [
         "AVNTUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/avantis/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/avantis",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "1INCH",
@@ -3586,8 +3694,9 @@
       "futuresPairs": [
         "1INCHUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/1inch/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/1inch",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "MET",
@@ -3606,8 +3715,9 @@
       "futuresPairs": [
         "METUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/metronome/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/meteora",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "AWE",
@@ -3624,8 +3734,9 @@
       "futuresPairs": [
         "AWEUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/awe-network/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/stp-network",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "BIO",
@@ -3646,8 +3757,9 @@
         "BIOUSDT",
         "BIOUSDC"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/biocoin/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/bio-protocol",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "PLUME",
@@ -3666,8 +3778,9 @@
       "futuresPairs": [
         "PLUMEUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/plume/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/plume",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "ERA",
@@ -3688,8 +3801,9 @@
       "futuresPairs": [
         "ERAUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/blakestar/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/caldera",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "C",
@@ -3708,8 +3822,9 @@
       "futuresPairs": [
         "CUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/chainbase/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/chainbase",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "SUPER",
@@ -3728,8 +3843,9 @@
       "futuresPairs": [
         "SUPERUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/supercoin/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/superfarm",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "W",
@@ -3748,8 +3864,9 @@
       "futuresPairs": [
         "WUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/wormhole/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/wormhole",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "RED",
@@ -3768,8 +3885,9 @@
       "futuresPairs": [
         "REDUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/red/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/redstone-oracles",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "LPT",
@@ -3790,8 +3908,9 @@
       "futuresPairs": [
         "LPTUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/livepeer/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/livepeer",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "ZEN",
@@ -3810,8 +3929,9 @@
       "futuresPairs": [
         "ZENUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/horizen/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/zencash",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "NMR",
@@ -3830,8 +3950,9 @@
       "futuresPairs": [
         "NMRUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/numeraire/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/numeraire",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "ZRX",
@@ -3848,8 +3969,9 @@
       "futuresPairs": [
         "ZRXUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/0x/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/0x",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "ORCA",
@@ -3868,8 +3990,9 @@
       "futuresPairs": [
         "ORCAUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/orca-alliance/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/orca",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "EGLD",
@@ -3889,8 +4012,9 @@
       "futuresPairs": [
         "EGLDUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/elrond-egld/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/elrond-erd-2",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "SIGN",
@@ -3910,8 +4034,9 @@
       "futuresPairs": [
         "SIGNUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/signature-chain/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/sign-global",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "OPN",
@@ -3932,8 +4057,9 @@
       "futuresPairs": [
         "OPNUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/opinion/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/opinion",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "BEAMX",
@@ -3952,8 +4078,9 @@
       "futuresPairs": [
         "BEAMXUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/beam/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/beam-2",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "MANTA",
@@ -3973,8 +4100,9 @@
       "futuresPairs": [
         "MANTAUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/manta-network/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/manta-network",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "SNX",
@@ -3993,8 +4121,9 @@
       "futuresPairs": [
         "SNXUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/synthetix-network-token/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/havven",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "SAPIEN",
@@ -4013,8 +4142,9 @@
       "futuresPairs": [
         "SAPIENUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/sapien/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/sapien-2",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "BREV",
@@ -4033,8 +4163,9 @@
       "futuresPairs": [
         "BREVUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/brevis/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/brevis",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "RIF",
@@ -4051,8 +4182,9 @@
       "futuresPairs": [
         "RIFUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/rsk-infrastructure-framework/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/rif-token",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "ACH",
@@ -4071,8 +4203,9 @@
       "futuresPairs": [
         "ACHUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/alchemy-pay/",
-      "dataStatus": "existing_fallback"
+      "dataStatus": "existing_fallback",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/alchemy-pay",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "QTUM",
@@ -4090,8 +4223,9 @@
       "futuresPairs": [
         "QTUMUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/qtum/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/qtum",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "BANANAS31",
@@ -4109,8 +4243,9 @@
       "futuresPairs": [
         "BANANAS31USDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/banana-for-scale/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/banana-for-scale-2",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "XVS",
@@ -4127,8 +4262,9 @@
       "futuresPairs": [
         "XVSUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/venus/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/venus",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "GPS",
@@ -4147,8 +4283,9 @@
       "futuresPairs": [
         "GPSUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/goplus-security/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/goplus-security",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "GAS",
@@ -4166,8 +4303,9 @@
       "futuresPairs": [
         "GASUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/gas/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/gas",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "LA",
@@ -4186,8 +4324,9 @@
       "futuresPairs": [
         "LAUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/latoken/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/lagrange",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "ORDI",
@@ -4208,8 +4347,9 @@
         "ORDIUSDT",
         "ORDIUSDC"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/ordi/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/ordinals",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "RVN",
@@ -4228,8 +4368,9 @@
       "futuresPairs": [
         "RVNUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/ravencoin/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/ravencoin",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "YFI",
@@ -4246,8 +4387,9 @@
       "futuresPairs": [
         "YFIUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/yearn-finance/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/yearn-finance",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "KSM",
@@ -4265,8 +4407,30 @@
       "futuresPairs": [
         "KSMUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/kusama/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/kusama",
+      "mappingSource": "coingecko_binance_ticker"
+    },
+    {
+      "asset": "1MBABYDOGE",
+      "name": "1MBABYDOGE",
+      "fdv": 66721470,
+      "marketCap": 0,
+      "rank": null,
+      "price": 0.00032942,
+      "coinGeckoId": "1mbabydoge",
+      "spotPairs": [
+        "1MBABYDOGEUSDT",
+        "1MBABYDOGEUSDC",
+        "1MBABYDOGETRY"
+      ],
+      "hasBinanceFutures": true,
+      "futuresPairs": [
+        "1MBABYDOGEUSDT"
+      ],
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/1mbabydoge",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "LAYER",
@@ -4285,8 +4449,9 @@
       "futuresPairs": [
         "LAYERUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/unilayer/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/solayer",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "ENJ",
@@ -4306,8 +4471,9 @@
       "futuresPairs": [
         "ENJUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/enjin-coin/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/enjincoin",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "YB",
@@ -4326,8 +4492,9 @@
       "futuresPairs": [
         "YBUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/yieldbasis/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/yield-basis",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "ZIL",
@@ -4346,8 +4513,9 @@
       "futuresPairs": [
         "ZILUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/zilliqa/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/zilliqa",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "STG",
@@ -4364,8 +4532,9 @@
       "futuresPairs": [
         "STGUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/stargate-finance/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/stargate-finance",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "ME",
@@ -4384,8 +4553,9 @@
       "futuresPairs": [
         "MEUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/all-me/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/magic-eden",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "ENSO",
@@ -4404,8 +4574,9 @@
       "futuresPairs": [
         "ENSOUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/enso/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/enso",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "ROSE",
@@ -4424,8 +4595,9 @@
       "futuresPairs": [
         "ROSEUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/oasis-network/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/oasis-network",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "ALT",
@@ -4444,8 +4616,9 @@
       "futuresPairs": [
         "ALTUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/alt-estate-token/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/altlayer",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "AXL",
@@ -4463,8 +4636,9 @@
       "futuresPairs": [
         "AXLUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/axial-entertainment-digital-asset/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/axelar",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "LUNA",
@@ -4481,8 +4655,9 @@
       ],
       "hasBinanceFutures": false,
       "futuresPairs": [],
-      "cmcUrl": "https://coinmarketcap.com/currencies/terra-luna/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/terra-luna-2",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "TFUEL",
@@ -4497,8 +4672,9 @@
       ],
       "hasBinanceFutures": false,
       "futuresPairs": [],
-      "cmcUrl": "https://coinmarketcap.com/currencies/theta-fuel/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/theta-fuel",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "KAT",
@@ -4518,8 +4694,9 @@
       "futuresPairs": [
         "KATUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/kambria/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/katana-network-token",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "CELO",
@@ -4537,8 +4714,9 @@
       "futuresPairs": [
         "CELOUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/celo/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/celo",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "PARTI",
@@ -4559,8 +4737,9 @@
       "futuresPairs": [
         "PARTIUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/particle-network/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/particle-network",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "SOPH",
@@ -4579,8 +4758,9 @@
       "futuresPairs": [
         "SOPHUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/sophon/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/sophon",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "GUN",
@@ -4600,8 +4780,9 @@
       "futuresPairs": [
         "GUNUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/gunz/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/gunz",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "INIT",
@@ -4620,8 +4801,9 @@
       "futuresPairs": [
         "INITUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/initia/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/initia",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "TURBO",
@@ -4640,8 +4822,9 @@
       "futuresPairs": [
         "TURBOUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/turbo/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/turbo",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "RONIN",
@@ -4659,8 +4842,9 @@
       "futuresPairs": [
         "RONINUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/ronin/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/ronin",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "CATI",
@@ -4679,8 +4863,9 @@
       "futuresPairs": [
         "CATIUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/catizen/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/catizen",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "GMX",
@@ -4698,8 +4883,9 @@
       "futuresPairs": [
         "GMXUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/gmx/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/gmx",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "HYPER",
@@ -4718,8 +4904,9 @@
       "futuresPairs": [
         "HYPERUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/hyperlane/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/hyperlane",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "EURI",
@@ -4735,8 +4922,9 @@
       ],
       "hasBinanceFutures": false,
       "futuresPairs": [],
-      "cmcUrl": null,
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/eurite",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "ID",
@@ -4754,8 +4942,9 @@
       "futuresPairs": [
         "IDUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/space-id/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/space-id",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "REQ",
@@ -4770,8 +4959,9 @@
       ],
       "hasBinanceFutures": false,
       "futuresPairs": [],
-      "cmcUrl": "https://coinmarketcap.com/currencies/request/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/request-network",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "CKB",
@@ -4790,8 +4980,9 @@
       "futuresPairs": [
         "CKBUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/nervos-network/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/nervos-network",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "HIVE",
@@ -4810,8 +5001,9 @@
       "futuresPairs": [
         "HIVEUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/hive-blockchain/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/hive",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "ZKP",
@@ -4830,8 +5022,9 @@
       "futuresPairs": [
         "ZKPUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/zkpass/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/zkpass",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "MINA",
@@ -4850,8 +5043,9 @@
       "futuresPairs": [
         "MINAUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/mina/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/mina-protocol",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "BLUR",
@@ -4870,8 +5064,9 @@
       "futuresPairs": [
         "BLURUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/blur/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/blur",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "HOT",
@@ -4889,8 +5084,9 @@
       "futuresPairs": [
         "HOTUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/holo/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/holotoken",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "MANTRA",
@@ -4909,8 +5105,9 @@
       "futuresPairs": [
         "MANTRAUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/mantra/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/mantra",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "AMP",
@@ -4926,8 +5123,9 @@
       ],
       "hasBinanceFutures": false,
       "futuresPairs": [],
-      "cmcUrl": "https://coinmarketcap.com/currencies/amp/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/amp-token",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "MIRA",
@@ -4946,8 +5144,9 @@
       "futuresPairs": [
         "MIRAUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/mira-network/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/mira-3",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "DUSK",
@@ -4964,8 +5163,9 @@
       "futuresPairs": [
         "DUSKUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/dusk-network/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/dusk-network",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "STO",
@@ -4984,8 +5184,9 @@
       "futuresPairs": [
         "STOUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/storeum/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/stakestone",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "NEWT",
@@ -5004,8 +5205,9 @@
       "futuresPairs": [
         "NEWTUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/newton-protocol/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/newton-protocol",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "UMA",
@@ -5024,8 +5226,9 @@
       "futuresPairs": [
         "UMAUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/uma/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/uma",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "ZKC",
@@ -5044,8 +5247,9 @@
       "futuresPairs": [
         "ZKCUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/boundless/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/boundless",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "SUSHI",
@@ -5064,8 +5268,9 @@
       "futuresPairs": [
         "SUSHIUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/sushiswap/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/sushi",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "POLYX",
@@ -5083,8 +5288,9 @@
       "futuresPairs": [
         "POLYXUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/polymesh/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/polymesh",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "ASTR",
@@ -5101,8 +5307,9 @@
       "futuresPairs": [
         "ASTRUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/astar/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/astar",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "HEMI",
@@ -5121,8 +5328,9 @@
       "futuresPairs": [
         "HEMIUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/hemi/",
-      "dataStatus": "existing_fallback"
+      "dataStatus": "existing_fallback",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/hemi",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "KAVA",
@@ -5140,8 +5348,9 @@
       "futuresPairs": [
         "KAVAUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/kava/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/kava",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "POWR",
@@ -5158,8 +5367,9 @@
       "futuresPairs": [
         "POWRUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/power-ledger/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/power-ledger",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "XNO",
@@ -5174,8 +5384,9 @@
       ],
       "hasBinanceFutures": false,
       "futuresPairs": [],
-      "cmcUrl": null,
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/nano",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "NOT",
@@ -5195,8 +5406,9 @@
       "futuresPairs": [
         "NOTUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/notcoin/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/notcoin",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "KERNEL",
@@ -5215,8 +5427,9 @@
       "futuresPairs": [
         "KERNELUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/kerneldao/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/kernel-2",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "FLOW",
@@ -5233,8 +5446,9 @@
       "futuresPairs": [
         "FLOWUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/flow-protocol/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/flow",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "ONT",
@@ -5254,8 +5468,9 @@
       "futuresPairs": [
         "ONTUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/ontology/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/ontology",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "WCT",
@@ -5274,8 +5489,9 @@
       "futuresPairs": [
         "WCTUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/walletconnect-token/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/connect-token-wct",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "OSMO",
@@ -5291,8 +5507,30 @@
       ],
       "hasBinanceFutures": false,
       "futuresPairs": [],
-      "cmcUrl": null,
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/osmosis",
+      "mappingSource": "coingecko_binance_ticker"
+    },
+    {
+      "asset": "TREE",
+      "name": "Treehouse",
+      "fdv": 45225668,
+      "marketCap": 7060742,
+      "rank": 1340,
+      "price": 0.04518866,
+      "coinGeckoId": "treehouse",
+      "spotPairs": [
+        "TREEUSDT",
+        "TREEUSDC",
+        "TREETRY"
+      ],
+      "hasBinanceFutures": true,
+      "futuresPairs": [
+        "TREEUSDT"
+      ],
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/treehouse",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "BB",
@@ -5311,8 +5549,9 @@
       "futuresPairs": [
         "BBUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/bouncebit/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/bouncebit",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "XUSD",
@@ -5327,8 +5566,9 @@
       ],
       "hasBinanceFutures": false,
       "futuresPairs": [],
-      "cmcUrl": null,
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/straitsx-xusd",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "DGB",
@@ -5343,8 +5583,9 @@
       ],
       "hasBinanceFutures": false,
       "futuresPairs": [],
-      "cmcUrl": "https://coinmarketcap.com/currencies/digibyte/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/digibyte",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "BIGTIME",
@@ -5362,8 +5603,9 @@
       "futuresPairs": [
         "BIGTIMEUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/big-time/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/big-time",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "API3",
@@ -5382,8 +5624,9 @@
       "futuresPairs": [
         "API3USDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/api3/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/api3",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "GMT",
@@ -5402,8 +5645,9 @@
       "futuresPairs": [
         "GMTUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/green-metaverse-token/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/stepn",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "EDEN",
@@ -5422,8 +5666,9 @@
       "futuresPairs": [
         "EDENUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/openeden/",
-      "dataStatus": "existing_fallback"
+      "dataStatus": "existing_fallback",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/openeden",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "PNUT",
@@ -5443,8 +5688,9 @@
         "PNUTUSDT",
         "PNUTUSDC"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/peanut-the-squirrel/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/peanut-the-squirrel",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "T",
@@ -5462,8 +5708,9 @@
       "futuresPairs": [
         "TUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/t/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/threshold-network-token",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "SXT",
@@ -5482,8 +5729,9 @@
       "futuresPairs": [
         "SXTUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/space-and-time/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/space-and-time",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "ACX",
@@ -5502,8 +5750,9 @@
       "futuresPairs": [
         "ACXUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/ac-index/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/across-protocol",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "LISTA",
@@ -5522,8 +5771,9 @@
       "futuresPairs": [
         "LISTAUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/lista-dao/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/lista",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "XVG",
@@ -5542,8 +5792,9 @@
       "futuresPairs": [
         "XVGUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/verge/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/verge",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "VTHO",
@@ -5560,8 +5811,9 @@
       "futuresPairs": [
         "VTHOUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/vethor-token/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/vethor-token",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "ANKR",
@@ -5579,8 +5831,9 @@
       "futuresPairs": [
         "ANKRUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/ankr/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/ankr",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "MEME",
@@ -5599,8 +5852,9 @@
       "futuresPairs": [
         "MEMEUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/degenerator-meme/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/memecoin-2",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "F",
@@ -5619,8 +5873,9 @@
       "futuresPairs": [
         "FUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/synfutures/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/synfutures",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "ONG",
@@ -5638,8 +5893,9 @@
       "futuresPairs": [
         "ONGUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/ongsocial/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/ong",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "NIL",
@@ -5658,8 +5914,9 @@
       "futuresPairs": [
         "NILUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/nillion/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/nillion",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "TRB",
@@ -5678,8 +5935,9 @@
       "futuresPairs": [
         "TRBUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/tellor/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/tellor",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "LSK",
@@ -5696,8 +5954,30 @@
       "futuresPairs": [
         "LSKUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/lisk/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/lisk",
+      "mappingSource": "coingecko_binance_ticker"
+    },
+    {
+      "asset": "TURTLE",
+      "name": "Turtle",
+      "fdv": 36179858,
+      "marketCap": 5597024,
+      "rank": 1500,
+      "price": 0.03617068,
+      "coinGeckoId": "turtle-4",
+      "spotPairs": [
+        "TURTLEUSDT",
+        "TURTLEUSDC",
+        "TURTLETRY"
+      ],
+      "hasBinanceFutures": true,
+      "futuresPairs": [
+        "TURTLEUSDT"
+      ],
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/turtle-4",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "USTC",
@@ -5715,8 +5995,9 @@
       "futuresPairs": [
         "USTCUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/terrausd/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/terrausd",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "SC",
@@ -5731,8 +6012,9 @@
       ],
       "hasBinanceFutures": false,
       "futuresPairs": [],
-      "cmcUrl": "https://coinmarketcap.com/currencies/siacoin/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/siacoin",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "MASK",
@@ -5751,8 +6033,9 @@
       "futuresPairs": [
         "MASKUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/mask-network/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/mask-network",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "VELODROME",
@@ -5770,8 +6053,9 @@
       "futuresPairs": [
         "VELODROMEUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/velodrome-finance/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/velodrome-finance",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "PHA",
@@ -5790,8 +6074,9 @@
       "futuresPairs": [
         "PHAUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/phala-network/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/pha",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "CYBER",
@@ -5810,8 +6095,9 @@
       "futuresPairs": [
         "CYBERUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/cyberway/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/cyberconnect",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "STORJ",
@@ -5829,8 +6115,9 @@
       "futuresPairs": [
         "STORJUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/storj/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/storj",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "SCR",
@@ -5849,8 +6136,9 @@
       "futuresPairs": [
         "SCRUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/scorum-coins/",
-      "dataStatus": "existing_fallback"
+      "dataStatus": "existing_fallback",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/scroll",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "G",
@@ -5868,8 +6156,9 @@
       "futuresPairs": [
         "GUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/g-token/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/g-token",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "SSV",
@@ -5887,8 +6176,9 @@
       "futuresPairs": [
         "SSVUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/ssv-network/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/ssv-network",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "USDP",
@@ -5903,8 +6193,9 @@
       ],
       "hasBinanceFutures": false,
       "futuresPairs": [],
-      "cmcUrl": null,
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/paxos-standard",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "ICX",
@@ -5921,8 +6212,9 @@
       "futuresPairs": [
         "ICXUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/icon/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/icon",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "IOTX",
@@ -5940,8 +6232,9 @@
       "futuresPairs": [
         "IOTXUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/iotex/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/iotex",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "ILV",
@@ -5959,8 +6252,9 @@
       "futuresPairs": [
         "ILVUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/illuvium/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/illuvium",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "RPL",
@@ -5978,8 +6272,9 @@
       "futuresPairs": [
         "RPLUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/rocket-pool/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/rocket-pool",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "REZ",
@@ -5998,8 +6293,9 @@
       "futuresPairs": [
         "REZUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/renzo/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/renzo",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "RLC",
@@ -6016,8 +6312,9 @@
       "futuresPairs": [
         "RLCUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/rlc/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/iexec-rlc",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "BAND",
@@ -6034,8 +6331,9 @@
       "futuresPairs": [
         "BANDUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/band-protocol/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/band-protocol",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "ANIME",
@@ -6054,8 +6352,9 @@
       "futuresPairs": [
         "ANIMEUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/animecoin/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/anime",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "BNT",
@@ -6072,8 +6371,9 @@
       "futuresPairs": [
         "BNTUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/bancor/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/bancor",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "BOME",
@@ -6093,8 +6393,9 @@
         "BOMEUSDT",
         "BOMEUSDC"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/book-of-meme/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/book-of-meme",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "ARDR",
@@ -6109,8 +6410,9 @@
       ],
       "hasBinanceFutures": false,
       "futuresPairs": [],
-      "cmcUrl": "https://coinmarketcap.com/currencies/ardor/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/ardor",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "TNSR",
@@ -6129,8 +6431,9 @@
       "futuresPairs": [
         "TNSRUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/tensor/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/tensor",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "KNC",
@@ -6148,8 +6451,9 @@
       "futuresPairs": [
         "KNCUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/kyber-network/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/kyber-network-crystal",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "EDU",
@@ -6167,8 +6471,9 @@
       "futuresPairs": [
         "EDUUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/edu-coin/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/edu-coin",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "AUCTION",
@@ -6187,8 +6492,9 @@
       "futuresPairs": [
         "AUCTIONUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/bounce-token/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/auction",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "COTI",
@@ -6207,8 +6513,9 @@
       "futuresPairs": [
         "COTIUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/coti/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/coti",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "NEIRO",
@@ -6227,8 +6534,28 @@
       "futuresPairs": [
         "NEIROUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/neiro/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/neiro-3",
+      "mappingSource": "coingecko_binance_ticker"
+    },
+    {
+      "asset": "FRAX",
+      "name": "Frax (prev. FXS)",
+      "fdv": 27810463,
+      "marketCap": 26649852,
+      "rank": 687,
+      "price": 0.278985,
+      "coinGeckoId": "frax-share",
+      "spotPairs": [
+        "FRAXUSDT"
+      ],
+      "hasBinanceFutures": true,
+      "futuresPairs": [
+        "FRAXUSDT"
+      ],
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/frax-share",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "SOLV",
@@ -6247,8 +6574,9 @@
       "futuresPairs": [
         "SOLVUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/solv-protocol/",
-      "dataStatus": "existing_fallback"
+      "dataStatus": "existing_fallback",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/solv-protocol",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "IOST",
@@ -6265,8 +6593,9 @@
       "futuresPairs": [
         "IOSTUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/iostoken/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/iostoken",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "PEOPLE",
@@ -6285,8 +6614,9 @@
       "futuresPairs": [
         "PEOPLEUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/constitutiondao/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/constitutiondao",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "GIGGLE",
@@ -6306,8 +6636,9 @@
       "futuresPairs": [
         "GIGGLEUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/giggle-fund/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/giggle-fund",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "SKL",
@@ -6326,8 +6657,9 @@
       "futuresPairs": [
         "SKLUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/skale-network/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/skale",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "YGG",
@@ -6345,8 +6677,9 @@
       "futuresPairs": [
         "YGGUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/yield-guild-games/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/yield-guild-games",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "PIXEL",
@@ -6365,8 +6698,9 @@
       "futuresPairs": [
         "PIXELUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/pixels/",
-      "dataStatus": "existing_fallback"
+      "dataStatus": "existing_fallback",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/pixels",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "DOLO",
@@ -6385,8 +6719,9 @@
       "futuresPairs": [
         "DOLOUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/dolomite/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/dolomite",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "PUNDIX",
@@ -6403,8 +6738,9 @@
       "futuresPairs": [
         "PUNDIXUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/pundix-new/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/pundi-x-2",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "METIS",
@@ -6422,8 +6758,9 @@
       "futuresPairs": [
         "METISUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/metisdao/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/metis-token",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "SHELL",
@@ -6442,8 +6779,9 @@
       "futuresPairs": [
         "SHELLUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/myshell/",
-      "dataStatus": "existing_fallback"
+      "dataStatus": "existing_fallback",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/myshell",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "BANANA",
@@ -6462,8 +6800,9 @@
       "futuresPairs": [
         "BANANAUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/banana-finance/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/banana-gun",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "WOO",
@@ -6480,8 +6819,9 @@
       "futuresPairs": [
         "WOOUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/wootrade/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/woo-network",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "EUL",
@@ -6500,8 +6840,9 @@
       "futuresPairs": [
         "EULUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/euler-finance/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/euler",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "QKC",
@@ -6516,8 +6857,9 @@
       ],
       "hasBinanceFutures": false,
       "futuresPairs": [],
-      "cmcUrl": "https://coinmarketcap.com/currencies/quarkchain/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/quark-chain",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "OGN",
@@ -6535,8 +6877,9 @@
       "futuresPairs": [
         "OGNUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/origin-protocol/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/origin-protocol",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "STEEM",
@@ -6554,8 +6897,9 @@
       "futuresPairs": [
         "STEEMUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/steem/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/steem",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "AIXBT",
@@ -6574,8 +6918,9 @@
       "futuresPairs": [
         "AIXBTUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/aixbt/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/aixbt",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "SPELL",
@@ -6593,8 +6938,9 @@
       "futuresPairs": [
         "SPELLUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/spell-token/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/spell-token",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "ARK",
@@ -6612,8 +6958,9 @@
       "futuresPairs": [
         "ARKUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/ark/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/ark",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "CTSI",
@@ -6630,8 +6977,9 @@
       "futuresPairs": [
         "CTSIUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/cartesi/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/cartesi",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "DOGS",
@@ -6651,8 +6999,9 @@
       "futuresPairs": [
         "DOGSUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/dogs/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/dogs-2",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "TOWNS",
@@ -6671,8 +7020,9 @@
       "futuresPairs": [
         "TOWNSUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/towns/",
-      "dataStatus": "existing_fallback"
+      "dataStatus": "existing_fallback",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/towns",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "CVC",
@@ -6690,8 +7040,9 @@
       "futuresPairs": [
         "CVCUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/civic/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/civic",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "MTL",
@@ -6708,8 +7059,27 @@
       "futuresPairs": [
         "MTLUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/metal/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/metal",
+      "mappingSource": "coingecko_binance_ticker"
+    },
+    {
+      "asset": "AI",
+      "name": "Sleepless AI",
+      "fdv": 22694058,
+      "marketCap": 2950228,
+      "rank": 1942,
+      "price": 0.02269352,
+      "coinGeckoId": "sleepless-ai",
+      "spotPairs": [
+        "AIUSDT",
+        "AITRY"
+      ],
+      "hasBinanceFutures": false,
+      "futuresPairs": [],
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/sleepless-ai",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "FIDA",
@@ -6727,8 +7097,9 @@
       "futuresPairs": [
         "FIDAUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/bonfida/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/bonfida",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "ONE",
@@ -6746,8 +7117,9 @@
       "futuresPairs": [
         "ONEUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/harmony/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/harmony",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "RAD",
@@ -6763,8 +7135,9 @@
       ],
       "hasBinanceFutures": false,
       "futuresPairs": [],
-      "cmcUrl": "https://coinmarketcap.com/currencies/centrifuge/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/radicle",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "LUMIA",
@@ -6782,8 +7155,9 @@
       "futuresPairs": [
         "LUMIAUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/lumia/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/lumia",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "CELR",
@@ -6800,8 +7174,9 @@
       "futuresPairs": [
         "CELRUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/celer-network/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/celer-network",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "MBL",
@@ -6816,8 +7191,9 @@
       ],
       "hasBinanceFutures": false,
       "futuresPairs": [],
-      "cmcUrl": "https://coinmarketcap.com/currencies/moviebloc/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/moviebloc",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "AUDIO",
@@ -6833,8 +7209,9 @@
       ],
       "hasBinanceFutures": false,
       "futuresPairs": [],
-      "cmcUrl": "https://coinmarketcap.com/currencies/audius/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/audius",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "IQ",
@@ -6849,8 +7226,9 @@
       ],
       "hasBinanceFutures": false,
       "futuresPairs": [],
-      "cmcUrl": "https://coinmarketcap.com/currencies/everipedia/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/everipedia",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "WAXP",
@@ -6867,8 +7245,9 @@
       "futuresPairs": [
         "WAXPUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/wax/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/wax",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "FLUX",
@@ -6886,8 +7265,9 @@
       "futuresPairs": [
         "FLUXUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/flux/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/zelcash",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "SCRT",
@@ -6904,8 +7284,9 @@
       "futuresPairs": [
         "SCRTUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/secret/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/secret",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "MAV",
@@ -6923,8 +7304,9 @@
       "futuresPairs": [
         "MAVUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/maverick-protocol/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/maverick-protocol",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "CGPT",
@@ -6942,8 +7324,9 @@
       "futuresPairs": [
         "CGPTUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/chaingpt/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/chaingpt",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "DIA",
@@ -6960,8 +7343,9 @@
       "futuresPairs": [
         "DIAUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/dia/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/dia-data",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "MITO",
@@ -6980,8 +7364,9 @@
       "futuresPairs": [
         "MITOUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/mitosis/",
-      "dataStatus": "existing_fallback"
+      "dataStatus": "existing_fallback",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/mitosis",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "PROM",
@@ -6998,28 +7383,9 @@
       "futuresPairs": [
         "PROMUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/prometeus/",
-      "dataStatus": "ok"
-    },
-    {
-      "asset": "1000SATS",
-      "name": "SATS (Ordinals)",
-      "fdv": 20323964,
-      "marketCap": 20323964,
-      "rank": 807,
-      "price": 9.679e-9,
-      "coinGeckoId": "sats-ordinals",
-      "spotPairs": [
-        "1000SATSUSDT",
-        "1000SATSUSDC",
-        "1000SATSTRY"
-      ],
-      "hasBinanceFutures": true,
-      "futuresPairs": [
-        "1000SATSUSDT"
-      ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/sats/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/prometeus",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "STRAX",
@@ -7035,8 +7401,30 @@
       ],
       "hasBinanceFutures": false,
       "futuresPairs": [],
-      "cmcUrl": "https://coinmarketcap.com/currencies/stratis/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/stratis",
+      "mappingSource": "coingecko_binance_ticker"
+    },
+    {
+      "asset": "1000SATS",
+      "name": "1000SATS (Ordinals)",
+      "fdv": 20205608,
+      "marketCap": 0,
+      "rank": null,
+      "price": 0.00000962,
+      "coinGeckoId": "1000sats-ordinals",
+      "spotPairs": [
+        "1000SATSUSDT",
+        "1000SATSUSDC",
+        "1000SATSTRY"
+      ],
+      "hasBinanceFutures": true,
+      "futuresPairs": [
+        "1000SATSUSDT"
+      ],
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/1000sats-ordinals",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "LQTY",
@@ -7053,8 +7441,9 @@
       "futuresPairs": [
         "LQTYUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/liquity/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/liquity",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "CTK",
@@ -7073,8 +7462,9 @@
       "futuresPairs": [
         "CTKUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/cryptyk-token/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/certik",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "AEVO",
@@ -7093,8 +7483,9 @@
       "futuresPairs": [
         "AEVOUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/aevo-coin/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/aevo-exchange",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "HMSTR",
@@ -7113,8 +7504,9 @@
       "futuresPairs": [
         "HMSTRUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/hamster-kombat/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/hamster-kombat",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "THE",
@@ -7133,8 +7525,9 @@
       "futuresPairs": [
         "THEUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/thenode/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/thena",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "HAEDAL",
@@ -7153,8 +7546,9 @@
       "futuresPairs": [
         "HAEDALUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/haedal-protocol/",
-      "dataStatus": "existing_fallback"
+      "dataStatus": "existing_fallback",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/haedal",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "SANTOS",
@@ -7172,8 +7566,9 @@
       "futuresPairs": [
         "SANTOSUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/santos-fc-fan-token/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/santos-fc-fan-token",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "BICO",
@@ -7190,8 +7585,9 @@
       "futuresPairs": [
         "BICOUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/biconomy/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/biconomy",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "USUAL",
@@ -7210,8 +7606,9 @@
       "futuresPairs": [
         "USUALUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/usual/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/usual",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "SLP",
@@ -7229,8 +7626,9 @@
       "futuresPairs": [
         "SLPUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/small-love-potion/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/smooth-love-potion",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "EPIC",
@@ -7248,28 +7646,9 @@
       "futuresPairs": [
         "EPICUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/epic-cash/",
-      "dataStatus": "ok"
-    },
-    {
-      "asset": "TREE",
-      "name": "Tree",
-      "fdv": 18086185,
-      "marketCap": 16128498,
-      "rank": 918,
-      "price": 0.159113,
-      "coinGeckoId": "tree-capital",
-      "spotPairs": [
-        "TREEUSDT",
-        "TREEUSDC",
-        "TREETRY"
-      ],
-      "hasBinanceFutures": true,
-      "futuresPairs": [
-        "TREEUSDT"
-      ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/treehouse/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/epic-chain",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "CETUS",
@@ -7288,8 +7667,9 @@
       "futuresPairs": [
         "CETUSUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/cetus-protocol/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/cetus-protocol",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "DYM",
@@ -7308,8 +7688,9 @@
       "futuresPairs": [
         "DYMUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/dymension/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/dymension",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "XAI",
@@ -7328,8 +7709,9 @@
       "futuresPairs": [
         "XAIUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/xai/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/xai-blockchain",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "POND",
@@ -7344,8 +7726,9 @@
       ],
       "hasBinanceFutures": false,
       "futuresPairs": [],
-      "cmcUrl": "https://coinmarketcap.com/currencies/marlin/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/marlin",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "BANK",
@@ -7364,8 +7747,9 @@
       "futuresPairs": [
         "BANKUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/the-bank-coin/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/lorenzo-protocol",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "WIN",
@@ -7381,8 +7765,9 @@
       ],
       "hasBinanceFutures": false,
       "futuresPairs": [],
-      "cmcUrl": "https://coinmarketcap.com/currencies/wink/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/wink",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "RESOLV",
@@ -7401,8 +7786,9 @@
       "futuresPairs": [
         "RESOLVUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/resolv/",
-      "dataStatus": "existing_fallback"
+      "dataStatus": "existing_fallback",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/resolv",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "AGLD",
@@ -7419,8 +7805,9 @@
       "futuresPairs": [
         "AGLDUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/adventure-gold/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/adventure-gold",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "MOVR",
@@ -7438,8 +7825,9 @@
       "futuresPairs": [
         "MOVRUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/moonriver/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/moonriver",
+      "mappingSource": "verified_id_fallback"
     },
     {
       "asset": "ARPA",
@@ -7457,8 +7845,9 @@
       "futuresPairs": [
         "ARPAUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/arpa-chain/",
-      "dataStatus": "existing_fallback"
+      "dataStatus": "existing_fallback",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/arpa",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "TST",
@@ -7477,8 +7866,9 @@
       "futuresPairs": [
         "TSTUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/touch-social/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/test-3",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "MAGIC",
@@ -7497,8 +7887,9 @@
       "futuresPairs": [
         "MAGICUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/magic-token/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/magic",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "JOE",
@@ -7515,8 +7906,9 @@
       "futuresPairs": [
         "JOEUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/joe/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/joe",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "DODO",
@@ -7532,8 +7924,9 @@
       ],
       "hasBinanceFutures": false,
       "futuresPairs": [],
-      "cmcUrl": "https://coinmarketcap.com/currencies/dodo/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/dodo",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "CHR",
@@ -7550,8 +7943,9 @@
       "futuresPairs": [
         "CHRUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/chromia/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/chromaway",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "C98",
@@ -7568,8 +7962,9 @@
       "futuresPairs": [
         "C98USDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/coin98/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/coin98",
+      "mappingSource": "verified_id_fallback"
     },
     {
       "asset": "AVA",
@@ -7586,8 +7981,9 @@
       "futuresPairs": [
         "AVAUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/travala/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/concierge-io",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "SAGA",
@@ -7607,8 +8003,9 @@
       "futuresPairs": [
         "SAGAUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/darksaga/",
-      "dataStatus": "existing_fallback"
+      "dataStatus": "existing_fallback",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/saga-2",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "GNS",
@@ -7623,8 +8020,9 @@
       ],
       "hasBinanceFutures": false,
       "futuresPairs": [],
-      "cmcUrl": null,
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/gains-network",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "ALPINE",
@@ -7642,8 +8040,9 @@
       "futuresPairs": [
         "ALPINEUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/alpine-f1-team-fan-token/",
-      "dataStatus": "existing_fallback"
+      "dataStatus": "existing_fallback",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/alpine-f1-team-fan-token",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "PORTAL",
@@ -7661,8 +8060,9 @@
       "futuresPairs": [
         "PORTALUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/portal/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/portal-2",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "OG",
@@ -7680,8 +8080,9 @@
       "futuresPairs": [
         "OGUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/og-fan-token/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/og-fan-token",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "RARE",
@@ -7700,8 +8101,9 @@
       "futuresPairs": [
         "RAREUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/rare/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/superrare",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "ACE",
@@ -7719,8 +8121,9 @@
       "futuresPairs": [
         "ACEUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/ace/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/endurance",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "BMT",
@@ -7739,8 +8142,9 @@
       "futuresPairs": [
         "BMTUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/bubblemaps/",
-      "dataStatus": "existing_fallback"
+      "dataStatus": "existing_fallback",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/bubblemaps",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "NOM",
@@ -7759,8 +8163,9 @@
       "futuresPairs": [
         "NOMUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/nomina/",
-      "dataStatus": "existing_fallback"
+      "dataStatus": "existing_fallback",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/nomina",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "GLMR",
@@ -7775,8 +8180,9 @@
       ],
       "hasBinanceFutures": false,
       "futuresPairs": [],
-      "cmcUrl": null,
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/moonbeam",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "ALCX",
@@ -7791,8 +8197,9 @@
       ],
       "hasBinanceFutures": false,
       "futuresPairs": [],
-      "cmcUrl": null,
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/alchemix",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "PSG",
@@ -7808,8 +8215,9 @@
       ],
       "hasBinanceFutures": false,
       "futuresPairs": [],
-      "cmcUrl": "https://coinmarketcap.com/currencies/paris-saint-germain-fan-token/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/paris-saint-germain-fan-token",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "MUBARAK",
@@ -7828,8 +8236,9 @@
       "futuresPairs": [
         "MUBARAKUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/mubarak/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/mubarak",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "HFT",
@@ -7846,8 +8255,9 @@
       "futuresPairs": [
         "HFTUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/hashflow/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/hashflow",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "ALICE",
@@ -7865,8 +8275,9 @@
       "futuresPairs": [
         "ALICEUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/myneighboralice/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/my-neighbor-alice",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "SPCXB",
@@ -7881,8 +8292,9 @@
       ],
       "hasBinanceFutures": false,
       "futuresPairs": [],
-      "cmcUrl": null,
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/spacex-bstocks-tokenized-stock",
+      "mappingSource": "verified_id_fallback"
     },
     {
       "asset": "ASR",
@@ -7900,8 +8312,9 @@
       "futuresPairs": [
         "ASRUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/as-roma-fan-token/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/as-roma-fan-token",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "ATM",
@@ -7917,8 +8330,9 @@
       ],
       "hasBinanceFutures": false,
       "futuresPairs": [],
-      "cmcUrl": "https://coinmarketcap.com/currencies/attention-token-of-media/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/atletico-madrid",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "QI",
@@ -7933,8 +8347,9 @@
       ],
       "hasBinanceFutures": false,
       "futuresPairs": [],
-      "cmcUrl": null,
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/benqi",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "ACT",
@@ -7953,8 +8368,9 @@
       "futuresPairs": [
         "ACTUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/achain/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/act-i-the-ai-prophecy",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "COOKIE",
@@ -7972,8 +8388,9 @@
       "futuresPairs": [
         "COOKIEUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/cookie/",
-      "dataStatus": "existing_fallback"
+      "dataStatus": "existing_fallback",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/cookie",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "HEI",
@@ -7992,8 +8409,9 @@
       "futuresPairs": [
         "HEIUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/heima/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/heima",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "TUT",
@@ -8011,8 +8429,9 @@
       "futuresPairs": [
         "TUTUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/tutorial/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/tutorial",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "ADX",
@@ -8028,8 +8447,9 @@
       ],
       "hasBinanceFutures": false,
       "futuresPairs": [],
-      "cmcUrl": "https://coinmarketcap.com/currencies/adx-net/",
-      "dataStatus": "ok"
+      "dataStatus": "ok",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/adex",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "BEL",
@@ -8047,8 +8467,9 @@
       "futuresPairs": [
         "BELUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/bella-protocol/",
-      "dataStatus": "existing_fallback"
+      "dataStatus": "existing_fallback",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/bella-protocol",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "NFP",
@@ -8066,8 +8487,9 @@
       "futuresPairs": [
         "NFPUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/nfprompt/",
-      "dataStatus": "existing_fallback"
+      "dataStatus": "existing_fallback",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/nfprompt-token",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "SYN",
@@ -8085,8 +8507,9 @@
       "futuresPairs": [
         "SYNUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/synlev/",
-      "dataStatus": "existing_fallback"
+      "dataStatus": "existing_fallback",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/synapse-2",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "VIC",
@@ -8104,8 +8527,9 @@
       "futuresPairs": [
         "VICUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/viridi/",
-      "dataStatus": "existing_fallback"
+      "dataStatus": "existing_fallback",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/tomochain",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "GTC",
@@ -8122,8 +8546,9 @@
       "futuresPairs": [
         "GTCUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/game/",
-      "dataStatus": "existing_fallback"
+      "dataStatus": "existing_fallback",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/gitcoin",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "VANRY",
@@ -8142,8 +8567,9 @@
       "futuresPairs": [
         "VANRYUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/vanar/",
-      "dataStatus": "existing_fallback"
+      "dataStatus": "existing_fallback",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/vanar-chain",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "TLM",
@@ -8162,8 +8588,9 @@
       "futuresPairs": [
         "TLMUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/alien-worlds/",
-      "dataStatus": "existing_fallback"
+      "dataStatus": "existing_fallback",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/alien-worlds",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "HIGH",
@@ -8181,8 +8608,9 @@
       "futuresPairs": [
         "HIGHUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/highstreet/",
-      "dataStatus": "existing_fallback"
+      "dataStatus": "existing_fallback",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/highstreet",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "COS",
@@ -8200,8 +8628,9 @@
       "futuresPairs": [
         "COSUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/contentos/",
-      "dataStatus": "existing_fallback"
+      "dataStatus": "existing_fallback",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/contentos",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "D",
@@ -8219,8 +8648,9 @@
       "futuresPairs": [
         "DUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/dar-open-network/",
-      "dataStatus": "existing_fallback"
+      "dataStatus": "existing_fallback",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/dar-open-network",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "MBOX",
@@ -8238,28 +8668,9 @@
       "futuresPairs": [
         "MBOXUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/mobox/",
-      "dataStatus": "existing_fallback"
-    },
-    {
-      "asset": "TURTLE",
-      "name": "Turtle",
-      "fdv": 125453,
-      "marketCap": 125453,
-      "rank": 5275,
-      "price": 0.00012534,
-      "coinGeckoId": "turtle-2",
-      "spotPairs": [
-        "TURTLEUSDT",
-        "TURTLEUSDC",
-        "TURTLETRY"
-      ],
-      "hasBinanceFutures": true,
-      "futuresPairs": [
-        "TURTLEUSDT"
-      ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/turtle/",
-      "dataStatus": "existing_fallback"
+      "dataStatus": "existing_fallback",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/mobox",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "1000CAT",
@@ -8278,8 +8689,9 @@
       "futuresPairs": [
         "1000CATUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/cat/",
-      "dataStatus": "unmatched"
+      "dataStatus": "unmatched",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/1000cat",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "ACM",
@@ -8288,15 +8700,16 @@
       "marketCap": null,
       "rank": null,
       "price": null,
-      "coinGeckoId": null,
+      "coinGeckoId": "ac-milan-fan-token",
       "spotPairs": [
         "ACMUSDT",
         "ACMTRY"
       ],
       "hasBinanceFutures": false,
       "futuresPairs": [],
-      "cmcUrl": "https://coinmarketcap.com/currencies/actinium/",
-      "dataStatus": "unmatched"
+      "dataStatus": "unmatched",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/ac-milan-fan-token",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "AEUR",
@@ -8305,14 +8718,15 @@
       "marketCap": null,
       "rank": null,
       "price": null,
-      "coinGeckoId": null,
+      "coinGeckoId": "anchored-coins-eur",
       "spotPairs": [
         "AEURUSDT"
       ],
       "hasBinanceFutures": false,
       "futuresPairs": [],
-      "cmcUrl": null,
-      "dataStatus": "unmatched"
+      "dataStatus": "unmatched",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/anchored-coins-eur",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "AIGENSYN",
@@ -8321,7 +8735,7 @@
       "marketCap": null,
       "rank": null,
       "price": null,
-      "coinGeckoId": null,
+      "coinGeckoId": "gensyn",
       "spotPairs": [
         "AIGENSYNUSDT",
         "AIGENSYNUSDC",
@@ -8331,8 +8745,9 @@
       "futuresPairs": [
         "AIGENSYNUSDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/gensyn/",
-      "dataStatus": "unmatched"
+      "dataStatus": "unmatched",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/gensyn",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "BAR",
@@ -8341,15 +8756,16 @@
       "marketCap": null,
       "rank": null,
       "price": null,
-      "coinGeckoId": null,
+      "coinGeckoId": "fc-barcelona-fan-token",
       "spotPairs": [
         "BARUSDT",
         "BARTRY"
       ],
       "hasBinanceFutures": false,
       "futuresPairs": [],
-      "cmcUrl": "https://coinmarketcap.com/currencies/fc-barcelona-fan-token/",
-      "dataStatus": "unmatched"
+      "dataStatus": "unmatched",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/fc-barcelona-fan-token",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "BNSOL",
@@ -8358,15 +8774,16 @@
       "marketCap": null,
       "rank": null,
       "price": null,
-      "coinGeckoId": null,
+      "coinGeckoId": "binance-staked-sol",
       "spotPairs": [
         "BNSOLUSDT",
         "BNSOLSOL"
       ],
       "hasBinanceFutures": false,
       "futuresPairs": [],
-      "cmcUrl": null,
-      "dataStatus": "unmatched"
+      "dataStatus": "unmatched",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/binance-staked-sol",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "BROCCOLI714",
@@ -8375,7 +8792,7 @@
       "marketCap": null,
       "rank": null,
       "price": null,
-      "coinGeckoId": null,
+      "coinGeckoId": "czs-dog",
       "spotPairs": [
         "BROCCOLI714USDT",
         "BROCCOLI714USDC"
@@ -8384,8 +8801,9 @@
       "futuresPairs": [
         "BROCCOLI714USDT"
       ],
-      "cmcUrl": "https://coinmarketcap.com/currencies/broccoli-714/",
-      "dataStatus": "unmatched"
+      "dataStatus": "unmatched",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/czs-dog",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "BTTC",
@@ -8394,15 +8812,16 @@
       "marketCap": null,
       "rank": null,
       "price": null,
-      "coinGeckoId": null,
+      "coinGeckoId": "bittorrent",
       "spotPairs": [
         "BTTCUSDT",
         "BTTCTRY"
       ],
       "hasBinanceFutures": false,
       "futuresPairs": [],
-      "cmcUrl": null,
-      "dataStatus": "unmatched"
+      "dataStatus": "unmatched",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/bittorrent",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "CITY",
@@ -8411,15 +8830,16 @@
       "marketCap": null,
       "rank": null,
       "price": null,
-      "coinGeckoId": null,
+      "coinGeckoId": "manchester-city-fan-token",
       "spotPairs": [
         "CITYUSDT",
         "CITYTRY"
       ],
       "hasBinanceFutures": false,
       "futuresPairs": [],
-      "cmcUrl": "https://coinmarketcap.com/currencies/city-coin/",
-      "dataStatus": "unmatched"
+      "dataStatus": "unmatched",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/manchester-city-fan-token",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "CRCLB",
@@ -8434,8 +8854,9 @@
       ],
       "hasBinanceFutures": false,
       "futuresPairs": [],
-      "cmcUrl": null,
-      "dataStatus": "unmatched"
+      "dataStatus": "unmatched",
+      "coinGeckoUrl": null,
+      "mappingSource": "unmatched"
     },
     {
       "asset": "EUR",
@@ -8452,8 +8873,9 @@
       ],
       "hasBinanceFutures": false,
       "futuresPairs": [],
-      "cmcUrl": null,
-      "dataStatus": "unmatched"
+      "dataStatus": "unmatched",
+      "coinGeckoUrl": null,
+      "mappingSource": "unmatched"
     },
     {
       "asset": "FTT",
@@ -8462,14 +8884,15 @@
       "marketCap": null,
       "rank": null,
       "price": null,
-      "coinGeckoId": null,
+      "coinGeckoId": "ftx-token",
       "spotPairs": [
         "FTTUSDT"
       ],
       "hasBinanceFutures": false,
       "futuresPairs": [],
-      "cmcUrl": "https://coinmarketcap.com/currencies/ftx-token/",
-      "dataStatus": "unmatched"
+      "dataStatus": "unmatched",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/ftx-token",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "JUV",
@@ -8478,15 +8901,16 @@
       "marketCap": null,
       "rank": null,
       "price": null,
-      "coinGeckoId": null,
+      "coinGeckoId": "juventus-fan-token",
       "spotPairs": [
         "JUVUSDT",
         "JUVTRY"
       ],
       "hasBinanceFutures": false,
       "futuresPairs": [],
-      "cmcUrl": "https://coinmarketcap.com/currencies/juventus-fan-token/",
-      "dataStatus": "unmatched"
+      "dataStatus": "unmatched",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/juventus-fan-token",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "KGST",
@@ -8495,15 +8919,16 @@
       "marketCap": null,
       "rank": null,
       "price": null,
-      "coinGeckoId": null,
+      "coinGeckoId": "kyrgyz-som-stablecoin",
       "spotPairs": [
         "KGSTUSDT",
         "KGSTU"
       ],
       "hasBinanceFutures": false,
       "futuresPairs": [],
-      "cmcUrl": null,
-      "dataStatus": "unmatched"
+      "dataStatus": "unmatched",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/kyrgyz-som-stablecoin",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "LAZIO",
@@ -8512,15 +8937,16 @@
       "marketCap": null,
       "rank": null,
       "price": null,
-      "coinGeckoId": null,
+      "coinGeckoId": "lazio-fan-token",
       "spotPairs": [
         "LAZIOUSDT",
         "LAZIOTRY"
       ],
       "hasBinanceFutures": false,
       "futuresPairs": [],
-      "cmcUrl": null,
-      "dataStatus": "unmatched"
+      "dataStatus": "unmatched",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/lazio-fan-token",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "MUB",
@@ -8535,8 +8961,9 @@
       ],
       "hasBinanceFutures": false,
       "futuresPairs": [],
-      "cmcUrl": null,
-      "dataStatus": "unmatched"
+      "dataStatus": "unmatched",
+      "coinGeckoUrl": null,
+      "mappingSource": "unmatched"
     },
     {
       "asset": "NVDAB",
@@ -8551,8 +8978,9 @@
       ],
       "hasBinanceFutures": false,
       "futuresPairs": [],
-      "cmcUrl": null,
-      "dataStatus": "unmatched"
+      "dataStatus": "unmatched",
+      "coinGeckoUrl": null,
+      "mappingSource": "unmatched"
     },
     {
       "asset": "PIVX",
@@ -8561,14 +8989,15 @@
       "marketCap": null,
       "rank": null,
       "price": null,
-      "coinGeckoId": null,
+      "coinGeckoId": "pivx",
       "spotPairs": [
         "PIVXUSDT"
       ],
       "hasBinanceFutures": false,
       "futuresPairs": [],
-      "cmcUrl": "https://coinmarketcap.com/currencies/pivx/",
-      "dataStatus": "unmatched"
+      "dataStatus": "unmatched",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/pivx",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "PORTO",
@@ -8577,15 +9006,16 @@
       "marketCap": null,
       "rank": null,
       "price": null,
-      "coinGeckoId": null,
+      "coinGeckoId": "fc-porto",
       "spotPairs": [
         "PORTOUSDT",
         "PORTOTRY"
       ],
       "hasBinanceFutures": false,
       "futuresPairs": [],
-      "cmcUrl": null,
-      "dataStatus": "unmatched"
+      "dataStatus": "unmatched",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/fc-porto",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "PYR",
@@ -8594,14 +9024,15 @@
       "marketCap": null,
       "rank": null,
       "price": null,
-      "coinGeckoId": null,
+      "coinGeckoId": "vulcan-forged",
       "spotPairs": [
         "PYRUSDT"
       ],
       "hasBinanceFutures": false,
       "futuresPairs": [],
-      "cmcUrl": null,
-      "dataStatus": "unmatched"
+      "dataStatus": "unmatched",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/vulcan-forged",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "QUICK",
@@ -8610,14 +9041,15 @@
       "marketCap": null,
       "rank": null,
       "price": null,
-      "coinGeckoId": null,
+      "coinGeckoId": "quickswap",
       "spotPairs": [
         "QUICKUSDT"
       ],
       "hasBinanceFutures": false,
       "futuresPairs": [],
-      "cmcUrl": "https://coinmarketcap.com/currencies/quickswap/",
-      "dataStatus": "unmatched"
+      "dataStatus": "unmatched",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/quickswap",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "SNDKB",
@@ -8632,8 +9064,9 @@
       ],
       "hasBinanceFutures": false,
       "futuresPairs": [],
-      "cmcUrl": null,
-      "dataStatus": "unmatched"
+      "dataStatus": "unmatched",
+      "coinGeckoUrl": null,
+      "mappingSource": "unmatched"
     },
     {
       "asset": "TKO",
@@ -8642,15 +9075,16 @@
       "marketCap": null,
       "rank": null,
       "price": null,
-      "coinGeckoId": null,
+      "coinGeckoId": "tokocrypto",
       "spotPairs": [
         "TKOUSDT",
         "TKOIDR"
       ],
       "hasBinanceFutures": false,
       "futuresPairs": [],
-      "cmcUrl": null,
-      "dataStatus": "unmatched"
+      "dataStatus": "unmatched",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/tokocrypto",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "TSLAB",
@@ -8665,8 +9099,9 @@
       ],
       "hasBinanceFutures": false,
       "futuresPairs": [],
-      "cmcUrl": null,
-      "dataStatus": "unmatched"
+      "dataStatus": "unmatched",
+      "coinGeckoUrl": null,
+      "mappingSource": "unmatched"
     },
     {
       "asset": "WBETH",
@@ -8675,15 +9110,16 @@
       "marketCap": null,
       "rank": null,
       "price": null,
-      "coinGeckoId": null,
+      "coinGeckoId": "wrapped-beacon-eth",
       "spotPairs": [
         "WBETHUSDT",
         "WBETHETH"
       ],
       "hasBinanceFutures": false,
       "futuresPairs": [],
-      "cmcUrl": null,
-      "dataStatus": "unmatched"
+      "dataStatus": "unmatched",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/wrapped-beacon-eth",
+      "mappingSource": "coingecko_binance_ticker"
     },
     {
       "asset": "WBTC",
@@ -8692,7 +9128,7 @@
       "marketCap": null,
       "rank": null,
       "price": null,
-      "coinGeckoId": null,
+      "coinGeckoId": "wrapped-bitcoin",
       "spotPairs": [
         "WBTCUSDT",
         "WBTCBTC",
@@ -8700,8 +9136,10 @@
       ],
       "hasBinanceFutures": false,
       "futuresPairs": [],
-      "cmcUrl": "https://coinmarketcap.com/currencies/wrapped-bitcoin/",
-      "dataStatus": "unmatched"
+      "dataStatus": "unmatched",
+      "coinGeckoUrl": "https://www.coingecko.com/en/coins/wrapped-bitcoin",
+      "mappingSource": "coingecko_binance_ticker"
     }
-  ]
+  ],
+  "linkMappingVerifiedAt": "2026-06-13T05:30:24.025Z"
 }

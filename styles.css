@@ -475,7 +475,7 @@ td:nth-child(7) {
   font-weight: 900;
 }
 
-.cmc {
+.coin-link {
   color: var(--blue);
   font-size: 13px;
   font-weight: 900;
@@ -483,7 +483,7 @@ td:nth-child(7) {
   white-space: nowrap;
 }
 
-.cmc:hover {
+.coin-link:hover {
   text-decoration: underline;
 }
 

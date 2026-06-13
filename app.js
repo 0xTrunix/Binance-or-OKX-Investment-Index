@@ -120,7 +120,11 @@ function renderRows() {
         <td data-label="Binance 合约">${renderPairs(row.futuresPairs)}</td>
         <td data-label="YZi Labs">${renderInvestment(row, "yziLabs")}</td>
         <td data-label="OKX Ventures">${renderInvestment(row, "okxVentures")}</td>
-        <td data-label="CMC"><a class="cmc" href="${row.cmcUrl}" target="_blank" rel="noreferrer">CMC</a></td>
+        <td data-label="CoinGecko">${
+          row.coinGeckoUrl
+            ? `<a class="coin-link" href="${row.coinGeckoUrl}" target="_blank" rel="noreferrer">CoinGecko</a>`
+            : '<span class="muted">-</span>'
+        }</td>
       </tr>`,
     )
     .join("");
