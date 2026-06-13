@@ -71,6 +71,11 @@ function cmcSlugFromUrl(url) {
 async function main() {
   const existingData = readJsonIfExists("assets-data.json", { rows: [] });
   const existingByAsset = new Map(existingData.rows.map((row) => [row.asset, row]));
+  const futuresByAsset = new Map(
+    existingData.rows
+      .filter((row) => row.futuresPairs?.length)
+      .map((row) => [row.asset, row.futuresPairs]),
+  );
   const generatedSlugs = readJsonIfExists("cmc-slugs.json", {});
 
   const exchangeInfo = await fetchJson(BINANCE_URL);
@@ -134,6 +139,8 @@ async function main() {
       price: coin?.current_price ?? existing?.price ?? null,
       coinGeckoId: coin?.id || preferredId || null,
       spotPairs: compactPairList(pairs),
+      hasBinanceFutures: futuresByAsset.has(asset),
+      futuresPairs: futuresByAsset.get(asset) || [],
       cmcUrl: cmcSlug ? `https://coinmarketcap.com/currencies/${cmcSlug}/` : null,
       dataStatus: coin
         ? (coin.fully_diluted_valuation ? "ok" : "no_fdv")
@@ -150,12 +157,14 @@ async function main() {
       spotAssets: rows.length,
       withFdv: rows.filter((row) => row.fdv).length,
       withoutFdv: rows.filter((row) => !row.fdv).length,
+      withBinanceFutures: rows.filter((row) => row.hasBinanceFutures).length,
     },
     sources: [BINANCE_URL, COINGECKO_URL, CMC_URL],
     notes: [
       "Rows are sorted by FDV descending; assets without FDV appear last.",
       "Existing verified CoinGecko IDs are reused before unique symbol matching.",
       "Existing recent FDV values are retained when a low-ranked asset is outside the fetched CoinGecko market pages.",
+      "Binance futures status follows the verified spot-plus-futures dataset used by the main screener.",
       "FDV is point-in-time market data and changes with price and supply.",
     ],
     rows,

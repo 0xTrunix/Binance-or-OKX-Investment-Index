@@ -4,6 +4,7 @@
 
 - 同时上线 Binance 现货与 Binance USD-M 永续合约的币种列表
 - Binance 全现货币种 FDV 区间筛选页面
+- 可叠加筛选是否已上线 Binance 合约
 - YZi Labs / OKX Ventures 投资标签和 CoinMarketCap 直达链接
 
 ## 内容

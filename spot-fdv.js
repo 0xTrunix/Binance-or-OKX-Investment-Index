@@ -3,6 +3,7 @@ const spotState = {
   search: "",
   minFdv: null,
   maxFdv: null,
+  futuresOnly: false,
   visibleLimit: 100,
 };
 
@@ -64,6 +65,7 @@ function getSpotRows() {
       if (term && !row.asset.includes(term) && !row.name.toUpperCase().includes(term)) return false;
       if (spotState.minFdv !== null && (!row.fdv || row.fdv < spotState.minFdv)) return false;
       if (spotState.maxFdv !== null && (!row.fdv || row.fdv > spotState.maxFdv)) return false;
+      if (spotState.futuresOnly && !row.hasBinanceFutures) return false;
       return true;
     })
     .sort((a, b) => (b.fdv || 0) - (a.fdv || 0) || a.asset.localeCompare(b.asset));
@@ -82,7 +84,9 @@ function renderSpotRows() {
   document.getElementById("spotResultCount").textContent =
     `匹配 ${rows.length} 个币种，当前展示 ${visibleRows.length} 个`;
   document.getElementById("activeRange").textContent =
-    `FDV：${formatRangeValue(spotState.minFdv)} 至 ${formatRangeValue(spotState.maxFdv)}`;
+    `FDV：${formatRangeValue(spotState.minFdv)} 至 ${formatRangeValue(spotState.maxFdv)} · 合约：${
+      spotState.futuresOnly ? "仅已上线" : "全部现货"
+    }`;
   document.getElementById("spotAssetRows").innerHTML = visibleRows.length
     ? visibleRows.map((row) => `<tr>
         <td data-label="币种">
@@ -97,13 +101,18 @@ function renderSpotRows() {
         <td data-label="FDV"><div class="fdv">${formatSpotUsd(row.fdv)}</div></td>
         <td data-label="市值"><div class="fdv market-cap-value">${formatSpotUsd(row.marketCap)}</div></td>
         <td data-label="Binance 现货">${renderSpotPairs(row.spotPairs)}</td>
+        <td data-label="Binance 合约">${
+          row.hasBinanceFutures
+            ? renderSpotPairs(row.futuresPairs)
+            : '<span class="badge no">No</span>'
+        }</td>
         <td data-label="CMC">${
           row.cmcUrl
             ? `<a class="cmc" href="${row.cmcUrl}" target="_blank" rel="noreferrer">CMC</a>`
             : '<span class="muted">-</span>'
         }</td>
       </tr>`).join("")
-    : '<tr class="empty-row"><td colspan="5">当前区间没有匹配币种</td></tr>';
+    : '<tr class="empty-row"><td colspan="6">当前区间没有匹配币种</td></tr>';
   const loadMoreButton = document.getElementById("loadMoreButton");
   loadMoreButton.hidden = visibleRows.length >= rows.length;
   loadMoreButton.textContent = `显示更多（剩余 ${rows.length - visibleRows.length}）`;
@@ -133,6 +142,11 @@ function bindSpotControls() {
     spotState.visibleLimit = 100;
     renderSpotRows();
   });
+  document.getElementById("futuresOnlyInput").addEventListener("change", (event) => {
+    spotState.futuresOnly = event.target.checked;
+    spotState.visibleLimit = 100;
+    renderSpotRows();
+  });
   document.getElementById("rangeForm").addEventListener("submit", (event) => {
     event.preventDefault();
     applyRange();
@@ -140,9 +154,11 @@ function bindSpotControls() {
   document.getElementById("clearRangeButton").addEventListener("click", () => {
     document.getElementById("minFdvInput").value = "";
     document.getElementById("maxFdvInput").value = "";
+    document.getElementById("futuresOnlyInput").checked = false;
     document.getElementById("rangeError").textContent = "";
     spotState.minFdv = null;
     spotState.maxFdv = null;
+    spotState.futuresOnly = false;
     spotState.visibleLimit = 100;
     renderSpotRows();
   });
