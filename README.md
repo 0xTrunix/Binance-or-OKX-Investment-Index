@@ -78,6 +78,9 @@ npm run update:data
 `assets-data.json`、`spot-assets-data.json`、CoinGecko portfolio 缓存和 Binance
 CoinGecko ID 映射；如果数据有变化，会自动提交到 `main` 分支。
 
+如需提高稳定性，可以配置 GitHub Secret `COINGECKO_API_KEY`。脚本会优先使用
+官方 API key 认证；未提供时则回退到公开接口。
+
 投资标签采用更严格的验证口径：
 
 - YZi Labs：CoinGecko `YZi Labs Portfolio` category

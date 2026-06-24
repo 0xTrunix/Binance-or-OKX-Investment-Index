@@ -2,8 +2,6 @@ const fs = require("fs");
 
 const BINANCE_SPOT_URL = "https://data-api.binance.vision/api/v3/exchangeInfo";
 const BINANCE_FUTURES_URL = "https://fapi.binance.com/fapi/v1/exchangeInfo";
-const COINGECKO_MARKETS_URL = "https://api.coingecko.com/api/v3/coins/markets";
-const COINGECKO_BINANCE_TICKERS_URL = "https://api.coingecko.com/api/v3/exchanges/binance/tickers";
 const ID_BATCH_SIZE = 100;
 const REQUEST_DELAY_MS = 3500;
 
@@ -35,6 +33,25 @@ const manualCoinGeckoIds = {
 };
 
 const wait = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
+
+function getCoinGeckoCandidates() {
+  const mode = process.env.COINGECKO_API_MODE?.trim().toLowerCase();
+  const candidates = [
+    {
+      mode: "pro",
+      baseUrl: "https://pro-api.coingecko.com/api/v3",
+      headerName: "x-cg-pro-api-key",
+    },
+    {
+      mode: "demo",
+      baseUrl: "https://api.coingecko.com/api/v3",
+      headerName: "x-cg-demo-api-key",
+    },
+  ];
+  if (!mode) return candidates;
+  const prioritized = candidates.filter((candidate) => candidate.mode === mode);
+  return prioritized.length ? prioritized.concat(candidates.filter((candidate) => candidate.mode !== mode)) : candidates;
+}
 
 function readJsonIfExists(file, fallback) {
   return fs.existsSync(file) ? JSON.parse(fs.readFileSync(file, "utf8")) : fallback;
@@ -71,7 +88,76 @@ async function fetchJson(url, attempts = 5) {
       }
     }
   }
-  throw new Error(`Failed to fetch ${url}: ${lastError.message}`);
+  const wrappedError = new Error(`Failed to fetch ${url}: ${lastError.message}`);
+  wrappedError.status = lastError.status;
+  wrappedError.retryAfter = lastError.retryAfter;
+  throw wrappedError;
+}
+
+async function fetchJsonWithHeaders(url, headers, attempts = 5) {
+  let lastError;
+  for (let attempt = 1; attempt <= attempts; attempt += 1) {
+    try {
+      const response = await fetch(url, {
+        headers: {
+          Accept: "application/json",
+          "User-Agent": "BinanceCoinGeckoDataUpdater/1.0",
+          ...headers,
+        },
+      });
+      if (!response.ok) {
+        const error = new Error(`${response.status} ${response.statusText}`);
+        error.status = response.status;
+        error.retryAfter = Number(response.headers.get("retry-after") || 0);
+        throw error;
+      }
+      return await response.json();
+    } catch (error) {
+      lastError = error;
+      if (attempt < attempts) {
+        const backoff = error.status === 429
+          ? Math.max(error.retryAfter * 1000, attempt * 20000)
+          : attempt * 2500;
+        await wait(backoff);
+      }
+    }
+  }
+  const wrappedError = new Error(`Failed to fetch ${url}: ${lastError.message}`);
+  wrappedError.status = lastError.status;
+  wrappedError.retryAfter = lastError.retryAfter;
+  throw wrappedError;
+}
+
+async function resolveCoinGeckoConfig() {
+  const apiKey = process.env.COINGECKO_API_KEY?.trim();
+  if (!apiKey) {
+    return {
+      baseUrl: "https://api.coingecko.com/api/v3",
+      headers: {},
+      authMode: "public",
+    };
+  }
+
+  const candidates = getCoinGeckoCandidates();
+  let lastError;
+  for (const candidate of candidates) {
+    try {
+      await fetchJsonWithHeaders(`${candidate.baseUrl}/ping`, {
+        [candidate.headerName]: apiKey,
+      }, 2);
+      return {
+        baseUrl: candidate.baseUrl,
+        headers: {
+          [candidate.headerName]: apiKey,
+        },
+        authMode: candidate.mode,
+      };
+    } catch (error) {
+      lastError = error;
+    }
+  }
+
+  throw new Error(`Unable to authenticate CoinGecko API key: ${lastError?.message || "unknown error"}`);
 }
 
 function sortedObject(object) {
@@ -122,10 +208,21 @@ function buildFuturesMap(exchangeInfo) {
   return futuresByAsset;
 }
 
-async function fetchBinanceCoinGeckoIds(existingMapping, spotAssets) {
+function buildCachedFuturesMap(existingMainData, existingSpotData) {
+  const futuresByAsset = new Map();
+  for (const row of [...existingMainData.rows, ...existingSpotData.rows]) {
+    if (row.futuresPairs?.length) futuresByAsset.set(row.asset, [...row.futuresPairs]);
+  }
+  return futuresByAsset;
+}
+
+async function fetchBinanceCoinGeckoIds(existingMapping, spotAssets, coinGecko) {
   const refreshed = { ...existingMapping };
   for (let page = 1; page <= 25; page += 1) {
-    const tickersPage = await fetchJson(`${COINGECKO_BINANCE_TICKERS_URL}?page=${page}`);
+    const tickersPage = await fetchJsonWithHeaders(
+      `${coinGecko.baseUrl}/exchanges/binance/tickers?page=${page}`,
+      coinGecko.headers,
+    );
     const tickers = tickersPage.tickers || [];
     if (!tickers.length) break;
     for (const ticker of tickers) {
@@ -140,6 +237,13 @@ async function fetchBinanceCoinGeckoIds(existingMapping, spotAssets) {
 }
 
 async function fetchMarketsById(ids) {
+  return fetchMarketsByIdWithConfig(ids, {
+    baseUrl: "https://api.coingecko.com/api/v3",
+    headers: {},
+  });
+}
+
+async function fetchMarketsByIdWithConfig(ids, coinGecko) {
   const marketById = new Map();
   const uniqueIds = [...new Set(ids.filter(Boolean))];
   for (let index = 0; index < uniqueIds.length; index += ID_BATCH_SIZE) {
@@ -149,14 +253,14 @@ async function fetchMarketsById(ids) {
       per_page: String(ID_BATCH_SIZE),
       sparkline: "false",
     });
-    const rows = await fetchJson(`${COINGECKO_MARKETS_URL}?${params}`);
+    const rows = await fetchJsonWithHeaders(`${coinGecko.baseUrl}/coins/markets?${params}`, coinGecko.headers);
     for (const coin of rows) marketById.set(coin.id, coin);
     await wait(REQUEST_DELAY_MS);
   }
   return marketById;
 }
 
-async function fetchCoinGeckoCategory(category) {
+async function fetchCoinGeckoCategory(category, coinGecko) {
   const rows = [];
   for (let page = 1; page <= 5; page += 1) {
     const params = new URLSearchParams({
@@ -166,7 +270,7 @@ async function fetchCoinGeckoCategory(category) {
       page: String(page),
       sparkline: "false",
     });
-    const pageRows = await fetchJson(`${COINGECKO_MARKETS_URL}?${params}`);
+    const pageRows = await fetchJsonWithHeaders(`${coinGecko.baseUrl}/coins/markets?${params}`, coinGecko.headers);
     rows.push(...pageRows);
     if (pageRows.length < 250) break;
     await wait(REQUEST_DELAY_MS);
@@ -264,6 +368,7 @@ function buildMarketFields(asset, preferredId, marketById, existingByAsset) {
 }
 
 async function main() {
+  const coinGecko = await resolveCoinGeckoConfig();
   const existingMainData = readJsonIfExists("assets-data.json", { rows: [] });
   const existingSpotData = readJsonIfExists("spot-assets-data.json", { rows: [] });
   const existingByAsset = new Map(
@@ -271,25 +376,34 @@ async function main() {
   );
   const idOverrides = readJsonIfExists("coingecko-id-overrides.json", {});
 
-  const [spotExchangeInfo, futuresExchangeInfo] = await Promise.all([
-    fetchJson(BINANCE_SPOT_URL),
-    fetchJson(BINANCE_FUTURES_URL),
-  ]);
+  const spotExchangeInfo = await fetchJson(BINANCE_SPOT_URL);
+  let futuresByAsset;
+  let futuresSource = BINANCE_FUTURES_URL;
+  let futuresNote = "Binance futures status is refreshed from Binance USD-M perpetual exchangeInfo.";
+  try {
+    const futuresExchangeInfo = await fetchJson(BINANCE_FUTURES_URL);
+    futuresByAsset = buildFuturesMap(futuresExchangeInfo);
+  } catch (error) {
+    if (error.status !== 451) throw error;
+    futuresByAsset = buildCachedFuturesMap(existingMainData, existingSpotData);
+    futuresSource = `${BINANCE_FUTURES_URL} (cached fallback due to 451 region restriction)`;
+    futuresNote = "Binance USD-M futures exchangeInfo was unavailable from the current region, so the previous verified futures mapping was retained.";
+  }
 
   const { allSpot, quotedSpot } = buildSpotMaps(spotExchangeInfo);
-  const futuresByAsset = buildFuturesMap(futuresExchangeInfo);
   const refreshedMapping = await fetchBinanceCoinGeckoIds(
     readJsonIfExists("coingecko-binance-ids.json", {}),
     new Set(allSpot.keys()),
+    coinGecko,
   );
   writeJson("coingecko-binance-ids.json", refreshedMapping);
 
   const allAssets = new Set([...allSpot.keys(), ...quotedSpot.keys()].filter(Boolean));
   const preferredIds = [...allAssets].map((asset) => getPreferredId(asset, refreshedMapping, idOverrides));
-  const marketById = await fetchMarketsById(preferredIds);
+  const marketById = await fetchMarketsByIdWithConfig(preferredIds, coinGecko);
   const [yziRows, okxRows] = await Promise.all([
-    fetchCoinGeckoCategory("yzi-labs-portfolio"),
-    fetchCoinGeckoCategory("okx-ventures-portfolio"),
+    fetchCoinGeckoCategory("yzi-labs-portfolio", coinGecko),
+    fetchCoinGeckoCategory("okx-ventures-portfolio", coinGecko),
   ]);
   writeJson("cg_yzi_api.json", yziRows);
   writeJson("cg_okx_api.json", okxRows);
@@ -365,9 +479,9 @@ async function main() {
   const generatedAt = new Date().toISOString();
   const commonSources = [
     BINANCE_SPOT_URL,
-    BINANCE_FUTURES_URL,
-    COINGECKO_MARKETS_URL,
-    COINGECKO_BINANCE_TICKERS_URL,
+    futuresSource,
+    `${coinGecko.baseUrl}/coins/markets`,
+    `${coinGecko.baseUrl}/exchanges/binance/tickers`,
   ];
 
   writeJson("spot-assets-data.json", {
@@ -384,7 +498,7 @@ async function main() {
       "Rows are sorted by FDV descending; assets without FDV appear last.",
       "CoinGecko IDs are verified against CoinGecko's Binance exchange ticker mapping before market data and links are generated.",
       "Coin links and FDV use the same CoinGecko ID; symbol-only URL guessing is not used.",
-      "Binance futures status is refreshed from Binance USD-M perpetual exchangeInfo.",
+      futuresNote,
       "FDV is point-in-time market data and changes with price and supply.",
     ],
     rows: spotRows,
@@ -406,8 +520,8 @@ async function main() {
     },
     sources: [
       ...commonSources,
-      "https://api.coingecko.com/api/v3/coins/markets?category=yzi-labs-portfolio",
-      "https://api.coingecko.com/api/v3/coins/markets?category=okx-ventures-portfolio",
+      `${coinGecko.baseUrl}/coins/markets?category=yzi-labs-portfolio`,
+      `${coinGecko.baseUrl}/coins/markets?category=okx-ventures-portfolio`,
     ],
     notes: [
       "Investment tags are verified against CoinGecko portfolio category membership, primarily by CoinGecko ID; unique-symbol fallback is flagged for review.",
@@ -418,6 +532,7 @@ async function main() {
   });
 
   console.log({
+    coinGeckoAuthMode: coinGecko.authMode,
     generatedAt,
     spot: {
       spotAssets: spotRows.length,

@@ -28,9 +28,15 @@ jobs:
           node-version: "20"
 
       - name: Refresh data
+        env:
+          COINGECKO_API_KEY: ${{ secrets.COINGECKO_API_KEY }}
+          COINGECKO_API_MODE: demo
         run: npm run update:data
 
       - name: Validate generated data
+        env:
+          COINGECKO_API_KEY: ${{ secrets.COINGECKO_API_KEY }}
+          COINGECKO_API_MODE: demo
         run: npm run check
 
       - name: Commit and push changes
