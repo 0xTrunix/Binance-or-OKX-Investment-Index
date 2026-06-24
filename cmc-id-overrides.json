@@ -1,0 +1,38 @@
+{
+  "AI": {
+    "id": 28846,
+    "slug": "sleepless-ai"
+  },
+  "FRAX": {
+    "id": 6953,
+    "slug": "frax-share"
+  },
+  "SENT": {
+    "id": 38868,
+    "slug": "sentient"
+  },
+  "SHELL": {
+    "id": 35710,
+    "slug": "myshell"
+  },
+  "1000CHEEMS": {
+    "id": 33280,
+    "slug": "cheems-pet"
+  },
+  "1000SATS": {
+    "id": 28194,
+    "slug": "sats-ordinals"
+  },
+  "1MBABYDOGE": {
+    "id": 10407,
+    "slug": "baby-doge-coin"
+  },
+  "TREE": {
+    "id": 37495,
+    "slug": "treehouse"
+  },
+  "TURTLE": {
+    "id": 38671,
+    "slug": "turtle-xyz"
+  }
+}

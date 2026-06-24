@@ -10,13 +10,14 @@
     <main class="shell">
       <header class="topbar">
         <div>
-          <p class="eyebrow">Binance Spot FDV Screener</p>
-          <h1>Binance 全现货 FDV 筛选</h1>
+          <p class="eyebrow" id="spotEyebrow">Binance Spot FDV Screener</p>
+          <h1 id="spotPageTitle">Binance 全现货 FDV 筛选</h1>
           <p id="spotSourceLine" class="source-line">Loading data...</p>
         </div>
         <div class="header-actions">
-          <a class="source-link primary-link" href="index.html">现货 + 合约列表</a>
-          <a class="source-link" href="spot-assets-data.json" target="_blank" rel="noreferrer">查看数据 JSON</a>
+          <a class="source-link" id="sourcePickerLink" href="index.html">选择数据源</a>
+          <a class="source-link primary-link" id="mainBoardLink" href="dashboard.html">现货 + 合约列表</a>
+          <a class="source-link" id="spotJsonLink" href="spot-assets-data.json" target="_blank" rel="noreferrer">查看数据 JSON</a>
         </div>
       </header>
 
@@ -81,7 +82,7 @@
               <th>市值</th>
               <th>Binance 现货交易对</th>
               <th>Binance 合约</th>
-              <th>CoinGecko</th>
+              <th id="spotMarketHeader">CoinGecko</th>
             </tr>
           </thead>
           <tbody id="spotAssetRows"></tbody>
@@ -91,6 +92,7 @@
         <button class="action-button load-more-button" id="loadMoreButton" type="button">显示更多</button>
       </div>
     </main>
+    <script src="source-config.js"></script>
     <script src="spot-fdv.js"></script>
   </body>
 </html>

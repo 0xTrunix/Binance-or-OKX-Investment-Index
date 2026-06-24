@@ -1,0 +1,2582 @@
+{
+  "0G": {
+    "id": 38337,
+    "slug": "zero-gravity",
+    "name": "0G",
+    "symbol": "0G"
+  },
+  "1000CHEEMS": {
+    "id": 33280,
+    "slug": "cheems-pet",
+    "name": "Cheems (cheems.pet)",
+    "symbol": "CHEEMS"
+  },
+  "1000SATS": {
+    "id": 28194,
+    "slug": "sats-ordinals",
+    "name": "SATS (Ordinals)",
+    "symbol": "SATS"
+  },
+  "1INCH": {
+    "id": 8104,
+    "slug": "1inch",
+    "name": "1inch",
+    "symbol": "1INCH"
+  },
+  "1MBABYDOGE": {
+    "id": 10407,
+    "slug": "baby-doge-coin",
+    "name": "Baby Doge Coin",
+    "symbol": "BabyDoge"
+  },
+  "2Z": {
+    "id": 38515,
+    "slug": "doublezero",
+    "name": "DoubleZero",
+    "symbol": "2Z"
+  },
+  "A": {
+    "id": 36462,
+    "slug": "vaulta",
+    "name": "Vaulta",
+    "symbol": "A"
+  },
+  "AAVE": {
+    "id": 7278,
+    "slug": "aave",
+    "name": "Aave",
+    "symbol": "AAVE"
+  },
+  "ACE": {
+    "id": 28674,
+    "slug": "fusionist",
+    "name": "Fusionist",
+    "symbol": "ACE"
+  },
+  "ACH": {
+    "id": 6958,
+    "slug": "alchemy-pay",
+    "name": "Alchemy Pay",
+    "symbol": "ACH"
+  },
+  "ACM": {
+    "id": 8538,
+    "slug": "ac-milan-fan-token",
+    "name": "AC Milan Fan Token",
+    "symbol": "ACM"
+  },
+  "ACT": {
+    "id": 33566,
+    "slug": "act-i-the-ai-prophecy",
+    "name": "Act I : The AI Prophecy",
+    "symbol": "ACT"
+  },
+  "ACX": {
+    "id": 22620,
+    "slug": "across-protocol",
+    "name": "Across Protocol",
+    "symbol": "ACX"
+  },
+  "ADA": {
+    "id": 2010,
+    "slug": "cardano",
+    "name": "Cardano",
+    "symbol": "ADA"
+  },
+  "ADX": {
+    "id": 1768,
+    "slug": "adx-net",
+    "name": "heyAura",
+    "symbol": "ADX"
+  },
+  "AEUR": {
+    "id": 28596,
+    "slug": "anchored-coins-aeur",
+    "name": "Anchored Coins AEUR",
+    "symbol": "AEUR"
+  },
+  "AEVO": {
+    "id": 29676,
+    "slug": "aevo",
+    "name": "Aevo",
+    "symbol": "AEVO"
+  },
+  "AGLD": {
+    "id": 11568,
+    "slug": "adventure-gold",
+    "name": "Adventure Gold",
+    "symbol": "AGLD"
+  },
+  "AI": {
+    "id": 28846,
+    "slug": "sleepless-ai",
+    "name": "Sleepless AI",
+    "symbol": "AI"
+  },
+  "AIXBT": {
+    "id": 34103,
+    "slug": "aixbt",
+    "name": "aixbt",
+    "symbol": "AIXBT"
+  },
+  "ALCX": {
+    "id": 8613,
+    "slug": "alchemix",
+    "name": "Alchemix",
+    "symbol": "ALCX"
+  },
+  "ALGO": {
+    "id": 4030,
+    "slug": "algorand",
+    "name": "Algorand",
+    "symbol": "ALGO"
+  },
+  "ALICE": {
+    "id": 8766,
+    "slug": "myneighboralice",
+    "name": "MyNeighborAlice",
+    "symbol": "ALICE"
+  },
+  "ALLO": {
+    "id": 38908,
+    "slug": "allora",
+    "name": "Allora",
+    "symbol": "ALLO"
+  },
+  "ALPINE": {
+    "id": 18112,
+    "slug": "alpine-f1-team-fan-token",
+    "name": "Alpine F1 Team Fan Token",
+    "symbol": "ALPINE"
+  },
+  "ALT": {
+    "id": 29073,
+    "slug": "altlayer",
+    "name": "Altlayer",
+    "symbol": "ALT"
+  },
+  "AMDB": {
+    "id": 40538,
+    "slug": "advanced-micro-devices-tokenized-bstocks",
+    "name": "Advanced Micro Devices Tokenized bStocks",
+    "symbol": "AMDB"
+  },
+  "AMP": {
+    "id": 6945,
+    "slug": "amp",
+    "name": "Amp",
+    "symbol": "AMP"
+  },
+  "ANIME": {
+    "id": 35319,
+    "slug": "anime",
+    "name": "Animecoin",
+    "symbol": "ANIME"
+  },
+  "ANKR": {
+    "id": 3783,
+    "slug": "ankr",
+    "name": "Ankr",
+    "symbol": "ANKR"
+  },
+  "APE": {
+    "id": 7257,
+    "slug": "apecoin",
+    "name": "APEcoin.dev",
+    "symbol": "APE"
+  },
+  "API3": {
+    "id": 7737,
+    "slug": "api3",
+    "name": "API3",
+    "symbol": "API3"
+  },
+  "APT": {
+    "id": 21794,
+    "slug": "aptos",
+    "name": "Aptos",
+    "symbol": "APT"
+  },
+  "AR": {
+    "id": 5632,
+    "slug": "arweave",
+    "name": "Arweave",
+    "symbol": "AR"
+  },
+  "ARB": {
+    "id": 11841,
+    "slug": "arbitrum",
+    "name": "Arbitrum",
+    "symbol": "ARB"
+  },
+  "ARDR": {
+    "id": 1320,
+    "slug": "ardor",
+    "name": "Ardor",
+    "symbol": "ARDR"
+  },
+  "ARK": {
+    "id": 1586,
+    "slug": "ark",
+    "name": "Ark",
+    "symbol": "ARK"
+  },
+  "ARKM": {
+    "id": 27565,
+    "slug": "arkham",
+    "name": "Arkham",
+    "symbol": "ARKM"
+  },
+  "ARPA": {
+    "id": 4039,
+    "slug": "arpa-chain",
+    "name": "ARPA",
+    "symbol": "ARPA"
+  },
+  "ASR": {
+    "id": 5229,
+    "slug": "as-roma-fan-token",
+    "name": "AS Roma Fan Token",
+    "symbol": "ASR"
+  },
+  "ASTER": {
+    "id": 36341,
+    "slug": "aster",
+    "name": "Aster",
+    "symbol": "ASTER"
+  },
+  "ASTR": {
+    "id": 12885,
+    "slug": "astar",
+    "name": "Astar",
+    "symbol": "ASTR"
+  },
+  "AT": {
+    "id": 38757,
+    "slug": "apro",
+    "name": "APRO",
+    "symbol": "AT"
+  },
+  "ATM": {
+    "id": 5227,
+    "slug": "atletico-de-madrid-fan-token",
+    "name": "Atletico De Madrid Fan Token",
+    "symbol": "ATM"
+  },
+  "ATOM": {
+    "id": 3794,
+    "slug": "cosmos",
+    "name": "Cosmos",
+    "symbol": "ATOM"
+  },
+  "AUCTION": {
+    "id": 8602,
+    "slug": "bounce-token",
+    "name": "Bounce Token",
+    "symbol": "AUCTION"
+  },
+  "AUDIO": {
+    "id": 7455,
+    "slug": "audius",
+    "name": "Audius",
+    "symbol": "AUDIO"
+  },
+  "AVA": {
+    "id": 2776,
+    "slug": "ava",
+    "name": "AVA (Travala)",
+    "symbol": "AVA"
+  },
+  "AVAX": {
+    "id": 5805,
+    "slug": "avalanche",
+    "name": "Avalanche",
+    "symbol": "AVAX"
+  },
+  "AVNT": {
+    "id": 38299,
+    "slug": "avantis",
+    "name": "Avantis",
+    "symbol": "AVNT"
+  },
+  "AWE": {
+    "id": 4006,
+    "slug": "awe-network",
+    "name": "AWE",
+    "symbol": "AWE"
+  },
+  "AXL": {
+    "id": 17799,
+    "slug": "axelar",
+    "name": "Axelar",
+    "symbol": "AXL"
+  },
+  "AXS": {
+    "id": 6783,
+    "slug": "axie-infinity",
+    "name": "Axie Infinity",
+    "symbol": "AXS"
+  },
+  "BABY": {
+    "id": 32198,
+    "slug": "babylon",
+    "name": "Babylon",
+    "symbol": "BABY"
+  },
+  "BANANA": {
+    "id": 28066,
+    "slug": "banana-gun",
+    "name": "Banana Gun",
+    "symbol": "BANANA"
+  },
+  "BANANAS31": {
+    "id": 34118,
+    "slug": "banana-for-scale",
+    "name": "Banana For Scale",
+    "symbol": "BANANAS31"
+  },
+  "BAND": {
+    "id": 4679,
+    "slug": "band-protocol",
+    "name": "Band",
+    "symbol": "BAND"
+  },
+  "BANK": {
+    "id": 36296,
+    "slug": "lorenzo-protocol",
+    "name": "Lorenzo Protocol",
+    "symbol": "BANK"
+  },
+  "BAR": {
+    "id": 5225,
+    "slug": "fc-barcelona-fan-token",
+    "name": "FC Barcelona Fan Token",
+    "symbol": "BAR"
+  },
+  "BARD": {
+    "id": 38408,
+    "slug": "lombard",
+    "name": "Lombard",
+    "symbol": "BARD"
+  },
+  "BAT": {
+    "id": 1697,
+    "slug": "basic-attention-token",
+    "name": "Basic Attention Token",
+    "symbol": "BAT"
+  },
+  "BB": {
+    "id": 30746,
+    "slug": "bouncebit",
+    "name": "BounceBit",
+    "symbol": "BB"
+  },
+  "BCH": {
+    "id": 1831,
+    "slug": "bitcoin-cash",
+    "name": "Bitcoin Cash",
+    "symbol": "BCH"
+  },
+  "BEL": {
+    "id": 6928,
+    "slug": "bella-protocol",
+    "name": "Bella Protocol",
+    "symbol": "BEL"
+  },
+  "BERA": {
+    "id": 24647,
+    "slug": "berachain",
+    "name": "Berachain",
+    "symbol": "BERA"
+  },
+  "BFUSD": {
+    "id": 37760,
+    "slug": "bfusd",
+    "name": "BFUSD",
+    "symbol": "BFUSD"
+  },
+  "BICO": {
+    "id": 9543,
+    "slug": "biconomy",
+    "name": "Biconomy",
+    "symbol": "BICO"
+  },
+  "BIGTIME": {
+    "id": 28230,
+    "slug": "big-time",
+    "name": "Big Time",
+    "symbol": "BIGTIME"
+  },
+  "BIO": {
+    "id": 34812,
+    "slug": "bio",
+    "name": "Bio Protocol",
+    "symbol": "BIO"
+  },
+  "BLUR": {
+    "id": 23121,
+    "slug": "blur-token",
+    "name": "Blur",
+    "symbol": "BLUR"
+  },
+  "BMT": {
+    "id": 35214,
+    "slug": "bubblemaps",
+    "name": "Bubblemaps",
+    "symbol": "BMT"
+  },
+  "BNB": {
+    "id": 1839,
+    "slug": "bnb",
+    "name": "BNB",
+    "symbol": "BNB"
+  },
+  "BNSOL": {
+    "id": 32882,
+    "slug": "binance-staked-sol",
+    "name": "Binance Staked SOL",
+    "symbol": "BNSOL"
+  },
+  "BNT": {
+    "id": 1727,
+    "slug": "bancor",
+    "name": "Bancor",
+    "symbol": "BNT"
+  },
+  "BOME": {
+    "id": 29870,
+    "slug": "book-of-meme",
+    "name": "BOOK OF MEME",
+    "symbol": "BOME"
+  },
+  "BONK": {
+    "id": 23095,
+    "slug": "bonk1",
+    "name": "Bonk",
+    "symbol": "BONK"
+  },
+  "BREV": {
+    "id": 39159,
+    "slug": "brevis",
+    "name": "Brevis",
+    "symbol": "BREV"
+  },
+  "BTC": {
+    "id": 1,
+    "slug": "bitcoin",
+    "name": "Bitcoin",
+    "symbol": "BTC"
+  },
+  "C": {
+    "id": 37340,
+    "slug": "chainbase",
+    "name": "Chainbase",
+    "symbol": "C"
+  },
+  "C98": {
+    "id": 10903,
+    "slug": "coin98",
+    "name": "Coin98",
+    "symbol": "C98"
+  },
+  "CAKE": {
+    "id": 7186,
+    "slug": "pancakeswap",
+    "name": "PancakeSwap",
+    "symbol": "CAKE"
+  },
+  "CATI": {
+    "id": 32966,
+    "slug": "catizen",
+    "name": "Catizen",
+    "symbol": "CATI"
+  },
+  "CELO": {
+    "id": 5567,
+    "slug": "celo",
+    "name": "Celo",
+    "symbol": "CELO"
+  },
+  "CELR": {
+    "id": 3814,
+    "slug": "celer-network",
+    "name": "Celer Network",
+    "symbol": "CELR"
+  },
+  "CETUS": {
+    "id": 25114,
+    "slug": "cetus-protocol",
+    "name": "Cetus Protocol",
+    "symbol": "CETUS"
+  },
+  "CFG": {
+    "id": 6748,
+    "slug": "centrifuge",
+    "name": "Centrifuge",
+    "symbol": "CFG"
+  },
+  "CFX": {
+    "id": 7334,
+    "slug": "conflux-network",
+    "name": "Conflux",
+    "symbol": "CFX"
+  },
+  "CGPT": {
+    "id": 23756,
+    "slug": "chaingpt",
+    "name": "ChainGPT",
+    "symbol": "CGPT"
+  },
+  "CHIP": {
+    "id": 39870,
+    "slug": "usd-ai",
+    "name": "USD.AI",
+    "symbol": "CHIP"
+  },
+  "CHR": {
+    "id": 3978,
+    "slug": "chromia",
+    "name": "Chromia",
+    "symbol": "CHR"
+  },
+  "CHZ": {
+    "id": 4066,
+    "slug": "chiliz",
+    "name": "Chiliz",
+    "symbol": "CHZ"
+  },
+  "CITY": {
+    "id": 10049,
+    "slug": "manchester-city-fan-token",
+    "name": "Manchester City Fan Token",
+    "symbol": "CITY"
+  },
+  "CKB": {
+    "id": 4948,
+    "slug": "nervos-network",
+    "name": "Nervos Network",
+    "symbol": "CKB"
+  },
+  "COMP": {
+    "id": 5692,
+    "slug": "compound",
+    "name": "Compound",
+    "symbol": "COMP"
+  },
+  "COOKIE": {
+    "id": 31838,
+    "slug": "cookie",
+    "name": "Cookie DAO",
+    "symbol": "COOKIE"
+  },
+  "COTI": {
+    "id": 3992,
+    "slug": "coti",
+    "name": "COTI",
+    "symbol": "COTI"
+  },
+  "COW": {
+    "id": 19269,
+    "slug": "cow-protocol",
+    "name": "CoW Protocol",
+    "symbol": "COW"
+  },
+  "CRCLB": {
+    "id": 40213,
+    "slug": "circle-internet-group-tokenized-bstocks",
+    "name": "Circle Internet Group Tokenized bStocks",
+    "symbol": "CRCLB"
+  },
+  "CRV": {
+    "id": 6538,
+    "slug": "curve-dao-token",
+    "name": "Curve DAO Token",
+    "symbol": "CRV"
+  },
+  "CTK": {
+    "id": 4807,
+    "slug": "shentu",
+    "name": "Shentu",
+    "symbol": "CTK"
+  },
+  "CTSI": {
+    "id": 5444,
+    "slug": "cartesi",
+    "name": "Cartesi",
+    "symbol": "CTSI"
+  },
+  "CVC": {
+    "id": 1816,
+    "slug": "civic",
+    "name": "Civic",
+    "symbol": "CVC"
+  },
+  "CVX": {
+    "id": 9903,
+    "slug": "convex-finance",
+    "name": "Convex Finance",
+    "symbol": "CVX"
+  },
+  "CYBER": {
+    "id": 24781,
+    "slug": "cyberconnect",
+    "name": "Cyber",
+    "symbol": "CYBER"
+  },
+  "DASH": {
+    "id": 131,
+    "slug": "dash",
+    "name": "Dash",
+    "symbol": "DASH"
+  },
+  "DCR": {
+    "id": 1168,
+    "slug": "decred",
+    "name": "Decred",
+    "symbol": "DCR"
+  },
+  "DEXE": {
+    "id": 7326,
+    "slug": "dexe",
+    "name": "DeXe",
+    "symbol": "DEXE"
+  },
+  "DGB": {
+    "id": 109,
+    "slug": "digibyte",
+    "name": "DigiByte",
+    "symbol": "DGB"
+  },
+  "DIA": {
+    "id": 6138,
+    "slug": "dia",
+    "name": "DIA",
+    "symbol": "DIA"
+  },
+  "DODO": {
+    "id": 7224,
+    "slug": "dodo",
+    "name": "DODO",
+    "symbol": "DODO"
+  },
+  "DOGE": {
+    "id": 74,
+    "slug": "dogecoin",
+    "name": "Dogecoin",
+    "symbol": "DOGE"
+  },
+  "DOGS": {
+    "id": 32698,
+    "slug": "dogs",
+    "name": "DOGS",
+    "symbol": "DOGS"
+  },
+  "DOLO": {
+    "id": 35929,
+    "slug": "dolomite",
+    "name": "Dolomite",
+    "symbol": "DOLO"
+  },
+  "DOT": {
+    "id": 6636,
+    "slug": "polkadot-new",
+    "name": "Polkadot",
+    "symbol": "DOT"
+  },
+  "DUSK": {
+    "id": 4092,
+    "slug": "dusk",
+    "name": "Dusk",
+    "symbol": "DUSK"
+  },
+  "DYDX": {
+    "id": 28324,
+    "slug": "dydx-chain",
+    "name": "dYdX",
+    "symbol": "DYDX"
+  },
+  "DYM": {
+    "id": 28932,
+    "slug": "dymension",
+    "name": "Dymension",
+    "symbol": "DYM"
+  },
+  "EDEN": {
+    "id": 38513,
+    "slug": "openeden",
+    "name": "OpenEden",
+    "symbol": "EDEN"
+  },
+  "EDU": {
+    "id": 24613,
+    "slug": "open-campus",
+    "name": "Open Campus",
+    "symbol": "EDU"
+  },
+  "EGLD": {
+    "id": 6892,
+    "slug": "multiversx-egld",
+    "name": "MultiversX",
+    "symbol": "EGLD"
+  },
+  "EIGEN": {
+    "id": 30494,
+    "slug": "eigencloud",
+    "name": "EigenCloud",
+    "symbol": "EIGEN"
+  },
+  "ENA": {
+    "id": 30171,
+    "slug": "ethena",
+    "name": "Ethena",
+    "symbol": "ENA"
+  },
+  "ENJ": {
+    "id": 2130,
+    "slug": "enjin-coin",
+    "name": "Enjin Coin",
+    "symbol": "ENJ"
+  },
+  "ENS": {
+    "id": 13855,
+    "slug": "ethereum-name-service",
+    "name": "Ethereum Name Service",
+    "symbol": "ENS"
+  },
+  "ENSO": {
+    "id": 38668,
+    "slug": "enso",
+    "name": "Enso",
+    "symbol": "ENSO"
+  },
+  "EPIC": {
+    "id": 8615,
+    "slug": "epic-chain",
+    "name": "Epic Chain",
+    "symbol": "EPIC"
+  },
+  "ERA": {
+    "id": 37374,
+    "slug": "caldera",
+    "name": "Caldera",
+    "symbol": "ERA"
+  },
+  "ESP": {
+    "id": 39548,
+    "slug": "espresso",
+    "name": "Espresso",
+    "symbol": "ESP"
+  },
+  "ETC": {
+    "id": 1321,
+    "slug": "ethereum-classic",
+    "name": "Ethereum Classic",
+    "symbol": "ETC"
+  },
+  "ETH": {
+    "id": 1027,
+    "slug": "ethereum",
+    "name": "Ethereum",
+    "symbol": "ETH"
+  },
+  "ETHFI": {
+    "id": 29814,
+    "slug": "ether-fi-ethfi",
+    "name": "ether.fi",
+    "symbol": "ETHFI"
+  },
+  "EUL": {
+    "id": 14280,
+    "slug": "euler-finance",
+    "name": "Euler",
+    "symbol": "EUL"
+  },
+  "EURI": {
+    "id": 32644,
+    "slug": "eurite",
+    "name": "Eurite",
+    "symbol": "EURI"
+  },
+  "EWYB": {
+    "id": 40539,
+    "slug": "ishares-msci-south-korea-etf-tokenized-bstocks",
+    "name": "iShares MSCI South Korea ETF Tokenized bStocks",
+    "symbol": "EWYB"
+  },
+  "F": {
+    "id": 34297,
+    "slug": "synfutures",
+    "name": "SynFutures",
+    "symbol": "F"
+  },
+  "FDUSD": {
+    "id": 26081,
+    "slug": "first-digital-usd",
+    "name": "First Digital USD",
+    "symbol": "FDUSD"
+  },
+  "FET": {
+    "id": 3773,
+    "slug": "artificial-superintelligence-alliance",
+    "name": "Artificial Superintelligence Alliance",
+    "symbol": "FET"
+  },
+  "FF": {
+    "id": 38482,
+    "slug": "falcon-finance-ff",
+    "name": "Falcon Finance",
+    "symbol": "FF"
+  },
+  "FIDA": {
+    "id": 7978,
+    "slug": "bonfida-sns",
+    "name": "Bonfida",
+    "symbol": "FIDA"
+  },
+  "FIL": {
+    "id": 2280,
+    "slug": "filecoin",
+    "name": "Filecoin",
+    "symbol": "FIL"
+  },
+  "FLOKI": {
+    "id": 10804,
+    "slug": "floki-inu",
+    "name": "FLOKI",
+    "symbol": "FLOKI"
+  },
+  "FLOW": {
+    "id": 4558,
+    "slug": "flow",
+    "name": "Flow",
+    "symbol": "FLOW"
+  },
+  "FLUX": {
+    "id": 3029,
+    "slug": "zel",
+    "name": "Flux",
+    "symbol": "FLUX"
+  },
+  "FOGO": {
+    "id": 38356,
+    "slug": "fogo",
+    "name": "Fogo",
+    "symbol": "FOGO"
+  },
+  "FORM": {
+    "id": 23635,
+    "slug": "binaryx-new",
+    "name": "Four",
+    "symbol": "FORM"
+  },
+  "FRAX": {
+    "id": 6953,
+    "slug": "frax-share",
+    "name": "Frax (prev. FXS)",
+    "symbol": "FRAX"
+  },
+  "FTT": {
+    "id": 4195,
+    "slug": "ftx-token",
+    "name": "FTX Token",
+    "symbol": "FTT"
+  },
+  "G": {
+    "id": 32120,
+    "slug": "gravity-token",
+    "name": "Gravity",
+    "symbol": "G"
+  },
+  "GALA": {
+    "id": 7080,
+    "slug": "gala",
+    "name": "Gala",
+    "symbol": "GALA"
+  },
+  "GAS": {
+    "id": 1785,
+    "slug": "gas",
+    "name": "Gas",
+    "symbol": "GAS"
+  },
+  "GENIUS": {
+    "id": 39841,
+    "slug": "genius-terminal",
+    "name": "Genius Terminal",
+    "symbol": "GENIUS"
+  },
+  "GIGGLE": {
+    "id": 38470,
+    "slug": "giggle-fund",
+    "name": "Giggle Fund",
+    "symbol": "GIGGLE"
+  },
+  "GLM": {
+    "id": 1455,
+    "slug": "golem-network-tokens",
+    "name": "Golem",
+    "symbol": "GLM"
+  },
+  "GLMR": {
+    "id": 6836,
+    "slug": "moonbeam",
+    "name": "Moonbeam",
+    "symbol": "GLMR"
+  },
+  "GMT": {
+    "id": 18069,
+    "slug": "green-metaverse-token",
+    "name": "GMT",
+    "symbol": "GMT"
+  },
+  "GMX": {
+    "id": 11857,
+    "slug": "gmx",
+    "name": "GMX",
+    "symbol": "GMX"
+  },
+  "GNO": {
+    "id": 1659,
+    "slug": "gnosis-gno",
+    "name": "Gnosis",
+    "symbol": "GNO"
+  },
+  "GNS": {
+    "id": 13663,
+    "slug": "gains-network",
+    "name": "Gains Network",
+    "symbol": "GNS"
+  },
+  "GPS": {
+    "id": 35268,
+    "slug": "goplus-security",
+    "name": "GoPlus Security",
+    "symbol": "GPS"
+  },
+  "GRT": {
+    "id": 6719,
+    "slug": "the-graph",
+    "name": "The Graph",
+    "symbol": "GRT"
+  },
+  "GTC": {
+    "id": 10052,
+    "slug": "gitcoin",
+    "name": "Gitcoin",
+    "symbol": "GTC"
+  },
+  "GUN": {
+    "id": 36156,
+    "slug": "gunz",
+    "name": "GUNZ",
+    "symbol": "GUN"
+  },
+  "HAEDAL": {
+    "id": 36369,
+    "slug": "haedal-protocol",
+    "name": "Haedal Protocol",
+    "symbol": "HAEDAL"
+  },
+  "HBAR": {
+    "id": 4642,
+    "slug": "hedera",
+    "name": "Hedera",
+    "symbol": "HBAR"
+  },
+  "HEI": {
+    "id": 35724,
+    "slug": "heima",
+    "name": "Heima",
+    "symbol": "HEI"
+  },
+  "HEMI": {
+    "id": 38159,
+    "slug": "hemi",
+    "name": "Hemi",
+    "symbol": "HEMI"
+  },
+  "HFT": {
+    "id": 22461,
+    "slug": "hashflow",
+    "name": "Hashflow",
+    "symbol": "HFT"
+  },
+  "HIVE": {
+    "id": 5370,
+    "slug": "hive-blockchain",
+    "name": "Hive",
+    "symbol": "HIVE"
+  },
+  "HMSTR": {
+    "id": 32195,
+    "slug": "hamster-kombat",
+    "name": "Hamster Kombat",
+    "symbol": "HMSTR"
+  },
+  "HOLO": {
+    "id": 38309,
+    "slug": "holoworld-ai",
+    "name": "Holoworld AI",
+    "symbol": "HOLO"
+  },
+  "HOME": {
+    "id": 26959,
+    "slug": "otterhome",
+    "name": "OtterHome",
+    "symbol": "HOME"
+  },
+  "HOT": {
+    "id": 2682,
+    "slug": "holo",
+    "name": "Holo",
+    "symbol": "HOT"
+  },
+  "HUMA": {
+    "id": 36576,
+    "slug": "huma-finance",
+    "name": "Huma Finance",
+    "symbol": "HUMA"
+  },
+  "HYPER": {
+    "id": 36281,
+    "slug": "hyperlane",
+    "name": "Hyperlane",
+    "symbol": "HYPER"
+  },
+  "ICP": {
+    "id": 8916,
+    "slug": "internet-computer",
+    "name": "Internet Computer",
+    "symbol": "ICP"
+  },
+  "ICX": {
+    "id": 2099,
+    "slug": "icon",
+    "name": "ICON",
+    "symbol": "ICX"
+  },
+  "ID": {
+    "id": 21846,
+    "slug": "space-id",
+    "name": "SPACE ID",
+    "symbol": "ID"
+  },
+  "ILV": {
+    "id": 8719,
+    "slug": "illuvium",
+    "name": "Illuvium",
+    "symbol": "ILV"
+  },
+  "IMX": {
+    "id": 10603,
+    "slug": "immutable-x",
+    "name": "Immutable",
+    "symbol": "IMX"
+  },
+  "INIT": {
+    "id": 33120,
+    "slug": "initia",
+    "name": "Initia",
+    "symbol": "INIT"
+  },
+  "INJ": {
+    "id": 7226,
+    "slug": "injective",
+    "name": "Injective",
+    "symbol": "INJ"
+  },
+  "INTCB": {
+    "id": 40540,
+    "slug": "intel-tokenized-bstocks",
+    "name": "Intel Tokenized bStocks",
+    "symbol": "INTCB"
+  },
+  "IO": {
+    "id": 29835,
+    "slug": "io-net",
+    "name": "io.net",
+    "symbol": "IO"
+  },
+  "IOST": {
+    "id": 2405,
+    "slug": "iostoken",
+    "name": "IOST",
+    "symbol": "IOST"
+  },
+  "IOTA": {
+    "id": 1720,
+    "slug": "iota",
+    "name": "IOTA",
+    "symbol": "IOTA"
+  },
+  "IOTX": {
+    "id": 2777,
+    "slug": "iotex",
+    "name": "IoTeX",
+    "symbol": "IOTX"
+  },
+  "IQ": {
+    "id": 2930,
+    "slug": "iq",
+    "name": "IQ",
+    "symbol": "IQ"
+  },
+  "JASMY": {
+    "id": 8425,
+    "slug": "jasmy",
+    "name": "JasmyCoin",
+    "symbol": "JASMY"
+  },
+  "JOE": {
+    "id": 11396,
+    "slug": "joe",
+    "name": "JOE",
+    "symbol": "JOE"
+  },
+  "JST": {
+    "id": 5488,
+    "slug": "just",
+    "name": "JUST",
+    "symbol": "JST"
+  },
+  "JTO": {
+    "id": 28541,
+    "slug": "jito",
+    "name": "Jito",
+    "symbol": "JTO"
+  },
+  "JUP": {
+    "id": 1503,
+    "slug": "jupiter",
+    "name": "Jupiter",
+    "symbol": "JUP"
+  },
+  "JUV": {
+    "id": 5224,
+    "slug": "juventus-fan-token",
+    "name": "Juventus Fan Token",
+    "symbol": "JUV"
+  },
+  "KAIA": {
+    "id": 32880,
+    "slug": "kaia",
+    "name": "Kaia",
+    "symbol": "KAIA"
+  },
+  "KAITO": {
+    "id": 35763,
+    "slug": "kaito",
+    "name": "KAITO",
+    "symbol": "KAITO"
+  },
+  "KAT": {
+    "id": 38769,
+    "slug": "katana-network",
+    "name": "Katana",
+    "symbol": "KAT"
+  },
+  "KAVA": {
+    "id": 4846,
+    "slug": "kava",
+    "name": "Kava",
+    "symbol": "KAVA"
+  },
+  "KERNEL": {
+    "id": 36180,
+    "slug": "kerneldao",
+    "name": "KernelDAO",
+    "symbol": "KERNEL"
+  },
+  "KGST": {
+    "id": 39162,
+    "slug": "kgst",
+    "name": "KGST",
+    "symbol": "KGST"
+  },
+  "KITE": {
+    "id": 38828,
+    "slug": "kite",
+    "name": "Kite",
+    "symbol": "KITE"
+  },
+  "KMNO": {
+    "id": 30986,
+    "slug": "kamino-finance",
+    "name": "Kamino",
+    "symbol": "KMNO"
+  },
+  "KNC": {
+    "id": 9444,
+    "slug": "kyber-network-crystal-v2",
+    "name": "Kyber Network Crystal v2",
+    "symbol": "KNC"
+  },
+  "KSM": {
+    "id": 5034,
+    "slug": "kusama",
+    "name": "Kusama",
+    "symbol": "KSM"
+  },
+  "LA": {
+    "id": 36510,
+    "slug": "lagrange",
+    "name": "Lagrange",
+    "symbol": "LA"
+  },
+  "LAYER": {
+    "id": 35429,
+    "slug": "solayer",
+    "name": "Solayer",
+    "symbol": "LAYER"
+  },
+  "LAZIO": {
+    "id": 12687,
+    "slug": "lazio-fan-token",
+    "name": "S.S. Lazio Fan Token",
+    "symbol": "LAZIO"
+  },
+  "LDO": {
+    "id": 8000,
+    "slug": "lido-dao",
+    "name": "Lido DAO",
+    "symbol": "LDO"
+  },
+  "LINEA": {
+    "id": 27657,
+    "slug": "linea",
+    "name": "Linea",
+    "symbol": "LINEA"
+  },
+  "LINK": {
+    "id": 1975,
+    "slug": "chainlink",
+    "name": "Chainlink",
+    "symbol": "LINK"
+  },
+  "LISTA": {
+    "id": 21533,
+    "slug": "lista-dao",
+    "name": "Lista DAO",
+    "symbol": "LISTA"
+  },
+  "LPT": {
+    "id": 3640,
+    "slug": "livepeer",
+    "name": "Livepeer",
+    "symbol": "LPT"
+  },
+  "LQTY": {
+    "id": 7429,
+    "slug": "liquity",
+    "name": "Liquity",
+    "symbol": "LQTY"
+  },
+  "LSK": {
+    "id": 1214,
+    "slug": "lisk",
+    "name": "Lisk",
+    "symbol": "LSK"
+  },
+  "LTC": {
+    "id": 2,
+    "slug": "litecoin",
+    "name": "Litecoin",
+    "symbol": "LTC"
+  },
+  "LUMIA": {
+    "id": 33439,
+    "slug": "lumia",
+    "name": "Lumia",
+    "symbol": "LUMIA"
+  },
+  "LUNA": {
+    "id": 20314,
+    "slug": "terra-luna-v2",
+    "name": "Terra",
+    "symbol": "LUNA"
+  },
+  "LUNC": {
+    "id": 4172,
+    "slug": "terra-luna",
+    "name": "Terra Classic",
+    "symbol": "LUNC"
+  },
+  "MAGIC": {
+    "id": 14783,
+    "slug": "magic-token",
+    "name": "Treasure",
+    "symbol": "MAGIC"
+  },
+  "MANA": {
+    "id": 1966,
+    "slug": "decentraland",
+    "name": "Decentraland",
+    "symbol": "MANA"
+  },
+  "MANTA": {
+    "id": 13631,
+    "slug": "manta-network",
+    "name": "Manta Network",
+    "symbol": "MANTA"
+  },
+  "MANTRA": {
+    "id": 39611,
+    "slug": "mantra-new",
+    "name": "MANTRA",
+    "symbol": "MANTRA"
+  },
+  "MASK": {
+    "id": 8536,
+    "slug": "mask-network",
+    "name": "Mask Network",
+    "symbol": "MASK"
+  },
+  "MAV": {
+    "id": 18037,
+    "slug": "maverick-protocol",
+    "name": "Maverick Protocol",
+    "symbol": "MAV"
+  },
+  "MBL": {
+    "id": 4038,
+    "slug": "moviebloc",
+    "name": "MovieBloc",
+    "symbol": "MBL"
+  },
+  "ME": {
+    "id": 32197,
+    "slug": "magiceden",
+    "name": "Magic Eden",
+    "symbol": "ME"
+  },
+  "MEGA": {
+    "id": 38770,
+    "slug": "megaeth",
+    "name": "MegaETH",
+    "symbol": "MEGA"
+  },
+  "MEME": {
+    "id": 28301,
+    "slug": "meme",
+    "name": "Memecoin",
+    "symbol": "MEME"
+  },
+  "MET": {
+    "id": 38353,
+    "slug": "meteora",
+    "name": "Meteora",
+    "symbol": "MET"
+  },
+  "METIS": {
+    "id": 9640,
+    "slug": "metisdao",
+    "name": "Metis",
+    "symbol": "METIS"
+  },
+  "MINA": {
+    "id": 8646,
+    "slug": "mina",
+    "name": "Mina",
+    "symbol": "MINA"
+  },
+  "MIRA": {
+    "id": 38495,
+    "slug": "mira-network",
+    "name": "Mira",
+    "symbol": "MIRA"
+  },
+  "MITO": {
+    "id": 38204,
+    "slug": "mitosis",
+    "name": "Mitosis",
+    "symbol": "MITO"
+  },
+  "MMT": {
+    "id": 38231,
+    "slug": "momentum-token",
+    "name": "Momentum",
+    "symbol": "MMT"
+  },
+  "MORPHO": {
+    "id": 34104,
+    "slug": "morpho",
+    "name": "Morpho",
+    "symbol": "MORPHO"
+  },
+  "MOVE": {
+    "id": 32452,
+    "slug": "movement",
+    "name": "Movement",
+    "symbol": "MOVE"
+  },
+  "MOVR": {
+    "id": 9285,
+    "slug": "moonriver",
+    "name": "Moonriver",
+    "symbol": "MOVR"
+  },
+  "MSTRB": {
+    "id": 40536,
+    "slug": "strategy-tokenized-bstocks",
+    "name": "Strategy Tokenized bStocks",
+    "symbol": "MSTRB"
+  },
+  "MTL": {
+    "id": 1788,
+    "slug": "metal",
+    "name": "Metal DAO",
+    "symbol": "MTL"
+  },
+  "MUB": {
+    "id": 40212,
+    "slug": "micron-technology-tokenized-bstocks",
+    "name": "Micron Technology Tokenized bStocks",
+    "symbol": "MUB"
+  },
+  "MUBARAK": {
+    "id": 36041,
+    "slug": "mubarak",
+    "name": "Mubarak",
+    "symbol": "MUBARAK"
+  },
+  "NEAR": {
+    "id": 6535,
+    "slug": "near-protocol",
+    "name": "NEAR Protocol",
+    "symbol": "NEAR"
+  },
+  "NEIRO": {
+    "id": 32521,
+    "slug": "neiro",
+    "name": "Neiro",
+    "symbol": "NEIRO"
+  },
+  "NEO": {
+    "id": 1376,
+    "slug": "neo",
+    "name": "Neo",
+    "symbol": "NEO"
+  },
+  "NEWT": {
+    "id": 36861,
+    "slug": "newton-protocol",
+    "name": "Newton Protocol",
+    "symbol": "NEWT"
+  },
+  "NEXO": {
+    "id": 2694,
+    "slug": "nexo",
+    "name": "Nexo",
+    "symbol": "NEXO"
+  },
+  "NFP": {
+    "id": 28778,
+    "slug": "nfprompt",
+    "name": "NFPrompt",
+    "symbol": "NFP"
+  },
+  "NIGHT": {
+    "id": 39064,
+    "slug": "midnight-network",
+    "name": "Midnight",
+    "symbol": "NIGHT"
+  },
+  "NIL": {
+    "id": 35702,
+    "slug": "nillion",
+    "name": "Nillion",
+    "symbol": "NIL"
+  },
+  "NMR": {
+    "id": 1732,
+    "slug": "numeraire",
+    "name": "Numeraire",
+    "symbol": "NMR"
+  },
+  "NOM": {
+    "id": 38464,
+    "slug": "nomina",
+    "name": "Nomina",
+    "symbol": "NOM"
+  },
+  "NOT": {
+    "id": 28850,
+    "slug": "notcoin",
+    "name": "Notcoin",
+    "symbol": "NOT"
+  },
+  "NVDAB": {
+    "id": 40215,
+    "slug": "nvidia-tokenized-bstocks",
+    "name": "NVIDIA Tokenized bStocks",
+    "symbol": "NVDAB"
+  },
+  "NXPC": {
+    "id": 36044,
+    "slug": "maplestory-universe",
+    "name": "NEXPACE",
+    "symbol": "NXPC"
+  },
+  "OG": {
+    "id": 5309,
+    "slug": "og-fan-token",
+    "name": "OG Fan Token",
+    "symbol": "OG"
+  },
+  "OGN": {
+    "id": 5117,
+    "slug": "origin-protocol",
+    "name": "Origin Protocol",
+    "symbol": "OGN"
+  },
+  "ONDO": {
+    "id": 21159,
+    "slug": "ondo-finance",
+    "name": "Ondo",
+    "symbol": "ONDO"
+  },
+  "ONE": {
+    "id": 3945,
+    "slug": "harmony",
+    "name": "Harmony",
+    "symbol": "ONE"
+  },
+  "ONG": {
+    "id": 3217,
+    "slug": "ontology-gas",
+    "name": "Ontology Gas",
+    "symbol": "ONG"
+  },
+  "ONT": {
+    "id": 2566,
+    "slug": "ontology",
+    "name": "Ontology",
+    "symbol": "ONT"
+  },
+  "OP": {
+    "id": 11840,
+    "slug": "optimism-ethereum",
+    "name": "Optimism",
+    "symbol": "OP"
+  },
+  "OPEN": {
+    "id": 37456,
+    "slug": "openledger",
+    "name": "OpenLedger",
+    "symbol": "OPEN"
+  },
+  "OPG": {
+    "id": 39800,
+    "slug": "opengradient",
+    "name": "OpenGradient",
+    "symbol": "OPG"
+  },
+  "OPN": {
+    "id": 39564,
+    "slug": "opinion",
+    "name": "Opinion",
+    "symbol": "OPN"
+  },
+  "ORCA": {
+    "id": 11165,
+    "slug": "orca",
+    "name": "Orca",
+    "symbol": "ORCA"
+  },
+  "ORDI": {
+    "id": 25028,
+    "slug": "ordi",
+    "name": "ORDI",
+    "symbol": "ORDI"
+  },
+  "OSMO": {
+    "id": 12220,
+    "slug": "osmosis",
+    "name": "Osmosis",
+    "symbol": "OSMO"
+  },
+  "PARTI": {
+    "id": 36102,
+    "slug": "particle-network",
+    "name": "Particle Network",
+    "symbol": "PARTI"
+  },
+  "PAXG": {
+    "id": 4705,
+    "slug": "pax-gold",
+    "name": "PAX Gold",
+    "symbol": "PAXG"
+  },
+  "PENDLE": {
+    "id": 9481,
+    "slug": "pendle",
+    "name": "Pendle",
+    "symbol": "PENDLE"
+  },
+  "PENGU": {
+    "id": 34466,
+    "slug": "pudgy-penguins",
+    "name": "Pudgy Penguins",
+    "symbol": "PENGU"
+  },
+  "PEOPLE": {
+    "id": 14806,
+    "slug": "constitutiondao",
+    "name": "ConstitutionDAO",
+    "symbol": "PEOPLE"
+  },
+  "PEPE": {
+    "id": 24478,
+    "slug": "pepe",
+    "name": "Pepe",
+    "symbol": "PEPE"
+  },
+  "PHA": {
+    "id": 6841,
+    "slug": "phala-network",
+    "name": "Phala Network",
+    "symbol": "PHA"
+  },
+  "PIVX": {
+    "id": 1169,
+    "slug": "pivx",
+    "name": "PIVX",
+    "symbol": "PIVX"
+  },
+  "PIXEL": {
+    "id": 29335,
+    "slug": "pixels",
+    "name": "Pixels",
+    "symbol": "PIXEL"
+  },
+  "PLUME": {
+    "id": 35364,
+    "slug": "plume",
+    "name": "Plume",
+    "symbol": "PLUME"
+  },
+  "PNUT": {
+    "id": 33788,
+    "slug": "peanut-the-squirrel",
+    "name": "Peanut the Squirrel",
+    "symbol": "PNUT"
+  },
+  "POL": {
+    "id": 28321,
+    "slug": "polygon-ecosystem-token",
+    "name": "Polygon (prev. MATIC)",
+    "symbol": "POL"
+  },
+  "POLYX": {
+    "id": 20362,
+    "slug": "polymesh",
+    "name": "Polymesh",
+    "symbol": "POLYX"
+  },
+  "POND": {
+    "id": 7497,
+    "slug": "marlin",
+    "name": "Marlin",
+    "symbol": "POND"
+  },
+  "PORTAL": {
+    "id": 29555,
+    "slug": "portal-gaming",
+    "name": "Portal",
+    "symbol": "PORTAL"
+  },
+  "PORTO": {
+    "id": 14052,
+    "slug": "fc-porto",
+    "name": "FC Porto Fan Token",
+    "symbol": "PORTO"
+  },
+  "POWR": {
+    "id": 2132,
+    "slug": "power-ledger",
+    "name": "Powerledger",
+    "symbol": "POWR"
+  },
+  "PROM": {
+    "id": 4120,
+    "slug": "prom",
+    "name": "Prom",
+    "symbol": "PROM"
+  },
+  "PROVE": {
+    "id": 37593,
+    "slug": "succinct",
+    "name": "Succinct",
+    "symbol": "PROVE"
+  },
+  "PSG": {
+    "id": 5226,
+    "slug": "paris-saint-germain-fan-token",
+    "name": "Paris Saint-Germain Fan Token",
+    "symbol": "PSG"
+  },
+  "PUMP": {
+    "id": 36507,
+    "slug": "pump-fun",
+    "name": "Pump.fun",
+    "symbol": "PUMP"
+  },
+  "PUNDIX": {
+    "id": 9040,
+    "slug": "pundix-new",
+    "name": "Pundi X (New)",
+    "symbol": "PUNDIX"
+  },
+  "PYR": {
+    "id": 9308,
+    "slug": "vulcan-forged-pyr",
+    "name": "Vulcan Forged (PYR)",
+    "symbol": "PYR"
+  },
+  "PYTH": {
+    "id": 28177,
+    "slug": "pyth-network",
+    "name": "Pyth Network",
+    "symbol": "PYTH"
+  },
+  "QI": {
+    "id": 9288,
+    "slug": "benqi",
+    "name": "BENQI",
+    "symbol": "QI"
+  },
+  "QKC": {
+    "id": 2840,
+    "slug": "quarkchain",
+    "name": "QuarkChain",
+    "symbol": "QKC"
+  },
+  "QNT": {
+    "id": 3155,
+    "slug": "quant",
+    "name": "Quant",
+    "symbol": "QNT"
+  },
+  "QTUM": {
+    "id": 1684,
+    "slug": "qtum",
+    "name": "Qtum",
+    "symbol": "QTUM"
+  },
+  "QUICK": {
+    "id": 8206,
+    "slug": "quickswap",
+    "name": "QuickSwap [Old]",
+    "symbol": "QUICK"
+  },
+  "RAD": {
+    "id": 6843,
+    "slug": "radworks",
+    "name": "Radworks",
+    "symbol": "RAD"
+  },
+  "RARE": {
+    "id": 11294,
+    "slug": "superrare",
+    "name": "SuperRare",
+    "symbol": "RARE"
+  },
+  "RAY": {
+    "id": 8526,
+    "slug": "raydium",
+    "name": "Raydium",
+    "symbol": "RAY"
+  },
+  "RE": {
+    "id": 40224,
+    "slug": "re-protocol",
+    "name": "Re",
+    "symbol": "RE"
+  },
+  "RED": {
+    "id": 21707,
+    "slug": "redstone",
+    "name": "RedStone",
+    "symbol": "RED"
+  },
+  "RENDER": {
+    "id": 5690,
+    "slug": "render",
+    "name": "Render",
+    "symbol": "RENDER"
+  },
+  "REQ": {
+    "id": 2071,
+    "slug": "request",
+    "name": "Request",
+    "symbol": "REQ"
+  },
+  "RESOLV": {
+    "id": 36713,
+    "slug": "resolv",
+    "name": "Resolv",
+    "symbol": "RESOLV"
+  },
+  "REZ": {
+    "id": 30843,
+    "slug": "renzo",
+    "name": "Renzo",
+    "symbol": "REZ"
+  },
+  "RIF": {
+    "id": 3701,
+    "slug": "rsk-infrastructure-framework",
+    "name": "Rootstock Infrastructure Framework",
+    "symbol": "RIF"
+  },
+  "RLC": {
+    "id": 1637,
+    "slug": "rlc",
+    "name": "iExec RLC",
+    "symbol": "RLC"
+  },
+  "RLUSD": {
+    "id": 34387,
+    "slug": "ripple-usd",
+    "name": "Ripple USD",
+    "symbol": "RLUSD"
+  },
+  "ROBO": {
+    "id": 39595,
+    "slug": "fabric-foundation",
+    "name": "Fabric Protocol",
+    "symbol": "ROBO"
+  },
+  "ROSE": {
+    "id": 7653,
+    "slug": "oasis-network",
+    "name": "Oasis",
+    "symbol": "ROSE"
+  },
+  "RPL": {
+    "id": 2943,
+    "slug": "rocket-pool",
+    "name": "Rocket Pool",
+    "symbol": "RPL"
+  },
+  "RSR": {
+    "id": 3964,
+    "slug": "reserve-rights",
+    "name": "Reserve Rights",
+    "symbol": "RSR"
+  },
+  "RUNE": {
+    "id": 4157,
+    "slug": "thorchain",
+    "name": "THORChain",
+    "symbol": "RUNE"
+  },
+  "RVN": {
+    "id": 2577,
+    "slug": "ravencoin",
+    "name": "Ravencoin",
+    "symbol": "RVN"
+  },
+  "S": {
+    "id": 32684,
+    "slug": "sonic",
+    "name": "Sonic",
+    "symbol": "S"
+  },
+  "SAGA": {
+    "id": 30372,
+    "slug": "saga",
+    "name": "Saga",
+    "symbol": "SAGA"
+  },
+  "SAHARA": {
+    "id": 36671,
+    "slug": "sahara-ai",
+    "name": "Sahara AI",
+    "symbol": "SAHARA"
+  },
+  "SAND": {
+    "id": 6210,
+    "slug": "the-sandbox",
+    "name": "The Sandbox",
+    "symbol": "SAND"
+  },
+  "SANTOS": {
+    "id": 15248,
+    "slug": "santos-fc-fan-token",
+    "name": "Santos FC Fan Token",
+    "symbol": "SANTOS"
+  },
+  "SAPIEN": {
+    "id": 38117,
+    "slug": "sapien-io",
+    "name": "Sapien",
+    "symbol": "SAPIEN"
+  },
+  "SC": {
+    "id": 1042,
+    "slug": "siacoin",
+    "name": "Siacoin",
+    "symbol": "SC"
+  },
+  "SCR": {
+    "id": 26998,
+    "slug": "scroll",
+    "name": "Scroll",
+    "symbol": "SCR"
+  },
+  "SCRT": {
+    "id": 5604,
+    "slug": "secret",
+    "name": "Secret",
+    "symbol": "SCRT"
+  },
+  "SEI": {
+    "id": 23149,
+    "slug": "sei",
+    "name": "Sei",
+    "symbol": "SEI"
+  },
+  "SENT": {
+    "id": 38868,
+    "slug": "sentient",
+    "name": "Sentient",
+    "symbol": "SENT"
+  },
+  "SFP": {
+    "id": 8119,
+    "slug": "safepal",
+    "name": "SafePal",
+    "symbol": "SFP"
+  },
+  "SHELL": {
+    "id": 35710,
+    "slug": "myshell",
+    "name": "MyShell",
+    "symbol": "SHELL"
+  },
+  "SHIB": {
+    "id": 5994,
+    "slug": "shiba-inu",
+    "name": "Shiba Inu",
+    "symbol": "SHIB"
+  },
+  "SIGN": {
+    "id": 35600,
+    "slug": "sign",
+    "name": "Sign",
+    "symbol": "SIGN"
+  },
+  "SKL": {
+    "id": 5691,
+    "slug": "skale-network",
+    "name": "SKALE",
+    "symbol": "SKL"
+  },
+  "SKY": {
+    "id": 33038,
+    "slug": "sky",
+    "name": "Sky",
+    "symbol": "SKY"
+  },
+  "SLP": {
+    "id": 5824,
+    "slug": "smooth-love-potion",
+    "name": "Smooth Love Potion",
+    "symbol": "SLP"
+  },
+  "SNDKB": {
+    "id": 40216,
+    "slug": "sandisk-tokenized-bstocks",
+    "name": "SanDisk Tokenized bStocks",
+    "symbol": "SNDKB"
+  },
+  "SNX": {
+    "id": 2586,
+    "slug": "synthetix",
+    "name": "Synthetix",
+    "symbol": "SNX"
+  },
+  "SOL": {
+    "id": 5426,
+    "slug": "solana",
+    "name": "Solana",
+    "symbol": "SOL"
+  },
+  "SOLV": {
+    "id": 12165,
+    "slug": "solv-protocol",
+    "name": "Solv Protocol",
+    "symbol": "SOLV"
+  },
+  "SOMI": {
+    "id": 37637,
+    "slug": "somnia",
+    "name": "Somnia",
+    "symbol": "SOMI"
+  },
+  "SOPH": {
+    "id": 32087,
+    "slug": "sophon",
+    "name": "Sophon",
+    "symbol": "SOPH"
+  },
+  "SPCXB": {
+    "id": 40217,
+    "slug": "spacex-tokenized-bstocks",
+    "name": "SpaceX Tokenized bStocks",
+    "symbol": "SPCXB"
+  },
+  "SPELL": {
+    "id": 11289,
+    "slug": "spell-token",
+    "name": "Spell Token",
+    "symbol": "SPELL"
+  },
+  "SPK": {
+    "id": 36569,
+    "slug": "spark",
+    "name": "Spark",
+    "symbol": "SPK"
+  },
+  "SSV": {
+    "id": 12999,
+    "slug": "ssv-network",
+    "name": "ssv.network",
+    "symbol": "SSV"
+  },
+  "STEEM": {
+    "id": 1230,
+    "slug": "steem",
+    "name": "Steem",
+    "symbol": "STEEM"
+  },
+  "STG": {
+    "id": 18934,
+    "slug": "stargate-finance",
+    "name": "Stargate Finance",
+    "symbol": "STG"
+  },
+  "STO": {
+    "id": 32194,
+    "slug": "stakestone",
+    "name": "StakeStone",
+    "symbol": "STO"
+  },
+  "STORJ": {
+    "id": 1772,
+    "slug": "storj",
+    "name": "Storj",
+    "symbol": "STORJ"
+  },
+  "STRAX": {
+    "id": 1343,
+    "slug": "stratis",
+    "name": "Stratis [Old]",
+    "symbol": "STRAX"
+  },
+  "STRK": {
+    "id": 22691,
+    "slug": "starknet-token",
+    "name": "Starknet",
+    "symbol": "STRK"
+  },
+  "STX": {
+    "id": 4847,
+    "slug": "stacks",
+    "name": "Stacks",
+    "symbol": "STX"
+  },
+  "SUI": {
+    "id": 20947,
+    "slug": "sui",
+    "name": "Sui",
+    "symbol": "SUI"
+  },
+  "SUN": {
+    "id": 10529,
+    "slug": "sun-token",
+    "name": "Sun [New]",
+    "symbol": "SUN"
+  },
+  "SUPER": {
+    "id": 8290,
+    "slug": "superverse",
+    "name": "SuperVerse",
+    "symbol": "SUPER"
+  },
+  "SUSHI": {
+    "id": 6758,
+    "slug": "sushiswap",
+    "name": "SushiSwap",
+    "symbol": "SUSHI"
+  },
+  "SXT": {
+    "id": 36405,
+    "slug": "space-and-time",
+    "name": "Space and Time",
+    "symbol": "SXT"
+  },
+  "SYN": {
+    "id": 12147,
+    "slug": "synapse-2",
+    "name": "Synapse",
+    "symbol": "SYN"
+  },
+  "SYRUP": {
+    "id": 33824,
+    "slug": "maple-finance",
+    "name": "Maple Finance",
+    "symbol": "SYRUP"
+  },
+  "T": {
+    "id": 17751,
+    "slug": "threshold",
+    "name": "Threshold",
+    "symbol": "T"
+  },
+  "TAO": {
+    "id": 22974,
+    "slug": "bittensor",
+    "name": "Bittensor",
+    "symbol": "TAO"
+  },
+  "TFUEL": {
+    "id": 3822,
+    "slug": "theta-fuel",
+    "name": "Theta Fuel",
+    "symbol": "TFUEL"
+  },
+  "THE": {
+    "id": 23335,
+    "slug": "thena",
+    "name": "THENA",
+    "symbol": "THE"
+  },
+  "THETA": {
+    "id": 2416,
+    "slug": "theta-network",
+    "name": "Theta Network",
+    "symbol": "THETA"
+  },
+  "TIA": {
+    "id": 22861,
+    "slug": "celestia",
+    "name": "Celestia",
+    "symbol": "TIA"
+  },
+  "TKO": {
+    "id": 9020,
+    "slug": "tokocrypto",
+    "name": "Toko Token",
+    "symbol": "TKO"
+  },
+  "TLM": {
+    "id": 9119,
+    "slug": "alien-worlds",
+    "name": "Alien Worlds",
+    "symbol": "TLM"
+  },
+  "TNSR": {
+    "id": 30449,
+    "slug": "tensor",
+    "name": "Tensor",
+    "symbol": "TNSR"
+  },
+  "TON": {
+    "id": 39249,
+    "slug": "att-tokenized-stock-ondo",
+    "name": "AT&T Tokenized Stock (Ondo)",
+    "symbol": "Ton"
+  },
+  "TOWNS": {
+    "id": 37571,
+    "slug": "towns",
+    "name": "Towns",
+    "symbol": "TOWNS"
+  },
+  "TRB": {
+    "id": 4944,
+    "slug": "tellor",
+    "name": "Tellor",
+    "symbol": "TRB"
+  },
+  "TREE": {
+    "id": 37495,
+    "slug": "treehouse",
+    "name": "Treehouse",
+    "symbol": "TREE"
+  },
+  "TRUMP": {
+    "id": 35336,
+    "slug": "official-trump",
+    "name": "OFFICIAL TRUMP",
+    "symbol": "TRUMP"
+  },
+  "TRX": {
+    "id": 1958,
+    "slug": "tron",
+    "name": "TRON",
+    "symbol": "TRX"
+  },
+  "TSLAB": {
+    "id": 40214,
+    "slug": "tesla-tokenized-bstocks",
+    "name": "Tesla Tokenized bStocks",
+    "symbol": "TSLAB"
+  },
+  "TST": {
+    "id": 35647,
+    "slug": "test-token-bsc",
+    "name": "Test",
+    "symbol": "TST"
+  },
+  "TURBO": {
+    "id": 24911,
+    "slug": "turbo",
+    "name": "Turbo",
+    "symbol": "TURBO"
+  },
+  "TURTLE": {
+    "id": 38671,
+    "slug": "turtle-xyz",
+    "name": "Turtle",
+    "symbol": "TURTLE"
+  },
+  "TUSD": {
+    "id": 2563,
+    "slug": "trueusd",
+    "name": "TrueUSD",
+    "symbol": "TUSD"
+  },
+  "TUT": {
+    "id": 35892,
+    "slug": "tutorial",
+    "name": "Tutorial",
+    "symbol": "TUT"
+  },
+  "TWT": {
+    "id": 5964,
+    "slug": "trust-wallet-token",
+    "name": "Trust Wallet Token",
+    "symbol": "TWT"
+  },
+  "U": {
+    "id": 39120,
+    "slug": "united-stables",
+    "name": "United Stables",
+    "symbol": "U"
+  },
+  "UMA": {
+    "id": 5617,
+    "slug": "uma",
+    "name": "UMA",
+    "symbol": "UMA"
+  },
+  "UNI": {
+    "id": 7083,
+    "slug": "uniswap",
+    "name": "Uniswap",
+    "symbol": "UNI"
+  },
+  "USD1": {
+    "id": 36148,
+    "slug": "usd1",
+    "name": "World Liberty Financial USD",
+    "symbol": "USD1"
+  },
+  "USDC": {
+    "id": 3408,
+    "slug": "usd-coin",
+    "name": "USDC",
+    "symbol": "USDC"
+  },
+  "USDE": {
+    "id": 29470,
+    "slug": "ethena-usde",
+    "name": "Ethena USDe",
+    "symbol": "USDe"
+  },
+  "USDP": {
+    "id": 3330,
+    "slug": "paxos-standard",
+    "name": "Pax Dollar",
+    "symbol": "USDP"
+  },
+  "USDS": {
+    "id": 33039,
+    "slug": "usds",
+    "name": "USDS",
+    "symbol": "USDS"
+  },
+  "USDT": {
+    "id": 825,
+    "slug": "tether",
+    "name": "Tether USDt",
+    "symbol": "USDT"
+  },
+  "USTC": {
+    "id": 7129,
+    "slug": "terrausd",
+    "name": "TerraClassicUSD",
+    "symbol": "USTC"
+  },
+  "USUAL": {
+    "id": 33979,
+    "slug": "usual",
+    "name": "Usual",
+    "symbol": "USUAL"
+  },
+  "VANA": {
+    "id": 34619,
+    "slug": "vana",
+    "name": "Vana",
+    "symbol": "VANA"
+  },
+  "VANRY": {
+    "id": 8037,
+    "slug": "vanar",
+    "name": "Vanar Chain",
+    "symbol": "VANRY"
+  },
+  "VET": {
+    "id": 3077,
+    "slug": "vechain",
+    "name": "VeChain",
+    "symbol": "VET"
+  },
+  "VIC": {
+    "id": 2570,
+    "slug": "viction",
+    "name": "Viction",
+    "symbol": "VIC"
+  },
+  "VIRTUAL": {
+    "id": 29420,
+    "slug": "virtual-protocol",
+    "name": "Virtuals Protocol",
+    "symbol": "VIRTUAL"
+  },
+  "VTHO": {
+    "id": 3012,
+    "slug": "vethor-token",
+    "name": "VeThor Token",
+    "symbol": "VTHO"
+  },
+  "W": {
+    "id": 29587,
+    "slug": "wormhole",
+    "name": "Wormhole",
+    "symbol": "W"
+  },
+  "WAL": {
+    "id": 36119,
+    "slug": "walrus-xyz",
+    "name": "Walrus",
+    "symbol": "WAL"
+  },
+  "WAXP": {
+    "id": 2300,
+    "slug": "wax",
+    "name": "WAX",
+    "symbol": "WAXP"
+  },
+  "WBETH": {
+    "id": 24760,
+    "slug": "wrapped-beacon-eth",
+    "name": "Wrapped Beacon ETH",
+    "symbol": "WBETH"
+  },
+  "WBTC": {
+    "id": 3717,
+    "slug": "wrapped-bitcoin",
+    "name": "Wrapped Bitcoin",
+    "symbol": "WBTC"
+  },
+  "WCT": {
+    "id": 33152,
+    "slug": "walletconnect-token",
+    "name": "WalletConnect Token",
+    "symbol": "WCT"
+  },
+  "WIF": {
+    "id": 28752,
+    "slug": "dogwifhat",
+    "name": "dogwifhat",
+    "symbol": "WIF"
+  },
+  "WIN": {
+    "id": 4206,
+    "slug": "wink",
+    "name": "WINkLink",
+    "symbol": "WIN"
+  },
+  "WLD": {
+    "id": 13502,
+    "slug": "worldcoin-org",
+    "name": "Worldcoin",
+    "symbol": "WLD"
+  },
+  "WLFI": {
+    "id": 33023,
+    "slug": "world-liberty-financial",
+    "name": "World Liberty Financial (wlfi.club)",
+    "symbol": "WLFI"
+  },
+  "WOO": {
+    "id": 7501,
+    "slug": "wootrade",
+    "name": "WOO",
+    "symbol": "WOO"
+  },
+  "XAI": {
+    "id": 28933,
+    "slug": "xai-games",
+    "name": "Xai",
+    "symbol": "XAI"
+  },
+  "XAUT": {
+    "id": 5176,
+    "slug": "tether-gold",
+    "name": "Tether Gold",
+    "symbol": "XAUt"
+  },
+  "XEC": {
+    "id": 10791,
+    "slug": "ecash",
+    "name": "eCash",
+    "symbol": "XEC"
+  },
+  "XLM": {
+    "id": 512,
+    "slug": "stellar",
+    "name": "Stellar",
+    "symbol": "XLM"
+  },
+  "XNO": {
+    "id": 1567,
+    "slug": "nano",
+    "name": "Nano",
+    "symbol": "XNO"
+  },
+  "XPL": {
+    "id": 36645,
+    "slug": "plasma-xpl",
+    "name": "Plasma",
+    "symbol": "XPL"
+  },
+  "XRP": {
+    "id": 52,
+    "slug": "xrp",
+    "name": "XRP",
+    "symbol": "XRP"
+  },
+  "XTZ": {
+    "id": 2011,
+    "slug": "tezos",
+    "name": "Tezos",
+    "symbol": "XTZ"
+  },
+  "XUSD": {
+    "id": 32372,
+    "slug": "straitsx-xusd",
+    "name": "StraitsX USD",
+    "symbol": "XUSD"
+  },
+  "XVG": {
+    "id": 693,
+    "slug": "verge",
+    "name": "Verge",
+    "symbol": "XVG"
+  },
+  "XVS": {
+    "id": 7288,
+    "slug": "venus",
+    "name": "Venus",
+    "symbol": "XVS"
+  },
+  "YB": {
+    "id": 38651,
+    "slug": "yieldbasis",
+    "name": "YieldBasis",
+    "symbol": "YB"
+  },
+  "YFI": {
+    "id": 5864,
+    "slug": "yearn-finance",
+    "name": "Yearn",
+    "symbol": "YFI"
+  },
+  "YGG": {
+    "id": 10688,
+    "slug": "yield-guild-games",
+    "name": "Yield Guild Games",
+    "symbol": "YGG"
+  },
+  "ZAMA": {
+    "id": 39332,
+    "slug": "zama",
+    "name": "Zama",
+    "symbol": "ZAMA"
+  },
+  "ZBT": {
+    "id": 38427,
+    "slug": "zerobase",
+    "name": "ZEROBASE",
+    "symbol": "ZBT"
+  },
+  "ZEC": {
+    "id": 1437,
+    "slug": "zcash",
+    "name": "Zcash",
+    "symbol": "ZEC"
+  },
+  "ZEN": {
+    "id": 1698,
+    "slug": "horizen",
+    "name": "Horizen",
+    "symbol": "ZEN"
+  },
+  "ZIL": {
+    "id": 2469,
+    "slug": "zilliqa",
+    "name": "Zilliqa",
+    "symbol": "ZIL"
+  },
+  "ZK": {
+    "id": 24091,
+    "slug": "zksync",
+    "name": "ZKsync",
+    "symbol": "ZK"
+  },
+  "ZKC": {
+    "id": 38371,
+    "slug": "boundless",
+    "name": "Boundless",
+    "symbol": "ZKC"
+  },
+  "ZKP": {
+    "id": 39035,
+    "slug": "zkpass",
+    "name": "zkPass",
+    "symbol": "ZKP"
+  },
+  "ZRO": {
+    "id": 26997,
+    "slug": "layerzero",
+    "name": "LayerZero",
+    "symbol": "ZRO"
+  },
+  "ZRX": {
+    "id": 1896,
+    "slug": "0x",
+    "name": "0x Protocol",
+    "symbol": "ZRX"
+  },
+  "币安人生": {
+    "id": 38590,
+    "slug": "bianrensheng",
+    "name": "币安人生",
+    "symbol": "币安人生"
+  }
+}

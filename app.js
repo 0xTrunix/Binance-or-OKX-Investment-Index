@@ -1,5 +1,6 @@
 const state = {
   data: null,
+  source: getSourceConfig(),
   filter: "all",
   search: "",
   sort: "fdv-desc",
@@ -39,8 +40,12 @@ function renderMetrics(data) {
     timeZone: "Asia/Shanghai",
     hour12: false,
   });
-  document.getElementById("sourceLine").textContent =
-    `筛选条件：已上 Binance 现货且已上 Binance USD-M 永续合约。投资标签按 CoinGecko portfolio category 会员关系验证，优先使用 CoinGecko ID 匹配。生成时间：${time}`;
+  document.getElementById("dashboardEyebrow").textContent = state.source.mainEyebrow;
+  document.getElementById("dashboardTitle").textContent = state.source.mainTitle;
+  document.getElementById("sourceLine").textContent = `${state.source.sourceSummary} 生成时间：${time}`;
+  document.getElementById("marketHeader").textContent = state.source.marketLinkLabel;
+  document.getElementById("spotBoardLink").href = sourceHref("spot-fdv.html", state.source.id);
+  document.getElementById("jsonLink").href = state.source.mainDataPath;
 }
 
 function getFilteredRows() {
@@ -88,7 +93,7 @@ function renderInvestment(row, key) {
     : "未验证";
   const review = verification?.review ? `<span class="review-flag">需复核</span>` : "";
   const source = verification?.sourceUrl
-    ? `<a class="verify-source" href="${verification.sourceUrl}" target="_blank" rel="noreferrer">CoinGecko</a>`
+    ? `<a class="verify-source" href="${verification.sourceUrl}" target="_blank" rel="noreferrer">${state.source.investorLinkLabel}</a>`
     : "";
   return `<div class="investment-cell">
     <span class="badge ${yes ? `yes ${className}` : "no"}">${label}</span>
@@ -120,9 +125,9 @@ function renderRows() {
         <td data-label="Binance 合约">${renderPairs(row.futuresPairs)}</td>
         <td data-label="YZi Labs">${renderInvestment(row, "yziLabs")}</td>
         <td data-label="OKX Ventures">${renderInvestment(row, "okxVentures")}</td>
-        <td data-label="CoinGecko">${
-          row.coinGeckoUrl
-            ? `<a class="coin-link" href="${row.coinGeckoUrl}" target="_blank" rel="noreferrer">CoinGecko</a>`
+        <td data-label="${state.source.marketLinkLabel}">${
+          row[state.source.marketUrlField]
+            ? `<a class="coin-link" href="${row[state.source.marketUrlField]}" target="_blank" rel="noreferrer">${state.source.marketLinkLabel}</a>`
             : '<span class="muted">-</span>'
         }</td>
       </tr>`,
@@ -157,7 +162,8 @@ function bindControls() {
 }
 
 async function init() {
-  const response = await fetch("assets-data.json");
+  document.getElementById("homeLink").href = "index.html";
+  const response = await fetch(state.source.mainDataPath);
   state.data = await response.json();
   renderMetrics(state.data);
   renderRows();

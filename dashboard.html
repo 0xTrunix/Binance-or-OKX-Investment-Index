@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Binance Spot + Futures Crypto List</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="shell">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow" id="dashboardEyebrow">Crypto Research Screener</p>
+          <h1 id="dashboardTitle">Binance 现货 + 合约币种池</h1>
+          <p id="sourceLine" class="source-line">Loading data...</p>
+        </div>
+        <div class="header-actions">
+          <a class="source-link" id="homeLink" href="index.html">选择数据源</a>
+          <a class="source-link primary-link" id="spotBoardLink" href="spot-fdv.html">全部现货 FDV</a>
+          <a class="source-link" id="jsonLink" href="assets-data.json" target="_blank" rel="noreferrer">查看数据 JSON</a>
+        </div>
+      </header>
+
+      <section class="metrics" id="metrics"></section>
+
+      <section class="toolbar" aria-label="筛选工具">
+        <label class="search">
+          <span>搜索</span>
+          <input id="searchInput" type="search" placeholder="Ticker / 名称" autocomplete="off" />
+        </label>
+        <div class="segmented" role="group" aria-label="投资方筛选">
+          <button type="button" class="active" data-filter="all">全部</button>
+          <button type="button" data-filter="yzi">YZi Labs</button>
+          <button type="button" data-filter="okx">OKX Ventures</button>
+          <button type="button" data-filter="both">双重投资</button>
+        </div>
+        <label class="select">
+          <span>排序</span>
+          <select id="sortSelect">
+            <option value="fdv-desc">FDV 高到低</option>
+            <option value="fdv-asc">FDV 低到高</option>
+            <option value="rank-asc">市值排名</option>
+            <option value="ticker-asc">Ticker A-Z</option>
+          </select>
+        </label>
+        <label class="toggle">
+          <input id="fdvOnly" type="checkbox" />
+          <span>仅显示有 FDV</span>
+        </label>
+      </section>
+
+      <section class="list-head">
+        <div id="resultCount"></div>
+        <div class="legend">
+          <span><i class="dot yzi"></i>YZi Labs</span>
+          <span><i class="dot okx"></i>OKX Ventures</span>
+        </div>
+      </section>
+
+      <section class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>币种</th>
+              <th>FDV</th>
+              <th>Binance 现货</th>
+              <th>Binance 合约</th>
+              <th>YZi Labs</th>
+              <th>OKX Ventures</th>
+              <th id="marketHeader">CoinGecko</th>
+            </tr>
+          </thead>
+          <tbody id="assetRows"></tbody>
+        </table>
+      </section>
+    </main>
+    <script src="source-config.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>

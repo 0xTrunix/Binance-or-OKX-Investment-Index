@@ -31,12 +31,14 @@ jobs:
         env:
           COINGECKO_API_KEY: ${{ secrets.COINGECKO_API_KEY }}
           COINGECKO_API_MODE: demo
+          CMC_API_KEY: ${{ secrets.CMC_API_KEY }}
         run: npm run update:data
 
       - name: Validate generated data
         env:
           COINGECKO_API_KEY: ${{ secrets.COINGECKO_API_KEY }}
           COINGECKO_API_MODE: demo
+          CMC_API_KEY: ${{ secrets.CMC_API_KEY }}
         run: npm run check
 
       - name: Commit and push changes
@@ -47,6 +49,6 @@ jobs:
           fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add assets-data.json spot-assets-data.json cg_yzi_api.json cg_okx_api.json coingecko-binance-ids.json
+          git add assets-data.json spot-assets-data.json assets-data-cmc.json spot-assets-data-cmc.json cg_yzi_api.json cg_okx_api.json coingecko-binance-ids.json cmc-binance-map.json
           git commit -m "Auto update crypto data"
           git push

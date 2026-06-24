@@ -1,5 +1,6 @@
 const spotState = {
   data: null,
+  source: getSourceConfig(),
   search: "",
   minFdv: null,
   maxFdv: null,
@@ -106,9 +107,9 @@ function renderSpotRows() {
             ? renderSpotPairs(row.futuresPairs)
             : '<span class="badge no">No</span>'
         }</td>
-        <td data-label="CoinGecko">${
-          row.coinGeckoUrl
-            ? `<a class="coin-link" href="${row.coinGeckoUrl}" target="_blank" rel="noreferrer">CoinGecko</a>`
+        <td data-label="${spotState.source.marketLinkLabel}">${
+          row[spotState.source.marketUrlField]
+            ? `<a class="coin-link" href="${row[spotState.source.marketUrlField]}" target="_blank" rel="noreferrer">${spotState.source.marketLinkLabel}</a>`
             : '<span class="muted">-</span>'
         }</td>
       </tr>`).join("")
@@ -169,15 +170,19 @@ function bindSpotControls() {
 }
 
 async function initSpotPage() {
-  const response = await fetch("spot-assets-data.json");
+  const response = await fetch(spotState.source.spotDataPath);
   if (!response.ok) throw new Error(`HTTP ${response.status}`);
   spotState.data = await response.json();
   const time = new Date(spotState.data.generatedAt).toLocaleString("zh-CN", {
     timeZone: "Asia/Shanghai",
     hour12: false,
   });
-  document.getElementById("spotSourceLine").textContent =
-    `范围：所有当前可交易的 Binance 现货基础资产。FDV 数据来自 CoinGecko，生成时间：${time}`;
+  document.getElementById("spotEyebrow").textContent = spotState.source.spotEyebrow;
+  document.getElementById("spotPageTitle").textContent = spotState.source.spotTitle;
+  document.getElementById("spotMarketHeader").textContent = spotState.source.marketLinkLabel;
+  document.getElementById("spotJsonLink").href = spotState.source.spotDataPath;
+  document.getElementById("mainBoardLink").href = sourceHref("dashboard.html", spotState.source.id);
+  document.getElementById("spotSourceLine").textContent = `${spotState.source.spotSummary} 生成时间：${time}`;
   bindSpotControls();
   renderSpotRows();
 }

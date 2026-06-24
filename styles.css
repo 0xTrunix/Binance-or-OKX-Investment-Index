@@ -39,6 +39,86 @@ a {
   padding: 28px 0 48px;
 }
 
+.shell-home {
+  width: min(1120px, calc(100vw - 40px));
+  padding-top: 42px;
+}
+
+.source-hero {
+  margin-bottom: 22px;
+}
+
+.home-subline {
+  max-width: 720px;
+}
+
+.source-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.source-card {
+  display: grid;
+  gap: 14px;
+  min-height: 280px;
+  padding: 22px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background:
+    linear-gradient(180deg, #ffffff 0%, #f9fbff 100%);
+}
+
+.source-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.source-pill {
+  display: inline-flex;
+  align-items: center;
+  min-height: 28px;
+  border-radius: 999px;
+  padding: 0 12px;
+  font-size: 12px;
+  font-weight: 900;
+}
+
+.source-pill.cg {
+  background: rgba(37, 99, 235, 0.08);
+  color: var(--blue);
+}
+
+.source-pill.cmc {
+  background: rgba(183, 121, 31, 0.12);
+  color: var(--amber);
+}
+
+.source-card h2 {
+  margin: 0;
+  font-size: 24px;
+  line-height: 1.2;
+}
+
+.source-card p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.65;
+}
+
+.source-card-actions {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  margin-top: auto;
+}
+
 .topbar {
   display: grid;
   grid-template-columns: minmax(0, 1fr) auto;
@@ -665,6 +745,10 @@ td:nth-child(7) {
     width: min(100vw - 28px, 980px);
   }
 
+  .source-grid {
+    grid-template-columns: 1fr;
+  }
+
   .metrics {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
@@ -709,12 +793,30 @@ td:nth-child(7) {
     padding: 20px 0 36px;
   }
 
+  .shell-home {
+    padding-top: 28px;
+  }
+
   .topbar {
     grid-template-columns: 1fr;
     gap: 14px;
   }
 
   .header-actions {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .source-card {
+    min-height: 0;
+    padding: 18px;
+  }
+
+  .source-card h2 {
+    font-size: 21px;
+  }
+
+  .source-card-actions {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -933,6 +1035,10 @@ td:nth-child(7) {
 
   .header-actions,
   .range-toolbar {
+    grid-template-columns: 1fr;
+  }
+
+  .source-card-actions {
     grid-template-columns: 1fr;
   }
 

@@ -1,4 +1,5 @@
 const fs = require("fs");
+const { buildCmcDatasets } = require("./cmc-builder");
 
 const BINANCE_SPOT_URL = "https://data-api.binance.vision/api/v3/exchangeInfo";
 const BINANCE_FUTURES_URL = "https://fapi.binance.com/fapi/v1/exchangeInfo";
@@ -531,6 +532,21 @@ async function main() {
     rows: mainRows,
   });
 
+  const cmcSummary = await buildCmcDatasets({
+    generatedAt,
+    allSpot,
+    quotedSpot,
+    futuresByAsset,
+    futuresSource,
+    futuresNote,
+    existingMainData: {
+      rows: mainRows,
+    },
+    existingSpotData: {
+      rows: spotRows,
+    },
+  });
+
   console.log({
     coinGeckoAuthMode: coinGecko.authMode,
     generatedAt,
@@ -545,6 +561,7 @@ async function main() {
       yziLabs: mainRows.filter((row) => row.yziLabs).length,
       okxVentures: mainRows.filter((row) => row.okxVentures).length,
     },
+    cmc: cmcSummary,
   });
 }
 

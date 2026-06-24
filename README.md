@@ -2,22 +2,28 @@
 
 一个可直接部署到 Vercel 的静态前端筛选工具，包含：
 
+- 数据源入口页，可选择 CoinGecko / CoinMarketCap 看板
 - 同时上线 Binance 现货与 Binance USD-M 永续合约的币种列表
 - Binance 全现货币种 FDV 区间筛选页面
 - 可叠加筛选是否已上线 Binance 合约
-- YZi Labs / OKX Ventures 投资标签和 CoinGecko 直达链接
+- YZi Labs / OKX Ventures 投资标签和 CoinGecko / CMC 直达链接
 
 ## 内容
 
-- `index.html`：页面入口
+- `index.html`：数据源选择入口
+- `dashboard.html`：主看板页面
 - `styles.css`：白色简约响应式 UI
 - `app.js`：筛选、排序、渲染逻辑
 - `assets-data.json`：当前前端使用的数据
+- `assets-data-cmc.json`：CoinMarketCap 主看板数据
 - `spot-fdv.html`：Binance 全现货 FDV 区间筛选页面
 - `spot-fdv.js`：全现货搜索和 FDV 上下限筛选逻辑
 - `spot-assets-data.json`：Binance 全现货 FDV 数据
+- `spot-assets-data-cmc.json`：CoinMarketCap 全现货 FDV 数据
 - `coingecko-binance-ids.json`：CoinGecko Binance 交易对精确 ID 映射
 - `coingecko-id-overrides.json`：CoinGecko 交易对接口未覆盖资产的人工核验 ID
+- `cmc-binance-map.json`：Binance 资产到 CMC id / slug 的核验映射
+- `cmc-id-overrides.json`：CMC 冲突 symbol 的人工覆盖表
 - `scripts/`：数据清洗脚本备份
 
 ## 本地预览
@@ -75,11 +81,14 @@ npm run update:data
 ```
 
 仓库已配置 GitHub Actions，每两天自动运行一次同样的更新流程。工作流会刷新
-`assets-data.json`、`spot-assets-data.json`、CoinGecko portfolio 缓存和 Binance
-CoinGecko ID 映射；如果数据有变化，会自动提交到 `main` 分支。
+`assets-data.json`、`spot-assets-data.json`、`assets-data-cmc.json`、
+`spot-assets-data-cmc.json`、CoinGecko / CMC 映射缓存；如果数据有变化，
+会自动提交到 `main` 分支。
 
 如需提高稳定性，可以配置 GitHub Secret `COINGECKO_API_KEY`。脚本会优先使用
 官方 API key 认证；未提供时则回退到公开接口。
+
+CMC 看板依赖 GitHub Secret `CMC_API_KEY`。未提供时会保留上一版 CMC 数据文件。
 
 投资标签采用更严格的验证口径：
 
