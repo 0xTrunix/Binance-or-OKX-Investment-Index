@@ -71,8 +71,12 @@ python3 -m http.server 8080
 全现货数据可以通过以下命令刷新：
 
 ```bash
-npm run build:spot-data
+npm run update:data
 ```
+
+仓库已配置 GitHub Actions，每两天自动运行一次同样的更新流程。工作流会刷新
+`assets-data.json`、`spot-assets-data.json`、CoinGecko portfolio 缓存和 Binance
+CoinGecko ID 映射；如果数据有变化，会自动提交到 `main` 分支。
 
 投资标签采用更严格的验证口径：
 
