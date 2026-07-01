@@ -1259,6 +1259,12 @@
     "name": "Lista DAO",
     "symbol": "LISTA"
   },
+  "LITEB": {
+    "id": 40591,
+    "slug": "lumentum-tokenized-bstocks",
+    "name": "Lumentum Tokenized bStocks",
+    "symbol": "LITEB"
+  },
   "LPT": {
     "id": 3640,
     "slug": "livepeer",
@@ -1367,6 +1373,12 @@
     "name": "Meteora",
     "symbol": "MET"
   },
+  "METAB": {
+    "id": 40592,
+    "slug": "meta-tokenized-bstocks",
+    "name": "Meta Tokenized bStocks",
+    "symbol": "METAB"
+  },
   "METIS": {
     "id": 9640,
     "slug": "metisdao",
@@ -1414,6 +1426,12 @@
     "slug": "moonriver",
     "name": "Moonriver",
     "symbol": "MOVR"
+  },
+  "MSFTB": {
+    "id": 40589,
+    "slug": "microsoft-tokenized-bstocks",
+    "name": "Microsoft Tokenized bStocks",
+    "symbol": "MSFTB"
   },
   "MSTRB": {
     "id": 40536,
@@ -1649,6 +1667,12 @@
     "name": "Pixels",
     "symbol": "PIXEL"
   },
+  "PLTRB": {
+    "id": 40590,
+    "slug": "palantir-tokenized-bstocks",
+    "name": "Palantir Tokenized bStocks",
+    "symbol": "PLTRB"
+  },
   "PLUME": {
     "id": 35364,
     "slug": "plume",
@@ -1756,6 +1780,12 @@
     "slug": "quant",
     "name": "Quant",
     "symbol": "QNT"
+  },
+  "QQQB": {
+    "id": 40593,
+    "slug": "invesco-qqq-trust-tokenized-bstocks",
+    "name": "Invesco QQQ Trust Tokenized bStocks",
+    "symbol": "QQQB"
   },
   "QTUM": {
     "id": 1684,
@@ -2182,12 +2212,6 @@
     "slug": "tensor",
     "name": "Tensor",
     "symbol": "TNSR"
-  },
-  "TON": {
-    "id": 39249,
-    "slug": "att-tokenized-stock-ondo",
-    "name": "AT&T Tokenized Stock (Ondo)",
-    "symbol": "Ton"
   },
   "TOWNS": {
     "id": 37571,
