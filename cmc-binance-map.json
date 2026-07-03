@@ -953,6 +953,12 @@
     "name": "GoPlus Security",
     "symbol": "GPS"
   },
+  "GRAM": {
+    "id": 11419,
+    "slug": "gram",
+    "name": "Gram (prev. Toncoin)",
+    "symbol": "GRAM"
+  },
   "GRT": {
     "id": 6719,
     "slug": "the-graph",
