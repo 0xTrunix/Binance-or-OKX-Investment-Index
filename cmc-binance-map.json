@@ -119,12 +119,6 @@
     "name": "aixbt",
     "symbol": "AIXBT"
   },
-  "ALCX": {
-    "id": 8613,
-    "slug": "alchemix",
-    "name": "Alchemix",
-    "symbol": "ALCX"
-  },
   "ALGO": {
     "id": 4030,
     "slug": "algorand",
@@ -208,12 +202,6 @@
     "slug": "arbitrum",
     "name": "Arbitrum",
     "symbol": "ARB"
-  },
-  "ARDR": {
-    "id": 1320,
-    "slug": "ardor",
-    "name": "Ardor",
-    "symbol": "ARDR"
   },
   "ARK": {
     "id": 1586,
@@ -491,6 +479,12 @@
     "name": "Catizen",
     "symbol": "CATI"
   },
+  "CBRSB": {
+    "id": 40791,
+    "slug": "cerebras-tokenized-bstocks",
+    "name": "Cerebras Tokenized bStocks",
+    "symbol": "CBRSB"
+  },
   "CELO": {
     "id": 5567,
     "slug": "celo",
@@ -556,6 +550,12 @@
     "slug": "nervos-network",
     "name": "Nervos Network",
     "symbol": "CKB"
+  },
+  "COINB": {
+    "id": 40789,
+    "slug": "coinbase-tokenized-bstocks",
+    "name": "Coinbase Tokenized bStocks",
+    "symbol": "COINB"
   },
   "COMP": {
     "id": 5692,
@@ -682,6 +682,12 @@
     "slug": "polkadot-new",
     "name": "Polkadot",
     "symbol": "DOT"
+  },
+  "DRAMB": {
+    "id": 40798,
+    "slug": "roundhill-memory-etf-tokenized-bstocks",
+    "name": "Roundhill Memory ETF Tokenized bStocks",
+    "symbol": "DRAMB"
   },
   "DUSK": {
     "id": 4092,
@@ -923,6 +929,12 @@
     "name": "Moonbeam",
     "symbol": "GLMR"
   },
+  "GLWB": {
+    "id": 40795,
+    "slug": "corning-tokenized-bstocks",
+    "name": "Corning Tokenized bStocks",
+    "symbol": "GLWB"
+  },
   "GMT": {
     "id": 18069,
     "slug": "green-metaverse-token",
@@ -946,6 +958,12 @@
     "slug": "gains-network",
     "name": "Gains Network",
     "symbol": "GNS"
+  },
+  "GOOGLB": {
+    "id": 40793,
+    "slug": "alphabet-tokenized-bstocks",
+    "name": "Alphabet Tokenized bStocks",
+    "symbol": "GOOGLB"
   },
   "GPS": {
     "id": 35268,
@@ -1463,6 +1481,12 @@
     "name": "Mubarak",
     "symbol": "MUBARAK"
   },
+  "NBISB": {
+    "id": 40797,
+    "slug": "nebius-tokenized-bstocks",
+    "name": "Nebius Tokenized bStocks",
+    "symbol": "NBISB"
+  },
   "NEAR": {
     "id": 6535,
     "slug": "near-protocol",
@@ -1492,12 +1516,6 @@
     "slug": "nexo",
     "name": "Nexo",
     "symbol": "NEXO"
-  },
-  "NFP": {
-    "id": 28778,
-    "slug": "nfprompt",
-    "name": "NFPrompt",
-    "symbol": "NFP"
   },
   "NIGHT": {
     "id": 39064,
@@ -1703,12 +1721,6 @@
     "name": "Polymesh",
     "symbol": "POLYX"
   },
-  "POND": {
-    "id": 7497,
-    "slug": "marlin",
-    "name": "Marlin",
-    "symbol": "POND"
-  },
   "PORTAL": {
     "id": 29555,
     "slug": "portal-gaming",
@@ -1768,6 +1780,12 @@
     "slug": "pyth-network",
     "name": "Pyth Network",
     "symbol": "PYTH"
+  },
+  "QCOMB": {
+    "id": 40792,
+    "slug": "qualcomm-tokenized-bstocks",
+    "name": "Qualcomm Tokenized bStocks",
+    "symbol": "QCOMB"
   },
   "QI": {
     "id": 9288,
@@ -2057,6 +2075,12 @@
     "name": "Sophon",
     "symbol": "SOPH"
   },
+  "SOXLB": {
+    "id": 40794,
+    "slug": "semicon-bull-3x-etf-tokenized-bstocks",
+    "name": "Semicon Bull 3X ETF Tokenized bStocks",
+    "symbol": "SOXLB"
+  },
   "SPCXB": {
     "id": 40217,
     "slug": "spacex-tokenized-bstocks",
@@ -2074,6 +2098,12 @@
     "slug": "spark",
     "name": "Spark",
     "symbol": "SPK"
+  },
+  "SPYB": {
+    "id": 40790,
+    "slug": "state-street-spdr-sp-500-etf-tokenized-bstocks",
+    "name": "State Street SPDR S&P 500 ETF Tokenized bStocks",
+    "symbol": "SPYB"
   },
   "SSV": {
     "id": 12999,
@@ -2428,6 +2458,12 @@
     "slug": "walletconnect-token",
     "name": "WalletConnect Token",
     "symbol": "WCT"
+  },
+  "WDCB": {
+    "id": 40796,
+    "slug": "western-digital-tokenized-bstocks",
+    "name": "Western Digital Tokenized bStocks",
+    "symbol": "WDCB"
   },
   "WIF": {
     "id": 28752,
