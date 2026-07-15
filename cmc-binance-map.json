@@ -2021,6 +2021,12 @@
     "name": "Sign",
     "symbol": "SIGN"
   },
+  "SKHYB": {
+    "id": 40813,
+    "slug": "sk-hynix-tokenized-bstocks",
+    "name": "SK Hynix Tokenized bStocks",
+    "symbol": "SKHYB"
+  },
   "SKL": {
     "id": 5691,
     "slug": "skale-network",
