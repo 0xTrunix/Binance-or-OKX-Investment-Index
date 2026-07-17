@@ -41,6 +41,12 @@
     "name": "Vaulta",
     "symbol": "A"
   },
+  "AAOIB": {
+    "id": 40844,
+    "slug": "applied-optoelectronics-tokenized-bstocks",
+    "name": "Applied Optoelectronics Tokenized bStocks",
+    "symbol": "AAOIB"
+  },
   "AAVE": {
     "id": 7278,
     "slug": "aave",
@@ -215,6 +221,12 @@
     "name": "Arkham",
     "symbol": "ARKM"
   },
+  "ARMB": {
+    "id": 40851,
+    "slug": "arm-tokenized-bstocks",
+    "name": "Arm Tokenized bStocks",
+    "symbol": "ARMB"
+  },
   "ARPA": {
     "id": 4039,
     "slug": "arpa-chain",
@@ -281,6 +293,12 @@
     "name": "Avalanche",
     "symbol": "AVAX"
   },
+  "AVGOB": {
+    "id": 40845,
+    "slug": "broadcom-tokenized-bstocks",
+    "name": "Broadcom Tokenized bStocks",
+    "symbol": "AVGOB"
+  },
   "AVNT": {
     "id": 38299,
     "slug": "avantis",
@@ -304,6 +322,12 @@
     "slug": "axie-infinity",
     "name": "Axie Infinity",
     "symbol": "AXS"
+  },
+  "BABAB": {
+    "id": 40852,
+    "slug": "alibaba-tokenized-bstocks",
+    "name": "Alibaba Tokenized bStocks",
+    "symbol": "BABAB"
   },
   "BABY": {
     "id": 32198,
@@ -1049,6 +1073,12 @@
     "name": "OtterHome",
     "symbol": "HOME"
   },
+  "HOODB": {
+    "id": 40850,
+    "slug": "robinhood-tokenized-bstocks",
+    "name": "Robinhood Tokenized bStocks",
+    "symbol": "HOODB"
+  },
   "HOT": {
     "id": 2682,
     "slug": "holo",
@@ -1066,6 +1096,12 @@
     "slug": "hyperlane",
     "name": "Hyperlane",
     "symbol": "HYPER"
+  },
+  "IBMB": {
+    "id": 40847,
+    "slug": "ibm-tokenized-bstocks",
+    "name": "IBM Tokenized bStocks",
+    "symbol": "IBMB"
   },
   "ICP": {
     "id": 8916,
@@ -1451,6 +1487,12 @@
     "name": "Moonriver",
     "symbol": "MOVR"
   },
+  "MRVLB": {
+    "id": 40848,
+    "slug": "marvell-technology-tokenized-bstocks",
+    "name": "Marvell Technology Tokenized bStocks",
+    "symbol": "MRVLB"
+  },
   "MSFTB": {
     "id": 40589,
     "slug": "microsoft-tokenized-bstocks",
@@ -1534,6 +1576,12 @@
     "slug": "numeraire",
     "name": "Numeraire",
     "symbol": "NMR"
+  },
+  "NOKB": {
+    "id": 40853,
+    "slug": "nokia-tokenized-bstocks",
+    "name": "Nokia Tokenized bStocks",
+    "symbol": "NOKB"
   },
   "NOM": {
     "id": 38464,
@@ -1882,6 +1930,12 @@
     "slug": "rsk-infrastructure-framework",
     "name": "Rootstock Infrastructure Framework",
     "symbol": "RIF"
+  },
+  "RKLBB": {
+    "id": 40849,
+    "slug": "rocket-lab-tokenized-bstocks",
+    "name": "Rocket Lab Tokenized bStocks",
+    "symbol": "RKLBB"
   },
   "RLC": {
     "id": 1637,
@@ -2290,6 +2344,12 @@
     "slug": "tesla-tokenized-bstocks",
     "name": "Tesla Tokenized bStocks",
     "symbol": "TSLAB"
+  },
+  "TSMB": {
+    "id": 40846,
+    "slug": "tsmc-tokenized-bstocks",
+    "name": "TSMC Tokenized bStocks",
+    "symbol": "TSMB"
   },
   "TST": {
     "id": 35647,
