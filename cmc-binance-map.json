@@ -95,6 +95,12 @@
     "name": "heyAura",
     "symbol": "ADX"
   },
+  "AERO": {
+    "id": 29270,
+    "slug": "aerodrome-finance",
+    "name": "Aerodrome Finance",
+    "symbol": "AERO"
+  },
   "AEUR": {
     "id": 28596,
     "slug": "anchored-coins-aeur",
