@@ -329,6 +329,12 @@
     "name": "Axie Infinity",
     "symbol": "AXS"
   },
+  "AXTIB": {
+    "id": 40875,
+    "slug": "axt-tokenized-bstocks",
+    "name": "AXT Tokenized bStocks",
+    "symbol": "AXTIB"
+  },
   "BABAB": {
     "id": 40852,
     "slug": "alibaba-tokenized-bstocks",
@@ -622,6 +628,12 @@
     "slug": "curve-dao-token",
     "name": "Curve DAO Token",
     "symbol": "CRV"
+  },
+  "CRWVB": {
+    "id": 40877,
+    "slug": "coreweave-tokenized-bstocks",
+    "name": "CoreWeave Tokenized bStocks",
+    "symbol": "CRWVB"
   },
   "CTK": {
     "id": 4807,
@@ -1157,6 +1169,12 @@
     "name": "Intel Tokenized bStocks",
     "symbol": "INTCB"
   },
+  "INTWB": {
+    "id": 40883,
+    "slug": "graniteshares-2x-long-intc-etf-tokenized-bstocks",
+    "name": "GraniteShares 2X Long INTC ETF Tokenized bStocks",
+    "symbol": "INTWB"
+  },
   "IO": {
     "id": 29835,
     "slug": "io-net",
@@ -1276,6 +1294,12 @@
     "slug": "kyber-network-crystal-v2",
     "name": "Kyber Network Crystal v2",
     "symbol": "KNC"
+  },
+  "KORUB": {
+    "id": 40876,
+    "slug": "south-korea-bull-3x-etf-tokenized-bstocks",
+    "name": "South Korea Bull 3X ETF Tokenized bStocks",
+    "symbol": "KORUB"
   },
   "KSM": {
     "id": 5034,
@@ -1529,6 +1553,18 @@
     "name": "Mubarak",
     "symbol": "MUBARAK"
   },
+  "MUUB": {
+    "id": 40881,
+    "slug": "direxion-mu-bull-2x-etf-tokenized-bstocks",
+    "name": "Direxion MU Bull 2X ETF Tokenized bStocks",
+    "symbol": "MUUB"
+  },
+  "MVLLB": {
+    "id": 40879,
+    "slug": "graniteshares-2x-long-mrvl-etf-tokenized-bstocks",
+    "name": "GraniteShares 2X Long MRVL ETF Tokenized bStocks",
+    "symbol": "MVLLB"
+  },
   "NBISB": {
     "id": 40797,
     "slug": "nebius-tokenized-bstocks",
@@ -1678,6 +1714,12 @@
     "slug": "orca",
     "name": "Orca",
     "symbol": "ORCA"
+  },
+  "ORCLB": {
+    "id": 40882,
+    "slug": "oracle-tokenized-bstocks",
+    "name": "Oracle Tokenized bStocks",
+    "symbol": "ORCLB"
   },
   "ORDI": {
     "id": 25028,
@@ -1858,6 +1900,12 @@
     "slug": "quant",
     "name": "Quant",
     "symbol": "QNT"
+  },
+  "QNTB": {
+    "id": 40878,
+    "slug": "quantinuum-tokenized-bstocks",
+    "name": "Quantinuum Tokenized bStocks",
+    "symbol": "QNTB"
   },
   "QQQB": {
     "id": 40593,
@@ -2117,6 +2165,12 @@
     "name": "Synthetix",
     "symbol": "SNX"
   },
+  "SNXXB": {
+    "id": 40880,
+    "slug": "tradr-2x-long-sndk-etf-tokenized-bstocks",
+    "name": "Tradr 2X Long SNDK ETF Tokenized bStocks",
+    "symbol": "SNXXB"
+  },
   "SOL": {
     "id": 5426,
     "slug": "solana",
@@ -2320,6 +2374,12 @@
     "slug": "towns",
     "name": "Towns",
     "symbol": "TOWNS"
+  },
+  "TQQQB": {
+    "id": 40884,
+    "slug": "proshares-ultrapro-qqq-tokenized-bstocks",
+    "name": "ProShares UltraPro QQQ Tokenized bStocks",
+    "symbol": "TQQQB"
   },
   "TRB": {
     "id": 4944,
