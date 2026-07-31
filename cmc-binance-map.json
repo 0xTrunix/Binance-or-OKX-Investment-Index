@@ -47,6 +47,12 @@
     "name": "Applied Optoelectronics Tokenized bStocks",
     "symbol": "AAOIB"
   },
+  "AAPLB": {
+    "id": 40927,
+    "slug": "apple-tokenized-bstocks",
+    "name": "Apple Tokenized bStocks",
+    "symbol": "AAPLB"
+  },
   "AAVE": {
     "id": 7278,
     "slug": "aave",
@@ -100,12 +106,6 @@
     "slug": "aerodrome-finance",
     "name": "Aerodrome Finance",
     "symbol": "AERO"
-  },
-  "AEUR": {
-    "id": 28596,
-    "slug": "anchored-coins-aeur",
-    "name": "Anchored Coins AEUR",
-    "symbol": "AEUR"
   },
   "AEVO": {
     "id": 29676,
@@ -161,6 +161,12 @@
     "name": "Altlayer",
     "symbol": "ALT"
   },
+  "AMATB": {
+    "id": 40936,
+    "slug": "applied-materials-tokenized-bstocks",
+    "name": "Applied Materials Tokenized bStocks",
+    "symbol": "AMATB"
+  },
   "AMDB": {
     "id": 40538,
     "slug": "advanced-micro-devices-tokenized-bstocks",
@@ -172,6 +178,12 @@
     "slug": "amp",
     "name": "Amp",
     "symbol": "AMP"
+  },
+  "AMZNB": {
+    "id": 40929,
+    "slug": "amazon-tokenized-bstocks",
+    "name": "Amazon Tokenized bStocks",
+    "symbol": "AMZNB"
   },
   "ANIME": {
     "id": 35319,
@@ -400,6 +412,12 @@
     "slug": "bitcoin-cash",
     "name": "Bitcoin Cash",
     "symbol": "BCH"
+  },
+  "BEB": {
+    "id": 40933,
+    "slug": "bloom-energy-tokenized-bstocks",
+    "name": "Bloom Energy Tokenized bStocks",
+    "symbol": "BEB"
   },
   "BEL": {
     "id": 6928,
@@ -677,6 +695,12 @@
     "name": "Decred",
     "symbol": "DCR"
   },
+  "DELLB": {
+    "id": 40931,
+    "slug": "dell-tokenized-bstocks",
+    "name": "Dell Tokenized bStocks",
+    "symbol": "DELLB"
+  },
   "DEXE": {
     "id": 7326,
     "slug": "dexe",
@@ -887,6 +911,12 @@
     "name": "Filecoin",
     "symbol": "FIL"
   },
+  "FLNCB": {
+    "id": 40932,
+    "slug": "fluence-energy-tokenized-bstocks",
+    "name": "Fluence Energy Tokenized bStocks",
+    "symbol": "FLNCB"
+  },
   "FLOKI": {
     "id": 10804,
     "slug": "floki-inu",
@@ -1024,6 +1054,12 @@
     "slug": "the-graph",
     "name": "The Graph",
     "symbol": "GRT"
+  },
+  "GSB": {
+    "id": 40934,
+    "slug": "goldman-sachs-tokenized-bstocks",
+    "name": "Goldman Sachs Tokenized bStocks",
+    "symbol": "GSB"
   },
   "GTC": {
     "id": 10052,
@@ -1865,6 +1901,12 @@
     "name": "Pundi X (New)",
     "symbol": "PUNDIX"
   },
+  "PYPLB": {
+    "id": 40935,
+    "slug": "paypal-tokenized-bstocks",
+    "name": "Paypal Tokenized bStocks",
+    "symbol": "PYPLB"
+  },
   "PYR": {
     "id": 9308,
     "slug": "vulcan-forged-pyr",
@@ -2153,6 +2195,12 @@
     "name": "Smooth Love Potion",
     "symbol": "SLP"
   },
+  "SMHB": {
+    "id": 40928,
+    "slug": "vaneck-semiconductor-etf-tokenized-bstocks",
+    "name": "VanEck Semiconductor ETF Tokenized bStocks",
+    "symbol": "SMHB"
+  },
   "SNDKB": {
     "id": 40216,
     "slug": "sandisk-tokenized-bstocks",
@@ -2200,6 +2248,12 @@
     "slug": "semicon-bull-3x-etf-tokenized-bstocks",
     "name": "Semicon Bull 3X ETF Tokenized bStocks",
     "symbol": "SOXLB"
+  },
+  "SOXSB": {
+    "id": 40930,
+    "slug": "direxion-semiconductor-bear-3x-etf-tokenized-bstocks",
+    "name": "Direxion Semiconductor Bear 3X ETF Tokenized bStocks",
+    "symbol": "SOXSB"
   },
   "SPCXB": {
     "id": 40217,
