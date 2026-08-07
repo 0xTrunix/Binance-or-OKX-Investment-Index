@@ -131,6 +131,12 @@
     "name": "aixbt",
     "symbol": "AIXBT"
   },
+  "ALABB": {
+    "id": 40972,
+    "slug": "astera-labs-tokenized-bstocks",
+    "name": "Astera Labs Tokenized bStocks",
+    "symbol": "ALABB"
+  },
   "ALGO": {
     "id": 4030,
     "slug": "algorand",
@@ -251,6 +257,12 @@
     "name": "ARPA",
     "symbol": "ARPA"
   },
+  "ASMLB": {
+    "id": 40968,
+    "slug": "asml-tokenized-bstocks",
+    "name": "ASML Tokenized bStocks",
+    "symbol": "ASMLB"
+  },
   "ASR": {
     "id": 5229,
     "slug": "as-roma-fan-token",
@@ -268,6 +280,12 @@
     "slug": "astar",
     "name": "Astar",
     "symbol": "ASTR"
+  },
+  "ASTSB": {
+    "id": 40971,
+    "slug": "ast-spacemobile-tokenized-bstocks",
+    "name": "AST SpaceMobile Tokenized bStocks",
+    "symbol": "ASTSB"
   },
   "AT": {
     "id": 38757,
@@ -461,6 +479,12 @@
     "name": "Blur",
     "symbol": "BLUR"
   },
+  "BMNRB": {
+    "id": 40964,
+    "slug": "bitmine-immersion-technologies-tokenized-bstocks",
+    "name": "BitMine Immersion Technologies Tokenized bStocks",
+    "symbol": "BMNRB"
+  },
   "BMT": {
     "id": 35214,
     "slug": "bubblemaps",
@@ -605,6 +629,12 @@
     "name": "Nervos Network",
     "symbol": "CKB"
   },
+  "COHRB": {
+    "id": 40965,
+    "slug": "coherent-tokenized-bstocks",
+    "name": "Coherent Tokenized bStocks",
+    "symbol": "COHRB"
+  },
   "COINB": {
     "id": 40789,
     "slug": "coinbase-tokenized-bstocks",
@@ -640,6 +670,12 @@
     "slug": "circle-internet-group-tokenized-bstocks",
     "name": "Circle Internet Group Tokenized bStocks",
     "symbol": "CRCLB"
+  },
+  "CRDOB": {
+    "id": 40967,
+    "slug": "credo-technology-tokenized-bstocks",
+    "name": "Credo Technology Tokenized bStocks",
+    "symbol": "CRDOB"
   },
   "CRV": {
     "id": 6538,
@@ -1241,6 +1277,12 @@
     "name": "IQ",
     "symbol": "IQ"
   },
+  "IRENB": {
+    "id": 40970,
+    "slug": "iren-limited-tokenized-bstocks",
+    "name": "IREN Limited Tokenized bStocks",
+    "symbol": "IRENB"
+  },
   "JASMY": {
     "id": 8425,
     "slug": "jasmy",
@@ -1636,6 +1678,12 @@
     "slug": "nexo",
     "name": "Nexo",
     "symbol": "NEXO"
+  },
+  "NFLXB": {
+    "id": 40973,
+    "slug": "netflix-tokenized-bstocks",
+    "name": "Netflix Tokenized bStocks",
+    "symbol": "NFLXB"
   },
   "NIGHT": {
     "id": 39064,
@@ -2195,6 +2243,12 @@
     "name": "Smooth Love Potion",
     "symbol": "SLP"
   },
+  "SMCIB": {
+    "id": 40966,
+    "slug": "super-micro-computer-tokenized-bstocks",
+    "name": "Super Micro Computer Tokenized bStocks",
+    "symbol": "SMCIB"
+  },
   "SMHB": {
     "id": 40928,
     "slug": "vaneck-semiconductor-etf-tokenized-bstocks",
@@ -2524,6 +2578,12 @@
     "slug": "uniswap",
     "name": "Uniswap",
     "symbol": "UNI"
+  },
+  "USARB": {
+    "id": 40969,
+    "slug": "usa-rare-earth-tokenized-bstocks",
+    "name": "USA Rare Earth Tokenized bStocks",
+    "symbol": "USARB"
   },
   "USD1": {
     "id": 36148,
