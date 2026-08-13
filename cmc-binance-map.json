@@ -1043,6 +1043,12 @@
     "name": "Corning Tokenized bStocks",
     "symbol": "GLWB"
   },
+  "GMEB": {
+    "id": 41077,
+    "slug": "gamestop-tokenized-bstocks",
+    "name": "GameStop Tokenized bStocks",
+    "symbol": "GMEB"
+  },
   "GMT": {
     "id": 18069,
     "slug": "green-metaverse-token",
