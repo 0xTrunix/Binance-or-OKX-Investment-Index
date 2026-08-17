@@ -83,12 +83,6 @@
     "name": "Act I : The AI Prophecy",
     "symbol": "ACT"
   },
-  "ACX": {
-    "id": 22620,
-    "slug": "across-protocol",
-    "name": "Across Protocol",
-    "symbol": "ACX"
-  },
   "ADA": {
     "id": 2010,
     "slug": "cardano",
@@ -1139,12 +1133,6 @@
     "name": "Hemi",
     "symbol": "HEMI"
   },
-  "HFT": {
-    "id": 22461,
-    "slug": "hashflow",
-    "name": "Hashflow",
-    "symbol": "HFT"
-  },
   "HIVE": {
     "id": 5370,
     "slug": "hive-blockchain",
@@ -1865,12 +1853,6 @@
     "name": "Phala Network",
     "symbol": "PHA"
   },
-  "PIVX": {
-    "id": 1169,
-    "slug": "pivx",
-    "name": "PIVX",
-    "symbol": "PIVX"
-  },
   "PIXEL": {
     "id": 29335,
     "slug": "pixels",
@@ -1960,12 +1942,6 @@
     "slug": "paypal-tokenized-bstocks",
     "name": "Paypal Tokenized bStocks",
     "symbol": "PYPLB"
-  },
-  "PYR": {
-    "id": 9308,
-    "slug": "vulcan-forged-pyr",
-    "name": "Vulcan Forged (PYR)",
-    "symbol": "PYR"
   },
   "PYTH": {
     "id": 28177,
@@ -2645,23 +2621,11 @@
     "name": "Vana",
     "symbol": "VANA"
   },
-  "VANRY": {
-    "id": 8037,
-    "slug": "vanar",
-    "name": "Vanar Chain",
-    "symbol": "VANRY"
-  },
   "VET": {
     "id": 3077,
     "slug": "vechain",
     "name": "VeChain",
     "symbol": "VET"
-  },
-  "VIC": {
-    "id": 2570,
-    "slug": "viction",
-    "name": "Viction",
-    "symbol": "VIC"
   },
   "VIRTUAL": {
     "id": 29420,
