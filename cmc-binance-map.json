@@ -749,6 +749,12 @@
     "name": "DIA",
     "symbol": "DIA"
   },
+  "DJTB": {
+    "id": 41915,
+    "slug": "trump-media-technology-group-tokenized-bstocks",
+    "name": "Trump Media & Technology Group Tokenized bStocks",
+    "symbol": "DJTB"
+  },
   "DODO": {
     "id": 7224,
     "slug": "dodo",
