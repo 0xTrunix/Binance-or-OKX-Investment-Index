@@ -677,6 +677,12 @@
     "name": "Curve DAO Token",
     "symbol": "CRV"
   },
+  "CRWDB": {
+    "id": 41960,
+    "slug": "crowdstrike-tokenized-bstocks",
+    "name": "CrowdStrike Tokenized bStocks",
+    "symbol": "CRWDB"
+  },
   "CRWVB": {
     "id": 40877,
     "slug": "coreweave-tokenized-bstocks",
@@ -1199,12 +1205,6 @@
     "name": "Internet Computer",
     "symbol": "ICP"
   },
-  "ICX": {
-    "id": 2099,
-    "slug": "icon",
-    "name": "ICON",
-    "symbol": "ICX"
-  },
   "ID": {
     "id": 21846,
     "slug": "space-id",
@@ -1594,6 +1594,12 @@
     "slug": "moonriver",
     "name": "Moonriver",
     "symbol": "MOVR"
+  },
+  "MRNAB": {
+    "id": 41961,
+    "slug": "moderna-tokenized-bstocks",
+    "name": "Moderna Tokenized bStocks",
+    "symbol": "MRNAB"
   },
   "MRVLB": {
     "id": 40848,
@@ -2165,12 +2171,6 @@
     "name": "Scroll",
     "symbol": "SCR"
   },
-  "SCRT": {
-    "id": 5604,
-    "slug": "secret",
-    "name": "Secret",
-    "symbol": "SCRT"
-  },
   "SEI": {
     "id": 23149,
     "slug": "sei",
@@ -2321,6 +2321,12 @@
     "name": "State Street SPDR S&P 500 ETF Tokenized bStocks",
     "symbol": "SPYB"
   },
+  "SQQQB": {
+    "id": 41962,
+    "slug": "proshares-ultrapro-short-qqq-tokenized-bstocks",
+    "name": "ProShares UltraPro Short QQQ Tokenized bStocks",
+    "symbol": "SQQQB"
+  },
   "SSV": {
     "id": 12999,
     "slug": "ssv-network",
@@ -2345,12 +2351,6 @@
     "name": "StakeStone",
     "symbol": "STO"
   },
-  "STORJ": {
-    "id": 1772,
-    "slug": "storj",
-    "name": "Storj",
-    "symbol": "STORJ"
-  },
   "STRAX": {
     "id": 1343,
     "slug": "stratis",
@@ -2368,6 +2368,12 @@
     "slug": "stacks",
     "name": "Stacks",
     "symbol": "STX"
+  },
+  "STXB": {
+    "id": 41963,
+    "slug": "seagate-tokenized-bstocks",
+    "name": "Seagate Tokenized bStocks",
+    "symbol": "STXB"
   },
   "SUI": {
     "id": 20947,
