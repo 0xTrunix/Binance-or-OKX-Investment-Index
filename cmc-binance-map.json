@@ -1499,6 +1499,12 @@
     "name": "MANTRA",
     "symbol": "MANTRA"
   },
+  "MARSCOIN": {
+    "id": 40944,
+    "slug": "marscoin-meme-bsc",
+    "name": "MarsCoin",
+    "symbol": "MARSCOIN"
+  },
   "MASK": {
     "id": 8536,
     "slug": "mask-network",
