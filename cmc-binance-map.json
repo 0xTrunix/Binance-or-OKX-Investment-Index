@@ -671,6 +671,12 @@
     "name": "Credo Technology Tokenized bStocks",
     "symbol": "CRDOB"
   },
+  "CRMB": {
+    "id": 42045,
+    "slug": "salesforce-tokenized-bstocks",
+    "name": "Salesforce Tokenized bStocks",
+    "symbol": "CRMB"
+  },
   "CRV": {
     "id": 6538,
     "slug": "curve-dao-token",
@@ -1144,6 +1150,12 @@
     "slug": "hemi",
     "name": "Hemi",
     "symbol": "HEMI"
+  },
+  "HIMSB": {
+    "id": 42046,
+    "slug": "hims-hers-tokenized-bstocks",
+    "name": "Hims & Hers Tokenized bStocks",
+    "symbol": "HIMSB"
   },
   "HIVE": {
     "id": 5370,
@@ -2878,5 +2890,11 @@
     "slug": "bianrensheng",
     "name": "币安人生",
     "symbol": "币安人生"
+  },
+  "牛来": {
+    "id": 41861,
+    "slug": "niu-lai",
+    "name": "牛来 (Niu Lai)",
+    "symbol": "牛来"
   }
 }

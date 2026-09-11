@@ -120,6 +120,7 @@
   "COW": "cow-protocol",
   "CRCLB": "circle-internet-group-bstock",
   "CRDOB": "credo-technology-bstocks-tokenized-stock",
+  "CRMB": "salesforce-bstocks-tokenized-stock",
   "CRV": "curve-dao-token",
   "CRWVB": "coreweave-bstocks-tokenized-stock",
   "CTK": "certik",
@@ -200,6 +201,7 @@
   "HEMI": "hemi",
   "HFT": "hashflow",
   "HIGH": "highstreet",
+  "HIMSB": "hims-hers-bstocks-tokenized-stock",
   "HIVE": "hive",
   "HMSTR": "hamster-kombat",
   "HOLO": "holoworld",
@@ -496,5 +498,6 @@
   "ZKP": "zkpass",
   "ZRO": "layerzero",
   "ZRX": "0x",
-  "币安人生": "bianrensheng"
+  "币安人生": "bianrensheng",
+  "牛来": "niu-lai"
 }
