@@ -491,6 +491,12 @@
     "name": "BNB",
     "symbol": "BNB"
   },
+  "BNCB": {
+    "id": 42290,
+    "slug": "cea-industries-tokenized-bstocks",
+    "name": "CEA Industries Tokenized bStocks",
+    "symbol": "BNCB"
+  },
   "BNSOL": {
     "id": 32882,
     "slug": "binance-staked-sol",
