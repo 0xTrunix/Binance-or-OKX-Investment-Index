@@ -332,7 +332,7 @@
   "AVNT": {
     "id": 38299,
     "slug": "avantis",
-    "name": "Avantis",
+    "name": "Veranta",
     "symbol": "AVNT"
   },
   "AWE": {
@@ -1096,6 +1096,12 @@
     "slug": "alphabet-tokenized-bstocks",
     "name": "Alphabet Tokenized bStocks",
     "symbol": "GOOGLB"
+  },
+  "GPROB": {
+    "id": 42303,
+    "slug": "gopro-tokenized-bstocks",
+    "name": "GoPro Tokenized bStocks",
+    "symbol": "GPROB"
   },
   "GPS": {
     "id": 35268,
@@ -2050,6 +2056,12 @@
     "slug": "raydium",
     "name": "Raydium",
     "symbol": "RAY"
+  },
+  "RDDTB": {
+    "id": 42302,
+    "slug": "reddit-tokenized-bstocks",
+    "name": "Reddit Tokenized bStocks",
+    "symbol": "RDDTB"
   },
   "RE": {
     "id": 40224,
