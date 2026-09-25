@@ -113,6 +113,12 @@
     "name": "Adventure Gold",
     "symbol": "AGLD"
   },
+  "AGPUB": {
+    "id": 42353,
+    "slug": "axe-compute-tokenized-bstocks",
+    "name": "Axe Compute Tokenized bStocks",
+    "symbol": "AGPUB"
+  },
   "AI": {
     "id": 28846,
     "slug": "sleepless-ai",
@@ -166,6 +172,12 @@
     "slug": "applied-materials-tokenized-bstocks",
     "name": "Applied Materials Tokenized bStocks",
     "symbol": "AMATB"
+  },
+  "AMCB": {
+    "id": 42355,
+    "slug": "amc-entertainment-holdings-tokenized-bstocks",
+    "name": "AMC Entertainment Holdings Tokenized bStocks",
+    "symbol": "AMCB"
   },
   "AMDB": {
     "id": 40538,
@@ -731,6 +743,12 @@
     "name": "Cyber",
     "symbol": "CYBER"
   },
+  "CYPHB": {
+    "id": 42354,
+    "slug": "cypherpunk-technologies-tokenized-bstocks",
+    "name": "Cypherpunk Technologies Tokenized bStocks",
+    "symbol": "CYPHB"
+  },
   "DASH": {
     "id": 131,
     "slug": "dash",
@@ -1210,6 +1228,12 @@
     "slug": "huma-finance",
     "name": "Huma Finance",
     "symbol": "HUMA"
+  },
+  "HYPE": {
+    "id": 32196,
+    "slug": "hyperliquid",
+    "name": "Hyperliquid",
+    "symbol": "HYPE"
   },
   "HYPER": {
     "id": 36281,
@@ -2632,12 +2656,6 @@
     "slug": "ethena-usde",
     "name": "Ethena USDe",
     "symbol": "USDe"
-  },
-  "USDP": {
-    "id": 3330,
-    "slug": "paxos-standard",
-    "name": "Pax Dollar",
-    "symbol": "USDP"
   },
   "USDS": {
     "id": 33039,
