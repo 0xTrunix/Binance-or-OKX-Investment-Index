@@ -89,6 +89,12 @@
     "name": "Cardano",
     "symbol": "ADA"
   },
+  "ADBEB": {
+    "id": 42384,
+    "slug": "adobe-tokenized-bstocks",
+    "name": "Adobe Tokenized bStocks",
+    "symbol": "ADBEB"
+  },
   "ADX": {
     "id": 1768,
     "slug": "adx-net",
@@ -1031,6 +1037,12 @@
     "name": "FTX Token",
     "symbol": "FTT"
   },
+  "FWDIB": {
+    "id": 42386,
+    "slug": "forward-industries-tokenized-bstocks",
+    "name": "Forward Industries Tokenized bStocks",
+    "symbol": "FWDIB"
+  },
   "G": {
     "id": 32120,
     "slug": "gravity-token",
@@ -1222,6 +1234,12 @@
     "slug": "holo",
     "name": "Holo",
     "symbol": "HOT"
+  },
+  "HPEB": {
+    "id": 42385,
+    "slug": "hewlett-packard-tokenized-bstocks",
+    "name": "Hewlett Packard Tokenized bStocks",
+    "symbol": "HPEB"
   },
   "HUMA": {
     "id": 36576,
@@ -1889,6 +1907,12 @@
     "name": "PAX Gold",
     "symbol": "PAXG"
   },
+  "PDDB": {
+    "id": 42383,
+    "slug": "pdd-holdings-tokenized-bstocks",
+    "name": "PDD Holdings Tokenized bStocks",
+    "symbol": "PDDB"
+  },
   "PENDLE": {
     "id": 9481,
     "slug": "pendle",
@@ -2249,6 +2273,12 @@
     "name": "SafePal",
     "symbol": "SFP"
   },
+  "SHAZB": {
+    "id": 42389,
+    "slug": "sharonai-tokenized-bstocks",
+    "name": "SharonAI Tokenized bStocks",
+    "symbol": "SHAZB"
+  },
   "SHELL": {
     "id": 35710,
     "slug": "myshell",
@@ -2398,12 +2428,6 @@
     "slug": "steem",
     "name": "Steem",
     "symbol": "STEEM"
-  },
-  "STG": {
-    "id": 18934,
-    "slug": "stargate-finance",
-    "name": "Stargate Finance",
-    "symbol": "STG"
   },
   "STO": {
     "id": 32194,
@@ -2747,6 +2771,12 @@
     "name": "Western Digital Tokenized bStocks",
     "symbol": "WDCB"
   },
+  "WENB": {
+    "id": 42387,
+    "slug": "wendys-tokenized-bstocks",
+    "name": "Wendy's Tokenized bStocks",
+    "symbol": "WENB"
+  },
   "WIF": {
     "id": 28752,
     "slug": "dogwifhat",
@@ -2908,6 +2938,12 @@
     "slug": "zkpass",
     "name": "zkPass",
     "symbol": "ZKP"
+  },
+  "ZMB": {
+    "id": 42388,
+    "slug": "zoom-tokenized-bstocks",
+    "name": "Zoom Tokenized bStocks",
+    "symbol": "ZMB"
   },
   "ZRO": {
     "id": 26997,
