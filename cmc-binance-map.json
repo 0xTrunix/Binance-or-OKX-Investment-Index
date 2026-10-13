@@ -2219,6 +2219,12 @@
     "name": "Ravencoin",
     "symbol": "RVN"
   },
+  "RWUSD": {
+    "id": 42538,
+    "slug": "rwusd",
+    "name": "RWUSD",
+    "symbol": "RWUSD"
+  },
   "S": {
     "id": 32684,
     "slug": "sonic",
