@@ -437,6 +437,12 @@
     "name": "BounceBit",
     "symbol": "BB"
   },
+  "BBB": {
+    "id": 42534,
+    "slug": "blackberry-tokenized-bstocks",
+    "name": "Blackberry Tokenized bStocks",
+    "symbol": "BBB"
+  },
   "BCH": {
     "id": 1831,
     "slug": "bitcoin-cash",
@@ -1601,6 +1607,12 @@
     "name": "MovieBloc",
     "symbol": "MBL"
   },
+  "MDBB": {
+    "id": 42535,
+    "slug": "mongodb-tokenized-bstocks",
+    "name": "Mongodb Tokenized bStocks",
+    "symbol": "MDBB"
+  },
   "ME": {
     "id": 32197,
     "slug": "magiceden",
@@ -1930,6 +1942,12 @@
     "slug": "pendle",
     "name": "Pendle",
     "symbol": "PENDLE"
+  },
+  "PENGB": {
+    "id": 42536,
+    "slug": "penguin-solutions-tokenized-bstocks",
+    "name": "Penguin Solutions Tokenized bStocks",
+    "symbol": "PENGB"
   },
   "PENGU": {
     "id": 34466,
@@ -2735,6 +2753,12 @@
     "name": "Usual",
     "symbol": "USUAL"
   },
+  "UVXYB": {
+    "id": 42537,
+    "slug": "proshares-ultra-vix-short-term-futures-etf-tokenized-bstocks",
+    "name": "ProShares Ultra VIX Short-Term Futures ETF  Tokenized bStocks",
+    "symbol": "UVXYB"
+  },
   "VANA": {
     "id": 34619,
     "slug": "vana",
@@ -2826,9 +2850,9 @@
     "symbol": "WLD"
   },
   "WLFI": {
-    "id": 33023,
-    "slug": "world-liberty-financial",
-    "name": "World Liberty Financial (wlfi.club)",
+    "id": 33251,
+    "slug": "world-liberty-financial-wlfi",
+    "name": "World Liberty Financial",
     "symbol": "WLFI"
   },
   "WOO": {
