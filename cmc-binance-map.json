@@ -517,8 +517,8 @@
   },
   "BNCB": {
     "id": 42290,
-    "slug": "cea-industries-tokenized-bstocks",
-    "name": "CEA Industries Tokenized bStocks",
+    "slug": "bnb-standard-corporation-tokenized-bstocks",
+    "name": "BNB Standard Corporation Tokenized bStocks",
     "symbol": "BNCB"
   },
   "BNSOL": {
@@ -545,11 +545,23 @@
     "name": "Bonk",
     "symbol": "BONK"
   },
+  "BOTB": {
+    "id": 42613,
+    "slug": "robostrategy-inc-tokenized-bstocks",
+    "name": "RoboStrategy Inc Tokenized bStocks",
+    "symbol": "BOTB"
+  },
   "BREV": {
     "id": 39159,
     "slug": "brevis",
     "name": "Brevis",
     "symbol": "BREV"
+  },
+  "BRKBB": {
+    "id": 42612,
+    "slug": "berkshire-hathaway-tokenized-bstocks",
+    "name": "Berkshire Hathaway Tokenized bStocks",
+    "symbol": "BRKBB"
   },
   "BTC": {
     "id": 1,
@@ -1462,6 +1474,12 @@
     "slug": "kusama",
     "name": "Kusama",
     "symbol": "KSM"
+  },
+  "KSTRB": {
+    "id": 42615,
+    "slug": "kraneshares-star-market-50-etf-tokenized-bstocks",
+    "name": "KraneShares STAR Market 50 ETF Tokenized bStocks",
+    "symbol": "KSTRB"
   },
   "LA": {
     "id": 36510,
@@ -2591,6 +2609,12 @@
     "name": "Alien Worlds",
     "symbol": "TLM"
   },
+  "TMFB": {
+    "id": 42611,
+    "slug": "direxion-daily-20-year-treasury-bull-3x-etf-tokenized-bstocks",
+    "name": "Direxion Daily 20 Year Treasury Bull 3X ETF Tokenized bStocks",
+    "symbol": "TMFB"
+  },
   "TNSR": {
     "id": 30449,
     "slug": "tensor",
@@ -2776,6 +2800,12 @@
     "slug": "virtual-protocol",
     "name": "Virtuals Protocol",
     "symbol": "VIRTUAL"
+  },
+  "VSTB": {
+    "id": 42614,
+    "slug": "vistra-corp-tokenized-bstocks",
+    "name": "Vistra Corp Tokenized bStocks",
+    "symbol": "VSTB"
   },
   "VTHO": {
     "id": 3012,
