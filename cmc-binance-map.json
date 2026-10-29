@@ -227,6 +227,12 @@
     "name": "API3",
     "symbol": "API3"
   },
+  "APPB": {
+    "id": 42683,
+    "slug": "applovin-corp-tokenized-bstocks",
+    "name": "Applovin Corp Tokenized bStocks",
+    "symbol": "APPB"
+  },
   "APT": {
     "id": 21794,
     "slug": "aptos",
@@ -562,6 +568,12 @@
     "slug": "berkshire-hathaway-tokenized-bstocks",
     "name": "Berkshire Hathaway Tokenized bStocks",
     "symbol": "BRKBB"
+  },
+  "BSPB": {
+    "id": 42682,
+    "slug": "bending-spoons-tokenized-bstocks",
+    "name": "Bending Spoons Tokenized bStocks",
+    "symbol": "BSPB"
   },
   "BTC": {
     "id": 1,
@@ -917,12 +929,6 @@
     "name": "Enso",
     "symbol": "ENSO"
   },
-  "EPIC": {
-    "id": 8615,
-    "slug": "epic-chain",
-    "name": "Epic Chain",
-    "symbol": "EPIC"
-  },
   "ERA": {
     "id": 37374,
     "slug": "caldera",
@@ -1084,6 +1090,12 @@
     "slug": "genius-terminal",
     "name": "Genius Terminal",
     "symbol": "GENIUS"
+  },
+  "GEVB": {
+    "id": 42681,
+    "slug": "ge-vernova-inc-tokenized-bstocks",
+    "name": "GE Vernova Inc Tokenized bStocks",
+    "symbol": "GEVB"
   },
   "GIGGLE": {
     "id": 38470,
@@ -2129,12 +2141,6 @@
     "name": "Qtum",
     "symbol": "QTUM"
   },
-  "QUICK": {
-    "id": 8206,
-    "slug": "quickswap",
-    "name": "QuickSwap [Old]",
-    "symbol": "QUICK"
-  },
   "RAD": {
     "id": 6843,
     "slug": "radworks",
@@ -2357,6 +2363,12 @@
     "name": "Sign",
     "symbol": "SIGN"
   },
+  "SKDDB": {
+    "id": 42680,
+    "slug": "graniteshares-2x-short-sk-hynix-daily-etf-tokenized-bstocks",
+    "name": "GraniteShares 2x Short SK Hynix Daily ETF Tokenized bStocks",
+    "symbol": "SKDDB"
+  },
   "SKHYB": {
     "id": 40813,
     "slug": "sk-hynix-tokenized-bstocks",
@@ -2368,6 +2380,12 @@
     "slug": "skale-network",
     "name": "SKALE",
     "symbol": "SKL"
+  },
+  "SKUUB": {
+    "id": 42684,
+    "slug": "graniteshares-2x-long-sk-hynix-daily-etf-tokenized-bstocks",
+    "name": "GraniteShares 2x Long SK Hynix Daily ETF Tokenized bStocks",
+    "symbol": "SKUUB"
   },
   "SKY": {
     "id": 33038,
