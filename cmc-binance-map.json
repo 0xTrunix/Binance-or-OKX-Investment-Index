@@ -971,11 +971,35 @@
     "name": "Eurite",
     "symbol": "EURI"
   },
+  "EWJB": {
+    "id": 42863,
+    "slug": "ishares-msci-japan-etf-tokenized-bstocks",
+    "name": "iShares MSCI Japan ETF Tokenized bStocks",
+    "symbol": "EWJB"
+  },
+  "EWTB": {
+    "id": 42866,
+    "slug": "ishares-msci-taiwan-etf-tokenized-bstocks",
+    "name": "iShares MSCI Taiwan ETF Tokenized bStocks",
+    "symbol": "EWTB"
+  },
   "EWYB": {
     "id": 40539,
     "slug": "ishares-msci-south-korea-etf-tokenized-bstocks",
     "name": "iShares MSCI South Korea ETF Tokenized bStocks",
     "symbol": "EWYB"
+  },
+  "EWZB": {
+    "id": 42861,
+    "slug": "ishares-msci-brazil-etf-tokenized-bstocks",
+    "name": "iShares MSCI Brazil ETF Tokenized bStocks",
+    "symbol": "EWZB"
+  },
+  "EWZSB": {
+    "id": 42864,
+    "slug": "ishares-msci-brazil-small-cap-etf-tokenized-bstocks",
+    "name": "iShares MSCI Brazil Small-Cap ETF Tokenized bStocks",
+    "symbol": "EWZSB"
   },
   "F": {
     "id": 34297,
@@ -1379,6 +1403,12 @@
     "name": "IREN Limited Tokenized bStocks",
     "symbol": "IRENB"
   },
+  "IWMB": {
+    "id": 42865,
+    "slug": "ishares-russell-2000-index-fund-tokenized-bstocks",
+    "name": "iShares Russell 2000 Index Fund Tokenized bStocks",
+    "symbol": "IWMB"
+  },
   "JASMY": {
     "id": 8425,
     "slug": "jasmy",
@@ -1655,6 +1685,12 @@
     "name": "MegaETH",
     "symbol": "MEGA"
   },
+  "MELIB": {
+    "id": 42859,
+    "slug": "mercadolibre-tokenized-bstocks",
+    "name": "MercadoLibre Tokenized bStocks",
+    "symbol": "MELIB"
+  },
   "MEME": {
     "id": 28301,
     "slug": "meme",
@@ -1852,6 +1888,12 @@
     "slug": "notcoin",
     "name": "Notcoin",
     "symbol": "NOT"
+  },
+  "NUB": {
+    "id": 30493,
+    "slug": "nubcat",
+    "name": "nubcat",
+    "symbol": "NUB"
   },
   "NVDAB": {
     "id": 40215,
