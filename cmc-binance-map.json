@@ -215,6 +215,12 @@
     "name": "Ankr",
     "symbol": "ANKR"
   },
+  "ANTB": {
+    "id": 42860,
+    "slug": "anthropic-tokenized-bstocks",
+    "name": "Anthropic Tokenized bStocks",
+    "symbol": "ANTB"
+  },
   "APE": {
     "id": 7257,
     "slug": "apecoin",
