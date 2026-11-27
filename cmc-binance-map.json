@@ -281,6 +281,12 @@
     "name": "ARPA",
     "symbol": "ARPA"
   },
+  "ARTYB": {
+    "id": 42927,
+    "slug": "ishares-future-ai-tech-etf-tokenized-bstocks",
+    "name": "iShares Future AI & Tech ETF Tokenized bStocks",
+    "symbol": "ARTYB"
+  },
   "ASMLB": {
     "id": 40968,
     "slug": "asml-tokenized-bstocks",
@@ -1085,6 +1091,12 @@
     "name": "Frax (prev. FXS)",
     "symbol": "FRAX"
   },
+  "FRHCB": {
+    "id": 42930,
+    "slug": "freedom-holding-corp-tokenized-bstocks",
+    "name": "Freedom Holding Corp Tokenized bStocks",
+    "symbol": "FRHCB"
+  },
   "FTT": {
     "id": 4195,
     "slug": "ftx-token",
@@ -1319,6 +1331,12 @@
     "name": "Hyperlane",
     "symbol": "HYPER"
   },
+  "IBITB": {
+    "id": 42926,
+    "slug": "ishares-bitcoin-trust-tokenized-bstocks",
+    "name": "iShares Bitcoin Trust Tokenized bStocks",
+    "symbol": "IBITB"
+  },
   "IBMB": {
     "id": 40847,
     "slug": "ibm-tokenized-bstocks",
@@ -1336,6 +1354,12 @@
     "slug": "space-id",
     "name": "SPACE ID",
     "symbol": "ID"
+  },
+  "IGVB": {
+    "id": 42928,
+    "slug": "ishares-expanded-tech-software-sector-etf-tokenized-bstocks",
+    "name": "iShares Expanded Tech-Software Sector ETF Tokenized bStocks",
+    "symbol": "IGVB"
   },
   "ILV": {
     "id": 8719,
@@ -2512,6 +2536,12 @@
     "slug": "direxion-semiconductor-bear-3x-etf-tokenized-bstocks",
     "name": "Direxion Semiconductor Bear 3X ETF Tokenized bStocks",
     "symbol": "SOXSB"
+  },
+  "SOXXB": {
+    "id": 42929,
+    "slug": "ishares-semiconductor-etf-tokenized-bstocks",
+    "name": "iShares Semiconductor ETF Tokenized bStocks",
+    "symbol": "SOXXB"
   },
   "SPCXB": {
     "id": 40217,
